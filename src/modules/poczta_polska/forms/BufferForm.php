@@ -107,7 +107,7 @@ class BufferForm extends Model
     public static function getProfileName(ProfilType $model): string
     {
         return $model->getNazwa()
-            . ' ' . $model->getUlica()
+            . ' BufferForm.php' . $model->getUlica()
             . ' ' . $model->getNumerDomu()
             . ' ' . $model->getMiejscowosc()
             . ' ' . $model->getKodPocztowy()
@@ -117,7 +117,7 @@ class BufferForm extends Model
     public static function getDispatchOfficeName(PlacowkaPocztowaType $model): string
     {
         return $model->getMiejscowosc()
-            . ' ' . $model->getUlica()
+            . ' BufferForm.php' . $model->getUlica()
             . ' ' . $model->getNumerDomu()
             . ' (' . $model->getNazwaWydruk() . ')';
     }

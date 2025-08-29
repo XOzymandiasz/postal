@@ -1,5 +1,7 @@
 <?php
 
+namespace app\modules\postal\tests\migrations;
+
 use app\modules\postal\ModuleEnsureTrait;
 use yii\base\InvalidConfigException;
 use yii\db\Migration;

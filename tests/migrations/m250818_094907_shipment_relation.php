@@ -1,5 +1,7 @@
 <?php
 
+namespace app\modules\postal\tests\migrations;
+
 use app\modules\postal\components\ShipmentRelationComponent;
 use app\modules\postal\ModuleEnsureTrait;
 use yii\base\InvalidConfigException;
