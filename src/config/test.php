@@ -10,7 +10,7 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\RepositoryFactory;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use yii\caching\DummyCache;
 
-$db = require __DIR__ . '/test_db.php';
+$db = require dirname(__DIR__, 2) . '/config/test_db.php';
 $params = array_merge(
     require __DIR__ . '/params.php',
 );
