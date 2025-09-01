@@ -18,7 +18,8 @@
         "vlucas/phpdotenv": "^5.6",
         "kartik-v/yii2-widget-select2": "^2.2.5",
         "edzima/yii2-teryt": "^1.1.6",
-        "kartik-v/yii2-widget-depdrop": "^1.0"
+        "kartik-v/yii2-widget-depdrop": "^1.0",
+        "wsdltophp/packagebase": "^5.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
@@ -29,8 +30,7 @@
         "codeception/module-asserts": "^3.0",
         "codeception/module-yii2": "^1.1",
         "codeception/module-filesystem": "^3.0",
-        "codeception/verify": "^3.0",
-        "wsdltophp/packagegenerator": "^4.1"
+        "codeception/verify": "^3.0"
     },
     "config": {
         "allow-plugins": {
@@ -59,8 +59,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "XOzymandias\\Yii2Postal\\": "src/",
-            "XOzymandias\\Yii2Postal\\tests\\": "tests/"
+            "XOzymandias\\Yii2Postal\\": "src/"
         }
     },
     "autoload-dev": {
