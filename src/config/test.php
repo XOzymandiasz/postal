@@ -9,7 +9,6 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\RepositoryFactory;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use yii\caching\DummyCache;
-use yii\caching\FileCache;
 
 $db = require __DIR__ . '/test_db.php';
 $params = array_merge(
@@ -38,7 +37,7 @@ return [
                             'class' => RepositoryFactory::class,
                             'repositoryConfig' => [
                                 'cache' => [
-                                    'class' => FileCache::class
+                                    'class' => DummyCache::class
                                 ]
                             ]
                         ],
