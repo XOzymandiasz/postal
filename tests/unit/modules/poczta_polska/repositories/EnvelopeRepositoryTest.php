@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
+use DateTime;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
@@ -26,7 +27,7 @@ class EnvelopeRepositoryTest extends Unit
 
     private ?ShipmentRepository $shipmentRepository = null;
 
-    private string $sendAt = '2025-08-27';
+    private string $sendAt = '';
 
     public function _before(): void
     {
@@ -34,6 +35,7 @@ class EnvelopeRepositoryTest extends Unit
         $this->repository = new EnvelopeRepository(
             PocztaPolskaSenderOptions::testInstance()
         );
+        $this->sendAt = (new DateTime('tomorrow'))->format('Y-m-d');
     }
 
     public function testGetBuffersList(): void
