@@ -4,6 +4,13 @@ Module for
 ##### Store and manage shipments in the database
 ##### Communicate with the Poczta Polska Api 
 
+INSTALLATION
+-------------
+Add following lines to require section in composer.json:
+```
+"xozymandias/postal": "*@dev"
+```
+
 CONFIGURATION
 -------------
 ## config/web
@@ -60,10 +67,6 @@ CONFIGURATION
 ## composer.json
 
 ```
-"require-dev: {
-      "xozymandias/postal": "*@dev"
-}
-
 "repositories": [
       {
           "type": "path",
