@@ -11,4 +11,4 @@ extensions:
 modules:
   config:
     Yii2:
-      configFile: 'config/test.php'
+      configFile: 'src/config/test.php'
