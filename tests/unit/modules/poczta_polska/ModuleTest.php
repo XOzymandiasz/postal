@@ -10,7 +10,7 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\RepositoryFactory;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Codeception\Test\Unit;
-use tests\_support\stubs\PocztaPolskaTrackerStub;
+use XOzymandias\Yii2Postal\tests\_support\stubs\PocztaPolskaTrackerStub;
 use UnitTester;
 use Yii;
 
@@ -33,7 +33,7 @@ class ModuleTest extends Unit
 
     public function testCustomDefinitionAreEnsured(): void
     {
-        $this->module =  new Module(self::MODULE_ID);
+        $this->module = Yii::$app->getModule(self::MODULE_ID);
 
         $this->module->tracker = [
             'class' => PocztaPolskaTrackerStub::class,

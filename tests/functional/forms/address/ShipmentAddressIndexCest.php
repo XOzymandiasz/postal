@@ -3,7 +3,6 @@
 namespace XOzymandias\Yii2Postal\tests\functional\forms\address;
 
 use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
-use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
 use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use FunctionalTester;
 use yii\helpers\Url;

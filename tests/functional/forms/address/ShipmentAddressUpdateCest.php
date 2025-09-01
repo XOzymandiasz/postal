@@ -2,7 +2,6 @@
 
 namespace XOzymandias\Yii2Postal\tests\functional\forms\address;
 
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Util\HttpCode;

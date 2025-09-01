@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\_support\stubs;
+namespace XOzymandias\Yii2Postal\tests\_support\stubs;
 
 use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
 
