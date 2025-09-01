@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -50,16 +50,16 @@ class ZwrotDokumentowBiznesowaType extends AbstractStructBase
     /**
      * Set rodzaj value
      * @param string $rodzaj
-     * @return \app\modules\postal\sender\StructType\ZwrotDokumentowBiznesowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotDokumentowBiznesowaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::valueIsValid()
      */
     public function setRodzaj(?string $rodzaj = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::valueIsValid($rodzaj)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TerminZwrotDokumentowBiznesowaType', is_array($rodzaj) ? implode(', ', $rodzaj) : var_export($rodzaj, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::valueIsValid($rodzaj)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TerminZwrotDokumentowBiznesowaType', is_array($rodzaj) ? implode(', ', $rodzaj) : var_export($rodzaj, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowBiznesowaType::getValidValues())), __LINE__);
         }
         $this->rodzaj = $rodzaj;
         
@@ -76,7 +76,7 @@ class ZwrotDokumentowBiznesowaType extends AbstractStructBase
     /**
      * Set idDokumentyZwrotneAdresy value
      * @param int $idDokumentyZwrotneAdresy
-     * @return \app\modules\postal\sender\StructType\ZwrotDokumentowBiznesowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotDokumentowBiznesowaType
      */
     public function setIdDokumentyZwrotneAdresy(?int $idDokumentyZwrotneAdresy = null): self
     {

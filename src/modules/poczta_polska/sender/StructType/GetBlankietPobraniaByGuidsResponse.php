@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent[]
      */
     protected ?array $content = null;
     /**
@@ -27,13 +27,13 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getBlankietPobraniaByGuidsResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent[] $content
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent[] $content
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @uses GetBlankietPobraniaByGuidsResponse::setContent()
      * @uses GetBlankietPobraniaByGuidsResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Get content value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent[]
      */
     public function getContent(): ?array
     {
@@ -67,12 +67,12 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getBlankietPobraniaByGuidsResponseContentItem) {
             // validation for constraint: itemType
-            if (!$getBlankietPobraniaByGuidsResponseContentItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent) {
+            if (!$getBlankietPobraniaByGuidsResponseContentItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent) {
                 $invalidValues[] = is_object($getBlankietPobraniaByGuidsResponseContentItem) ? get_class($getBlankietPobraniaByGuidsResponseContentItem) : sprintf('%s(%s)', gettype($getBlankietPobraniaByGuidsResponseContentItem), var_export($getBlankietPobraniaByGuidsResponseContentItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The content property can only contain items of type \app\modules\postal\sender\StructType\AddressLabelContent, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The content property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AddressLabelContent, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Set content value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent[] $content
-     * @return \app\modules\postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent[] $content
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
      *@throws InvalidArgumentException
      */
     public function setContent(?array $content = null): self
@@ -96,15 +96,15 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Add item to content value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent $item
-     * @return \app\modules\postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
      *@throws InvalidArgumentException
      */
-    public function addToContent(\app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent $item): self
+    public function addToContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AddressLabelContent) {
-            throw new InvalidArgumentException(sprintf('The content property can only contain items of type \app\modules\postal\sender\StructType\AddressLabelContent, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressLabelContent) {
+            throw new InvalidArgumentException(sprintf('The content property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AddressLabelContent, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->content[] = $item;
         
@@ -112,7 +112,7 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getBlankietPobraniaByGuidsResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getBlankietPobraniaByGuidsResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getBlankietPobraniaByGuidsResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getBlankietPobraniaByGuidsResponseErrorItem) ? get_class($getBlankietPobraniaByGuidsResponseErrorItem) : sprintf('%s(%s)', gettype($getBlankietPobraniaByGuidsResponseErrorItem), var_export($getBlankietPobraniaByGuidsResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetBlankietPobraniaByGuidsResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetBlankietPobraniaByGuidsResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

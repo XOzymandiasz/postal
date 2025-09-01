@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -96,7 +96,7 @@ class GetWplatyCKP extends AbstractStructBase
      * property is null, the property is removed from this object
      * @throws InvalidArgumentException
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKP
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKP
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -135,7 +135,7 @@ class GetWplatyCKP extends AbstractStructBase
     /**
      * Set startDate value
      * @param string $startDate
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKP
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKP
      */
     public function setStartDate(?string $startDate = null): self
     {
@@ -158,7 +158,7 @@ class GetWplatyCKP extends AbstractStructBase
     /**
      * Set stopDate value
      * @param string $stopDate
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKP
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKP
      */
     public function setStopDate(?string $stopDate = null): self
     {

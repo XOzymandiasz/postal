@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -42,7 +42,7 @@ class DoreczenieBiznesowaType extends AbstractStructBase
     /**
      * Set doRakWlasnych value
      * @param bool $doRakWlasnych
-     * @return \app\modules\postal\sender\StructType\DoreczenieBiznesowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieBiznesowaType
      */
     public function setDoRakWlasnych(?bool $doRakWlasnych = null): self
     {

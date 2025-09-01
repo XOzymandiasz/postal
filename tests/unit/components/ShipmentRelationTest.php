@@ -1,12 +1,12 @@
 <?php
 
-namespace app\modules\postal\tests\unit\components;
+namespace XOzymandias\Yii2Postal\tests\unit\components;
 
-use app\modules\postal\components\ShipmentRelationComponent;
-use app\modules\postal\ModuleEnsureTrait;
-use app\modules\postal\tests\_support\stubs\WeirdTableStub;
-use app\modules\postal\tests\fixtures\ShipmentFixture;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\components\ShipmentRelationComponent;
+use XOzymandias\Yii2Postal\ModuleEnsureTrait;
+use XOzymandias\Yii2Postal\tests\_support\stubs\WeirdTableStub;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Test\Unit;
 use stdClass;
 use UnitTester;

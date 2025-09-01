@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,23 +17,23 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
      * The adres
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
     /**
      * The nadawca
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
     /**
      * The deklaracjaCelna2
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
     /**
      * The zawartosc
      * Meta information extracted from the WSDL
@@ -78,9 +78,9 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     protected ?string $kraj = null;
     /**
      * Constructor method for przesylkaZagranicznaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
      * @param string $zawartosc
      * @param bool $posteRestante
      * @param string $kategoria
@@ -97,7 +97,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
      * @uses PrzesylkaZagranicznaType::setEkspres()
      * @uses PrzesylkaZagranicznaType::setKraj()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?string $kategoria = null, ?int $masa = null, ?bool $ekspres = false, ?string $kraj = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?string $kategoria = null, ?int $masa = null, ?bool $ekspres = false, ?string $kraj = null)
     {
         $this
             ->setAdres($adres)
@@ -112,18 +112,18 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     }
     /**
      * Get adres value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdres(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdres(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adres;
     }
     /**
      * Set adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
-    public function setAdres(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
+    public function setAdres(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
     {
         $this->adres = $adres;
         
@@ -131,18 +131,18 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     }
     /**
      * Get nadawca value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getNadawca(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getNadawca(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->nadawca;
     }
     /**
      * Set nadawca value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
-    public function setNadawca(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
+    public function setNadawca(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
     {
         $this->nadawca = $nadawca;
         
@@ -150,18 +150,18 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     }
     /**
      * Get deklaracjaCelna2 value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    public function getDeklaracjaCelna2(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
+    public function getDeklaracjaCelna2(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
     {
         return $this->deklaracjaCelna2;
     }
     /**
      * Set deklaracjaCelna2 value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
-    public function setDeklaracjaCelna2(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
+    public function setDeklaracjaCelna2(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
     {
         $this->deklaracjaCelna2 = $deklaracjaCelna2;
         
@@ -178,7 +178,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -201,7 +201,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
     public function setPosteRestante(?bool $posteRestante = false): self
     {
@@ -224,16 +224,16 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -250,7 +250,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -281,7 +281,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set ekspres value
      * @param bool $ekspres
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
     public function setEkspres(?bool $ekspres = false): self
     {
@@ -304,7 +304,7 @@ class PrzesylkaZagranicznaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set kraj value
      * @param string $kraj
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZagranicznaType
      */
     public function setKraj(?string $kraj = null): self
     {

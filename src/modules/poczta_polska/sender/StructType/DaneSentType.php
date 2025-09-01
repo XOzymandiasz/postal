@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -94,7 +94,7 @@ class DaneSentType extends AbstractStructBase
     /**
      * Set numer value
      * @param string $numer
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setNumer(?string $numer = null): self
     {
@@ -117,7 +117,7 @@ class DaneSentType extends AbstractStructBase
     /**
      * Set kluczPrzewoznika value
      * @param string $kluczPrzewoznika
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setKluczPrzewoznika(?string $kluczPrzewoznika = null): self
     {
@@ -172,7 +172,7 @@ class DaneSentType extends AbstractStructBase
      * property is null, the property is removed from this object
      * @throws InvalidArgumentException
      * @param string $kodCN
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setKodCN(?string $kodCN = null): self
     {
@@ -235,7 +235,7 @@ class DaneSentType extends AbstractStructBase
      * property is null, the property is removed from this object
      * @throws InvalidArgumentException
      * @param string $kodPKWiU
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setKodPKWiU(?string $kodPKWiU = null): self
     {
@@ -266,7 +266,7 @@ class DaneSentType extends AbstractStructBase
     /**
      * Set masa value
      * @param float $masa
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setMasa(?float $masa = null): self
     {
@@ -289,7 +289,7 @@ class DaneSentType extends AbstractStructBase
     /**
      * Set proceduraAwaryjna value
      * @param bool $proceduraAwaryjna
-     * @return \app\modules\postal\sender\StructType\DaneSentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DaneSentType
      */
     public function setProceduraAwaryjna(?bool $proceduraAwaryjna = null): self
     {

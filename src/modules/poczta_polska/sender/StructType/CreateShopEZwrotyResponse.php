@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -26,13 +26,13 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for createShopEZwrotyResponse
      * @param int $idShop
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses CreateShopEZwrotyResponse::setIdShop()
      * @uses CreateShopEZwrotyResponse::setError()
      */
@@ -53,7 +53,7 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
     /**
      * Set idShop value
      * @param int $idShop
-     * @return \app\modules\postal\sender\StructType\CreateShopEZwrotyResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateShopEZwrotyResponse
      */
     public function setIdShop(?int $idShop = null): self
     {
@@ -67,7 +67,7 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -89,12 +89,12 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $createShopEZwrotyResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$createShopEZwrotyResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$createShopEZwrotyResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($createShopEZwrotyResponseErrorItem) ? get_class($createShopEZwrotyResponseErrorItem) : sprintf('%s(%s)', gettype($createShopEZwrotyResponseErrorItem), var_export($createShopEZwrotyResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -102,8 +102,8 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\CreateShopEZwrotyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateShopEZwrotyResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -118,15 +118,15 @@ class CreateShopEZwrotyResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\CreateShopEZwrotyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateShopEZwrotyResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

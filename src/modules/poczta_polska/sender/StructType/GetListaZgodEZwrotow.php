@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,16 +52,16 @@ class GetListaZgodEZwrotow extends AbstractStructBase
     /**
      * Set status value
      * @param string $status
-     * @return \app\modules\postal\sender\StructType\GetListaZgodEZwrotow
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetListaZgodEZwrotow
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid()
      */
     public function setStatus(?string $status = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid($status)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\StatusZgodyEZwrotNameType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid($status)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\StatusZgodyEZwrotNameType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues())), __LINE__);
         }
         $this->status = $status;
         
@@ -78,7 +78,7 @@ class GetListaZgodEZwrotow extends AbstractStructBase
     /**
      * Set idShop value
      * @param int $idShop
-     * @return \app\modules\postal\sender\StructType\GetListaZgodEZwrotow
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetListaZgodEZwrotow
      */
     public function setIdShop(?int $idShop = null): self
     {

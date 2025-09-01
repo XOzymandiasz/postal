@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -80,7 +80,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set endNode value
      * @param string $endNode
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setEndNode(?string $endNode = null): self
     {
@@ -103,7 +103,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set targetingNode value
      * @param string $targetingNode
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setTargetingNode(?string $targetingNode = null): self
     {
@@ -126,7 +126,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set assistantNode value
      * @param string $assistantNode
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setAssistantNode(?string $assistantNode = null): self
     {
@@ -149,7 +149,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set reloadingPoint value
      * @param string $reloadingPoint
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setReloadingPoint(?string $reloadingPoint = null): self
     {
@@ -172,7 +172,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set postOffice value
      * @param string $postOffice
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setPostOffice(?string $postOffice = null): self
     {
@@ -195,7 +195,7 @@ class DeliveryPathType extends AbstractStructBase
     /**
      * Set deliveryRegion value
      * @param string $deliveryRegion
-     * @return \app\modules\postal\sender\StructType\DeliveryPathType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeliveryPathType
      */
     public function setDeliveryRegion(?string $deliveryRegion = null): self
     {

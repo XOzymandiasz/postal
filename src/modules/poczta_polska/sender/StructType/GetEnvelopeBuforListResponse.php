@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType[]
      */
     protected ?array $bufor = null;
     /**
@@ -27,13 +27,13 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getEnvelopeBuforListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType[] $bufor
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType[] $bufor
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @uses GetEnvelopeBuforListResponse::setBufor()
      * @uses GetEnvelopeBuforListResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Get bufor value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType[]
      */
     public function getBufor(): ?array
     {
@@ -67,12 +67,12 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEnvelopeBuforListResponseBuforItem) {
             // validation for constraint: itemType
-            if (!$getEnvelopeBuforListResponseBuforItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType) {
+            if (!$getEnvelopeBuforListResponseBuforItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType) {
                 $invalidValues[] = is_object($getEnvelopeBuforListResponseBuforItem) ? get_class($getEnvelopeBuforListResponseBuforItem) : sprintf('%s(%s)', gettype($getEnvelopeBuforListResponseBuforItem), var_export($getEnvelopeBuforListResponseBuforItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The bufor property can only contain items of type \app\modules\postal\sender\StructType\BuforType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The bufor property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\BuforType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Set bufor value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType[] $bufor
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeBuforListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType[] $bufor
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeBuforListResponse
      *@throws InvalidArgumentException
      */
     public function setBufor(?array $bufor = null): self
@@ -96,15 +96,15 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Add item to bufor value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType $item
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeBuforListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeBuforListResponse
      *@throws InvalidArgumentException
      */
-    public function addToBufor(\app\modules\postal\modules\poczta_polska\sender\StructType\BuforType $item): self
+    public function addToBufor(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\BuforType) {
-            throw new InvalidArgumentException(sprintf('The bufor property can only contain items of type \app\modules\postal\sender\StructType\BuforType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType) {
+            throw new InvalidArgumentException(sprintf('The bufor property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\BuforType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->bufor[] = $item;
         
@@ -112,7 +112,7 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEnvelopeBuforListResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getEnvelopeBuforListResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getEnvelopeBuforListResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getEnvelopeBuforListResponseErrorItem) ? get_class($getEnvelopeBuforListResponseErrorItem) : sprintf('%s(%s)', gettype($getEnvelopeBuforListResponseErrorItem), var_export($getEnvelopeBuforListResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeBuforListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeBuforListResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetEnvelopeBuforListResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeBuforListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeBuforListResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

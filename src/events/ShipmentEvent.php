@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\events;
+namespace XOzymandias\Yii2Postal\events;
 
-use app\modules\postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\Shipment;
 use yii\base\Event;
 
 class ShipmentEvent extends Event

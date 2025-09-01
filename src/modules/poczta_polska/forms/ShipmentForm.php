@@ -1,18 +1,18 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\forms;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\forms;
 
-use app\modules\postal\forms\ShipmentForm as BaseShipmentForm;
-use app\modules\postal\models\Shipment; #todo:
-use app\modules\postal\Module as BaseModule;
-use app\modules\postal\modules\poczta_polska\builders\CreateShipmentFactory;
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ShipmentRepository;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\forms\ShipmentForm as BaseShipmentForm;
+use XOzymandias\Yii2Postal\models\Shipment; #todo:
+use XOzymandias\Yii2Postal\Module as BaseModule;
+use XOzymandias\Yii2Postal\modules\poczta_polska\builders\CreateShipmentFactory;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use Throwable;
 use yii\base\InvalidConfigException;
 use yii\db\StaleObjectException;

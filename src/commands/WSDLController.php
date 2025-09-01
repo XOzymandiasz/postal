@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\commands;
+namespace XOzymandias\Yii2Postal\commands;
 
 use WsdlToPhp\PackageGenerator\ConfigurationReader\GeneratorOptions;
 use WsdlToPhp\PackageGenerator\Generator\Generator;

@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\models\search\EnvelopeSearch;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\models\search\EnvelopeSearch;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

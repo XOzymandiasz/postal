@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class DeleteShopEZwroty extends AbstractStructBase
     /**
      * Set idShop value
      * @param int $idShop
-     * @return \app\modules\postal\sender\StructType\DeleteShopEZwroty
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeleteShopEZwroty
      */
     public function setIdShop(?int $idShop = null): self
     {

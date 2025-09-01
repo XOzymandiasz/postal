@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,7 +52,7 @@ class PotwierdzenieOdbioruType extends AbstractStructBase
     /**
      * Set ilosc value
      * @param int $ilosc
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieOdbioruType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieOdbioruType
      */
     public function setIlosc(?int $ilosc = null): self
     {
@@ -83,16 +83,16 @@ class PotwierdzenieOdbioruType extends AbstractStructBase
     /**
      * Set sposob value
      * @param string $sposob
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieOdbioruType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieOdbioruType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::valueIsValid()
      */
     public function setSposob(?string $sposob = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::valueIsValid($sposob)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType', is_array($sposob) ? implode(', ', $sposob) : var_export($sposob, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::valueIsValid($sposob)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType', is_array($sposob) ? implode(', ', $sposob) : var_export($sposob, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruType::getValidValues())), __LINE__);
         }
         $this->sposob = $sposob;
         

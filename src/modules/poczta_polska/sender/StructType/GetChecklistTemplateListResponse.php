@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
      */
     protected ?array $checklistTemplate = null;
     /**
@@ -27,13 +27,13 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getChecklistTemplateListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @uses GetChecklistTemplateListResponse::setChecklistTemplate()
      * @uses GetChecklistTemplateListResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Get checklistTemplate value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
      */
     public function getChecklistTemplate(): ?array
     {
@@ -67,12 +67,12 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getChecklistTemplateListResponseChecklistTemplateItem) {
             // validation for constraint: itemType
-            if (!$getChecklistTemplateListResponseChecklistTemplateItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
+            if (!$getChecklistTemplateListResponseChecklistTemplateItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
                 $invalidValues[] = is_object($getChecklistTemplateListResponseChecklistTemplateItem) ? get_class($getChecklistTemplateListResponseChecklistTemplateItem) : sprintf('%s(%s)', gettype($getChecklistTemplateListResponseChecklistTemplateItem), var_export($getChecklistTemplateListResponseChecklistTemplateItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The checklistTemplate property can only contain items of type \app\modules\postal\sender\StructType\ChecklistTemplateType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The checklistTemplate property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Set checklistTemplate value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateListResponse
      *@throws InvalidArgumentException
      */
     public function setChecklistTemplate(?array $checklistTemplate = null): self
@@ -96,15 +96,15 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Add item to checklistTemplate value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateListResponse
      *@throws InvalidArgumentException
      */
-    public function addToChecklistTemplate(\app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item): self
+    public function addToChecklistTemplate(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
-            throw new InvalidArgumentException(sprintf('The checklistTemplate property can only contain items of type \app\modules\postal\sender\StructType\ChecklistTemplateType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
+            throw new InvalidArgumentException(sprintf('The checklistTemplate property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->checklistTemplate[] = $item;
         
@@ -112,7 +112,7 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getChecklistTemplateListResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getChecklistTemplateListResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getChecklistTemplateListResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getChecklistTemplateListResponseErrorItem) ? get_class($getChecklistTemplateListResponseErrorItem) : sprintf('%s(%s)', gettype($getChecklistTemplateListResponseErrorItem), var_export($getChecklistTemplateListResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateListResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetChecklistTemplateListResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateListResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class HelloResponse extends AbstractStructBase
     /**
      * Set out value
      * @param string $out
-     * @return \app\modules\postal\sender\StructType\HelloResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\HelloResponse
      */
     public function setOut(?string $out = null): self
     {

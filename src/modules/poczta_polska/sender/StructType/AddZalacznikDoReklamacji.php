@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -23,13 +23,13 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
      * The zalacznik
      * Meta information extracted from the WSDL
      * - maxOccurs: 5
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[]
      */
     protected ?array $zalacznik = null;
     /**
      * Constructor method for addZalacznikDoReklamacji
      * @param string $idReklamacja
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[] $zalacznik
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[] $zalacznik
      *@uses AddZalacznikDoReklamacji::setIdReklamacja()
      * @uses AddZalacznikDoReklamacji::setZalacznik()
      */
@@ -50,7 +50,7 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
     /**
      * Set idReklamacja value
      * @param string $idReklamacja
-     * @return \app\modules\postal\sender\StructType\AddZalacznikDoReklamacji
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddZalacznikDoReklamacji
      */
     public function setIdReklamacja(?string $idReklamacja = null): self
     {
@@ -64,7 +64,7 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
     }
     /**
      * Get zalacznik value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[]
      */
     public function getZalacznik(): ?array
     {
@@ -86,12 +86,12 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addZalacznikDoReklamacjiZalacznikItem) {
             // validation for constraint: itemType
-            if (!$addZalacznikDoReklamacjiZalacznikItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType) {
+            if (!$addZalacznikDoReklamacjiZalacznikItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType) {
                 $invalidValues[] = is_object($addZalacznikDoReklamacjiZalacznikItem) ? get_class($addZalacznikDoReklamacjiZalacznikItem) : sprintf('%s(%s)', gettype($addZalacznikDoReklamacjiZalacznikItem), var_export($addZalacznikDoReklamacjiZalacznikItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The zalacznik property can only contain items of type \app\modules\postal\sender\StructType\ZalacznikDoReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The zalacznik property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ZalacznikDoReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -99,8 +99,8 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
     }
     /**
      * Set zalacznik value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[] $zalacznik
-     * @return \app\modules\postal\sender\StructType\AddZalacznikDoReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType[] $zalacznik
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddZalacznikDoReklamacji
      *@throws InvalidArgumentException
      */
     public function setZalacznik(?array $zalacznik = null): self
@@ -119,15 +119,15 @@ class AddZalacznikDoReklamacji extends AbstractStructBase
     }
     /**
      * Add item to zalacznik value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType $item
-     * @return \app\modules\postal\sender\StructType\AddZalacznikDoReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddZalacznikDoReklamacji
      *@throws InvalidArgumentException
      */
-    public function addToZalacznik(\app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType $item): self
+    public function addToZalacznik(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType) {
-            throw new InvalidArgumentException(sprintf('The zalacznik property can only contain items of type \app\modules\postal\sender\StructType\ZalacznikDoReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZalacznikDoReklamacjiType) {
+            throw new InvalidArgumentException(sprintf('The zalacznik property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ZalacznikDoReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(5)
         if (is_array($this->zalacznik) && count($this->zalacznik) >= 5) {

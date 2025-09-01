@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class IsObszarMiasto extends AbstractStructBase
      * The adres
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[]
      */
     protected ?array $adres = null;
     /**
      * Constructor method for isObszarMiasto
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[] $adres
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[] $adres
      * @uses IsObszarMiasto::setAdres()
      */
     public function __construct(?array $adres = null)
@@ -33,7 +33,7 @@ class IsObszarMiasto extends AbstractStructBase
     }
     /**
      * Get adres value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[]
      */
     public function getAdres(): ?array
     {
@@ -55,12 +55,12 @@ class IsObszarMiasto extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $isObszarMiastoAdresItem) {
             // validation for constraint: itemType
-            if (!$isObszarMiastoAdresItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType) {
+            if (!$isObszarMiastoAdresItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType) {
                 $invalidValues[] = is_object($isObszarMiastoAdresItem) ? get_class($isObszarMiastoAdresItem) : sprintf('%s(%s)', gettype($isObszarMiastoAdresItem), var_export($isObszarMiastoAdresItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The adres property can only contain items of type \app\modules\postal\sender\StructType\ObszarAdresowyType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The adres property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class IsObszarMiasto extends AbstractStructBase
     }
     /**
      * Set adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[] $adres
-     * @return \app\modules\postal\sender\StructType\IsObszarMiasto
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType[] $adres
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsObszarMiasto
      *@throws InvalidArgumentException
      */
     public function setAdres(?array $adres = null): self
@@ -88,15 +88,15 @@ class IsObszarMiasto extends AbstractStructBase
     }
     /**
      * Add item to adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType $item
-     * @return \app\modules\postal\sender\StructType\IsObszarMiasto
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsObszarMiasto
      *@throws InvalidArgumentException
      */
-    public function addToAdres(\app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType $item): self
+    public function addToAdres(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType) {
-            throw new InvalidArgumentException(sprintf('The adres property can only contain items of type \app\modules\postal\sender\StructType\ObszarAdresowyType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyType) {
+            throw new InvalidArgumentException(sprintf('The adres property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->adres) && count($this->adres) >= 500) {

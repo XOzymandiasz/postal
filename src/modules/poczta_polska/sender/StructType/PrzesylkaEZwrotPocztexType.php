@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -53,7 +53,7 @@ class PrzesylkaEZwrotPocztexType extends PrzesylkaRejestrowanaType
     /**
      * Set idSklepEZwrot value
      * @param int $idSklepEZwrot
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEZwrotPocztexType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEZwrotPocztexType
      */
     public function setIdSklepEZwrot(?int $idSklepEZwrot = null): self
     {
@@ -76,7 +76,7 @@ class PrzesylkaEZwrotPocztexType extends PrzesylkaRejestrowanaType
     /**
      * Set numerNadaniaZwrot value
      * @param string $numerNadaniaZwrot
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEZwrotPocztexType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEZwrotPocztexType
      */
     public function setNumerNadaniaZwrot(?string $numerNadaniaZwrot = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Cancel extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named cancelReklamacja
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CancelReklamacja $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CancelReklamacjaResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CancelReklamacja $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CancelReklamacjaResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function cancelReklamacja(\app\modules\postal\modules\poczta_polska\sender\StructType\CancelReklamacja $parameters)
+    public function cancelReklamacja(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CancelReklamacja $parameters)
     {
         try {
             $this->setResult($resultCancelReklamacja = $this->getSoapClient()->__soapCall('cancelReklamacja', [
@@ -37,7 +37,7 @@ class Cancel extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CancelReklamacjaResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CancelReklamacjaResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

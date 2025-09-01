@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class CancelReklamacja extends AbstractStructBase
     /**
      * Set idRelkamacja value
      * @param int $idRelkamacja
-     * @return \app\modules\postal\sender\StructType\CancelReklamacja
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CancelReklamacja
      */
     public function setIdRelkamacja(?int $idRelkamacja = null): self
     {

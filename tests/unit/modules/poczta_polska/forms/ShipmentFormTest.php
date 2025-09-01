@@ -1,16 +1,16 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\forms;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\forms;
 
 use _support\UnitModelTrait;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\modules\poczta_polska\forms\ShipmentForm;
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ShipmentRepository;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use Codeception\Test\Unit;
 use Throwable;
 use UnitTester;

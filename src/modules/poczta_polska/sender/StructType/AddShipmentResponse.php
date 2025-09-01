@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class AddShipmentResponse extends AbstractStructBase
      * The retval
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[]
      */
     protected ?array $retval = null;
     /**
      * Constructor method for addShipmentResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[] $retval
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[] $retval
      * @uses AddShipmentResponse::setRetval()
      */
     public function __construct(?array $retval = null)
@@ -33,7 +33,7 @@ class AddShipmentResponse extends AbstractStructBase
     }
     /**
      * Get retval value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[]
      */
     public function getRetval(): ?array
     {
@@ -55,12 +55,12 @@ class AddShipmentResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addShipmentResponseRetvalItem) {
             // validation for constraint: itemType
-            if (!$addShipmentResponseRetvalItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType) {
+            if (!$addShipmentResponseRetvalItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType) {
                 $invalidValues[] = is_object($addShipmentResponseRetvalItem) ? get_class($addShipmentResponseRetvalItem) : sprintf('%s(%s)', gettype($addShipmentResponseRetvalItem), var_export($addShipmentResponseRetvalItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The retval property can only contain items of type \app\modules\postal\sender\StructType\AddShipmentResponseItemType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The retval property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class AddShipmentResponse extends AbstractStructBase
     }
     /**
      * Set retval value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[] $retval
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType[] $retval
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponse
      *@throws InvalidArgumentException
      */
     public function setRetval(?array $retval = null): self
@@ -88,15 +88,15 @@ class AddShipmentResponse extends AbstractStructBase
     }
     /**
      * Add item to retval value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType $item
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponse
      *@throws InvalidArgumentException
      */
-    public function addToRetval(\app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType $item): self
+    public function addToRetval(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType) {
-            throw new InvalidArgumentException(sprintf('The retval property can only contain items of type \app\modules\postal\sender\StructType\AddShipmentResponseItemType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponseItemType) {
+            throw new InvalidArgumentException(sprintf('The retval property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->retval) && count($this->retval) >= 500) {

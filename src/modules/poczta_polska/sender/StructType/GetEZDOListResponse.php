@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetEZDOListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType[]
      */
     protected ?array $EZDOPakiet = null;
     /**
      * Constructor method for getEZDOListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType[] $eZDOPakiet
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType[] $eZDOPakiet
      * @uses GetEZDOListResponse::setEZDOPakiet()
      */
     public function __construct(?array $eZDOPakiet = null)
@@ -34,7 +34,7 @@ class GetEZDOListResponse extends AbstractStructBase
     }
     /**
      * Get EZDOPakiet value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType[]
      */
     public function getEZDOPakiet(): ?array
     {
@@ -56,12 +56,12 @@ class GetEZDOListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEZDOListResponseEZDOPakietItem) {
             // validation for constraint: itemType
-            if (!$getEZDOListResponseEZDOPakietItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType) {
+            if (!$getEZDOListResponseEZDOPakietItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType) {
                 $invalidValues[] = is_object($getEZDOListResponseEZDOPakietItem) ? get_class($getEZDOListResponseEZDOPakietItem) : sprintf('%s(%s)', gettype($getEZDOListResponseEZDOPakietItem), var_export($getEZDOListResponseEZDOPakietItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The EZDOPakiet property can only contain items of type \app\modules\postal\sender\StructType\EZDOPakietType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The EZDOPakiet property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EZDOPakietType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetEZDOListResponse extends AbstractStructBase
     }
     /**
      * Set EZDOPakiet value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType[] $eZDOPakiet
-     * @return \app\modules\postal\sender\StructType\GetEZDOListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType[] $eZDOPakiet
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOListResponse
      *@throws InvalidArgumentException
      */
     public function setEZDOPakiet(?array $eZDOPakiet = null): self
@@ -85,15 +85,15 @@ class GetEZDOListResponse extends AbstractStructBase
     }
     /**
      * Add item to EZDOPakiet value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType $item
-     * @return \app\modules\postal\sender\StructType\GetEZDOListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOListResponse
      *@throws InvalidArgumentException
      */
-    public function addToEZDOPakiet(\app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType $item): self
+    public function addToEZDOPakiet(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPakietType) {
-            throw new InvalidArgumentException(sprintf('The EZDOPakiet property can only contain items of type \app\modules\postal\sender\StructType\EZDOPakietType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPakietType) {
+            throw new InvalidArgumentException(sprintf('The EZDOPakiet property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EZDOPakietType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->EZDOPakiet[] = $item;
         

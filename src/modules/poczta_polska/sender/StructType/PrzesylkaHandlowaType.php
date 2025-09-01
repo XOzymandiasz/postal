@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -54,7 +54,7 @@ class PrzesylkaHandlowaType extends PrzesylkaRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PrzesylkaHandlowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaHandlowaType
      */
     public function setPosteRestante(?bool $posteRestante = false): self
     {
@@ -77,7 +77,7 @@ class PrzesylkaHandlowaType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaHandlowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaHandlowaType
      */
     public function setMasa(?int $masa = null): self
     {

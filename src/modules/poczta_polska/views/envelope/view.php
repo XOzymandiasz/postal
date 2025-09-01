@@ -1,11 +1,11 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\modules\poczta_polska\sender\StructType\BuforType $model */
+/** @var XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType $model */
 
 $this->title = $model->getOpis();
 $this->params['breadcrumbs'][] = ['label' => Module::t('poczta-polska', 'Buffers'), 'url' => ['index']];

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -18,23 +18,23 @@ class Pocztex2021KurierType extends Pocztex2021Type
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[]
      */
     protected ?array $subPrzesylka = null;
     /**
      * The punktOdbioru
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null;
     /**
      * The punktNadania
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null;
     /**
      * The kopertaPocztex
      * Meta information extracted from the WSDL
@@ -72,9 +72,9 @@ class Pocztex2021KurierType extends Pocztex2021Type
     protected ?string $labelExpirationDate = null;
     /**
      * Constructor method for pocztex2021KurierType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[] $subPrzesylka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[] $subPrzesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania
      * @param bool $kopertaPocztex
      * @param string $godzinaDoreczenia
      * @param string $doreczenieWeWskazanymDniu
@@ -89,7 +89,7 @@ class Pocztex2021KurierType extends Pocztex2021Type
      * @uses Pocztex2021KurierType::setShipmentChannel()
      * @uses Pocztex2021KurierType::setLabelExpirationDate()
      */
-    public function __construct(?array $subPrzesylka = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null, ?bool $kopertaPocztex = null, ?string $godzinaDoreczenia = null, ?string $doreczenieWeWskazanymDniu = null, ?string $shipmentChannel = null, ?string $labelExpirationDate = null)
+    public function __construct(?array $subPrzesylka = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null, ?bool $kopertaPocztex = null, ?string $godzinaDoreczenia = null, ?string $doreczenieWeWskazanymDniu = null, ?string $shipmentChannel = null, ?string $labelExpirationDate = null)
     {
         $this
             ->setSubPrzesylka($subPrzesylka)
@@ -103,7 +103,7 @@ class Pocztex2021KurierType extends Pocztex2021Type
     }
     /**
      * Get subPrzesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[]
      */
     public function getSubPrzesylka(): ?array
     {
@@ -125,12 +125,12 @@ class Pocztex2021KurierType extends Pocztex2021Type
         $invalidValues = [];
         foreach ($values as $pocztex2021KurierTypeSubPrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$pocztex2021KurierTypeSubPrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType) {
+            if (!$pocztex2021KurierTypeSubPrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType) {
                 $invalidValues[] = is_object($pocztex2021KurierTypeSubPrzesylkaItem) ? get_class($pocztex2021KurierTypeSubPrzesylkaItem) : sprintf('%s(%s)', gettype($pocztex2021KurierTypeSubPrzesylkaItem), var_export($pocztex2021KurierTypeSubPrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubPocztex2021KurierType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021KurierType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -138,8 +138,8 @@ class Pocztex2021KurierType extends Pocztex2021Type
     }
     /**
      * Set subPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[] $subPrzesylka
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType[] $subPrzesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      *@throws InvalidArgumentException
      */
     public function setSubPrzesylka(?array $subPrzesylka = null): self
@@ -154,15 +154,15 @@ class Pocztex2021KurierType extends Pocztex2021Type
     }
     /**
      * Add item to subPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType $item
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      *@throws InvalidArgumentException
      */
-    public function addToSubPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType $item): self
+    public function addToSubPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType) {
-            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubPocztex2021KurierType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021KurierType) {
+            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021KurierType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->subPrzesylka[] = $item;
         
@@ -170,18 +170,18 @@ class Pocztex2021KurierType extends Pocztex2021Type
     }
     /**
      * Get punktOdbioru value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType|null
      */
-    public function getPunktOdbioru(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType
+    public function getPunktOdbioru(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType
     {
         return $this->punktOdbioru;
     }
     /**
      * Set punktOdbioru value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      */
-    public function setPunktOdbioru(?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null): self
+    public function setPunktOdbioru(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktOdbioruType $punktOdbioru = null): self
     {
         $this->punktOdbioru = $punktOdbioru;
         
@@ -189,18 +189,18 @@ class Pocztex2021KurierType extends Pocztex2021Type
     }
     /**
      * Get punktNadania value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType|null
      */
-    public function getPunktNadania(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType
+    public function getPunktNadania(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType
     {
         return $this->punktNadania;
     }
     /**
      * Set punktNadania value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      */
-    public function setPunktNadania(?\app\modules\postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null): self
+    public function setPunktNadania(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PunktNadaniaType $punktNadania = null): self
     {
         $this->punktNadania = $punktNadania;
         
@@ -217,7 +217,7 @@ class Pocztex2021KurierType extends Pocztex2021Type
     /**
      * Set kopertaPocztex value
      * @param bool $kopertaPocztex
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      */
     public function setKopertaPocztex(?bool $kopertaPocztex = null): self
     {
@@ -240,16 +240,16 @@ class Pocztex2021KurierType extends Pocztex2021Type
     /**
      * Set godzinaDoreczenia value
      * @param string $godzinaDoreczenia
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::valueIsValid()
      */
     public function setGodzinaDoreczenia(?string $godzinaDoreczenia = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::valueIsValid($godzinaDoreczenia)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum', is_array($godzinaDoreczenia) ? implode(', ', $godzinaDoreczenia) : var_export($godzinaDoreczenia, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::valueIsValid($godzinaDoreczenia)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum', is_array($godzinaDoreczenia) ? implode(', ', $godzinaDoreczenia) : var_export($godzinaDoreczenia, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GodzinaDoreczeniaPocztex2021Enum::getValidValues())), __LINE__);
         }
         $this->godzinaDoreczenia = $godzinaDoreczenia;
         
@@ -266,7 +266,7 @@ class Pocztex2021KurierType extends Pocztex2021Type
     /**
      * Set doreczenieWeWskazanymDniu value
      * @param string $doreczenieWeWskazanymDniu
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      */
     public function setDoreczenieWeWskazanymDniu(?string $doreczenieWeWskazanymDniu = null): self
     {
@@ -289,16 +289,16 @@ class Pocztex2021KurierType extends Pocztex2021Type
     /**
      * Set shipmentChannel value
      * @param string $shipmentChannel
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::valueIsValid()
      */
     public function setShipmentChannel(?string $shipmentChannel = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::valueIsValid($shipmentChannel)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ShipmentChannelPocztex2021Enum', is_array($shipmentChannel) ? implode(', ', $shipmentChannel) : var_export($shipmentChannel, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::valueIsValid($shipmentChannel)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ShipmentChannelPocztex2021Enum', is_array($shipmentChannel) ? implode(', ', $shipmentChannel) : var_export($shipmentChannel, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ShipmentChannelPocztex2021Enum::getValidValues())), __LINE__);
         }
         $this->shipmentChannel = $shipmentChannel;
         
@@ -315,7 +315,7 @@ class Pocztex2021KurierType extends Pocztex2021Type
     /**
      * Set labelExpirationDate value
      * @param string $labelExpirationDate
-     * @return \app\modules\postal\sender\StructType\Pocztex2021KurierType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021KurierType
      */
     public function setLabelExpirationDate(?string $labelExpirationDate = null): self
     {

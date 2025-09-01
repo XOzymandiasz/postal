@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class SetEnvelopeBuforDataNadania extends AbstractStructBase
     /**
      * Set dataNadania value
      * @param string $dataNadania
-     * @return \app\modules\postal\sender\StructType\SetEnvelopeBuforDataNadania
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SetEnvelopeBuforDataNadania
      */
     public function setDataNadania(?string $dataNadania = null): self
     {

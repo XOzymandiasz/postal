@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -115,7 +115,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -146,7 +146,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set rodzaj value
      * @param string $rodzaj
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setRodzaj(?string $rodzaj = null): self
     {
@@ -169,16 +169,16 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -195,7 +195,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -226,7 +226,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -257,7 +257,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set kwotaPobrania value
      * @param int $kwotaPobrania
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setKwotaPobrania(?int $kwotaPobrania = null): self
     {
@@ -288,7 +288,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set numerWewnetrznyPrzesylki value
      * @param string $numerWewnetrznyPrzesylki
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setNumerWewnetrznyPrzesylki(?string $numerWewnetrznyPrzesylki = null): self
     {
@@ -311,7 +311,7 @@ class EZDOPrzesylkaType extends AbstractStructBase
     /**
      * Set zwrot value
      * @param string $zwrot
-     * @return \app\modules\postal\sender\StructType\EZDOPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType
      */
     public function setZwrot(?string $zwrot = null): self
     {

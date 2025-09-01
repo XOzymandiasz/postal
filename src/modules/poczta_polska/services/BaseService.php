@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\services;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\services;
 
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 

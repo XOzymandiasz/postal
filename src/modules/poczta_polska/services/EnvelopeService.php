@@ -1,24 +1,24 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\services;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\services;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelope;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBuforResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforList;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeList;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetOutboxBook;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelope;
-use app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelope;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforList;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeList;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetOutboxBook;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelope;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse;
 use SoapFault;
 
 class EnvelopeService extends BaseService

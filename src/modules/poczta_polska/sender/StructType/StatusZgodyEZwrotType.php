@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -101,12 +101,12 @@ class StatusZgodyEZwrotType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $statusZgodyEZwrotTypeEZwrotPrzesylkiItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($statusZgodyEZwrotTypeEZwrotPrzesylkiItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($statusZgodyEZwrotTypeEZwrotPrzesylkiItem)) {
                 $invalidValues[] = is_object($statusZgodyEZwrotTypeEZwrotPrzesylkiItem) ? get_class($statusZgodyEZwrotTypeEZwrotPrzesylkiItem) : sprintf('%s(%s)', gettype($statusZgodyEZwrotTypeEZwrotPrzesylkiItem), var_export($statusZgodyEZwrotTypeEZwrotPrzesylkiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EZwrotPrzesylkiType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EZwrotPrzesylkiType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()));
         }
         unset($invalidValues);
         
@@ -115,10 +115,10 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set eZwrotPrzesylki value
      * @param string[] $eZwrotPrzesylki
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
      */
     public function setEZwrotPrzesylki(?array $eZwrotPrzesylki = null): self
     {
@@ -137,16 +137,16 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Add item to eZwrotPrzesylki value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
      */
     public function addToEZwrotPrzesylki(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EZwrotPrzesylkiType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EZwrotPrzesylkiType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues())), __LINE__);
         }
         // validation for constraint: maxOccurs(2)
         if (is_array($this->eZwrotPrzesylki) && count($this->eZwrotPrzesylki) >= 2) {
@@ -167,7 +167,7 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set guidZgodaEZwrot value
      * @param string $guidZgodaEZwrot
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      */
     public function setGuidZgodaEZwrot(?string $guidZgodaEZwrot = null): self
     {
@@ -194,16 +194,16 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set status value
      * @param string $status
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid()
      */
     public function setStatus(?string $status = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid($status)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\StatusZgodyEZwrotNameType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::valueIsValid($status)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\StatusZgodyEZwrotNameType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusZgodyEZwrotNameType::getValidValues())), __LINE__);
         }
         $this->status = $status;
         
@@ -220,7 +220,7 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set platnoscZaPrzesylke value
      * @param bool $platnoscZaPrzesylke
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      */
     public function setPlatnoscZaPrzesylke(?bool $platnoscZaPrzesylke = null): self
     {
@@ -243,7 +243,7 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set kosztKontrahenta value
      * @param int $kosztKontrahenta
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      */
     public function setKosztKontrahenta(?int $kosztKontrahenta = null): self
     {
@@ -266,7 +266,7 @@ class StatusZgodyEZwrotType extends AbstractStructBase
     /**
      * Set dataWygasnieciaZgody value
      * @param string $dataWygasnieciaZgody
-     * @return \app\modules\postal\sender\StructType\StatusZgodyEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType
      */
     public function setDataWygasnieciaZgody(?string $dataWygasnieciaZgody = null): self
     {

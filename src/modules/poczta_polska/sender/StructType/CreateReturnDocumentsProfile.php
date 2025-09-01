@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,33 +15,33 @@ class CreateReturnDocumentsProfile extends AbstractStructBase
 {
     /**
      * The profile
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null;
     /**
      * Constructor method for createReturnDocumentsProfile
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile
      * @uses CreateReturnDocumentsProfile::setProfile()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null)
     {
         $this
             ->setProfile($profile);
     }
     /**
      * Get profile value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType|null
      */
-    public function getProfile(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType
+    public function getProfile(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType
     {
         return $this->profile;
     }
     /**
      * Set profile value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile
-     * @return \app\modules\postal\sender\StructType\CreateReturnDocumentsProfile
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateReturnDocumentsProfile
      */
-    public function setProfile(?\app\modules\postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null): self
+    public function setProfile(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReturnDocumentProfileType $profile = null): self
     {
         $this->profile = $profile;
         

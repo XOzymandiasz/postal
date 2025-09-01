@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -16,16 +16,16 @@ class ZamowKuriera extends AbstractStructBase
 {
     /**
      * The miejsceOdbioru
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null;
     /**
      * The nadawca
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
     /**
      * The oczekiwanaDataOdbioru
      * @var string|null
@@ -58,8 +58,8 @@ class ZamowKuriera extends AbstractStructBase
     protected ?string $potwierdzenieZamowieniaEmail = null;
     /**
      * Constructor method for zamowKuriera
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
      * @param string $oczekiwanaDataOdbioru
      * @param string $oczekiwanaGodzinaOdbioru
      * @param string $szacowanaIloscPrzeslek
@@ -73,7 +73,7 @@ class ZamowKuriera extends AbstractStructBase
      * @uses ZamowKuriera::setSzacowanaLacznaMasaPrzesylek()
      * @uses ZamowKuriera::setPotwierdzenieZamowieniaEmail()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?string $oczekiwanaDataOdbioru = null, ?string $oczekiwanaGodzinaOdbioru = null, ?string $szacowanaIloscPrzeslek = null, ?string $szacowanaLacznaMasaPrzesylek = null, ?string $potwierdzenieZamowieniaEmail = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?string $oczekiwanaDataOdbioru = null, ?string $oczekiwanaGodzinaOdbioru = null, ?string $szacowanaIloscPrzeslek = null, ?string $szacowanaLacznaMasaPrzesylek = null, ?string $potwierdzenieZamowieniaEmail = null)
     {
         $this
             ->setMiejsceOdbioru($miejsceOdbioru)
@@ -86,18 +86,18 @@ class ZamowKuriera extends AbstractStructBase
     }
     /**
      * Get miejsceOdbioru value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getMiejsceOdbioru(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getMiejsceOdbioru(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->miejsceOdbioru;
     }
     /**
      * Set miejsceOdbioru value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
-    public function setMiejsceOdbioru(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null): self
+    public function setMiejsceOdbioru(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $miejsceOdbioru = null): self
     {
         $this->miejsceOdbioru = $miejsceOdbioru;
         
@@ -105,18 +105,18 @@ class ZamowKuriera extends AbstractStructBase
     }
     /**
      * Get nadawca value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getNadawca(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getNadawca(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->nadawca;
     }
     /**
      * Set nadawca value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
-    public function setNadawca(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
+    public function setNadawca(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
     {
         $this->nadawca = $nadawca;
         
@@ -133,7 +133,7 @@ class ZamowKuriera extends AbstractStructBase
     /**
      * Set oczekiwanaDataOdbioru value
      * @param string $oczekiwanaDataOdbioru
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
     public function setOczekiwanaDataOdbioru(?string $oczekiwanaDataOdbioru = null): self
     {
@@ -156,7 +156,7 @@ class ZamowKuriera extends AbstractStructBase
     /**
      * Set oczekiwanaGodzinaOdbioru value
      * @param string $oczekiwanaGodzinaOdbioru
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
     public function setOczekiwanaGodzinaOdbioru(?string $oczekiwanaGodzinaOdbioru = null): self
     {
@@ -179,7 +179,7 @@ class ZamowKuriera extends AbstractStructBase
     /**
      * Set szacowanaIloscPrzeslek value
      * @param string $szacowanaIloscPrzeslek
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
     public function setSzacowanaIloscPrzeslek(?string $szacowanaIloscPrzeslek = null): self
     {
@@ -202,7 +202,7 @@ class ZamowKuriera extends AbstractStructBase
     /**
      * Set szacowanaLacznaMasaPrzesylek value
      * @param string $szacowanaLacznaMasaPrzesylek
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
     public function setSzacowanaLacznaMasaPrzesylek(?string $szacowanaLacznaMasaPrzesylek = null): self
     {
@@ -225,7 +225,7 @@ class ZamowKuriera extends AbstractStructBase
     /**
      * Set potwierdzenieZamowieniaEmail value
      * @param string $potwierdzenieZamowieniaEmail
-     * @return \app\modules\postal\sender\StructType\ZamowKuriera
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZamowKuriera
      */
     public function setPotwierdzenieZamowieniaEmail(?string $potwierdzenieZamowieniaEmail = null): self
     {

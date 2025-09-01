@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -70,7 +70,7 @@ class AddRozbieznoscDoZapowiedziFaktur extends AbstractStructBase
      * Set rozbieznosciZipFile value
      * @throws InvalidArgumentException
      * @param string[] $rozbieznosciZipFile
-     * @return \app\modules\postal\sender\StructType\AddRozbieznoscDoZapowiedziFaktur
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddRozbieznoscDoZapowiedziFaktur
      */
     public function setRozbieznosciZipFile(?array $rozbieznosciZipFile = null): self
     {
@@ -90,7 +90,7 @@ class AddRozbieznoscDoZapowiedziFaktur extends AbstractStructBase
      * Add item to rozbieznosciZipFile value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\AddRozbieznoscDoZapowiedziFaktur
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddRozbieznoscDoZapowiedziFaktur
      */
     public function addToRozbieznosciZipFile(string $item): self
     {

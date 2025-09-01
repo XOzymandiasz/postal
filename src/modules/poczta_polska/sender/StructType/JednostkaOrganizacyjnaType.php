@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -20,7 +20,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
      * - documentation: Wystarczy przesłać obiekt z ustawionym id reszta pól może zostać pominięta (aby zmniejszyć ilość danych do transmisji)
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[]
      */
     protected ?array $account = null;
     /**
@@ -28,9 +28,9 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Wystarczy przesłać obiekt z ustawionym id reszta pól może zostać pominięta (aby zmniejszyć ilość danych do transmisji)
      * - minOccurs: 0
-     * @var \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType|null
+     * @var \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType|null
      */
-    protected ?\app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null;
+    protected ?\XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null;
     /**
      * The rodzajPrzypisania
      * Meta information extracted from the WSDL
@@ -69,8 +69,8 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     protected ?string $mpk = null;
     /**
      * Constructor method for jednostkaOrganizacyjnaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[] $account
-     * @param \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[] $account
+     * @param \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna
      * @param string[] $rodzajPrzypisania
      * @param int $id
      * @param string $nazwa
@@ -84,7 +84,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
      * @uses JednostkaOrganizacyjnaType::setOpis()
      * @uses JednostkaOrganizacyjnaType::setMpk()
      */
-    public function __construct(?array $account = null, ?\app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null, ?array $rodzajPrzypisania = null, ?int $id = null, ?string $nazwa = null, ?string $opis = null, ?string $mpk = null)
+    public function __construct(?array $account = null, ?\XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null, ?array $rodzajPrzypisania = null, ?int $id = null, ?string $nazwa = null, ?string $opis = null, ?string $mpk = null)
     {
         $this
             ->setAccount($account)
@@ -97,7 +97,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     }
     /**
      * Get account value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[]
      */
     public function getAccount(): ?array
     {
@@ -119,12 +119,12 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $jednostkaOrganizacyjnaTypeAccountItem) {
             // validation for constraint: itemType
-            if (!$jednostkaOrganizacyjnaTypeAccountItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType) {
+            if (!$jednostkaOrganizacyjnaTypeAccountItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType) {
                 $invalidValues[] = is_object($jednostkaOrganizacyjnaTypeAccountItem) ? get_class($jednostkaOrganizacyjnaTypeAccountItem) : sprintf('%s(%s)', gettype($jednostkaOrganizacyjnaTypeAccountItem), var_export($jednostkaOrganizacyjnaTypeAccountItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The account property can only contain items of type \app\modules\postal\sender\StructType\AccountType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The account property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccountType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -132,8 +132,8 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     }
     /**
      * Set account value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[] $account
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[] $account
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      *@throws InvalidArgumentException
      */
     public function setAccount(?array $account = null): self
@@ -148,15 +148,15 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     }
     /**
      * Add item to account value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType $item
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      *@throws InvalidArgumentException
      */
-    public function addToAccount(\app\modules\postal\modules\poczta_polska\sender\StructType\AccountType $item): self
+    public function addToAccount(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType) {
-            throw new InvalidArgumentException(sprintf('The account property can only contain items of type \app\modules\postal\sender\StructType\AccountType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType) {
+            throw new InvalidArgumentException(sprintf('The account property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccountType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->account[] = $item;
         
@@ -164,18 +164,18 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     }
     /**
      * Get jednostkaNadrzedna value
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType|null
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType|null
      */
-    public function getJednostkaNadrzedna(): ?\app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+    public function getJednostkaNadrzedna(): ?\XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
     {
         return $this->jednostkaNadrzedna;
     }
     /**
      * Set jednostkaNadrzedna value
-     * @param \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @param \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      */
-    public function setJednostkaNadrzedna(?\app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null): self
+    public function setJednostkaNadrzedna(?\XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType $jednostkaNadrzedna = null): self
     {
         $this->jednostkaNadrzedna = $jednostkaNadrzedna;
         
@@ -205,12 +205,12 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem)) {
                 $invalidValues[] = is_object($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem) ? get_class($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem) : sprintf('%s(%s)', gettype($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem), var_export($jednostkaOrganizacyjnaTypeRodzajPrzypisaniaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()));
         }
         unset($invalidValues);
         
@@ -219,10 +219,10 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Set rodzajPrzypisania value
      * @param string[] $rodzajPrzypisania
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
      */
     public function setRodzajPrzypisania(?array $rodzajPrzypisania = null): self
     {
@@ -241,16 +241,16 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Add item to rodzajPrzypisania value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
      */
     public function addToRodzajPrzypisania(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues())), __LINE__);
         }
         // validation for constraint: maxOccurs(2)
         if (is_array($this->rodzajPrzypisania) && count($this->rodzajPrzypisania) >= 2) {
@@ -271,7 +271,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Set id value
      * @param int $id
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      */
     public function setId(?int $id = null): self
     {
@@ -294,7 +294,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Set nazwa value
      * @param string $nazwa
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      */
     public function setNazwa(?string $nazwa = null): self
     {
@@ -325,7 +325,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -356,7 +356,7 @@ class JednostkaOrganizacyjnaType extends AbstractStructBase
     /**
      * Set mpk value
      * @param string $mpk
-     * @return \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType
      */
     public function setMpk(?string $mpk = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -25,16 +25,16 @@ class PlacowkaPocztowaType extends AbstractStructBase
      * The lokalizacjaGeograficzna
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null;
     /**
      * The godzinyPracy
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null;
     /**
      * The opis
      * Meta information extracted from the WSDL
@@ -46,9 +46,9 @@ class PlacowkaPocztowaType extends AbstractStructBase
      * The deliveryPath
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null;
     /**
      * The typ
      * Meta information extracted from the WSDL
@@ -179,10 +179,10 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Constructor method for placowkaPocztowaType
      * @param int $id
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy
      * @param string $opis
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath
      * @param string $typ
      * @param string[] $rodzajPlatnosci
      * @param string $funkcja
@@ -231,7 +231,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
      * @uses PlacowkaPocztowaType::setSiecPlacowek()
      * @uses PlacowkaPocztowaType::setIdZPO()
      */
-    public function __construct(int $id, ?\app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null, ?string $opis = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null, ?string $typ = null, ?array $rodzajPlatnosci = null, ?string $funkcja = null, ?int $maksymalnaKwotaPobrania = null, ?string $prefixNazwy = null, ?string $nazwa = null, ?string $wojewodztwo = null, ?string $powiat = null, ?string $miejsce = null, ?string $kodPocztowy = null, ?string $miejscowosc = null, ?string $ulica = null, ?string $numerDomu = null, ?string $numerLokalu = null, ?string $nazwaWydruk = null, ?bool $punktWydaniaEPrzesylki = null, ?bool $powiadomienieSMS = null, ?bool $punktWydaniaPrzesylkiBiznesowejPlus = null, ?bool $punktWydaniaPrzesylkiBiznesowej = null, ?string $siecPlacowek = null, ?string $idZPO = null)
+    public function __construct(int $id, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null, ?string $opis = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null, ?string $typ = null, ?array $rodzajPlatnosci = null, ?string $funkcja = null, ?int $maksymalnaKwotaPobrania = null, ?string $prefixNazwy = null, ?string $nazwa = null, ?string $wojewodztwo = null, ?string $powiat = null, ?string $miejsce = null, ?string $kodPocztowy = null, ?string $miejscowosc = null, ?string $ulica = null, ?string $numerDomu = null, ?string $numerLokalu = null, ?string $nazwaWydruk = null, ?bool $punktWydaniaEPrzesylki = null, ?bool $powiadomienieSMS = null, ?bool $punktWydaniaPrzesylkiBiznesowejPlus = null, ?bool $punktWydaniaPrzesylkiBiznesowej = null, ?string $siecPlacowek = null, ?string $idZPO = null)
     {
         $this
             ->setId($id)
@@ -272,7 +272,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set id value
      * @param int $id
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setId(int $id): self
     {
@@ -286,18 +286,18 @@ class PlacowkaPocztowaType extends AbstractStructBase
     }
     /**
      * Get lokalizacjaGeograficzna value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType|null
      */
-    public function getLokalizacjaGeograficzna(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType
+    public function getLokalizacjaGeograficzna(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType
     {
         return $this->lokalizacjaGeograficzna;
     }
     /**
      * Set lokalizacjaGeograficzna value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
-    public function setLokalizacjaGeograficzna(?\app\modules\postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null): self
+    public function setLokalizacjaGeograficzna(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LokalizacjaGeograficznaType $lokalizacjaGeograficzna = null): self
     {
         $this->lokalizacjaGeograficzna = $lokalizacjaGeograficzna;
         
@@ -305,18 +305,18 @@ class PlacowkaPocztowaType extends AbstractStructBase
     }
     /**
      * Get godzinyPracy value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType|null
      */
-    public function getGodzinyPracy(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType
+    public function getGodzinyPracy(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType
     {
         return $this->godzinyPracy;
     }
     /**
      * Set godzinyPracy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
-    public function setGodzinyPracy(?\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null): self
+    public function setGodzinyPracy(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyType $godzinyPracy = null): self
     {
         $this->godzinyPracy = $godzinyPracy;
         
@@ -333,7 +333,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -347,18 +347,18 @@ class PlacowkaPocztowaType extends AbstractStructBase
     }
     /**
      * Get deliveryPath value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType|null
      */
-    public function getDeliveryPath(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType
+    public function getDeliveryPath(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType
     {
         return $this->deliveryPath;
     }
     /**
      * Set deliveryPath value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
-    public function setDeliveryPath(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null): self
+    public function setDeliveryPath(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryPathType $deliveryPath = null): self
     {
         $this->deliveryPath = $deliveryPath;
         
@@ -375,16 +375,16 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set typ value
      * @param string $typ
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::valueIsValid()
      */
     public function setTyp(?string $typ = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::valueIsValid($typ)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TypPlacowkiPocztowejEnum', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::valueIsValid($typ)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TypPlacowkiPocztowejEnum', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypPlacowkiPocztowejEnum::getValidValues())), __LINE__);
         }
         $this->typ = $typ;
         
@@ -414,12 +414,12 @@ class PlacowkaPocztowaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $placowkaPocztowaTypeRodzajPlatnosciItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid($placowkaPocztowaTypeRodzajPlatnosciItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid($placowkaPocztowaTypeRodzajPlatnosciItem)) {
                 $invalidValues[] = is_object($placowkaPocztowaTypeRodzajPlatnosciItem) ? get_class($placowkaPocztowaTypeRodzajPlatnosciItem) : sprintf('%s(%s)', gettype($placowkaPocztowaTypeRodzajPlatnosciItem), var_export($placowkaPocztowaTypeRodzajPlatnosciItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPlatnosciEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPlatnosciEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()));
         }
         unset($invalidValues);
         
@@ -428,10 +428,10 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set rodzajPlatnosci value
      * @param string[] $rodzajPlatnosci
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid()
      */
     public function setRodzajPlatnosci(?array $rodzajPlatnosci = null): self
     {
@@ -446,16 +446,16 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Add item to rodzajPlatnosci value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid()
      */
     public function addToRodzajPlatnosci(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPlatnosciEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPlatnosciEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPlatnosciEnum::getValidValues())), __LINE__);
         }
         $this->rodzajPlatnosci[] = $item;
         
@@ -472,16 +472,16 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set funkcja value
      * @param string $funkcja
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::valueIsValid()
      */
     public function setFunkcja(?string $funkcja = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::valueIsValid($funkcja)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FunkcjaPlacowkiPocztowejType', is_array($funkcja) ? implode(', ', $funkcja) : var_export($funkcja, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::valueIsValid($funkcja)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FunkcjaPlacowkiPocztowejType', is_array($funkcja) ? implode(', ', $funkcja) : var_export($funkcja, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FunkcjaPlacowkiPocztowejType::getValidValues())), __LINE__);
         }
         $this->funkcja = $funkcja;
         
@@ -498,7 +498,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set maksymalnaKwotaPobrania value
      * @param int $maksymalnaKwotaPobrania
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setMaksymalnaKwotaPobrania(?int $maksymalnaKwotaPobrania = null): self
     {
@@ -521,7 +521,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set prefixNazwy value
      * @param string $prefixNazwy
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPrefixNazwy(?string $prefixNazwy = null): self
     {
@@ -544,7 +544,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set nazwa value
      * @param string $nazwa
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setNazwa(?string $nazwa = null): self
     {
@@ -567,7 +567,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set wojewodztwo value
      * @param string $wojewodztwo
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setWojewodztwo(?string $wojewodztwo = null): self
     {
@@ -590,7 +590,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set powiat value
      * @param string $powiat
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPowiat(?string $powiat = null): self
     {
@@ -613,7 +613,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set miejsce value
      * @param string $miejsce
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setMiejsce(?string $miejsce = null): self
     {
@@ -636,7 +636,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set kodPocztowy value
      * @param string $kodPocztowy
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setKodPocztowy(?string $kodPocztowy = null): self
     {
@@ -663,7 +663,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set miejscowosc value
      * @param string $miejscowosc
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setMiejscowosc(?string $miejscowosc = null): self
     {
@@ -694,7 +694,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set ulica value
      * @param string $ulica
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setUlica(?string $ulica = null): self
     {
@@ -717,7 +717,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set numerDomu value
      * @param string $numerDomu
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setNumerDomu(?string $numerDomu = null): self
     {
@@ -740,7 +740,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set numerLokalu value
      * @param string $numerLokalu
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setNumerLokalu(?string $numerLokalu = null): self
     {
@@ -763,7 +763,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set nazwaWydruk value
      * @param string $nazwaWydruk
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setNazwaWydruk(?string $nazwaWydruk = null): self
     {
@@ -786,7 +786,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set punktWydaniaEPrzesylki value
      * @param bool $punktWydaniaEPrzesylki
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPunktWydaniaEPrzesylki(?bool $punktWydaniaEPrzesylki = null): self
     {
@@ -809,7 +809,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set powiadomienieSMS value
      * @param bool $powiadomienieSMS
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPowiadomienieSMS(?bool $powiadomienieSMS = null): self
     {
@@ -832,7 +832,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set punktWydaniaPrzesylkiBiznesowejPlus value
      * @param bool $punktWydaniaPrzesylkiBiznesowejPlus
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPunktWydaniaPrzesylkiBiznesowejPlus(?bool $punktWydaniaPrzesylkiBiznesowejPlus = null): self
     {
@@ -855,7 +855,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set punktWydaniaPrzesylkiBiznesowej value
      * @param bool $punktWydaniaPrzesylkiBiznesowej
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setPunktWydaniaPrzesylkiBiznesowej(?bool $punktWydaniaPrzesylkiBiznesowej = null): self
     {
@@ -878,7 +878,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set siecPlacowek value
      * @param string $siecPlacowek
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setSiecPlacowek(?string $siecPlacowek = null): self
     {
@@ -901,7 +901,7 @@ class PlacowkaPocztowaType extends AbstractStructBase
     /**
      * Set idZPO value
      * @param string $idZPO
-     * @return \app\modules\postal\sender\StructType\PlacowkaPocztowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType
      */
     public function setIdZPO(?string $idZPO = null): self
     {

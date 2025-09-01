@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,9 +17,9 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
      * The deklaracjaCelna2
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
     /**
      * The zawartosc
      * Meta information extracted from the WSDL
@@ -61,7 +61,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     protected ?string $numerPrzesylkiKlienta = null;
     /**
      * Constructor method for przesylkaPoleconaZagranicznaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
      * @param string $zawartosc
      * @param bool $posteRestante
      * @param int $masa
@@ -74,7 +74,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
      * @uses PrzesylkaPoleconaZagranicznaType::setIloscPotwierdzenOdbioru()
      * @uses PrzesylkaPoleconaZagranicznaType::setNumerPrzesylkiKlienta()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?int $masa = null, ?int $iloscPotwierdzenOdbioru = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?int $masa = null, ?int $iloscPotwierdzenOdbioru = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setDeklaracjaCelna2($deklaracjaCelna2)
@@ -86,18 +86,18 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get deklaracjaCelna2 value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    public function getDeklaracjaCelna2(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
+    public function getDeklaracjaCelna2(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
     {
         return $this->deklaracjaCelna2;
     }
     /**
      * Set deklaracjaCelna2 value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
-    public function setDeklaracjaCelna2(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
+    public function setDeklaracjaCelna2(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
     {
         $this->deklaracjaCelna2 = $deklaracjaCelna2;
         
@@ -114,7 +114,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -137,7 +137,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
     public function setPosteRestante(?bool $posteRestante = false): self
     {
@@ -160,7 +160,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -191,7 +191,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set iloscPotwierdzenOdbioru value
      * @param int $iloscPotwierdzenOdbioru
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
     public function setIloscPotwierdzenOdbioru(?int $iloscPotwierdzenOdbioru = null): self
     {
@@ -222,7 +222,7 @@ class PrzesylkaPoleconaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaZagranicznaType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

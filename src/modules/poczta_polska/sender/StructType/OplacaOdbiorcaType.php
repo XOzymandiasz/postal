@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -27,17 +27,17 @@ class OplacaOdbiorcaType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Wymagalny dla typ=ADRESAT_UMOWNY i typ=ODDZIAL.
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null;
     /**
      * Constructor method for oplacaOdbiorcaType
      * @param string $typ
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta
      *@uses  OplacaOdbiorcaType::setTyp()
      * @uses OplacaOdbiorcaType::setKarta()
      */
-    public function __construct(?string $typ = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null)
+    public function __construct(?string $typ = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null)
     {
         $this
             ->setTyp($typ)
@@ -54,16 +54,16 @@ class OplacaOdbiorcaType extends AbstractStructBase
     /**
      * Set typ value
      * @param string $typ
-     * @return \app\modules\postal\sender\StructType\OplacaOdbiorcaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OplacaOdbiorcaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::valueIsValid()
      */
     public function setTyp(?string $typ = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::valueIsValid($typ)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TypOplacaOdbiorcaEnum', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::valueIsValid($typ)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TypOplacaOdbiorcaEnum', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOplacaOdbiorcaEnum::getValidValues())), __LINE__);
         }
         $this->typ = $typ;
         
@@ -71,18 +71,18 @@ class OplacaOdbiorcaType extends AbstractStructBase
     }
     /**
      * Get karta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType|null
      */
-    public function getKarta(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType
+    public function getKarta(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType
     {
         return $this->karta;
     }
     /**
      * Set karta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta
-     * @return \app\modules\postal\sender\StructType\OplacaOdbiorcaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OplacaOdbiorcaType
      */
-    public function setKarta(?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null): self
+    public function setKarta(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaKartaType $karta = null): self
     {
         $this->karta = $karta;
         

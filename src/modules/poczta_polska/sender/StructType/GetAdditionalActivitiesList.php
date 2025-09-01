@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetAdditionalActivitiesList extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\GetAdditionalActivitiesList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAdditionalActivitiesList
      */
     public function setIdKarta(?int $idKarta = null): self
     {

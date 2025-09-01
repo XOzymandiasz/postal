@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,7 +52,7 @@ class TrasaResponseType extends AbstractStructBase
     /**
      * Set isMiejscowa value
      * @param bool $isMiejscowa
-     * @return \app\modules\postal\sender\StructType\TrasaResponseType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\TrasaResponseType
      */
     public function setIsMiejscowa(?bool $isMiejscowa = null): self
     {
@@ -75,7 +75,7 @@ class TrasaResponseType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\TrasaResponseType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\TrasaResponseType
      */
     public function setGuid(?string $guid = null): self
     {

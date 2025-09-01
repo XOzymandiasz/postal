@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska;
 
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTracker;
-use app\modules\postal\modules\poczta_polska\repositories\RepositoryFactory;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\RepositoryFactory;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Yii;
 use yii\base\Module as BaseModule;
 use yii\di\Instance;

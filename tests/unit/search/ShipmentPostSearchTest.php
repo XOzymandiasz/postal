@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\tests\unit\search;
+namespace XOzymandias\Yii2Postal\tests\unit\search;
 
-use app\modules\postal\models\search\ShipmentPostSearch;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\tests\fixtures\ShipmentAddressFixture;
-use app\modules\postal\tests\fixtures\ShipmentAddressLinkFixture;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
-use app\modules\postal\tests\fixtures\ShipmentFixture;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\models\search\ShipmentPostSearch;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressLinkFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Test\Unit;
 use UnitTester;
 

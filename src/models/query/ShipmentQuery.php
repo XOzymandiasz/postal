@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\models\query;
+namespace XOzymandias\Yii2Postal\models\query;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use yii\db\ActiveQuery;
 
 /**

@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforList;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeList;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetOutBoxBook;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPrintForParcel;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyNadania;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyNadaniaResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrintType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforList;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeList;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetOutBoxBook;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPrintForParcel;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyNadania;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyNadaniaResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -35,7 +35,7 @@ class Get extends AbstractSoapClientBase
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getUrzedyNadania(\app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyNadania $parameters): GetUrzedyNadaniaResponse|null
+    public function getUrzedyNadania(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyNadania $parameters): GetUrzedyNadaniaResponse|null
     {
         try {
             $this->setResult($resultGetUrzedyNadania = $this->getSoapClient()->__soapCall('getUrzedyNadania', [
@@ -53,13 +53,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getUrzedyWydajaceEPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylki $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylki $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getUrzedyWydajaceEPrzesylki(\app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylki $parameters)
+    public function getUrzedyWydajaceEPrzesylki(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylki $parameters)
     {
         try {
             $this->setResult($resultGetUrzedyWydajaceEPrzesylki = $this->getSoapClient()->__soapCall('getUrzedyWydajaceEPrzesylki', [
@@ -76,13 +76,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEnvelopeStatus
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatus $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatusResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatus $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatusResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEnvelopeStatus(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatus $parameters)
+    public function getEnvelopeStatus(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatus $parameters)
     {
         try {
             $this->setResult($resultGetEnvelopeStatus = $this->getSoapClient()->__soapCall('getEnvelopeStatus', [
@@ -99,13 +99,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getKarty
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetKarty $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetKartyResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKarty $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKartyResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getKarty(\app\modules\postal\modules\poczta_polska\sender\StructType\GetKarty $parameters)
+    public function getKarty(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKarty $parameters)
     {
         try {
             $this->setResult($resultGetKarty = $this->getSoapClient()->__soapCall('getKarty', [
@@ -122,13 +122,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getPasswordExpiredDate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDate $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDateResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDate $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDateResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getPasswordExpiredDate(\app\modules\postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDate $parameters)
+    public function getPasswordExpiredDate(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDate $parameters)
     {
         try {
             $this->setResult($resultGetPasswordExpiredDate = $this->getSoapClient()->__soapCall('getPasswordExpiredDate', [
@@ -145,13 +145,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEnvelopeContentShort
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShort $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShortResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShort $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShortResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEnvelopeContentShort(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShort $parameters)
+    public function getEnvelopeContentShort(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShort $parameters)
     {
         try {
             $this->setResult($resultGetEnvelopeContentShort = $this->getSoapClient()->__soapCall('getEnvelopeContentShort', [
@@ -168,13 +168,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEnvelopeContentFull
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFull $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFullResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFull $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFullResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEnvelopeContentFull(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFull $parameters)
+    public function getEnvelopeContentFull(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFull $parameters)
     {
         try {
             $this->setResult($resultGetEnvelopeContentFull = $this->getSoapClient()->__soapCall('getEnvelopeContentFull', [
@@ -191,13 +191,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAddressLabel
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddressLabel $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddressLabelResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddressLabel $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddressLabelResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAddressLabel(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddressLabel $parameters)
+    public function getAddressLabel(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddressLabel $parameters)
     {
         try {
             $this->setResult($resultGetAddressLabel = $this->getSoapClient()->__soapCall('getAddressLabel', [
@@ -236,13 +236,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getFirmowaPocztaBook
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBook $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBookResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBook $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBookResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getFirmowaPocztaBook(\app\modules\postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBook $parameters)
+    public function getFirmowaPocztaBook(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBook $parameters)
     {
         try {
             $this->setResult($resultGetFirmowaPocztaBook = $this->getSoapClient()->__soapCall('getFirmowaPocztaBook', [
@@ -281,13 +281,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAddresLabelByGuid
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuid $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuid $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAddresLabelByGuid(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuid $parameters)
+    public function getAddresLabelByGuid(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuid $parameters)
     {
         try {
             $this->setResult($resultGetAddresLabelByGuid = $this->getSoapClient()->__soapCall('getAddresLabelByGuid', [
@@ -304,8 +304,8 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getPlacowkiPocztowe
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztowe $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
@@ -326,13 +326,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getGuid
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetGuid $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetGuidResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetGuid $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetGuidResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getGuid(\app\modules\postal\modules\poczta_polska\sender\StructType\GetGuid $parameters)
+    public function getGuid(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetGuid $parameters)
     {
         try {
             $this->setResult($resultGetGuid = $this->getSoapClient()->__soapCall('getGuid', [
@@ -349,13 +349,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getKierunki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunki $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunki $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getKierunki(\app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunki $parameters)
+    public function getKierunki(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunki $parameters)
     {
         try {
             $this->setResult($resultGetKierunki = $this->getSoapClient()->__soapCall('getKierunki', [
@@ -372,13 +372,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getKierunkiInfo
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiInfo $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiInfoResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiInfo $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiInfoResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getKierunkiInfo(\app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiInfo $parameters)
+    public function getKierunkiInfo(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiInfo $parameters)
     {
         try {
             $this->setResult($resultGetKierunkiInfo = $this->getSoapClient()->__soapCall('getKierunkiInfo', [
@@ -417,13 +417,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEPOStatus
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEPOStatus $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEPOStatusResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEPOStatus $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEPOStatusResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEPOStatus(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEPOStatus $parameters)
+    public function getEPOStatus(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEPOStatus $parameters)
     {
         try {
             $this->setResult($resultGetEPOStatus = $this->getSoapClient()->__soapCall('getEPOStatus', [
@@ -440,13 +440,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAddresLabelCompact
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompact $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompactResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompact $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompactResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAddresLabelCompact(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompact $parameters)
+    public function getAddresLabelCompact(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompact $parameters)
     {
         try {
             $this->setResult($resultGetAddresLabelCompact = $this->getSoapClient()->__soapCall('getAddresLabelCompact', [
@@ -463,13 +463,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAddresLabelByGuidCompact
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompact $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompactResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompact $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompactResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAddresLabelByGuidCompact(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompact $parameters)
+    public function getAddresLabelByGuidCompact(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompact $parameters)
     {
         try {
             $this->setResult($resultGetAddresLabelByGuidCompact = $this->getSoapClient()->__soapCall('getAddresLabelByGuidCompact', [
@@ -486,7 +486,7 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEnvelopeBuforList
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse|null
      * @uses AbstractSoapClientBase::setResult()
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
@@ -508,13 +508,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getUbezpieczeniaInfo
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfo $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfoResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfo $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfoResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getUbezpieczeniaInfo(\app\modules\postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfo $parameters)
+    public function getUbezpieczeniaInfo(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfo $parameters)
     {
         try {
             $this->setResult($resultGetUbezpieczeniaInfo = $this->getSoapClient()->__soapCall('getUbezpieczeniaInfo', [
@@ -531,13 +531,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getBlankietPobraniaByGuids
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuids $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuidsResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuids $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuidsResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getBlankietPobraniaByGuids(\app\modules\postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuids $parameters)
+    public function getBlankietPobraniaByGuids(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuids $parameters)
     {
         try {
             $this->setResult($resultGetBlankietPobraniaByGuids = $this->getSoapClient()->__soapCall('getBlankietPobraniaByGuids', [
@@ -554,13 +554,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAccountList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAccountList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAccountListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAccountList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAccountListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAccountList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAccountList $parameters)
+    public function getAccountList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAccountList $parameters)
     {
         try {
             $this->setResult($resultGetAccountList = $this->getSoapClient()->__soapCall('getAccountList', [
@@ -577,13 +577,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getProfilList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getProfilList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilList $parameters)
+    public function getProfilList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilList $parameters)
     {
         try {
             $this->setResult($resultGetProfilList = $this->getSoapClient()->__soapCall('getProfilList', [
@@ -600,13 +600,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getReklamacje
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetReklamacje $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetReklamacjeResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReklamacje $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReklamacjeResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getReklamacje(\app\modules\postal\modules\poczta_polska\sender\StructType\GetReklamacje $parameters)
+    public function getReklamacje(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReklamacje $parameters)
     {
         try {
             $this->setResult($resultGetReklamacje = $this->getSoapClient()->__soapCall('getReklamacje', [
@@ -623,13 +623,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getZapowiedziFaktur
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetZapowiedziFaktur $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetZapowiedziFakturResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetZapowiedziFaktur $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetZapowiedziFakturResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getZapowiedziFaktur(\app\modules\postal\modules\poczta_polska\sender\StructType\GetZapowiedziFaktur $parameters)
+    public function getZapowiedziFaktur(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetZapowiedziFaktur $parameters)
     {
         try {
             $this->setResult($resultGetZapowiedziFaktur = $this->getSoapClient()->__soapCall('getZapowiedziFaktur', [
@@ -646,13 +646,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getListaPowodowReklamacji
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacji $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacjiResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacji $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacjiResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getListaPowodowReklamacji(\app\modules\postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacji $parameters)
+    public function getListaPowodowReklamacji(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacji $parameters)
     {
         try {
             $this->setResult($resultGetListaPowodowReklamacji = $this->getSoapClient()->__soapCall('getListaPowodowReklamacji', [
@@ -669,13 +669,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEZDO
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDO $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDO $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEZDO(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDO $parameters)
+    public function getEZDO(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDO $parameters)
     {
         try {
             $this->setResult($resultGetEZDO = $this->getSoapClient()->__soapCall('getEZDO', [
@@ -692,13 +692,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getEZDOList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getEZDOList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOList $parameters)
+    public function getEZDOList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOList $parameters)
     {
         try {
             $this->setResult($resultGetEZDOList = $this->getSoapClient()->__soapCall('getEZDOList', [
@@ -715,13 +715,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getWplatyCKP
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetWplatyCKP $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetWplatyCKPResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetWplatyCKP $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetWplatyCKPResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getWplatyCKP(\app\modules\postal\modules\poczta_polska\sender\StructType\GetWplatyCKP $parameters)
+    public function getWplatyCKP(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetWplatyCKP $parameters)
     {
         try {
             $this->setResult($resultGetWplatyCKP = $this->getSoapClient()->__soapCall('getWplatyCKP', [
@@ -738,13 +738,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getListaZgodEZwrotow
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotow $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotowResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotow $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotowResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getListaZgodEZwrotow(\app\modules\postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotow $parameters)
+    public function getListaZgodEZwrotow(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotow $parameters)
     {
         try {
             $this->setResult($resultGetListaZgodEZwrotow = $this->getSoapClient()->__soapCall('getListaZgodEZwrotow', [
@@ -761,13 +761,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getJednostkaOrganizacyjna
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjna $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjnaResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjna $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjnaResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getJednostkaOrganizacyjna(\app\modules\postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjna $parameters)
+    public function getJednostkaOrganizacyjna(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjna $parameters)
     {
         try {
             $this->setResult($resultGetJednostkaOrganizacyjna = $this->getSoapClient()->__soapCall('getJednostkaOrganizacyjna', [
@@ -810,13 +810,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getShopEZwrotyList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getShopEZwrotyList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyList $parameters)
+    public function getShopEZwrotyList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyList $parameters)
     {
         try {
             $this->setResult($resultGetShopEZwrotyList = $this->getSoapClient()->__soapCall('getShopEZwrotyList', [
@@ -833,13 +833,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getLibrariesForLegalDeposits
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDeposits $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDepositsResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDeposits $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDepositsResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getLibrariesForLegalDeposits(\app\modules\postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDeposits $parameters)
+    public function getLibrariesForLegalDeposits(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDeposits $parameters)
     {
         try {
             $this->setResult($resultGetLibrariesForLegalDeposits = $this->getSoapClient()->__soapCall('getLibrariesForLegalDeposits', [
@@ -856,13 +856,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getPlacowkaPocztowa
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowa $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowaResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowa $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowaResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getPlacowkaPocztowa(\app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowa $parameters)
+    public function getPlacowkaPocztowa(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowa $parameters)
     {
         try {
             $this->setResult($resultGetPlacowkaPocztowa = $this->getSoapClient()->__soapCall('getPlacowkaPocztowa', [
@@ -879,13 +879,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getParcelContentList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetParcelContentList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetParcelContentListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetParcelContentList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetParcelContentListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getParcelContentList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetParcelContentList $parameters)
+    public function getParcelContentList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetParcelContentList $parameters)
     {
         try {
             $this->setResult($resultGetParcelContentList = $this->getSoapClient()->__soapCall('getParcelContentList', [
@@ -902,13 +902,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getReturnDocumentsProfileList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getReturnDocumentsProfileList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileList $parameters)
+    public function getReturnDocumentsProfileList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileList $parameters)
     {
         try {
             $this->setResult($resultGetReturnDocumentsProfileList = $this->getSoapClient()->__soapCall('getReturnDocumentsProfileList', [
@@ -925,13 +925,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getChecklistTemplateList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getChecklistTemplateList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateList $parameters)
+    public function getChecklistTemplateList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateList $parameters)
     {
         try {
             $this->setResult($resultGetChecklistTemplateList = $this->getSoapClient()->__soapCall('getChecklistTemplateList', [
@@ -948,13 +948,13 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Method to call the operation originally named getAdditionalActivitiesList
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesList $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesListResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesList $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesListResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function getAdditionalActivitiesList(\app\modules\postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesList $parameters)
+    public function getAdditionalActivitiesList(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesList $parameters)
     {
         try {
             $this->setResult($resultGetAdditionalActivitiesList = $this->getSoapClient()->__soapCall('getAdditionalActivitiesList', [
@@ -971,7 +971,7 @@ class Get extends AbstractSoapClientBase
 
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GetAccountListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompactResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompactResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetAddressLabelResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuidsResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFullResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShortResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatusResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEPOStatusResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetEZDOResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBookResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetGuidResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjnaResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetKartyResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiInfoResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetKierunkiResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDepositsResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacjiResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotowResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetParcelContentListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDateResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowaResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetReklamacjeResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyListResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfoResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyNadaniaResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetWplatyCKPResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\GetZapowiedziFakturResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAccountListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAdditionalActivitiesListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidCompactResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelByGuidResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddresLabelCompactResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetAddressLabelResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetBlankietPobraniaByGuidsResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetChecklistTemplateListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentFullResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeContentShortResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeStatusResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEPOStatusResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEZDOResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetFirmowaPocztaBookResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetGuidResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetJednostkaOrganizacyjnaResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKartyResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiInfoResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetKierunkiResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetLibrariesForLegalDepositsResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaPowodowReklamacjiResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetListaZgodEZwrotowResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetOutboxBookResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetParcelContentListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPasswordExpiredDateResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkaPocztowaResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPlacowkiPocztoweResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReklamacjeResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetReturnDocumentsProfileListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetShopEZwrotyListResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUbezpieczeniaInfoResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyNadaniaResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetWplatyCKPResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetZapowiedziFakturResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

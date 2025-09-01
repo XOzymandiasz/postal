@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -62,7 +62,7 @@ class ErrorType extends AbstractStructBase
     /**
      * Set errorNumber value
      * @param int $errorNumber
-     * @return \app\modules\postal\sender\StructType\ErrorType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ErrorType
      */
     public function setErrorNumber(?int $errorNumber = 0): self
     {
@@ -85,7 +85,7 @@ class ErrorType extends AbstractStructBase
     /**
      * Set errorDesc value
      * @param string $errorDesc
-     * @return \app\modules\postal\sender\StructType\ErrorType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ErrorType
      */
     public function setErrorDesc(?string $errorDesc = null): self
     {
@@ -108,7 +108,7 @@ class ErrorType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ErrorType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ErrorType
      */
     public function setGuid(?string $guid = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -123,7 +123,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set idLibraryForLegalDeposit value
      * @param string $idLibraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setIdLibraryForLegalDeposit(?string $idLibraryForLegalDeposit = null): self
     {
@@ -154,7 +154,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set libraryName value
      * @param string $libraryName
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setLibraryName(?string $libraryName = null): self
     {
@@ -185,7 +185,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set street value
      * @param string $street
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setStreet(?string $street = null): self
     {
@@ -216,7 +216,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set houseNumber value
      * @param string $houseNumber
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setHouseNumber(?string $houseNumber = null): self
     {
@@ -247,7 +247,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set apartmentNumber value
      * @param string $apartmentNumber
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setApartmentNumber(?string $apartmentNumber = null): self
     {
@@ -278,7 +278,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set zipCode value
      * @param string $zipCode
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setZipCode(?string $zipCode = null): self
     {
@@ -309,7 +309,7 @@ class LibraryForLegalDepositType extends AbstractStructBase
     /**
      * Set city value
      * @param string $city
-     * @return \app\modules\postal\sender\StructType\LibraryForLegalDepositType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType
      */
     public function setCity(?string $city = null): self
     {

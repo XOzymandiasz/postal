@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\models;
+namespace XOzymandias\Yii2Postal\models;
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 

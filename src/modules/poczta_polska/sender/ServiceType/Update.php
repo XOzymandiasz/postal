@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\AccountType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateAccount;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateAccountResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateProfil;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateAccount;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateAccountResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateProfil;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -89,13 +89,13 @@ class Update extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named updateShopEZwroty
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateShopEZwroty $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateShopEZwrotyResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateShopEZwroty $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateShopEZwrotyResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function updateShopEZwroty(\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateShopEZwroty $parameters)
+    public function updateShopEZwroty(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateShopEZwroty $parameters)
     {
         try {
             $this->setResult($resultUpdateShopEZwroty = $this->getSoapClient()->__soapCall('updateShopEZwroty', [
@@ -111,13 +111,13 @@ class Update extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named updateParcelContent
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateParcelContent $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateParcelContentResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateParcelContent $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateParcelContentResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function updateParcelContent(\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateParcelContent $parameters)
+    public function updateParcelContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateParcelContent $parameters)
     {
         try {
             $this->setResult($resultUpdateParcelContent = $this->getSoapClient()->__soapCall('updateParcelContent', [
@@ -133,13 +133,13 @@ class Update extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named updateReturnDocumentsProfile
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfile $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfileResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfile $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfileResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function updateReturnDocumentsProfile(\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfile $parameters)
+    public function updateReturnDocumentsProfile(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfile $parameters)
     {
         try {
             $this->setResult($resultUpdateReturnDocumentsProfile = $this->getSoapClient()->__soapCall('updateReturnDocumentsProfile', [
@@ -155,13 +155,13 @@ class Update extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named updateChecklistTemplate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplate $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplateResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplate $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplateResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function updateChecklistTemplate(\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplate $parameters)
+    public function updateChecklistTemplate(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplate $parameters)
     {
         try {
             $this->setResult($resultUpdateChecklistTemplate = $this->getSoapClient()->__soapCall('updateChecklistTemplate', [
@@ -177,7 +177,7 @@ class Update extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UpdateAccountResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplateResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateParcelContentResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfileResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\UpdateShopEZwrotyResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateAccountResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateChecklistTemplateResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateEnvelopeBuforResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateParcelContentResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateReturnDocumentsProfileResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateShopEZwrotyResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

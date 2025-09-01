@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\builders;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\builders;
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\forms\ShipmentForm;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use InvalidArgumentException;
 
 class CreateShipmentFactory

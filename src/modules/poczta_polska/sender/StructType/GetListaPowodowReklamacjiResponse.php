@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class GetListaPowodowReklamacjiResponse extends AbstractStructBase
      * The kategoriePowodowReklamacji
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[]
      */
     protected ?array $kategoriePowodowReklamacji = null;
     /**
      * Constructor method for getListaPowodowReklamacjiResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[] $kategoriePowodowReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[] $kategoriePowodowReklamacji
      * @uses GetListaPowodowReklamacjiResponse::setKategoriePowodowReklamacji()
      */
     public function __construct(?array $kategoriePowodowReklamacji = null)
@@ -33,7 +33,7 @@ class GetListaPowodowReklamacjiResponse extends AbstractStructBase
     }
     /**
      * Get kategoriePowodowReklamacji value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[]
      */
     public function getKategoriePowodowReklamacji(): ?array
     {
@@ -55,12 +55,12 @@ class GetListaPowodowReklamacjiResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem) {
             // validation for constraint: itemType
-            if (!$getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType) {
+            if (!$getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType) {
                 $invalidValues[] = is_object($getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem) ? get_class($getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem) : sprintf('%s(%s)', gettype($getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem), var_export($getListaPowodowReklamacjiResponseKategoriePowodowReklamacjiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The kategoriePowodowReklamacji property can only contain items of type \app\modules\postal\sender\StructType\KategoriePowodowReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The kategoriePowodowReklamacji property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KategoriePowodowReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class GetListaPowodowReklamacjiResponse extends AbstractStructBase
     }
     /**
      * Set kategoriePowodowReklamacji value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[] $kategoriePowodowReklamacji
-     * @return \app\modules\postal\sender\StructType\GetListaPowodowReklamacjiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType[] $kategoriePowodowReklamacji
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetListaPowodowReklamacjiResponse
      *@throws InvalidArgumentException
      */
     public function setKategoriePowodowReklamacji(?array $kategoriePowodowReklamacji = null): self
@@ -84,15 +84,15 @@ class GetListaPowodowReklamacjiResponse extends AbstractStructBase
     }
     /**
      * Add item to kategoriePowodowReklamacji value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType $item
-     * @return \app\modules\postal\sender\StructType\GetListaPowodowReklamacjiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetListaPowodowReklamacjiResponse
      *@throws InvalidArgumentException
      */
-    public function addToKategoriePowodowReklamacji(\app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType $item): self
+    public function addToKategoriePowodowReklamacji(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType) {
-            throw new InvalidArgumentException(sprintf('The kategoriePowodowReklamacji property can only contain items of type \app\modules\postal\sender\StructType\KategoriePowodowReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KategoriePowodowReklamacjiType) {
+            throw new InvalidArgumentException(sprintf('The kategoriePowodowReklamacji property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KategoriePowodowReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->kategoriePowodowReklamacji[] = $item;
         

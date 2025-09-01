@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class GetEnvelopeList extends AbstractStructBase
     /**
      * Set startDate value
      * @param string $startDate
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeList
      */
     public function setStartDate(?string $startDate = null): self
     {
@@ -71,7 +71,7 @@ class GetEnvelopeList extends AbstractStructBase
     /**
      * Set endDate value
      * @param string $endDate
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeList
      */
     public function setEndDate(?string $endDate = null): self
     {

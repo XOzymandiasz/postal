@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\tests\fixtures;
+namespace XOzymandias\Yii2Postal\tests\fixtures;
 
-use app\modules\postal\models\ShipmentAddressLink;
+use XOzymandias\Yii2Postal\models\ShipmentAddressLink;
 use yii\test\ActiveFixture;
 
 class ShipmentAddressLinkFixture extends ActiveFixture

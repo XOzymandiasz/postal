@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender;
 
 /**
  * Class which returns the class map definition

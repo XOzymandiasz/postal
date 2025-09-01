@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class UslugiType extends AbstractStructBase
     /**
      * Set id value
      * @param string $id
-     * @return \app\modules\postal\sender\StructType\UslugiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugiType
      */
     public function setId(?string $id = null): self
     {
@@ -71,7 +71,7 @@ class UslugiType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\UslugiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugiType
      */
     public function setOpis(?string $opis = null): self
     {

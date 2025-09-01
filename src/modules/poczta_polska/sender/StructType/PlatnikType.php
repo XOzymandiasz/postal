@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -29,17 +29,17 @@ class PlatnikType extends AbstractStructBase
      * - choice: uiszczaOplate | adresPlatnika
      * - choiceMaxOccurs: 1
      * - choiceMinOccurs: 1
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null;
     /**
      * Constructor method for platnikType
      * @param string $uiszczaOplate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika
      *@uses PlatnikType::setUiszczaOplate()
      * @uses PlatnikType::setAdresPlatnika()
      */
-    public function __construct(?string $uiszczaOplate = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null)
+    public function __construct(?string $uiszczaOplate = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null)
     {
         $this
             ->setUiszczaOplate($uiszczaOplate)
@@ -87,17 +87,17 @@ class PlatnikType extends AbstractStructBase
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
      * @param string $uiszczaOplate
-     * @return \app\modules\postal\sender\StructType\PlatnikType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlatnikType
      *@throws InvalidArgumentException
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
      */
     public function setUiszczaOplate(?string $uiszczaOplate = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
         }
         // validation for constraint: choice(uiszczaOplate, adresPlatnika)
         if ('' !== ($uiszczaOplateChoiceErrorMessage = self::validateUiszczaOplateForChoiceConstraintFromSetUiszczaOplate($uiszczaOplate))) {
@@ -113,9 +113,9 @@ class PlatnikType extends AbstractStructBase
     }
     /**
      * Get adresPlatnika value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdresPlatnika(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdresPlatnika(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adresPlatnika ?? null;
     }
@@ -152,11 +152,11 @@ class PlatnikType extends AbstractStructBase
      * This property belongs to a choice that allows only one property to exist. It is
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika
-     * @return \app\modules\postal\sender\StructType\PlatnikType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PlatnikType
      *@throws InvalidArgumentException
      */
-    public function setAdresPlatnika(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null): self
+    public function setAdresPlatnika(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresPlatnika = null): self
     {
         // validation for constraint: choice(uiszczaOplate, adresPlatnika)
         if ('' !== ($adresPlatnikaChoiceErrorMessage = self::validateAdresPlatnikaForChoiceConstraintFromSetAdresPlatnika($adresPlatnika))) {

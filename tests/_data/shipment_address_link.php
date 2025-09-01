@@ -1,6 +1,6 @@
 <?php
 
-use app\modules\postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 
 return [
     'sender_link' => [

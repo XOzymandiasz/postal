@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -71,7 +71,7 @@ class GetChecklistTemplateList extends AbstractStructBase
      * Set idChecklistTemplate value
      * @throws InvalidArgumentException
      * @param int[] $idChecklistTemplate
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateList
      */
     public function setIdChecklistTemplate(?array $idChecklistTemplate = null): self
     {
@@ -87,7 +87,7 @@ class GetChecklistTemplateList extends AbstractStructBase
      * Add item to idChecklistTemplate value
      * @throws InvalidArgumentException
      * @param int $item
-     * @return \app\modules\postal\sender\StructType\GetChecklistTemplateList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetChecklistTemplateList
      */
     public function addToIdChecklistTemplate(int $item): self
     {

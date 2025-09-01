@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class RodzajListType extends AbstractStructBase
     /**
      * Set polecony value
      * @param bool $polecony
-     * @return \app\modules\postal\sender\StructType\RodzajListType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RodzajListType
      */
     public function setPolecony(?bool $polecony = null): self
     {
@@ -71,16 +71,16 @@ class RodzajListType extends AbstractStructBase
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\RodzajListType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RodzajListType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         

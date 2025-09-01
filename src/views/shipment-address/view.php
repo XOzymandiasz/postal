@@ -1,12 +1,12 @@
 <?php
 
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\models\ShipmentAddress $model */
+/** @var XOzymandias\Yii2Postal\models\ShipmentAddress $model */
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => Module::t('common', 'Shipment Addresses'), 'url' => ['index']];

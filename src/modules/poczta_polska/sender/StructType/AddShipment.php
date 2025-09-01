@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,7 +18,7 @@ class AddShipment extends AbstractStructBase
      * The przesylki
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType[]
      */
     protected ?array $przesylki = null;
     /**
@@ -30,7 +30,7 @@ class AddShipment extends AbstractStructBase
     protected ?int $idBufor = null;
     /**
      * Constructor method for addShipment
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType[] $przesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType[] $przesylki
      * @param int $idBufor
      * @uses AddShipment::setPrzesylki()
      * @uses AddShipment::setIdBufor()
@@ -43,7 +43,7 @@ class AddShipment extends AbstractStructBase
     }
     /**
      * Get przesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType[]
      */
     public function getPrzesylki(): ?array
     {
@@ -65,12 +65,12 @@ class AddShipment extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addShipmentPrzesylkiItem) {
             // validation for constraint: itemType
-            if (!$addShipmentPrzesylkiItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType) {
+            if (!$addShipmentPrzesylkiItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType) {
                 $invalidValues[] = is_object($addShipmentPrzesylkiItem) ? get_class($addShipmentPrzesylkiItem) : sprintf('%s(%s)', gettype($addShipmentPrzesylkiItem), var_export($addShipmentPrzesylkiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The przesylki property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The przesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -78,8 +78,8 @@ class AddShipment extends AbstractStructBase
     }
     /**
      * Set przesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType[] $przesylki
-     * @return \app\modules\postal\sender\StructType\AddShipment
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType[] $przesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipment
      *@throws InvalidArgumentException
      */
     public function setPrzesylki(?array $przesylki = null): self
@@ -98,15 +98,15 @@ class AddShipment extends AbstractStructBase
     }
     /**
      * Add item to przesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $item
-     * @return \app\modules\postal\sender\StructType\AddShipment
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipment
      *@throws InvalidArgumentException
      */
-    public function addToPrzesylki(\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $item): self
+    public function addToPrzesylki(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType) {
-            throw new InvalidArgumentException(sprintf('The przesylki property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType) {
+            throw new InvalidArgumentException(sprintf('The przesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->przesylki) && count($this->przesylki) >= 500) {
@@ -127,7 +127,7 @@ class AddShipment extends AbstractStructBase
     /**
      * Set idBufor value
      * @param int $idBufor
-     * @return \app\modules\postal\sender\StructType\AddShipment
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipment
      */
     public function setIdBufor(?int $idBufor = null): self
     {

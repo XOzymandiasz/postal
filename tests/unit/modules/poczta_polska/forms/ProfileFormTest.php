@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\forms;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\forms;
 
 use _support\UnitModelTrait;
-use app\modules\postal\modules\poczta_polska\forms\ProfileForm;
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ProfileForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Codeception\Test\Unit;
 use UnitTester;
 use yii\base\Model;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetKierunkiInfo extends AbstractStructBase
     /**
      * Set plan value
      * @param string $plan
-     * @return \app\modules\postal\sender\StructType\GetKierunkiInfo
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKierunkiInfo
      */
     public function setPlan(?string $plan = null): self
     {

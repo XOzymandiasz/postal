@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
-use app\modules\postal\modules\poczta_polska\services\BaseService;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\services\BaseService;
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
 use Yii;

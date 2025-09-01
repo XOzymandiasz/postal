@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -35,19 +35,19 @@ class GetReklamacje extends AbstractStructBase
      * The dataZlozenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null;
     /**
      * Constructor method for getReklamacje
      * @param string $dataRozpatrzenia
      * @param string $guidPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia
      *@uses GetReklamacje::setDataRozpatrzenia()
      * @uses GetReklamacje::setGuidPrzesylki()
      * @uses GetReklamacje::setDataZlozenia()
      */
-    public function __construct(?string $dataRozpatrzenia = null, ?string $guidPrzesylki = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null)
+    public function __construct(?string $dataRozpatrzenia = null, ?string $guidPrzesylki = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null)
     {
         $this
             ->setDataRozpatrzenia($dataRozpatrzenia)
@@ -65,7 +65,7 @@ class GetReklamacje extends AbstractStructBase
     /**
      * Set dataRozpatrzenia value
      * @param string $dataRozpatrzenia
-     * @return \app\modules\postal\sender\StructType\GetReklamacje
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetReklamacje
      */
     public function setDataRozpatrzenia(?string $dataRozpatrzenia = null): self
     {
@@ -88,7 +88,7 @@ class GetReklamacje extends AbstractStructBase
     /**
      * Set guidPrzesylki value
      * @param string $guidPrzesylki
-     * @return \app\modules\postal\sender\StructType\GetReklamacje
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetReklamacje
      */
     public function setGuidPrzesylki(?string $guidPrzesylki = null): self
     {
@@ -106,18 +106,18 @@ class GetReklamacje extends AbstractStructBase
     }
     /**
      * Get dataZlozenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType|null
      */
-    public function getDataZlozenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType
+    public function getDataZlozenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType
     {
         return $this->dataZlozenia;
     }
     /**
      * Set dataZlozenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia
-     * @return \app\modules\postal\sender\StructType\GetReklamacje
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetReklamacje
      */
-    public function setDataZlozenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null): self
+    public function setDataZlozenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DataZlozeniaType $dataZlozenia = null): self
     {
         $this->dataZlozenia = $dataZlozenia;
         

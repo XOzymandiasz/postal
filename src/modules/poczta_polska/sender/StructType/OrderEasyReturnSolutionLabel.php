@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -16,14 +16,14 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
 {
     /**
      * The senderAddress
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null;
     /**
      * The recipientAddress
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null;
     /**
      * The weight
      * Meta information extracted from the WSDL
@@ -36,17 +36,17 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
      * The customsDeclaration
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null;
     /**
      * The deliveryMethod
      * Meta information extracted from the WSDL
      * - documentation: If not set, getPrintForParcel method should be used to get label.
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null;
     /**
      * The description
      * Meta information extracted from the WSDL
@@ -57,11 +57,11 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     protected ?string $description = null;
     /**
      * Constructor method for orderEasyReturnSolutionLabel
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress
      * @param int $weight
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod
      * @param string $description
      *@uses OrderEasyReturnSolutionLabel::setSenderAddress()
      * @uses OrderEasyReturnSolutionLabel::setRecipientAddress()
@@ -70,7 +70,7 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
      * @uses OrderEasyReturnSolutionLabel::setDeliveryMethod()
      * @uses OrderEasyReturnSolutionLabel::setDescription()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null, ?int $weight = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null, ?string $description = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null, ?int $weight = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null, ?string $description = null)
     {
         $this
             ->setSenderAddress($senderAddress)
@@ -82,18 +82,18 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     }
     /**
      * Get senderAddress value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType|null
      */
-    public function getSenderAddress(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType
+    public function getSenderAddress(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType
     {
         return $this->senderAddress;
     }
     /**
      * Set senderAddress value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
-    public function setSenderAddress(?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null): self
+    public function setSenderAddress(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $senderAddress = null): self
     {
         $this->senderAddress = $senderAddress;
         
@@ -101,18 +101,18 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     }
     /**
      * Get recipientAddress value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType|null
      */
-    public function getRecipientAddress(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType
+    public function getRecipientAddress(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType
     {
         return $this->recipientAddress;
     }
     /**
      * Set recipientAddress value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
-    public function setRecipientAddress(?\app\modules\postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null): self
+    public function setRecipientAddress(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddressType $recipientAddress = null): self
     {
         $this->recipientAddress = $recipientAddress;
         
@@ -129,7 +129,7 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     /**
      * Set weight value
      * @param int $weight
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
     public function setWeight(?int $weight = null): self
     {
@@ -143,18 +143,18 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     }
     /**
      * Get customsDeclaration value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType|null
      */
-    public function getCustomsDeclaration(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType
+    public function getCustomsDeclaration(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType
     {
         return $this->customsDeclaration;
     }
     /**
      * Set customsDeclaration value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
-    public function setCustomsDeclaration(?\app\modules\postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null): self
+    public function setCustomsDeclaration(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CustomsDeclarationType $customsDeclaration = null): self
     {
         $this->customsDeclaration = $customsDeclaration;
         
@@ -162,18 +162,18 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     }
     /**
      * Get deliveryMethod value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType|null
      */
-    public function getDeliveryMethod(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType
+    public function getDeliveryMethod(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType
     {
         return $this->deliveryMethod;
     }
     /**
      * Set deliveryMethod value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
-    public function setDeliveryMethod(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null): self
+    public function setDeliveryMethod(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeliveryMethodType $deliveryMethod = null): self
     {
         $this->deliveryMethod = $deliveryMethod;
         
@@ -190,7 +190,7 @@ class OrderEasyReturnSolutionLabel extends AbstractStructBase
     /**
      * Set description value
      * @param string $description
-     * @return \app\modules\postal\sender\StructType\OrderEasyReturnSolutionLabel
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OrderEasyReturnSolutionLabel
      */
     public function setDescription(?string $description = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -55,7 +55,7 @@ class PrintResultType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\PrintResultType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintResultType
      */
     public function setGuid(?string $guid = null): self
     {
@@ -82,7 +82,7 @@ class PrintResultType extends AbstractStructBase
     /**
      * Set print value
      * @param string $print
-     * @return \app\modules\postal\sender\StructType\PrintResultType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintResultType
      */
     public function setPrint(?string $print = null): self
     {

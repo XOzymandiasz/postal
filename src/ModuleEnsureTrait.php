@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal;
+namespace XOzymandias\Yii2Postal;
 
 use Yii;
 use yii\base\InvalidConfigException;

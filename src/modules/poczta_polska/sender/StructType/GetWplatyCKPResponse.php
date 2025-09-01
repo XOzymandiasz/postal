@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetWplatyCKPResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType[]
      */
     protected ?array $wplaty = null;
     /**
@@ -27,13 +27,13 @@ class GetWplatyCKPResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getWplatyCKPResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType[] $wplaty
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType[] $wplaty
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses GetWplatyCKPResponse::setWplaty()
      * @uses GetWplatyCKPResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Get wplaty value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType[]
      */
     public function getWplaty(): ?array
     {
@@ -67,12 +67,12 @@ class GetWplatyCKPResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getWplatyCKPResponseWplatyItem) {
             // validation for constraint: itemType
-            if (!$getWplatyCKPResponseWplatyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType) {
+            if (!$getWplatyCKPResponseWplatyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType) {
                 $invalidValues[] = is_object($getWplatyCKPResponseWplatyItem) ? get_class($getWplatyCKPResponseWplatyItem) : sprintf('%s(%s)', gettype($getWplatyCKPResponseWplatyItem), var_export($getWplatyCKPResponseWplatyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The wplaty property can only contain items of type \app\modules\postal\sender\StructType\WplataCKPType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The wplaty property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Set wplaty value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType[] $wplaty
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKPResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType[] $wplaty
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKPResponse
      *@throws InvalidArgumentException
      */
     public function setWplaty(?array $wplaty = null): self
@@ -96,15 +96,15 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Add item to wplaty value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType $item
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKPResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKPResponse
      *@throws InvalidArgumentException
      */
-    public function addToWplaty(\app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType $item): self
+    public function addToWplaty(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\WplataCKPType) {
-            throw new InvalidArgumentException(sprintf('The wplaty property can only contain items of type \app\modules\postal\sender\StructType\WplataCKPType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WplataCKPType) {
+            throw new InvalidArgumentException(sprintf('The wplaty property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->wplaty[] = $item;
         
@@ -112,7 +112,7 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetWplatyCKPResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getWplatyCKPResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getWplatyCKPResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getWplatyCKPResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getWplatyCKPResponseErrorItem) ? get_class($getWplatyCKPResponseErrorItem) : sprintf('%s(%s)', gettype($getWplatyCKPResponseErrorItem), var_export($getWplatyCKPResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKPResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKPResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetWplatyCKPResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetWplatyCKPResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetWplatyCKPResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Download extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named downloadIWDContent
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DownloadIWDContent $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DownloadIWDContentResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DownloadIWDContent $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DownloadIWDContentResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function downloadIWDContent(\app\modules\postal\modules\poczta_polska\sender\StructType\DownloadIWDContent $parameters)
+    public function downloadIWDContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DownloadIWDContent $parameters)
     {
         try {
             $this->setResult($resultDownloadIWDContent = $this->getSoapClient()->__soapCall('downloadIWDContent', [
@@ -37,7 +37,7 @@ class Download extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DownloadIWDContentResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DownloadIWDContentResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

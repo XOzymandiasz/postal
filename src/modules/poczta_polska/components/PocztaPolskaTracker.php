@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\components;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\components;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\modules\poczta_polska\entities\Mail;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
 use Yii;
 use yii\base\Component;
 

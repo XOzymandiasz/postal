@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -67,7 +67,7 @@ class TrasaRequestType extends AbstractStructBase
     /**
      * Set fromUrzadNadania value
      * @param int $fromUrzadNadania
-     * @return \app\modules\postal\sender\StructType\TrasaRequestType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\TrasaRequestType
      */
     public function setFromUrzadNadania(?int $fromUrzadNadania = null): self
     {
@@ -90,7 +90,7 @@ class TrasaRequestType extends AbstractStructBase
     /**
      * Set toKodPocztowy value
      * @param string $toKodPocztowy
-     * @return \app\modules\postal\sender\StructType\TrasaRequestType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\TrasaRequestType
      */
     public function setToKodPocztowy(?string $toKodPocztowy = null): self
     {
@@ -121,7 +121,7 @@ class TrasaRequestType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\TrasaRequestType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\TrasaRequestType
      */
     public function setGuid(?string $guid = null): self
     {

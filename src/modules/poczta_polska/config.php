@@ -1,9 +1,9 @@
 <?php
 
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTracker;
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
-use app\modules\postal\modules\poczta_polska\repositories\RepositoryFactory;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\RepositoryFactory;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 
 return [
     'components' => [

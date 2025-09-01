@@ -1,16 +1,16 @@
 <?php
 
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\components;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\components;
 
-use app\modules\postal\modules\poczta_polska\components\exceptions\BaseException;
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTracker;
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
-use app\modules\postal\modules\poczta_polska\entities\Mail;
-use app\modules\postal\modules\poczta_polska\entities\MailInfo;
-use app\modules\postal\modules\poczta_polska\entities\MailInfoEvent;
-use app\modules\postal\modules\poczta_polska\entities\MailInfoEventOffice;
-use app\modules\postal\modules\poczta_polska\entities\MailInfoEventStates;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\BaseException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\MailInfo;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\MailInfoEvent;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\MailInfoEventOffice;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\MailInfoEventStates;
 
 
 /**

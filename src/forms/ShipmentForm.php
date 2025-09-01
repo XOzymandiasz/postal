@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\forms;
+namespace XOzymandias\Yii2Postal\forms;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\models\ShipmentAddressLink;
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\models\ShipmentProviderInterface;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentAddressLink;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\InvalidConfigException;
 use yii\base\Model;
 use yii\db\Exception;

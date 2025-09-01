@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class IsObszarMiastoResponse extends AbstractStructBase
      * The obszarAdresowy
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[]
      */
     protected ?array $obszarAdresowy = null;
     /**
      * Constructor method for isObszarMiastoResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[] $obszarAdresowy
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[] $obszarAdresowy
      * @uses IsObszarMiastoResponse::setObszarAdresowy()
      */
     public function __construct(?array $obszarAdresowy = null)
@@ -33,7 +33,7 @@ class IsObszarMiastoResponse extends AbstractStructBase
     }
     /**
      * Get obszarAdresowy value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[]
      */
     public function getObszarAdresowy(): ?array
     {
@@ -55,12 +55,12 @@ class IsObszarMiastoResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $isObszarMiastoResponseObszarAdresowyItem) {
             // validation for constraint: itemType
-            if (!$isObszarMiastoResponseObszarAdresowyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType) {
+            if (!$isObszarMiastoResponseObszarAdresowyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType) {
                 $invalidValues[] = is_object($isObszarMiastoResponseObszarAdresowyItem) ? get_class($isObszarMiastoResponseObszarAdresowyItem) : sprintf('%s(%s)', gettype($isObszarMiastoResponseObszarAdresowyItem), var_export($isObszarMiastoResponseObszarAdresowyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The obszarAdresowy property can only contain items of type \app\modules\postal\sender\StructType\ObszarAdresowyResponseType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The obszarAdresowy property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyResponseType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class IsObszarMiastoResponse extends AbstractStructBase
     }
     /**
      * Set obszarAdresowy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[] $obszarAdresowy
-     * @return \app\modules\postal\sender\StructType\IsObszarMiastoResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType[] $obszarAdresowy
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsObszarMiastoResponse
      *@throws InvalidArgumentException
      */
     public function setObszarAdresowy(?array $obszarAdresowy = null): self
@@ -84,15 +84,15 @@ class IsObszarMiastoResponse extends AbstractStructBase
     }
     /**
      * Add item to obszarAdresowy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType $item
-     * @return \app\modules\postal\sender\StructType\IsObszarMiastoResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsObszarMiastoResponse
      *@throws InvalidArgumentException
      */
-    public function addToObszarAdresowy(\app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType $item): self
+    public function addToObszarAdresowy(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType) {
-            throw new InvalidArgumentException(sprintf('The obszarAdresowy property can only contain items of type \app\modules\postal\sender\StructType\ObszarAdresowyResponseType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ObszarAdresowyResponseType) {
+            throw new InvalidArgumentException(sprintf('The obszarAdresowy property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyResponseType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->obszarAdresowy[] = $item;
         

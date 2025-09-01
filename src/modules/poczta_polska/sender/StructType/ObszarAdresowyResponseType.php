@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,7 +52,7 @@ class ObszarAdresowyResponseType extends AbstractStructBase
     /**
      * Set isObszarMiasto value
      * @param bool $isObszarMiasto
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyResponseType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyResponseType
      */
     public function setIsObszarMiasto(?bool $isObszarMiasto = null): self
     {
@@ -75,7 +75,7 @@ class ObszarAdresowyResponseType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyResponseType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyResponseType
      */
     public function setGuid(?string $guid = null): self
     {

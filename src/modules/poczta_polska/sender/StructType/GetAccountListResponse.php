@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetAccountListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[]
      */
     protected ?array $account = null;
     /**
      * Constructor method for getAccountListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[] $account
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[] $account
      * @uses GetAccountListResponse::setAccount()
      */
     public function __construct(?array $account = null)
@@ -34,7 +34,7 @@ class GetAccountListResponse extends AbstractStructBase
     }
     /**
      * Get account value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[]
      */
     public function getAccount(): ?array
     {
@@ -56,12 +56,12 @@ class GetAccountListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getAccountListResponseAccountItem) {
             // validation for constraint: itemType
-            if (!$getAccountListResponseAccountItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType) {
+            if (!$getAccountListResponseAccountItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType) {
                 $invalidValues[] = is_object($getAccountListResponseAccountItem) ? get_class($getAccountListResponseAccountItem) : sprintf('%s(%s)', gettype($getAccountListResponseAccountItem), var_export($getAccountListResponseAccountItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The account property can only contain items of type \app\modules\postal\sender\StructType\AccountType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The account property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccountType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetAccountListResponse extends AbstractStructBase
     }
     /**
      * Set account value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType[] $account
-     * @return \app\modules\postal\sender\StructType\GetAccountListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType[] $account
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAccountListResponse
      *@throws InvalidArgumentException
      */
     public function setAccount(?array $account = null): self
@@ -85,15 +85,15 @@ class GetAccountListResponse extends AbstractStructBase
     }
     /**
      * Add item to account value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType $item
-     * @return \app\modules\postal\sender\StructType\GetAccountListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAccountListResponse
      *@throws InvalidArgumentException
      */
-    public function addToAccount(\app\modules\postal\modules\poczta_polska\sender\StructType\AccountType $item): self
+    public function addToAccount(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccountType) {
-            throw new InvalidArgumentException(sprintf('The account property can only contain items of type \app\modules\postal\sender\StructType\AccountType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccountType) {
+            throw new InvalidArgumentException(sprintf('The account property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccountType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->account[] = $item;
         

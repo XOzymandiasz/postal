@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\forms;
+namespace XOzymandias\Yii2Postal\forms;
 
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 use yii\db\Exception;
 

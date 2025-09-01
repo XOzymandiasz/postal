@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelope;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuids;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelope;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuids;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -19,8 +19,8 @@ class Clear extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named clearEnvelope
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelope $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelope $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
@@ -65,7 +65,7 @@ class Clear extends AbstractSoapClientBase
 
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

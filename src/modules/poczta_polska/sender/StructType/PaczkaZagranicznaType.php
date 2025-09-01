@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,23 +17,23 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
      * The zwrot
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null;
     /**
      * The deklaracjaCelna
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null;
     /**
      * The deklaracjaCelna2
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
     /**
      * The sposobNadaniaInterconnect
      * Meta information extracted from the WSDL
@@ -47,9 +47,9 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
      * The sposobDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null;
     /**
      * The posteRestante
      * @var bool|null
@@ -113,11 +113,11 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     protected ?string $numerPrzesylkiKlienta = null;
     /**
      * Constructor method for paczkaZagranicznaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
      * @param string $sposobNadaniaInterconnect
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
      * @param bool $posteRestante
      * @param int $masa
      * @param int $wartosc
@@ -142,7 +142,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
      * @uses PaczkaZagranicznaType::setNumerReferencyjnyCelny()
      * @uses PaczkaZagranicznaType::setNumerPrzesylkiKlienta()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $sposobNadaniaInterconnect = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null, ?bool $posteRestante = null, ?int $masa = null, ?int $wartosc = null, ?string $kategoria = null, ?int $iloscPotwierdzenOdbioru = null, ?bool $utrudnionaManipulacja = null, ?bool $ekspres = null, ?string $numerReferencyjnyCelny = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $sposobNadaniaInterconnect = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null, ?bool $posteRestante = null, ?int $masa = null, ?int $wartosc = null, ?string $kategoria = null, ?int $iloscPotwierdzenOdbioru = null, ?bool $utrudnionaManipulacja = null, ?bool $ekspres = null, ?string $numerReferencyjnyCelny = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setZwrot($zwrot)
@@ -162,18 +162,18 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get zwrot value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType|null
      */
-    public function getZwrot(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType
+    public function getZwrot(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType
     {
         return $this->zwrot;
     }
     /**
      * Set zwrot value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
-    public function setZwrot(?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null): self
+    public function setZwrot(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotType $zwrot = null): self
     {
         $this->zwrot = $zwrot;
         
@@ -181,18 +181,18 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get deklaracjaCelna value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
      */
-    public function getDeklaracjaCelna(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType
+    public function getDeklaracjaCelna(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType
     {
         return $this->deklaracjaCelna;
     }
     /**
      * Set deklaracjaCelna value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
-    public function setDeklaracjaCelna(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null): self
+    public function setDeklaracjaCelna(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null): self
     {
         $this->deklaracjaCelna = $deklaracjaCelna;
         
@@ -200,18 +200,18 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get deklaracjaCelna2 value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    public function getDeklaracjaCelna2(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
+    public function getDeklaracjaCelna2(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
     {
         return $this->deklaracjaCelna2;
     }
     /**
      * Set deklaracjaCelna2 value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
-    public function setDeklaracjaCelna2(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
+    public function setDeklaracjaCelna2(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
     {
         $this->deklaracjaCelna2 = $deklaracjaCelna2;
         
@@ -228,7 +228,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set sposobNadaniaInterconnect value
      * @param string $sposobNadaniaInterconnect
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setSposobNadaniaInterconnect(?string $sposobNadaniaInterconnect = null): self
     {
@@ -242,18 +242,18 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get sposobDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
      */
-    public function getSposobDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType
+    public function getSposobDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType
     {
         return $this->sposobDoreczenia;
     }
     /**
      * Set sposobDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
-    public function setSposobDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null): self
+    public function setSposobDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null): self
     {
         $this->sposobDoreczenia = $sposobDoreczenia;
         
@@ -270,7 +270,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setPosteRestante(?bool $posteRestante = null): self
     {
@@ -293,7 +293,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -324,7 +324,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -355,16 +355,16 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -381,7 +381,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set iloscPotwierdzenOdbioru value
      * @param int $iloscPotwierdzenOdbioru
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setIloscPotwierdzenOdbioru(?int $iloscPotwierdzenOdbioru = null): self
     {
@@ -412,7 +412,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set utrudnionaManipulacja value
      * @param bool $utrudnionaManipulacja
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setUtrudnionaManipulacja(?bool $utrudnionaManipulacja = null): self
     {
@@ -435,7 +435,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set ekspres value
      * @param bool $ekspres
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setEkspres(?bool $ekspres = null): self
     {
@@ -458,7 +458,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerReferencyjnyCelny value
      * @param string $numerReferencyjnyCelny
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setNumerReferencyjnyCelny(?string $numerReferencyjnyCelny = null): self
     {
@@ -481,7 +481,7 @@ class PaczkaZagranicznaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\PaczkaZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaczkaZagranicznaType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBuforResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateProfil;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateProfilResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateProfil;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateProfilResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -42,13 +42,13 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named createAccount
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CreateAccount $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateAccountResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateAccount $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateAccountResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function createAccount(\app\modules\postal\modules\poczta_polska\sender\StructType\CreateAccount $parameters)
+    public function createAccount(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateAccount $parameters)
     {
         try {
             $this->setResult($resultCreateAccount = $this->getSoapClient()->__soapCall('createAccount', [
@@ -85,13 +85,13 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named createShopEZwroty
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CreateShopEZwroty $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateShopEZwrotyResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateShopEZwroty $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateShopEZwrotyResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function createShopEZwroty(\app\modules\postal\modules\poczta_polska\sender\StructType\CreateShopEZwroty $parameters)
+    public function createShopEZwroty(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateShopEZwroty $parameters)
     {
         try {
             $this->setResult($resultCreateShopEZwroty = $this->getSoapClient()->__soapCall('createShopEZwroty', [
@@ -107,13 +107,13 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named createParcelContent
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CreateParcelContent $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateParcelContentResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateParcelContent $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateParcelContentResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function createParcelContent(\app\modules\postal\modules\poczta_polska\sender\StructType\CreateParcelContent $parameters)
+    public function createParcelContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateParcelContent $parameters)
     {
         try {
             $this->setResult($resultCreateParcelContent = $this->getSoapClient()->__soapCall('createParcelContent', [
@@ -129,13 +129,13 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named createReturnDocumentsProfile
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfile $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfileResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfile $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfileResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function createReturnDocumentsProfile(\app\modules\postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfile $parameters)
+    public function createReturnDocumentsProfile(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfile $parameters)
     {
         try {
             $this->setResult($resultCreateReturnDocumentsProfile = $this->getSoapClient()->__soapCall('createReturnDocumentsProfile', [
@@ -151,13 +151,13 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named createChecklistTemplate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplate $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplateResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplate $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplateResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function createChecklistTemplate(\app\modules\postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplate $parameters)
+    public function createChecklistTemplate(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplate $parameters)
     {
         try {
             $this->setResult($resultCreateChecklistTemplate = $this->getSoapClient()->__soapCall('createChecklistTemplate', [
@@ -173,7 +173,7 @@ class Create extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\CreateAccountResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplateResponse|CreateEnvelopeBuforResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\CreateParcelContentResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\CreateProfilResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfileResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\CreateShopEZwrotyResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateAccountResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateChecklistTemplateResponse|CreateEnvelopeBuforResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateParcelContentResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateProfilResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateReturnDocumentsProfileResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateShopEZwrotyResponse
      *@see AbstractSoapClientBase::getResult()
      */
     public function getResult()

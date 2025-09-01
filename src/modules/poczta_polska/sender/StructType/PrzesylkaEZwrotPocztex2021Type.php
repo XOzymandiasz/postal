@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -61,7 +61,7 @@ class PrzesylkaEZwrotPocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set numerNadaniaZwrot value
      * @param string $numerNadaniaZwrot
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
      */
     public function setNumerNadaniaZwrot(?string $numerNadaniaZwrot = null): self
     {
@@ -92,7 +92,7 @@ class PrzesylkaEZwrotPocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set idSklepEZwrot value
      * @param int $idSklepEZwrot
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
      */
     public function setIdSklepEZwrot(?int $idSklepEZwrot = null): self
     {
@@ -115,16 +115,16 @@ class PrzesylkaEZwrotPocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEZwrotPocztex2021Type
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
         }
         $this->format = $format;
         

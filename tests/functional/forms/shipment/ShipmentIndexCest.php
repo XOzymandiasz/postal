@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\shipment;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\shipment;
 
-use app\modules\postal\tests\fixtures\ShipmentAddressFixture;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
-use app\modules\postal\tests\fixtures\ShipmentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentFixture;
 use FunctionalTester;
 
 class ShipmentIndexCest

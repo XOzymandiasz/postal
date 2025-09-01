@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -112,7 +112,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set unikalnyIdentyfikatorWplaty value
      * @param string $unikalnyIdentyfikatorWplaty
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setUnikalnyIdentyfikatorWplaty(string $unikalnyIdentyfikatorWplaty): self
     {
@@ -135,7 +135,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setNumerNadania(string $numerNadania): self
     {
@@ -166,7 +166,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set kwota value
      * @param int $kwota
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setKwota(int $kwota): self
     {
@@ -189,7 +189,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set dataPobrania value
      * @param string $dataPobrania
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setDataPobrania(string $dataPobrania): self
     {
@@ -212,7 +212,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set idUmowy value
      * @param int $idUmowy
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setIdUmowy(int $idUmowy): self
     {
@@ -235,7 +235,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set tytulPrzelewuZbiorczego value
      * @param string $tytulPrzelewuZbiorczego
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setTytulPrzelewuZbiorczego(string $tytulPrzelewuZbiorczego): self
     {
@@ -258,7 +258,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set tytulPobrania value
      * @param string $tytulPobrania
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setTytulPobrania(?string $tytulPobrania = null): self
     {
@@ -281,7 +281,7 @@ class WplataCKPType extends AbstractStructBase
     /**
      * Set dataPrzelewu value
      * @param string $dataPrzelewu
-     * @return \app\modules\postal\sender\StructType\WplataCKPType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WplataCKPType
      */
     public function setDataPrzelewu(?string $dataPrzelewu = null): self
     {

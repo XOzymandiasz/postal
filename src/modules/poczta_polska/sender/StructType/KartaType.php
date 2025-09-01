@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,16 +19,16 @@ class KartaType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Lista dostępnych produktów dla karty
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null;
     /**
      * The adresKorespondencyjny
      * Meta information extracted from the WSDL
      * - documentation: Lista adresów korespondencyjnych dla kart typu 2
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[]
      */
     protected ?array $adresKorespondencyjny = null;
     /**
@@ -55,8 +55,8 @@ class KartaType extends AbstractStructBase
     protected ?int $typ = null;
     /**
      * Constructor method for kartaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[] $adresKorespondencyjny
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[] $adresKorespondencyjny
      * @param int $idKarta
      * @param string $opis
      * @param bool $aktywna
@@ -68,7 +68,7 @@ class KartaType extends AbstractStructBase
      * @uses KartaType::setAktywna()
      * @uses KartaType::setTyp()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null, ?array $adresKorespondencyjny = null, ?int $idKarta = null, ?string $opis = null, ?bool $aktywna = null, ?int $typ = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null, ?array $adresKorespondencyjny = null, ?int $idKarta = null, ?string $opis = null, ?bool $aktywna = null, ?int $typ = null)
     {
         $this
             ->setProduktyInKarta($produktyInKarta)
@@ -80,18 +80,18 @@ class KartaType extends AbstractStructBase
     }
     /**
      * Get produktyInKarta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType|null
      */
-    public function getProduktyInKarta(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType
+    public function getProduktyInKarta(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType
     {
         return $this->produktyInKarta;
     }
     /**
      * Set produktyInKarta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      */
-    public function setProduktyInKarta(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null): self
+    public function setProduktyInKarta(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktyInKartaType $produktyInKarta = null): self
     {
         $this->produktyInKarta = $produktyInKarta;
         
@@ -99,7 +99,7 @@ class KartaType extends AbstractStructBase
     }
     /**
      * Get adresKorespondencyjny value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[]
      */
     public function getAdresKorespondencyjny(): ?array
     {
@@ -121,12 +121,12 @@ class KartaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $kartaTypeAdresKorespondencyjnyItem) {
             // validation for constraint: itemType
-            if (!$kartaTypeAdresKorespondencyjnyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny) {
+            if (!$kartaTypeAdresKorespondencyjnyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny) {
                 $invalidValues[] = is_object($kartaTypeAdresKorespondencyjnyItem) ? get_class($kartaTypeAdresKorespondencyjnyItem) : sprintf('%s(%s)', gettype($kartaTypeAdresKorespondencyjnyItem), var_export($kartaTypeAdresKorespondencyjnyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The adresKorespondencyjny property can only contain items of type \app\modules\postal\sender\StructType\AdresKorespondencyjny, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The adresKorespondencyjny property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdresKorespondencyjny, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -134,8 +134,8 @@ class KartaType extends AbstractStructBase
     }
     /**
      * Set adresKorespondencyjny value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[] $adresKorespondencyjny
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny[] $adresKorespondencyjny
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      *@throws InvalidArgumentException
      */
     public function setAdresKorespondencyjny(?array $adresKorespondencyjny = null): self
@@ -150,15 +150,15 @@ class KartaType extends AbstractStructBase
     }
     /**
      * Add item to adresKorespondencyjny value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny $item
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      *@throws InvalidArgumentException
      */
-    public function addToAdresKorespondencyjny(\app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny $item): self
+    public function addToAdresKorespondencyjny(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny) {
-            throw new InvalidArgumentException(sprintf('The adresKorespondencyjny property can only contain items of type \app\modules\postal\sender\StructType\AdresKorespondencyjny, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresKorespondencyjny) {
+            throw new InvalidArgumentException(sprintf('The adresKorespondencyjny property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdresKorespondencyjny, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->adresKorespondencyjny[] = $item;
         
@@ -175,7 +175,7 @@ class KartaType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -198,7 +198,7 @@ class KartaType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -221,7 +221,7 @@ class KartaType extends AbstractStructBase
     /**
      * Set aktywna value
      * @param bool $aktywna
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      */
     public function setAktywna(?bool $aktywna = null): self
     {
@@ -244,7 +244,7 @@ class KartaType extends AbstractStructBase
     /**
      * Set typ value
      * @param int $typ
-     * @return \app\modules\postal\sender\StructType\KartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KartaType
      */
     public function setTyp(?int $typ = null): self
     {

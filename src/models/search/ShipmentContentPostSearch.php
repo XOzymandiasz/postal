@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\models\search;
+namespace XOzymandias\Yii2Postal\models\search;
 
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * ShipmentContentPostSearch represents the model behind the search form of `app\modules\postal\models\ShipmentContent`.
+ * ShipmentContentPostSearch represents the model behind the search form of `XOzymandias\Yii2Postal\models\ShipmentContent`.
  */
 class ShipmentContentPostSearch extends ShipmentContent
 {

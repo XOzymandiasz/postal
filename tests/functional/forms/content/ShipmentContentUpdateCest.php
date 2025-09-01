@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\content;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\content;
 
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\Module;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Util\HttpCode;
 use FunctionalTester;
 

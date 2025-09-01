@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\entities;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\entities;
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 
 class MailInfoEventOffice extends Model

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\content;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\content;
 
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use FunctionalTester;
 
 class ShipmentContentIndexCest

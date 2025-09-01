@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\components;
+namespace XOzymandias\Yii2Postal\components;
 
-use app\modules\postal\models\ShipmentProviderInterface as Providers;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface as Providers;
 use yii\base\Component;
 use yii\helpers\Url;
 

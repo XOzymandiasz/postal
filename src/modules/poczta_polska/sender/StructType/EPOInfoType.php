@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -17,33 +17,33 @@ class EPOInfoType extends AbstractStructBase
      * The awizoPrzesylki
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null;
     /**
      * The doreczeniePrzesylki
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null;
     /**
      * The zwrotPrzesylki
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null;
     /**
      * Constructor method for EPOInfoType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki
      *@uses EPOInfoType::setAwizoPrzesylki()
      * @uses EPOInfoType::setDoreczeniePrzesylki()
      * @uses EPOInfoType::setZwrotPrzesylki()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null)
     {
         $this
             ->setAwizoPrzesylki($awizoPrzesylki)
@@ -52,18 +52,18 @@ class EPOInfoType extends AbstractStructBase
     }
     /**
      * Get awizoPrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType|null
      */
-    public function getAwizoPrzesylki(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType
+    public function getAwizoPrzesylki(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType
     {
         return $this->awizoPrzesylki;
     }
     /**
      * Set awizoPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki
-     * @return \app\modules\postal\sender\StructType\EPOInfoType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EPOInfoType
      */
-    public function setAwizoPrzesylki(?\app\modules\postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null): self
+    public function setAwizoPrzesylki(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AwizoPrzesylkiType $awizoPrzesylki = null): self
     {
         $this->awizoPrzesylki = $awizoPrzesylki;
         
@@ -71,18 +71,18 @@ class EPOInfoType extends AbstractStructBase
     }
     /**
      * Get doreczeniePrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType|null
      */
-    public function getDoreczeniePrzesylki(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType
+    public function getDoreczeniePrzesylki(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType
     {
         return $this->doreczeniePrzesylki;
     }
     /**
      * Set doreczeniePrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki
-     * @return \app\modules\postal\sender\StructType\EPOInfoType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EPOInfoType
      */
-    public function setDoreczeniePrzesylki(?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null): self
+    public function setDoreczeniePrzesylki(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczeniePrzesylkiType $doreczeniePrzesylki = null): self
     {
         $this->doreczeniePrzesylki = $doreczeniePrzesylki;
         
@@ -90,18 +90,18 @@ class EPOInfoType extends AbstractStructBase
     }
     /**
      * Get zwrotPrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType|null
      */
-    public function getZwrotPrzesylki(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType
+    public function getZwrotPrzesylki(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType
     {
         return $this->zwrotPrzesylki;
     }
     /**
      * Set zwrotPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki
-     * @return \app\modules\postal\sender\StructType\EPOInfoType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EPOInfoType
      */
-    public function setZwrotPrzesylki(?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null): self
+    public function setZwrotPrzesylki(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotPrzesylkiType $zwrotPrzesylki = null): self
     {
         $this->zwrotPrzesylki = $zwrotPrzesylki;
         

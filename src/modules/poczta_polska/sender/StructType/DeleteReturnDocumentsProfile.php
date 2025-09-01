@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class DeleteReturnDocumentsProfile extends AbstractStructBase
     /**
      * Set idProfile value
      * @param int $idProfile
-     * @return \app\modules\postal\sender\StructType\DeleteReturnDocumentsProfile
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeleteReturnDocumentsProfile
      */
     public function setIdProfile(?int $idProfile = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class LokalizacjaGeograficznaType extends AbstractStructBase
 {
     /**
      * The dlugosc
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null;
     /**
      * The szerokosc
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null;
     /**
      * Constructor method for lokalizacjaGeograficznaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc
      *@uses LokalizacjaGeograficznaType::setDlugosc()
      * @uses LokalizacjaGeograficznaType::setSzerokosc()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null)
     {
         $this
             ->setDlugosc($dlugosc)
@@ -38,18 +38,18 @@ class LokalizacjaGeograficznaType extends AbstractStructBase
     }
     /**
      * Get dlugosc value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
      */
-    public function getDlugosc(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType
+    public function getDlugosc(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType
     {
         return $this->dlugosc;
     }
     /**
      * Set dlugosc value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc
-     * @return \app\modules\postal\sender\StructType\LokalizacjaGeograficznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LokalizacjaGeograficznaType
      */
-    public function setDlugosc(?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null): self
+    public function setDlugosc(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $dlugosc = null): self
     {
         $this->dlugosc = $dlugosc;
         
@@ -57,18 +57,18 @@ class LokalizacjaGeograficznaType extends AbstractStructBase
     }
     /**
      * Get szerokosc value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType|null
      */
-    public function getSzerokosc(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType
+    public function getSzerokosc(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType
     {
         return $this->szerokosc;
     }
     /**
      * Set szerokosc value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc
-     * @return \app\modules\postal\sender\StructType\LokalizacjaGeograficznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc
+     * @return \XOzymandias\Yii2Postal\sender\StructType\LokalizacjaGeograficznaType
      */
-    public function setSzerokosc(?\app\modules\postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null): self
+    public function setSzerokosc(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\WspolrzednaGeograficznaType $szerokosc = null): self
     {
         $this->szerokosc = $szerokosc;
         

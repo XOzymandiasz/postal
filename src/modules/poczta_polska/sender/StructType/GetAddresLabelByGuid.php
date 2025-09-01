@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -107,7 +107,7 @@ class GetAddresLabelByGuid extends AbstractStructBase
      * Set guid value
      * @throws InvalidArgumentException
      * @param string[] $guid
-     * @return \app\modules\postal\sender\StructType\GetAddresLabelByGuid
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAddresLabelByGuid
      */
     public function setGuid(?array $guid = null): self
     {
@@ -127,7 +127,7 @@ class GetAddresLabelByGuid extends AbstractStructBase
      * Add item to guid value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\GetAddresLabelByGuid
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAddresLabelByGuid
      */
     public function addToGuid(string $item): self
     {
@@ -154,7 +154,7 @@ class GetAddresLabelByGuid extends AbstractStructBase
     /**
      * Set idBufor value
      * @param int $idBufor
-     * @return \app\modules\postal\sender\StructType\GetAddresLabelByGuid
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAddresLabelByGuid
      */
     public function setIdBufor(?int $idBufor = null): self
     {

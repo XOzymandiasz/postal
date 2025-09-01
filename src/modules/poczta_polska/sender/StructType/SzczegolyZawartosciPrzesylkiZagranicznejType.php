@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -88,7 +88,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set okreslenieZawartosci value
      * @param string $okreslenieZawartosci
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setOkreslenieZawartosci(?string $okreslenieZawartosci = null): self
     {
@@ -111,7 +111,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set ilosc value
      * @param int $ilosc
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setIlosc(?int $ilosc = null): self
     {
@@ -134,7 +134,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set masaNetto value
      * @param int $masaNetto
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setMasaNetto(?int $masaNetto = null): self
     {
@@ -157,7 +157,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set wartosc value
      * @param float $wartosc
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setWartosc(?float $wartosc = null): self
     {
@@ -180,7 +180,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set numerTaryfyHs value
      * @param string $numerTaryfyHs
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setNumerTaryfyHs(?string $numerTaryfyHs = null): self
     {
@@ -203,7 +203,7 @@ class SzczegolyZawartosciPrzesylkiZagranicznejType extends AbstractStructBase
     /**
      * Set krajPochodzeniaKodAlfa2 value
      * @param string $krajPochodzeniaKodAlfa2
-     * @return \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType
      */
     public function setKrajPochodzeniaKodAlfa2(?string $krajPochodzeniaKodAlfa2 = null): self
     {

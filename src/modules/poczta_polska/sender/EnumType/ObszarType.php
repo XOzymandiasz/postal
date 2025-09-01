@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\EnumType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType;
 
 use WsdlToPhp\PackageBase\AbstractStructEnumBase;
 

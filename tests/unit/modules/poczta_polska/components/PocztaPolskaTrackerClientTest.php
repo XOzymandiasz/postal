@@ -1,14 +1,14 @@
 <?php
 
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\components;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\components;
 
-use app\modules\postal\modules\poczta_polska\components\exceptions\BadRequestException;
-use app\modules\postal\modules\poczta_polska\components\exceptions\ForbiddenAuthException;
-use app\modules\postal\modules\poczta_polska\components\exceptions\InvalidAuthException;
-use app\modules\postal\modules\poczta_polska\components\exceptions\PasswordChangeRequiredException;
-use app\modules\postal\modules\poczta_polska\components\exceptions\UnavailableServiceException;
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\BadRequestException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\ForbiddenAuthException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\InvalidAuthException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\PasswordChangeRequiredException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\exceptions\UnavailableServiceException;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTrackerClient;
 use UnitTester;
 use yii\base\InvalidConfigException;
 use yii\httpclient\Exception;

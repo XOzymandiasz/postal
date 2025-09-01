@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\models\search;
+namespace XOzymandias\Yii2Postal\models\search;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yii\db\ActiveQuery;
@@ -11,7 +11,7 @@ use yii\db\Expression;
 use yii\helpers\ArrayHelper;
 
 /**
- * ShipmentPostSearch represents the model behind the search form of `app\modules\postal\models\Shipment`.
+ * ShipmentPostSearch represents the model behind the search form of `XOzymandias\Yii2Postal\models\Shipment`.
  */
 class ShipmentPostSearch extends Shipment
 {

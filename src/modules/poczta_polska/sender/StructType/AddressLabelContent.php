@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -56,7 +56,7 @@ class AddressLabelContent extends AbstractStructBase
     /**
      * Set pdfContent value
      * @param string $pdfContent
-     * @return \app\modules\postal\sender\StructType\AddressLabelContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddressLabelContent
      */
     public function setPdfContent(?string $pdfContent = null): self
     {
@@ -79,7 +79,7 @@ class AddressLabelContent extends AbstractStructBase
     /**
      * Set nrNadania value
      * @param string $nrNadania
-     * @return \app\modules\postal\sender\StructType\AddressLabelContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddressLabelContent
      */
     public function setNrNadania(?string $nrNadania = null): self
     {
@@ -102,7 +102,7 @@ class AddressLabelContent extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\AddressLabelContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddressLabelContent
      */
     public function setGuid(?string $guid = null): self
     {

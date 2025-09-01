@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -64,7 +64,7 @@ class UbezpieczenieType extends AbstractStructBase
     /**
      * Set rodzaj value
      * @param string $rodzaj
-     * @return \app\modules\postal\sender\StructType\UbezpieczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UbezpieczenieType
      */
     public function setRodzaj(string $rodzaj): self
     {
@@ -95,7 +95,7 @@ class UbezpieczenieType extends AbstractStructBase
     /**
      * Set kwota value
      * @param float $kwota
-     * @return \app\modules\postal\sender\StructType\UbezpieczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UbezpieczenieType
      */
     public function setKwota(float $kwota): self
     {
@@ -118,7 +118,7 @@ class UbezpieczenieType extends AbstractStructBase
     /**
      * Set akceptacjaOWU value
      * @param bool $akceptacjaOWU
-     * @return \app\modules\postal\sender\StructType\UbezpieczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UbezpieczenieType
      */
     public function setAkceptacjaOWU(?bool $akceptacjaOWU = null): self
     {

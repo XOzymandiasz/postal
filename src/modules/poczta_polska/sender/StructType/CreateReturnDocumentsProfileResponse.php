@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -31,14 +31,14 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for createReturnDocumentsProfileResponse
      * @param bool $result
      * @param int $idProfile
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses CreateReturnDocumentsProfileResponse::setResult()
      * @uses CreateReturnDocumentsProfileResponse::setIdProfile()
      * @uses CreateReturnDocumentsProfileResponse::setError()
@@ -61,7 +61,7 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
     /**
      * Set result value
      * @param bool $result
-     * @return \app\modules\postal\sender\StructType\CreateReturnDocumentsProfileResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateReturnDocumentsProfileResponse
      */
     public function setResult(?bool $result = null): self
     {
@@ -84,7 +84,7 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
     /**
      * Set idProfile value
      * @param int $idProfile
-     * @return \app\modules\postal\sender\StructType\CreateReturnDocumentsProfileResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateReturnDocumentsProfileResponse
      */
     public function setIdProfile(?int $idProfile = null): self
     {
@@ -98,7 +98,7 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -120,12 +120,12 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $createReturnDocumentsProfileResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$createReturnDocumentsProfileResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$createReturnDocumentsProfileResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($createReturnDocumentsProfileResponseErrorItem) ? get_class($createReturnDocumentsProfileResponseErrorItem) : sprintf('%s(%s)', gettype($createReturnDocumentsProfileResponseErrorItem), var_export($createReturnDocumentsProfileResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -133,8 +133,8 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\CreateReturnDocumentsProfileResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateReturnDocumentsProfileResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -149,15 +149,15 @@ class CreateReturnDocumentsProfileResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\CreateReturnDocumentsProfileResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CreateReturnDocumentsProfileResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

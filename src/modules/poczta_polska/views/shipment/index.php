@@ -1,8 +1,8 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaRejestrowanaType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaRejestrowanaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use yii\data\DataProviderInterface;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;

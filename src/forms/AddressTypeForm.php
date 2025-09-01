@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\forms;
+namespace XOzymandias\Yii2Postal\forms;
 
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 use yii\db\Exception;
 

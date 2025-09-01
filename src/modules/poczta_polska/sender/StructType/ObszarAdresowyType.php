@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -97,7 +97,7 @@ class ObszarAdresowyType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType
      */
     public function setGuid(string $guid): self
     {
@@ -124,7 +124,7 @@ class ObszarAdresowyType extends AbstractStructBase
     /**
      * Set kodPocztowy value
      * @param string $kodPocztowy
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType
      */
     public function setKodPocztowy(?string $kodPocztowy = null): self
     {
@@ -155,7 +155,7 @@ class ObszarAdresowyType extends AbstractStructBase
     /**
      * Set miejscowosc value
      * @param string $miejscowosc
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType
      */
     public function setMiejscowosc(?string $miejscowosc = null): self
     {
@@ -186,7 +186,7 @@ class ObszarAdresowyType extends AbstractStructBase
     /**
      * Set ulica value
      * @param string $ulica
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType
      */
     public function setUlica(?string $ulica = null): self
     {
@@ -217,7 +217,7 @@ class ObszarAdresowyType extends AbstractStructBase
     /**
      * Set numerDomu value
      * @param string $numerDomu
-     * @return \app\modules\postal\sender\StructType\ObszarAdresowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ObszarAdresowyType
      */
     public function setNumerDomu(?string $numerDomu = null): self
     {

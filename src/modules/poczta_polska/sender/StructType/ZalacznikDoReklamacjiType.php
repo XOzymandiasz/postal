@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -58,7 +58,7 @@ class ZalacznikDoReklamacjiType extends AbstractStructBase
     /**
      * Set fileContent value
      * @param string $fileContent
-     * @return \app\modules\postal\sender\StructType\ZalacznikDoReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZalacznikDoReklamacjiType
      */
     public function setFileContent(?string $fileContent = null): self
     {
@@ -81,7 +81,7 @@ class ZalacznikDoReklamacjiType extends AbstractStructBase
     /**
      * Set fileName value
      * @param string $fileName
-     * @return \app\modules\postal\sender\StructType\ZalacznikDoReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZalacznikDoReklamacjiType
      */
     public function setFileName(?string $fileName = null): self
     {
@@ -104,7 +104,7 @@ class ZalacznikDoReklamacjiType extends AbstractStructBase
     /**
      * Set fileDesc value
      * @param string $fileDesc
-     * @return \app\modules\postal\sender\StructType\ZalacznikDoReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZalacznikDoReklamacjiType
      */
     public function setFileDesc(?string $fileDesc = null): self
     {

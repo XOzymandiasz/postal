@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -58,7 +58,7 @@ class UrzadNadaniaFullType extends AbstractStructBase
     /**
      * Set urzadNadania value
      * @param int $urzadNadania
-     * @return \app\modules\postal\sender\StructType\UrzadNadaniaFullType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UrzadNadaniaFullType
      */
     public function setUrzadNadania(?int $urzadNadania = null): self
     {
@@ -81,7 +81,7 @@ class UrzadNadaniaFullType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\UrzadNadaniaFullType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UrzadNadaniaFullType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -104,7 +104,7 @@ class UrzadNadaniaFullType extends AbstractStructBase
     /**
      * Set nazwaWydruk value
      * @param string $nazwaWydruk
-     * @return \app\modules\postal\sender\StructType\UrzadNadaniaFullType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UrzadNadaniaFullType
      */
     public function setNazwaWydruk(?string $nazwaWydruk = null): self
     {

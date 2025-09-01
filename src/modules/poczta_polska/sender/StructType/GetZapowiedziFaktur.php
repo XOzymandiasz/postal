@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetZapowiedziFaktur extends AbstractStructBase
     /**
      * Set data value
      * @param string $data
-     * @return \app\modules\postal\sender\StructType\GetZapowiedziFaktur
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetZapowiedziFaktur
      */
     public function setData(?string $data = null): self
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\forms;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\forms;
 
-use app\modules\postal\forms\AddressTypeForm;
-use app\modules\postal\Module as PostalModule;
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\Module as PostalModule;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use yii\base\InvalidConfigException;
 
 

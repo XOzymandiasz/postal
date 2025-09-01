@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,31 +17,31 @@ class EMSType extends PrzesylkaRejestrowanaType
      * The ubezpieczenie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
     /**
      * The deklaracjaCelna
      * Meta information extracted from the WSDL
      * - documentation: Deklaracja celna - "deprecated" - zalecane jest ustawianie elementu deklaracjaCelna2
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null;
     /**
      * The potwierdzenieDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
     /**
      * The deklaracjaCelna2
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
     /**
      * The sposobNadaniaInterconnect
      * Meta information extracted from the WSDL
@@ -55,9 +55,9 @@ class EMSType extends PrzesylkaRejestrowanaType
      * The sposobDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null;
     /**
      * The typOpakowania
      * @var string|null
@@ -85,12 +85,12 @@ class EMSType extends PrzesylkaRejestrowanaType
     protected ?string $numerPrzesylkiKlienta = null;
     /**
      * Constructor method for EMSType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
      * @param string $sposobNadaniaInterconnect
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
      * @param string $typOpakowania
      * @param int $masa
      * @param bool $zalaczoneDokumenty
@@ -106,7 +106,7 @@ class EMSType extends PrzesylkaRejestrowanaType
      * @uses EMSType::setZalaczoneDokumenty()
      * @uses EMSType::setNumerPrzesylkiKlienta()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $sposobNadaniaInterconnect = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null, ?string $typOpakowania = null, ?int $masa = null, ?bool $zalaczoneDokumenty = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $sposobNadaniaInterconnect = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null, ?string $typOpakowania = null, ?int $masa = null, ?bool $zalaczoneDokumenty = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setUbezpieczenie($ubezpieczenie)
@@ -122,18 +122,18 @@ class EMSType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get ubezpieczenie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    public function getUbezpieczenie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
+    public function getUbezpieczenie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
     {
         return $this->ubezpieczenie;
     }
     /**
      * Set ubezpieczenie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
-    public function setUbezpieczenie(?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
+    public function setUbezpieczenie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
     {
         $this->ubezpieczenie = $ubezpieczenie;
         
@@ -141,18 +141,18 @@ class EMSType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get deklaracjaCelna value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType|null
      */
-    public function getDeklaracjaCelna(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType
+    public function getDeklaracjaCelna(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType
     {
         return $this->deklaracjaCelna;
     }
     /**
      * Set deklaracjaCelna value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
-    public function setDeklaracjaCelna(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null): self
+    public function setDeklaracjaCelna(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelnaType $deklaracjaCelna = null): self
     {
         $this->deklaracjaCelna = $deklaracjaCelna;
         
@@ -160,18 +160,18 @@ class EMSType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    public function getPotwierdzenieDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
+    public function getPotwierdzenieDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
     {
         return $this->potwierdzenieDoreczenia;
     }
     /**
      * Set potwierdzenieDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
-    public function setPotwierdzenieDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
+    public function setPotwierdzenieDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
     {
         $this->potwierdzenieDoreczenia = $potwierdzenieDoreczenia;
         
@@ -179,18 +179,18 @@ class EMSType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get deklaracjaCelna2 value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    public function getDeklaracjaCelna2(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
+    public function getDeklaracjaCelna2(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
     {
         return $this->deklaracjaCelna2;
     }
     /**
      * Set deklaracjaCelna2 value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
-    public function setDeklaracjaCelna2(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
+    public function setDeklaracjaCelna2(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
     {
         $this->deklaracjaCelna2 = $deklaracjaCelna2;
         
@@ -207,7 +207,7 @@ class EMSType extends PrzesylkaRejestrowanaType
     /**
      * Set sposobNadaniaInterconnect value
      * @param string $sposobNadaniaInterconnect
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
     public function setSposobNadaniaInterconnect(?string $sposobNadaniaInterconnect = null): self
     {
@@ -221,18 +221,18 @@ class EMSType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get sposobDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType|null
      */
-    public function getSposobDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType
+    public function getSposobDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType
     {
         return $this->sposobDoreczenia;
     }
     /**
      * Set sposobDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
-    public function setSposobDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null): self
+    public function setSposobDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SposobDoreczeniaType $sposobDoreczenia = null): self
     {
         $this->sposobDoreczenia = $sposobDoreczenia;
         
@@ -249,16 +249,16 @@ class EMSType extends PrzesylkaRejestrowanaType
     /**
      * Set typOpakowania value
      * @param string $typOpakowania
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::valueIsValid()
      */
     public function setTypOpakowania(?string $typOpakowania = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::valueIsValid($typOpakowania)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EMSTypOpakowaniaType', is_array($typOpakowania) ? implode(', ', $typOpakowania) : var_export($typOpakowania, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::valueIsValid($typOpakowania)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EMSTypOpakowaniaType', is_array($typOpakowania) ? implode(', ', $typOpakowania) : var_export($typOpakowania, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EMSTypOpakowaniaType::getValidValues())), __LINE__);
         }
         $this->typOpakowania = $typOpakowania;
         
@@ -275,7 +275,7 @@ class EMSType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -306,7 +306,7 @@ class EMSType extends PrzesylkaRejestrowanaType
     /**
      * Set zalaczoneDokumenty value
      * @param bool $zalaczoneDokumenty
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
     public function setZalaczoneDokumenty(?bool $zalaczoneDokumenty = null): self
     {
@@ -329,7 +329,7 @@ class EMSType extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\EMSType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EMSType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

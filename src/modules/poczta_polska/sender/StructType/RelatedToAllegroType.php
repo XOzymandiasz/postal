@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -83,7 +83,7 @@ class RelatedToAllegroType extends AbstractStructBase
     /**
      * Set id value
      * @param string $id
-     * @return \app\modules\postal\sender\StructType\RelatedToAllegroType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RelatedToAllegroType
      */
     public function setId(?string $id = null): self
     {
@@ -114,7 +114,7 @@ class RelatedToAllegroType extends AbstractStructBase
     /**
      * Set sellerId value
      * @param string $sellerId
-     * @return \app\modules\postal\sender\StructType\RelatedToAllegroType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RelatedToAllegroType
      */
     public function setSellerId(?string $sellerId = null): self
     {
@@ -145,16 +145,16 @@ class RelatedToAllegroType extends AbstractStructBase
     /**
      * Set channel value
      * @param string $channel
-     * @return \app\modules\postal\sender\StructType\RelatedToAllegroType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RelatedToAllegroType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::valueIsValid()
      */
     public function setChannel(?string $channel = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::valueIsValid($channel)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RelatedToAllegroChannelType', is_array($channel) ? implode(', ', $channel) : var_export($channel, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::valueIsValid($channel)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RelatedToAllegroChannelType', is_array($channel) ? implode(', ', $channel) : var_export($channel, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RelatedToAllegroChannelType::getValidValues())), __LINE__);
         }
         $this->channel = $channel;
         
@@ -171,7 +171,7 @@ class RelatedToAllegroType extends AbstractStructBase
     /**
      * Set deliveryMethod value
      * @param string $deliveryMethod
-     * @return \app\modules\postal\sender\StructType\RelatedToAllegroType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\RelatedToAllegroType
      */
     public function setDeliveryMethod(?string $deliveryMethod = null): self
     {

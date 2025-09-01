@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -61,7 +61,7 @@ class MoveShipments extends AbstractStructBase
     /**
      * Set idBuforFrom value
      * @param int $idBuforFrom
-     * @return \app\modules\postal\sender\StructType\MoveShipments
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MoveShipments
      */
     public function setIdBuforFrom(?int $idBuforFrom = null): self
     {
@@ -84,7 +84,7 @@ class MoveShipments extends AbstractStructBase
     /**
      * Set idBuforTo value
      * @param int $idBuforTo
-     * @return \app\modules\postal\sender\StructType\MoveShipments
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MoveShipments
      */
     public function setIdBuforTo(?int $idBuforTo = null): self
     {
@@ -159,7 +159,7 @@ class MoveShipments extends AbstractStructBase
      * Set guid value
      * @throws InvalidArgumentException
      * @param string[] $guid
-     * @return \app\modules\postal\sender\StructType\MoveShipments
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MoveShipments
      */
     public function setGuid(?array $guid = null): self
     {
@@ -179,7 +179,7 @@ class MoveShipments extends AbstractStructBase
      * Add item to guid value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\MoveShipments
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MoveShipments
      */
     public function addToGuid(string $item): self
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\models;
+namespace XOzymandias\Yii2Postal\models;
 
-use app\modules\postal\models\query\ShipmentQuery;
-use app\modules\postal\Module;
-use app\modules\postal\ModuleEnsureTrait;
+use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use yii\base\InvalidCallException;
 use yii\base\InvalidConfigException;
 use yii\behaviors\TimestampBehavior;

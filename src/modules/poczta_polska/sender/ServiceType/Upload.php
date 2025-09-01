@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Upload extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named uploadIWDContent
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UploadIWDContent $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UploadIWDContent $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function uploadIWDContent(\app\modules\postal\modules\poczta_polska\sender\StructType\UploadIWDContent $parameters)
+    public function uploadIWDContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UploadIWDContent $parameters)
     {
         try {
             $this->setResult($resultUploadIWDContent = $this->getSoapClient()->__soapCall('uploadIWDContent', [
@@ -37,7 +37,7 @@ class Upload extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

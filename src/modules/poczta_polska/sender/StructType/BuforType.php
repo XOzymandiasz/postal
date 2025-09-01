@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,9 +18,9 @@ class BuforType extends AbstractStructBase
      * The profil
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null;
     /**
      * The idKarta
      * Meta information extracted from the WSDL
@@ -66,7 +66,7 @@ class BuforType extends AbstractStructBase
     protected ?bool $aktualizujPlanowanaDateNadaniaPrzesylek = null;
     /**
      * Constructor method for buforType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil
      * @param int $idKarta
      * @param int $idBufor
      * @param string $dataNadania
@@ -83,7 +83,7 @@ class BuforType extends AbstractStructBase
      * @uses BuforType::setOpis()
      * @uses BuforType::setAktualizujPlanowanaDateNadaniaPrzesylek()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null, ?int $idKarta = null, ?int $idBufor = null, ?string $dataNadania = null, ?int $urzadNadania = null, ?bool $active = null, ?string $opis = null, ?bool $aktualizujPlanowanaDateNadaniaPrzesylek = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null, ?int $idKarta = null, ?int $idBufor = null, ?string $dataNadania = null, ?int $urzadNadania = null, ?bool $active = null, ?string $opis = null, ?bool $aktualizujPlanowanaDateNadaniaPrzesylek = null)
     {
         $this
             ->setProfil($profil)
@@ -97,18 +97,18 @@ class BuforType extends AbstractStructBase
     }
     /**
      * Get profil value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    public function getProfil(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType
+    public function getProfil(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType
     {
         return $this->profil;
     }
     /**
      * Set profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
-    public function setProfil(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null): self
+    public function setProfil(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null): self
     {
         $this->profil = $profil;
         
@@ -125,7 +125,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -148,7 +148,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set idBufor value
      * @param int $idBufor
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setIdBufor(?int $idBufor = null): self
     {
@@ -171,7 +171,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set dataNadania value
      * @param string $dataNadania
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setDataNadania(?string $dataNadania = null): self
     {
@@ -194,7 +194,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set urzadNadania value
      * @param int $urzadNadania
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setUrzadNadania(?int $urzadNadania = null): self
     {
@@ -217,7 +217,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set active value
      * @param bool $active
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setActive(?bool $active = null): self
     {
@@ -240,7 +240,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -263,7 +263,7 @@ class BuforType extends AbstractStructBase
     /**
      * Set aktualizujPlanowanaDateNadaniaPrzesylek value
      * @param bool $aktualizujPlanowanaDateNadaniaPrzesylek
-     * @return \app\modules\postal\sender\StructType\BuforType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\BuforType
      */
     public function setAktualizujPlanowanaDateNadaniaPrzesylek(?bool $aktualizujPlanowanaDateNadaniaPrzesylek = null): self
     {

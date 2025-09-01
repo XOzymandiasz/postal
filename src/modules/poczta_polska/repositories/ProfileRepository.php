@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
-use app\modules\postal\modules\poczta_polska\services\ProfileService;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\services\ProfileService;
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
 

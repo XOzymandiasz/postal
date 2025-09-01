@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\HelloResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\HelloResponse;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -16,8 +16,8 @@ class Hello extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named hello
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\Hello $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\HelloResponse|null
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\Hello $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\HelloResponse|null
      *@uses  AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
@@ -38,7 +38,7 @@ class Hello extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\HelloResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\HelloResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

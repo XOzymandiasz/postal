@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\address;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\address;
 
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\models\ShipmentProviderInterface;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use FunctionalTester;
 use yii\helpers\Url;
 

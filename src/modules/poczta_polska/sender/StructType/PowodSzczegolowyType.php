@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class PowodSzczegolowyType extends AbstractStructBase
     /**
      * Set idPowodSzczegolowy value
      * @param int $idPowodSzczegolowy
-     * @return \app\modules\postal\sender\StructType\PowodSzczegolowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodSzczegolowyType
      */
     public function setIdPowodSzczegolowy(?int $idPowodSzczegolowy = null): self
     {
@@ -71,7 +71,7 @@ class PowodSzczegolowyType extends AbstractStructBase
     /**
      * Set powodSzczegolowyOpis value
      * @param string $powodSzczegolowyOpis
-     * @return \app\modules\postal\sender\StructType\PowodSzczegolowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodSzczegolowyType
      */
     public function setPowodSzczegolowyOpis(?string $powodSzczegolowyOpis = null): self
     {

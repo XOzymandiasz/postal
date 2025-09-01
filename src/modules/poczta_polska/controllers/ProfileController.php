@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\controllers;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\controllers;
 
-use app\modules\postal\modules\poczta_polska\forms\ProfileForm;
-use app\modules\postal\modules\poczta_polska\Module;
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ProfileForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\data\ArrayDataProvider;

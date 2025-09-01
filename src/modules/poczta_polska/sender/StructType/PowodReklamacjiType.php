@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,7 +18,7 @@ class PowodReklamacjiType extends AbstractStructBase
      * The powodSzczegolowy
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[]
      */
     protected ?array $powodSzczegolowy = null;
     /**
@@ -33,7 +33,7 @@ class PowodReklamacjiType extends AbstractStructBase
     protected ?string $powodGlownyOpis = null;
     /**
      * Constructor method for powodReklamacjiType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[] $powodSzczegolowy
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[] $powodSzczegolowy
      * @param int $idPowodGlowny
      * @param string $powodGlownyOpis
      *@uses  PowodReklamacjiType::setPowodSzczegolowy()
@@ -49,7 +49,7 @@ class PowodReklamacjiType extends AbstractStructBase
     }
     /**
      * Get powodSzczegolowy value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[]
      */
     public function getPowodSzczegolowy(): ?array
     {
@@ -71,12 +71,12 @@ class PowodReklamacjiType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $powodReklamacjiTypePowodSzczegolowyItem) {
             // validation for constraint: itemType
-            if (!$powodReklamacjiTypePowodSzczegolowyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType) {
+            if (!$powodReklamacjiTypePowodSzczegolowyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType) {
                 $invalidValues[] = is_object($powodReklamacjiTypePowodSzczegolowyItem) ? get_class($powodReklamacjiTypePowodSzczegolowyItem) : sprintf('%s(%s)', gettype($powodReklamacjiTypePowodSzczegolowyItem), var_export($powodReklamacjiTypePowodSzczegolowyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The powodSzczegolowy property can only contain items of type \app\modules\postal\sender\StructType\PowodSzczegolowyType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The powodSzczegolowy property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PowodSzczegolowyType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -84,8 +84,8 @@ class PowodReklamacjiType extends AbstractStructBase
     }
     /**
      * Set powodSzczegolowy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[] $powodSzczegolowy
-     * @return \app\modules\postal\sender\StructType\PowodReklamacjiType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType[] $powodSzczegolowy
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType
      *@throws InvalidArgumentException
      */
     public function setPowodSzczegolowy(?array $powodSzczegolowy = null): self
@@ -100,15 +100,15 @@ class PowodReklamacjiType extends AbstractStructBase
     }
     /**
      * Add item to powodSzczegolowy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType $item
-     * @return \app\modules\postal\sender\StructType\PowodReklamacjiType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType
      *@throws InvalidArgumentException
      */
-    public function addToPowodSzczegolowy(\app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType $item): self
+    public function addToPowodSzczegolowy(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType) {
-            throw new InvalidArgumentException(sprintf('The powodSzczegolowy property can only contain items of type \app\modules\postal\sender\StructType\PowodSzczegolowyType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodSzczegolowyType) {
+            throw new InvalidArgumentException(sprintf('The powodSzczegolowy property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PowodSzczegolowyType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->powodSzczegolowy[] = $item;
         
@@ -125,7 +125,7 @@ class PowodReklamacjiType extends AbstractStructBase
     /**
      * Set idPowodGlowny value
      * @param int $idPowodGlowny
-     * @return \app\modules\postal\sender\StructType\PowodReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType
      */
     public function setIdPowodGlowny(?int $idPowodGlowny = null): self
     {
@@ -148,7 +148,7 @@ class PowodReklamacjiType extends AbstractStructBase
     /**
      * Set powodGlownyOpis value
      * @param string $powodGlownyOpis
-     * @return \app\modules\postal\sender\StructType\PowodReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType
      */
     public function setPowodGlownyOpis(?string $powodGlownyOpis = null): self
     {

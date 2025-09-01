@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\models;
+namespace XOzymandias\Yii2Postal\models;
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\sender\StructType\AdresType; #@todo:
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType; #@todo:
 use yii\base\InvalidConfigException;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;

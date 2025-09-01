@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\sender;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender;
 
 use WsdlToPhp\PackageBase\SoapClientInterface;
 use yii\base\Component;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -109,9 +109,9 @@ class ShopEZwrotyType extends AbstractStructBase
      * The eZwrotKarta
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null;
     /**
      * The idShop
      * @var int|null
@@ -210,7 +210,7 @@ class ShopEZwrotyType extends AbstractStructBase
      * @param string $mobile
      * @param string $email
      * @param string[] $eZwrotPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta
      * @param int $idShop
      * @param string $nazwa2
      * @param string $numerLokalu
@@ -250,7 +250,7 @@ class ShopEZwrotyType extends AbstractStructBase
      * @uses ShopEZwrotyType::setContractorCost()
      * @uses ShopEZwrotyType::setInfoForClient()
      */
-    public function __construct(string $nazwa, string $przyjaznaNazwa, string $ulica, string $numerDomu, string $miejscowosc, string $kodPocztowy, string $mobile, string $email, ?array $eZwrotPrzesylki = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null, ?int $idShop = null, ?string $nazwa2 = null, ?string $numerLokalu = null, ?string $nip = null, ?string $regon = null, ?string $krs = null, ?string $eZwrotTyp = null, ?string $wymagalnoscNumeruIdentyfikujacegoPrzesylke = null, ?bool $availableOnWebsite = null, ?string $emailForEZwrot = null, ?bool $paid = null, ?int $consentValidFor = null, ?int $contractorCost = null, ?string $infoForClient = null)
+    public function __construct(string $nazwa, string $przyjaznaNazwa, string $ulica, string $numerDomu, string $miejscowosc, string $kodPocztowy, string $mobile, string $email, ?array $eZwrotPrzesylki = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null, ?int $idShop = null, ?string $nazwa2 = null, ?string $numerLokalu = null, ?string $nip = null, ?string $regon = null, ?string $krs = null, ?string $eZwrotTyp = null, ?string $wymagalnoscNumeruIdentyfikujacegoPrzesylke = null, ?bool $availableOnWebsite = null, ?string $emailForEZwrot = null, ?bool $paid = null, ?int $consentValidFor = null, ?int $contractorCost = null, ?string $infoForClient = null)
     {
         $this
             ->setNazwa($nazwa)
@@ -289,7 +289,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set nazwa value
      * @param string $nazwa
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setNazwa(string $nazwa): self
     {
@@ -320,7 +320,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set przyjaznaNazwa value
      * @param string $przyjaznaNazwa
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setPrzyjaznaNazwa(string $przyjaznaNazwa): self
     {
@@ -351,7 +351,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set ulica value
      * @param string $ulica
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setUlica(string $ulica): self
     {
@@ -382,7 +382,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set numerDomu value
      * @param string $numerDomu
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setNumerDomu(string $numerDomu): self
     {
@@ -413,7 +413,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set miejscowosc value
      * @param string $miejscowosc
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setMiejscowosc(string $miejscowosc): self
     {
@@ -444,7 +444,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set kodPocztowy value
      * @param string $kodPocztowy
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setKodPocztowy(string $kodPocztowy): self
     {
@@ -475,7 +475,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set mobile value
      * @param string $mobile
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setMobile(string $mobile): self
     {
@@ -498,7 +498,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set email value
      * @param string $email
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setEmail(string $email): self
     {
@@ -542,12 +542,12 @@ class ShopEZwrotyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $shopEZwrotyTypeEZwrotPrzesylkiItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($shopEZwrotyTypeEZwrotPrzesylkiItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($shopEZwrotyTypeEZwrotPrzesylkiItem)) {
                 $invalidValues[] = is_object($shopEZwrotyTypeEZwrotPrzesylkiItem) ? get_class($shopEZwrotyTypeEZwrotPrzesylkiItem) : sprintf('%s(%s)', gettype($shopEZwrotyTypeEZwrotPrzesylkiItem), var_export($shopEZwrotyTypeEZwrotPrzesylkiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EZwrotPrzesylkiType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EZwrotPrzesylkiType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()));
         }
         unset($invalidValues);
         
@@ -556,10 +556,10 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set eZwrotPrzesylki value
      * @param string[] $eZwrotPrzesylki
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
      */
     public function setEZwrotPrzesylki(?array $eZwrotPrzesylki = null): self
     {
@@ -578,16 +578,16 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Add item to eZwrotPrzesylki value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid()
      */
     public function addToEZwrotPrzesylki(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EZwrotPrzesylkiType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EZwrotPrzesylkiType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotPrzesylkiType::getValidValues())), __LINE__);
         }
         // validation for constraint: maxOccurs(2)
         if (is_array($this->eZwrotPrzesylki) && count($this->eZwrotPrzesylki) >= 2) {
@@ -599,18 +599,18 @@ class ShopEZwrotyType extends AbstractStructBase
     }
     /**
      * Get eZwrotKarta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType|null
      */
-    public function getEZwrotKarta(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType
+    public function getEZwrotKarta(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType
     {
         return $this->eZwrotKarta;
     }
     /**
      * Set eZwrotKarta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
-    public function setEZwrotKarta(?\app\modules\postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null): self
+    public function setEZwrotKarta(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZwrotKartaType $eZwrotKarta = null): self
     {
         $this->eZwrotKarta = $eZwrotKarta;
         
@@ -627,7 +627,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set idShop value
      * @param int $idShop
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setIdShop(?int $idShop = null): self
     {
@@ -650,7 +650,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set nazwa2 value
      * @param string $nazwa2
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setNazwa2(?string $nazwa2 = null): self
     {
@@ -681,7 +681,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set numerLokalu value
      * @param string $numerLokalu
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setNumerLokalu(?string $numerLokalu = null): self
     {
@@ -712,7 +712,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set nip value
      * @param string $nip
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setNip(?string $nip = null): self
     {
@@ -735,7 +735,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set regon value
      * @param string $regon
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setRegon(?string $regon = null): self
     {
@@ -758,7 +758,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set krs value
      * @param string $krs
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setKrs(?string $krs = null): self
     {
@@ -781,16 +781,16 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set eZwrotTyp value
      * @param string $eZwrotTyp
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::valueIsValid()
      */
     public function setEZwrotTyp(?string $eZwrotTyp = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::valueIsValid($eZwrotTyp)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EZwrotTypZgodyType', is_array($eZwrotTyp) ? implode(', ', $eZwrotTyp) : var_export($eZwrotTyp, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::valueIsValid($eZwrotTyp)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EZwrotTypZgodyType', is_array($eZwrotTyp) ? implode(', ', $eZwrotTyp) : var_export($eZwrotTyp, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EZwrotTypZgodyType::getValidValues())), __LINE__);
         }
         $this->eZwrotTyp = $eZwrotTyp;
         
@@ -807,16 +807,16 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set wymagalnoscNumeruIdentyfikujacegoPrzesylke value
      * @param string $wymagalnoscNumeruIdentyfikujacegoPrzesylke
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::valueIsValid()
      */
     public function setWymagalnoscNumeruIdentyfikujacegoPrzesylke(?string $wymagalnoscNumeruIdentyfikujacegoPrzesylke = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::valueIsValid($wymagalnoscNumeruIdentyfikujacegoPrzesylke)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum', is_array($wymagalnoscNumeruIdentyfikujacegoPrzesylke) ? implode(', ', $wymagalnoscNumeruIdentyfikujacegoPrzesylke) : var_export($wymagalnoscNumeruIdentyfikujacegoPrzesylke, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::valueIsValid($wymagalnoscNumeruIdentyfikujacegoPrzesylke)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum', is_array($wymagalnoscNumeruIdentyfikujacegoPrzesylke) ? implode(', ', $wymagalnoscNumeruIdentyfikujacegoPrzesylke) : var_export($wymagalnoscNumeruIdentyfikujacegoPrzesylke, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\WymagalnoscNumeruIdentyfikujacegoPrzesylkeEnum::getValidValues())), __LINE__);
         }
         $this->wymagalnoscNumeruIdentyfikujacegoPrzesylke = $wymagalnoscNumeruIdentyfikujacegoPrzesylke;
         
@@ -833,7 +833,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set availableOnWebsite value
      * @param bool $availableOnWebsite
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setAvailableOnWebsite(?bool $availableOnWebsite = null): self
     {
@@ -856,7 +856,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set emailForEZwrot value
      * @param string $emailForEZwrot
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setEmailForEZwrot(?string $emailForEZwrot = null): self
     {
@@ -887,7 +887,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set paid value
      * @param bool $paid
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setPaid(?bool $paid = null): self
     {
@@ -910,7 +910,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set consentValidFor value
      * @param int $consentValidFor
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setConsentValidFor(?int $consentValidFor = null): self
     {
@@ -933,7 +933,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set contractorCost value
      * @param int $contractorCost
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setContractorCost(?int $contractorCost = null): self
     {
@@ -956,7 +956,7 @@ class ShopEZwrotyType extends AbstractStructBase
     /**
      * Set infoForClient value
      * @param string $infoForClient
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyType
      */
     public function setInfoForClient(?string $infoForClient = null): self
     {

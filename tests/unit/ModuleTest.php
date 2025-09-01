@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\tests\unit;
+namespace XOzymandias\Yii2Postal\tests\unit;
 
-use app\modules\postal\components\ShipmentRelationComponent;
-use app\modules\postal\components\ShipmentUrlComponent;
-use app\modules\postal\Module;
-use app\modules\postal\ModuleEnsureTrait;
+use XOzymandias\Yii2Postal\components\ShipmentRelationComponent;
+use XOzymandias\Yii2Postal\components\ShipmentUrlComponent;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use Codeception\Test\Unit;
 use UnitTester;
 use Yii;

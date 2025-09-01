@@ -1,10 +1,10 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\models\ShipmentContent $model */
+/** @var XOzymandias\Yii2Postal\models\ShipmentContent $model */
 
 $this->title = Module::t('common', 'Create Shipment Content');
 $this->params['breadcrumbs'][] = ['label' => Module::t('common', 'Shipment Contents'), 'url' => ['index']];

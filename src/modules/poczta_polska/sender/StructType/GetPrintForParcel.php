@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -29,17 +29,17 @@ class GetPrintForParcel extends AbstractStructBase
      * The type
      * Meta information extracted from the WSDL
      * - documentation: printout type
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrintType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrintType $type = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType $type = null;
     /**
      * Constructor method for getPrintForParcel
      * @param string[] $guid
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrintType $type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType $type
      *@uses GetPrintForParcel::setGuid()
      * @uses GetPrintForParcel::setType()
      */
-    public function __construct(?array $guid = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrintType $type = null)
+    public function __construct(?array $guid = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType $type = null)
     {
         $this
             ->setGuid($guid)
@@ -108,7 +108,7 @@ class GetPrintForParcel extends AbstractStructBase
      * Set guid value
      * @throws InvalidArgumentException
      * @param string[] $guid
-     * @return \app\modules\postal\sender\StructType\GetPrintForParcel
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPrintForParcel
      */
     public function setGuid(?array $guid = null): self
     {
@@ -132,7 +132,7 @@ class GetPrintForParcel extends AbstractStructBase
      * Add item to guid value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\GetPrintForParcel
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPrintForParcel
      */
     public function addToGuid(string $item): self
     {
@@ -154,18 +154,18 @@ class GetPrintForParcel extends AbstractStructBase
     }
     /**
      * Get type value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrintType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType|null
      */
-    public function getType(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrintType
+    public function getType(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType
     {
         return $this->type;
     }
     /**
      * Set type value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrintType $type
-     * @return \app\modules\postal\sender\StructType\GetPrintForParcel
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType $type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPrintForParcel
      */
-    public function setType(?\app\modules\postal\modules\poczta_polska\sender\StructType\PrintType $type = null): self
+    public function setType(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType $type = null): self
     {
         $this->type = $type;
         

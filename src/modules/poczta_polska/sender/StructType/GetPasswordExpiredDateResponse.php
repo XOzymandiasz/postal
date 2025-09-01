@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetPasswordExpiredDateResponse extends AbstractStructBase
     /**
      * Set dataWygasniecia value
      * @param string $dataWygasniecia
-     * @return \app\modules\postal\sender\StructType\GetPasswordExpiredDateResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPasswordExpiredDateResponse
      */
     public function setDataWygasniecia(?string $dataWygasniecia = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,9 +18,9 @@ class PrzesylkaEPOType extends AbstractStructBase
      * The EPOInfo
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType $EPOInfo = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType $EPOInfo = null;
     /**
      * The biometricSignatureContent
      * Meta information extracted from the WSDL
@@ -62,7 +62,7 @@ class PrzesylkaEPOType extends AbstractStructBase
     protected ?string $statusEPO = null;
     /**
      * Constructor method for przesylkaEPOType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo
      * @param string $biometricSignatureContent
      * @param int $version
      * @param string $guid
@@ -75,7 +75,7 @@ class PrzesylkaEPOType extends AbstractStructBase
      * @uses PrzesylkaEPOType::setNumerNadania()
      * @uses PrzesylkaEPOType::setStatusEPO()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo = null, ?string $biometricSignatureContent = null, ?int $version = null, ?string $guid = null, ?string $numerNadania = null, ?string $statusEPO = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo = null, ?string $biometricSignatureContent = null, ?int $version = null, ?string $guid = null, ?string $numerNadania = null, ?string $statusEPO = null)
     {
         $this
             ->setEPOInfo($ePOInfo)
@@ -87,18 +87,18 @@ class PrzesylkaEPOType extends AbstractStructBase
     }
     /**
      * Get EPOInfo value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType|null
      */
-    public function getEPOInfo(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType
+    public function getEPOInfo(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType
     {
         return $this->EPOInfo;
     }
     /**
      * Set EPOInfo value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      */
-    public function setEPOInfo(?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo = null): self
+    public function setEPOInfo(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOInfoType $ePOInfo = null): self
     {
         $this->EPOInfo = $ePOInfo;
         
@@ -115,7 +115,7 @@ class PrzesylkaEPOType extends AbstractStructBase
     /**
      * Set biometricSignatureContent value
      * @param string $biometricSignatureContent
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      */
     public function setBiometricSignatureContent(?string $biometricSignatureContent = null): self
     {
@@ -138,7 +138,7 @@ class PrzesylkaEPOType extends AbstractStructBase
     /**
      * Set version value
      * @param int $version
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      */
     public function setVersion(?int $version = null): self
     {
@@ -161,7 +161,7 @@ class PrzesylkaEPOType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      */
     public function setGuid(?string $guid = null): self
     {
@@ -188,7 +188,7 @@ class PrzesylkaEPOType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -219,16 +219,16 @@ class PrzesylkaEPOType extends AbstractStructBase
     /**
      * Set statusEPO value
      * @param string $statusEPO
-     * @return \app\modules\postal\sender\StructType\PrzesylkaEPOType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaEPOType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::valueIsValid()
      */
     public function setStatusEPO(?string $statusEPO = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::valueIsValid($statusEPO)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\StatusEPOEnum', is_array($statusEPO) ? implode(', ', $statusEPO) : var_export($statusEPO, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::valueIsValid($statusEPO)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\StatusEPOEnum', is_array($statusEPO) ? implode(', ', $statusEPO) : var_export($statusEPO, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusEPOEnum::getValidValues())), __LINE__);
         }
         $this->statusEPO = $statusEPO;
         

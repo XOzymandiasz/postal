@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Change extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named changePassword
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChangePassword $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ChangePasswordResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChangePassword $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChangePasswordResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function changePassword(\app\modules\postal\modules\poczta_polska\sender\StructType\ChangePassword $parameters)
+    public function changePassword(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChangePassword $parameters)
     {
         try {
             $this->setResult($resultChangePassword = $this->getSoapClient()->__soapCall('changePassword', [
@@ -37,7 +37,7 @@ class Change extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ChangePasswordResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChangePasswordResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

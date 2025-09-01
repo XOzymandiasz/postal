@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,33 +15,33 @@ class UpdateShopEZwroty extends AbstractStructBase
 {
     /**
      * The shop
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null;
     /**
      * Constructor method for updateShopEZwroty
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop
      * @uses UpdateShopEZwroty::setShop()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null)
     {
         $this
             ->setShop($shop);
     }
     /**
      * Get shop value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
      */
-    public function getShop(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType
+    public function getShop(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType
     {
         return $this->shop;
     }
     /**
      * Set shop value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop
-     * @return \app\modules\postal\sender\StructType\UpdateShopEZwroty
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UpdateShopEZwroty
      */
-    public function setShop(?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null): self
+    public function setShop(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $shop = null): self
     {
         $this->shop = $shop;
         

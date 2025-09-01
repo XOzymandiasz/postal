@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -65,7 +65,7 @@ class ProduktInKartaType extends AbstractStructBase
     /**
      * Set symbolIWD value
      * @param string $symbolIWD
-     * @return \app\modules\postal\sender\StructType\ProduktInKartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProduktInKartaType
      */
     public function setSymbolIWD(?string $symbolIWD = null): self
     {
@@ -92,7 +92,7 @@ class ProduktInKartaType extends AbstractStructBase
     /**
      * Set nazwaWyswietlana value
      * @param string $nazwaWyswietlana
-     * @return \app\modules\postal\sender\StructType\ProduktInKartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProduktInKartaType
      */
     public function setNazwaWyswietlana(?string $nazwaWyswietlana = null): self
     {
@@ -119,7 +119,7 @@ class ProduktInKartaType extends AbstractStructBase
     /**
      * Set nazwaProduktu value
      * @param string $nazwaProduktu
-     * @return \app\modules\postal\sender\StructType\ProduktInKartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProduktInKartaType
      */
     public function setNazwaProduktu(?string $nazwaProduktu = null): self
     {

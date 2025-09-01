@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -51,7 +51,7 @@ class UploadIWDContent extends AbstractStructBase
     /**
      * Set urzadNadania value
      * @param int $urzadNadania
-     * @return \app\modules\postal\sender\StructType\UploadIWDContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UploadIWDContent
      */
     public function setUrzadNadania(?int $urzadNadania = null): self
     {
@@ -74,7 +74,7 @@ class UploadIWDContent extends AbstractStructBase
     /**
      * Set IWDContent value
      * @param string $iWDContent
-     * @return \app\modules\postal\sender\StructType\UploadIWDContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UploadIWDContent
      */
     public function setIWDContent(?string $iWDContent = null): self
     {

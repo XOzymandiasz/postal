@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,30 +17,30 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
      * The pobranie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
     /**
      * The potwierdzenieDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null;
     /**
      * The potwierdzenieOdbioru
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null;
     /**
      * The ubezpieczenie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
     /**
      * The masa
      * Meta information extracted from the WSDL
@@ -111,16 +111,16 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
      * The epo
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
     /**
      * The adresDlaZwrotu
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null;
     /**
      * The odbiorWSobote
      * Meta information extracted from the WSDL
@@ -139,9 +139,9 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
      * The zawartosc
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null;
     /**
      * The sprawdzenieZawartosciPrzesylkiPrzezOdbiorce
      * Meta information extracted from the WSDL
@@ -165,10 +165,10 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     protected ?bool $doreczenieDoRakWlasnych = null;
     /**
      * Constructor method for pocztex2021Type
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
      * @param int $masa
      * @param int $wartosc
      * @param bool $ostroznie
@@ -177,11 +177,11 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
      * @param string $numerPrzesylkiKlienta
      * @param string $zwrotDokumentow
      * @param int $idDokumentyZwrotneAdresy
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
      * @param bool $odbiorWSobote
      * @param string $zasadySpecjalne
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc
      * @param bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce
      * @param string $uiszczaOplate
      * @param bool $doreczenieDoRakWlasnych
@@ -206,7 +206,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
      * @uses Pocztex2021Type::setUiszczaOplate()
      * @uses Pocztex2021Type::setDoreczenieDoRakWlasnych()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?int $masa = null, ?int $wartosc = null, ?bool $ostroznie = null, ?bool $ponadgabaryt = null, ?string $format = null, ?string $numerPrzesylkiKlienta = null, ?string $zwrotDokumentow = null, ?int $idDokumentyZwrotneAdresy = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null, ?bool $odbiorWSobote = null, ?string $zasadySpecjalne = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null, ?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null, ?string $uiszczaOplate = null, ?bool $doreczenieDoRakWlasnych = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?int $masa = null, ?int $wartosc = null, ?bool $ostroznie = null, ?bool $ponadgabaryt = null, ?string $format = null, ?string $numerPrzesylkiKlienta = null, ?string $zwrotDokumentow = null, ?int $idDokumentyZwrotneAdresy = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null, ?bool $odbiorWSobote = null, ?string $zasadySpecjalne = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null, ?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null, ?string $uiszczaOplate = null, ?bool $doreczenieDoRakWlasnych = null)
     {
         $this
             ->setPobranie($pobranie)
@@ -232,18 +232,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get pobranie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    public function getPobranie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType
+    public function getPobranie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType
     {
         return $this->pobranie;
     }
     /**
      * Set pobranie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setPobranie(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
+    public function setPobranie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
     {
         $this->pobranie = $pobranie;
         
@@ -251,18 +251,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType|null
      */
-    public function getPotwierdzenieDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType
+    public function getPotwierdzenieDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType
     {
         return $this->potwierdzenieDoreczenia;
     }
     /**
      * Set potwierdzenieDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setPotwierdzenieDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null): self
+    public function setPotwierdzenieDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieEDoreczeniaType $potwierdzenieDoreczenia = null): self
     {
         $this->potwierdzenieDoreczenia = $potwierdzenieDoreczenia;
         
@@ -270,18 +270,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieOdbioru value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type|null
      */
-    public function getPotwierdzenieOdbioru(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
+    public function getPotwierdzenieOdbioru(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
     {
         return $this->potwierdzenieOdbioru;
     }
     /**
      * Set potwierdzenieOdbioru value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setPotwierdzenieOdbioru(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null): self
+    public function setPotwierdzenieOdbioru(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruPocztex2021Type $potwierdzenieOdbioru = null): self
     {
         $this->potwierdzenieOdbioru = $potwierdzenieOdbioru;
         
@@ -289,18 +289,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get ubezpieczenie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    public function getUbezpieczenie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
+    public function getUbezpieczenie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
     {
         return $this->ubezpieczenie;
     }
     /**
      * Set ubezpieczenie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setUbezpieczenie(?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
+    public function setUbezpieczenie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
     {
         $this->ubezpieczenie = $ubezpieczenie;
         
@@ -317,7 +317,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setMasa(?int $masa = null): self
     {
@@ -348,7 +348,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -379,7 +379,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set ostroznie value
      * @param bool $ostroznie
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setOstroznie(?bool $ostroznie = null): self
     {
@@ -402,7 +402,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set ponadgabaryt value
      * @param bool $ponadgabaryt
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setPonadgabaryt(?bool $ponadgabaryt = null): self
     {
@@ -425,16 +425,16 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -451,7 +451,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {
@@ -478,16 +478,16 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set zwrotDokumentow value
      * @param string $zwrotDokumentow
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::valueIsValid()
      */
     public function setZwrotDokumentow(?string $zwrotDokumentow = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::valueIsValid($zwrotDokumentow)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZwrotDokumentowPocztex2021Enum', is_array($zwrotDokumentow) ? implode(', ', $zwrotDokumentow) : var_export($zwrotDokumentow, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::valueIsValid($zwrotDokumentow)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZwrotDokumentowPocztex2021Enum', is_array($zwrotDokumentow) ? implode(', ', $zwrotDokumentow) : var_export($zwrotDokumentow, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZwrotDokumentowPocztex2021Enum::getValidValues())), __LINE__);
         }
         $this->zwrotDokumentow = $zwrotDokumentow;
         
@@ -504,7 +504,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set idDokumentyZwrotneAdresy value
      * @param int $idDokumentyZwrotneAdresy
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setIdDokumentyZwrotneAdresy(?int $idDokumentyZwrotneAdresy = null): self
     {
@@ -518,18 +518,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get epo value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    public function getEpo(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType
+    public function getEpo(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType
     {
         return $this->epo;
     }
     /**
      * Set epo value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setEpo(?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
+    public function setEpo(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
     {
         $this->epo = $epo;
         
@@ -537,18 +537,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get adresDlaZwrotu value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdresDlaZwrotu(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdresDlaZwrotu(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adresDlaZwrotu;
     }
     /**
      * Set adresDlaZwrotu value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setAdresDlaZwrotu(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null): self
+    public function setAdresDlaZwrotu(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null): self
     {
         $this->adresDlaZwrotu = $adresDlaZwrotu;
         
@@ -565,7 +565,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set odbiorWSobote value
      * @param bool $odbiorWSobote
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setOdbiorWSobote(?bool $odbiorWSobote = null): self
     {
@@ -588,16 +588,16 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set zasadySpecjalne value
      * @param string $zasadySpecjalne
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
      */
     public function setZasadySpecjalne(?string $zasadySpecjalne = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
         }
         $this->zasadySpecjalne = $zasadySpecjalne;
         
@@ -605,18 +605,18 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     }
     /**
      * Get zawartosc value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type|null
      */
-    public function getZawartosc(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type
+    public function getZawartosc(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type
     {
         return $this->zawartosc;
     }
     /**
      * Set zawartosc value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
-    public function setZawartosc(?\app\modules\postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null): self
+    public function setZawartosc(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZawartoscPocztex2021Type $zawartosc = null): self
     {
         $this->zawartosc = $zawartosc;
         
@@ -633,7 +633,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set sprawdzenieZawartosciPrzesylkiPrzezOdbiorce value
      * @param bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setSprawdzenieZawartosciPrzesylkiPrzezOdbiorce(?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null): self
     {
@@ -656,16 +656,16 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set uiszczaOplate value
      * @param string $uiszczaOplate
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
      */
     public function setUiszczaOplate(?string $uiszczaOplate = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
         }
         $this->uiszczaOplate = $uiszczaOplate;
         
@@ -682,7 +682,7 @@ abstract class Pocztex2021Type extends PrzesylkaRejestrowanaType
     /**
      * Set doreczenieDoRakWlasnych value
      * @param bool $doreczenieDoRakWlasnych
-     * @return \app\modules\postal\sender\StructType\Pocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021Type
      */
     public function setDoreczenieDoRakWlasnych(?bool $doreczenieDoRakWlasnych = null): self
     {

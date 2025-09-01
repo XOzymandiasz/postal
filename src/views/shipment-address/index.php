@@ -1,9 +1,9 @@
 <?php
 
-use app\modules\postal\models\search\ShipmentAddressPostSearch;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\search\ShipmentAddressPostSearch;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\Module;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;

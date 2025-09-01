@@ -1,16 +1,16 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ShipmentRepository;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
-use app\modules\postal\modules\poczta_polska\sender\StructType\AdresType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use Codeception\Test\Unit;
 use edzima\teryt\models\Region;
 use InvalidArgumentException;

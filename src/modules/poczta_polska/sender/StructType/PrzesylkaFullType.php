@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use WsdlToPhp\PackageBase\AbstractStructBase;
 
@@ -15,22 +15,22 @@ class PrzesylkaFullType extends AbstractStructBase
 {
     /**
      * The przesylkaShort
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null;
     /**
      * The przesylkaFull
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null;
     /**
      * Constructor method for przesylkaFullType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull
      *@uses PrzesylkaFullType::setPrzesylkaShort()
      * @uses PrzesylkaFullType::setPrzesylkaFull()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null)
     {
         $this
             ->setPrzesylkaShort($przesylkaShort)
@@ -38,18 +38,18 @@ class PrzesylkaFullType extends AbstractStructBase
     }
     /**
      * Get przesylkaShort value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType|null
      */
-    public function getPrzesylkaShort(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType
+    public function getPrzesylkaShort(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType
     {
         return $this->przesylkaShort;
     }
     /**
      * Set przesylkaShort value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort
-     * @return \app\modules\postal\sender\StructType\PrzesylkaFullType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaFullType
      */
-    public function setPrzesylkaShort(?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null): self
+    public function setPrzesylkaShort(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $przesylkaShort = null): self
     {
         $this->przesylkaShort = $przesylkaShort;
         
@@ -57,18 +57,18 @@ class PrzesylkaFullType extends AbstractStructBase
     }
     /**
      * Get przesylkaFull value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
      */
-    public function getPrzesylkaFull(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType
+    public function getPrzesylkaFull(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType
     {
         return $this->przesylkaFull;
     }
     /**
      * Set przesylkaFull value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull
-     * @return \app\modules\postal\sender\StructType\PrzesylkaFullType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaFullType
      */
-    public function setPrzesylkaFull(?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null): self
+    public function setPrzesylkaFull(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylkaFull = null): self
     {
         $this->przesylkaFull = $przesylkaFull;
         

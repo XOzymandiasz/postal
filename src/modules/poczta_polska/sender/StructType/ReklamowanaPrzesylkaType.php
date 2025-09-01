@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -23,14 +23,14 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     protected string $dataNadania;
     /**
      * The przesylka
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null;
     /**
      * The powodReklamacji
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null;
     /**
      * The nrb
      * Meta information extracted from the WSDL
@@ -88,8 +88,8 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Constructor method for reklamowanaPrzesylkaType
      * @param string $dataNadania
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji
      * @param string $nrb
      * @param string $numerFaktury
      * @param bool $ezgoda
@@ -110,7 +110,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
      * @uses ReklamowanaPrzesylkaType::setOplata()
      * @uses ReklamowanaPrzesylkaType::setOczekiwaneOdszkodowanie()
      */
-    public function __construct(string $dataNadania, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null, ?string $nrb = null, ?string $numerFaktury = null, ?bool $ezgoda = null, ?int $urzadNadania = null, ?string $powodReklamacjiOpis = null, ?int $odszkodowanie = null, ?int $oplata = null, ?int $oczekiwaneOdszkodowanie = null)
+    public function __construct(string $dataNadania, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null, ?string $nrb = null, ?string $numerFaktury = null, ?bool $ezgoda = null, ?int $urzadNadania = null, ?string $powodReklamacjiOpis = null, ?int $odszkodowanie = null, ?int $oplata = null, ?int $oczekiwaneOdszkodowanie = null)
     {
         $this
             ->setDataNadania($dataNadania)
@@ -136,7 +136,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set dataNadania value
      * @param string $dataNadania
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setDataNadania(string $dataNadania): self
     {
@@ -150,18 +150,18 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     }
     /**
      * Get przesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType|null
      */
-    public function getPrzesylka(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType
+    public function getPrzesylka(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType
     {
         return $this->przesylka;
     }
     /**
      * Set przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
-    public function setPrzesylka(?\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null): self
+    public function setPrzesylka(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType $przesylka = null): self
     {
         $this->przesylka = $przesylka;
         
@@ -169,18 +169,18 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     }
     /**
      * Get powodReklamacji value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType|null
      */
-    public function getPowodReklamacji(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType
+    public function getPowodReklamacji(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType
     {
         return $this->powodReklamacji;
     }
     /**
      * Set powodReklamacji value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
-    public function setPowodReklamacji(?\app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null): self
+    public function setPowodReklamacji(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $powodReklamacji = null): self
     {
         $this->powodReklamacji = $powodReklamacji;
         
@@ -197,7 +197,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set nrb value
      * @param string $nrb
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setNrb(?string $nrb = null): self
     {
@@ -228,7 +228,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set numerFaktury value
      * @param string $numerFaktury
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setNumerFaktury(?string $numerFaktury = null): self
     {
@@ -259,7 +259,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set ezgoda value
      * @param bool $ezgoda
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setEzgoda(?bool $ezgoda = null): self
     {
@@ -282,7 +282,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set urzadNadania value
      * @param int $urzadNadania
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setUrzadNadania(?int $urzadNadania = null): self
     {
@@ -305,7 +305,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set powodReklamacjiOpis value
      * @param string $powodReklamacjiOpis
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setPowodReklamacjiOpis(?string $powodReklamacjiOpis = null): self
     {
@@ -328,7 +328,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set odszkodowanie value
      * @param int $odszkodowanie
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setOdszkodowanie(?int $odszkodowanie = null): self
     {
@@ -351,7 +351,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set oplata value
      * @param int $oplata
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setOplata(?int $oplata = null): self
     {
@@ -374,7 +374,7 @@ class ReklamowanaPrzesylkaType extends AbstractStructBase
     /**
      * Set oczekiwaneOdszkodowanie value
      * @param int $oczekiwaneOdszkodowanie
-     * @return \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType
      */
     public function setOczekiwaneOdszkodowanie(?int $oczekiwaneOdszkodowanie = null): self
     {

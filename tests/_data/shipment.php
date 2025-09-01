@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
 
 return [
     'shipment_in_PP' => [

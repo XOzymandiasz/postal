@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -56,7 +56,7 @@ class OdbiorPrzesylkiOdNadawcyType extends AbstractStructBase
     /**
      * Set wSobote value
      * @param bool $wSobote
-     * @return \app\modules\postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
      */
     public function setWSobote(?bool $wSobote = null): self
     {
@@ -79,7 +79,7 @@ class OdbiorPrzesylkiOdNadawcyType extends AbstractStructBase
     /**
      * Set wNiedzieleLubSwieto value
      * @param bool $wNiedzieleLubSwieto
-     * @return \app\modules\postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
      */
     public function setWNiedzieleLubSwieto(?bool $wNiedzieleLubSwieto = null): self
     {
@@ -102,7 +102,7 @@ class OdbiorPrzesylkiOdNadawcyType extends AbstractStructBase
     /**
      * Set wGodzinachOd20Do7 value
      * @param bool $wGodzinachOd20Do7
-     * @return \app\modules\postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OdbiorPrzesylkiOdNadawcyType
      */
     public function setWGodzinachOd20Do7(?bool $wGodzinachOd20Do7 = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,16 +17,16 @@ abstract class SubPocztex2021Type extends PrzesylkaType
      * The pobranie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
     /**
      * The ubezpieczenie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
     /**
      * The numerNadania
      * Meta information extracted from the WSDL
@@ -91,8 +91,8 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     protected ?string $numerPrzesylkiKlienta = null;
     /**
      * Constructor method for subPocztex2021Type
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
      * @param string $numerNadania
      * @param int $masa
      * @param int $wartosc
@@ -110,7 +110,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
      * @uses SubPocztex2021Type::setFormat()
      * @uses SubPocztex2021Type::setNumerPrzesylkiKlienta()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?string $numerNadania = null, ?int $masa = null, ?int $wartosc = null, ?bool $ostroznie = null, ?bool $ponadgabaryt = null, ?string $format = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?string $numerNadania = null, ?int $masa = null, ?int $wartosc = null, ?bool $ostroznie = null, ?bool $ponadgabaryt = null, ?string $format = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setPobranie($pobranie)
@@ -125,18 +125,18 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     }
     /**
      * Get pobranie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    public function getPobranie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType
+    public function getPobranie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType
     {
         return $this->pobranie;
     }
     /**
      * Set pobranie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
-    public function setPobranie(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
+    public function setPobranie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
     {
         $this->pobranie = $pobranie;
         
@@ -144,18 +144,18 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     }
     /**
      * Get ubezpieczenie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    public function getUbezpieczenie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
+    public function getUbezpieczenie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
     {
         return $this->ubezpieczenie;
     }
     /**
      * Set ubezpieczenie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
-    public function setUbezpieczenie(?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
+    public function setUbezpieczenie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
     {
         $this->ubezpieczenie = $ubezpieczenie;
         
@@ -172,7 +172,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -203,7 +203,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setMasa(?int $masa = null): self
     {
@@ -234,7 +234,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -265,7 +265,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set ostroznie value
      * @param bool $ostroznie
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setOstroznie(?bool $ostroznie = null): self
     {
@@ -288,7 +288,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set ponadgabaryt value
      * @param bool $ponadgabaryt
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setPonadgabaryt(?bool $ponadgabaryt = null): self
     {
@@ -311,16 +311,16 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatPocztex2021Type', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatPocztex2021Type::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -337,7 +337,7 @@ abstract class SubPocztex2021Type extends PrzesylkaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\SubPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021Type
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

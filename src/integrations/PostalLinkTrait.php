@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\integrations;
+namespace XOzymandias\Yii2Postal\integrations;
 
-use app\modules\postal\models\query\ShipmentQuery;
-use app\modules\postal\models\Shipment;
-use app\modules\postal\ModuleEnsureTrait;
+use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use yii\db\ActiveRecord;
 
 trait PostalLinkTrait

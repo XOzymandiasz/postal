@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -15,9 +15,9 @@ class MarketingowaZAdresemType extends PrzesylkaType
 {
     /**
      * The adres
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
     /**
      * The masa
      * Meta information extracted from the WSDL
@@ -38,14 +38,14 @@ class MarketingowaZAdresemType extends PrzesylkaType
     protected ?string $gabaryt = null;
     /**
      * Constructor method for marketingowaZAdresemType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
      * @param int $masa
      * @param string $gabaryt
      *@uses MarketingowaZAdresemType::setAdres()
      * @uses MarketingowaZAdresemType::setMasa()
      * @uses MarketingowaZAdresemType::setGabaryt()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?int $masa = null, ?string $gabaryt = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?int $masa = null, ?string $gabaryt = null)
     {
         $this
             ->setAdres($adres)
@@ -54,18 +54,18 @@ class MarketingowaZAdresemType extends PrzesylkaType
     }
     /**
      * Get adres value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdres(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdres(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adres;
     }
     /**
      * Set adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @return \app\modules\postal\sender\StructType\MarketingowaZAdresemType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MarketingowaZAdresemType
      */
-    public function setAdres(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
+    public function setAdres(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
     {
         $this->adres = $adres;
         
@@ -82,7 +82,7 @@ class MarketingowaZAdresemType extends PrzesylkaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\MarketingowaZAdresemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MarketingowaZAdresemType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -113,16 +113,16 @@ class MarketingowaZAdresemType extends PrzesylkaType
     /**
      * Set gabaryt value
      * @param string $gabaryt
-     * @return \app\modules\postal\sender\StructType\MarketingowaZAdresemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\MarketingowaZAdresemType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
      */
     public function setGabaryt(?string $gabaryt = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
         }
         $this->gabaryt = $gabaryt;
         

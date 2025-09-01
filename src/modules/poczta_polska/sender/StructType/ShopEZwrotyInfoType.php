@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -69,7 +69,7 @@ class ShopEZwrotyInfoType extends AbstractStructBase
     /**
      * Set idShop value
      * @param int $idShop
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType
      */
     public function setIdShop(?int $idShop = null): self
     {
@@ -92,7 +92,7 @@ class ShopEZwrotyInfoType extends AbstractStructBase
     /**
      * Set przyjaznaNazwa value
      * @param string $przyjaznaNazwa
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType
      */
     public function setPrzyjaznaNazwa(?string $przyjaznaNazwa = null): self
     {
@@ -123,7 +123,7 @@ class ShopEZwrotyInfoType extends AbstractStructBase
     /**
      * Set availableOnWebsite value
      * @param bool $availableOnWebsite
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType
      */
     public function setAvailableOnWebsite(?bool $availableOnWebsite = null): self
     {
@@ -146,7 +146,7 @@ class ShopEZwrotyInfoType extends AbstractStructBase
     /**
      * Set nip value
      * @param string $nip
-     * @return \app\modules\postal\sender\StructType\ShopEZwrotyInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType
      */
     public function setNip(?string $nip = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -50,7 +50,7 @@ class GetOutboxBook extends AbstractStructBase
     /**
      * Set idEnvelope value
      * @param int $idEnvelope
-     * @return \app\modules\postal\sender\StructType\GetOutboxBook
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetOutboxBook
      */
     public function setIdEnvelope(?int $idEnvelope = null): self
     {
@@ -73,7 +73,7 @@ class GetOutboxBook extends AbstractStructBase
     /**
      * Set includeNierejestrowane value
      * @param bool $includeNierejestrowane
-     * @return \app\modules\postal\sender\StructType\GetOutboxBook
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetOutboxBook
      */
     public function setIncludeNierejestrowane(?bool $includeNierejestrowane = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -64,7 +64,7 @@ class WspolrzednaGeograficznaType extends AbstractStructBase
     /**
      * Set dec value
      * @param float $dec
-     * @return \app\modules\postal\sender\StructType\WspolrzednaGeograficznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WspolrzednaGeograficznaType
      */
     public function setDec(?float $dec = null): self
     {
@@ -87,7 +87,7 @@ class WspolrzednaGeograficznaType extends AbstractStructBase
     /**
      * Set stopien value
      * @param int $stopien
-     * @return \app\modules\postal\sender\StructType\WspolrzednaGeograficznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WspolrzednaGeograficznaType
      */
     public function setStopien(?int $stopien = null): self
     {
@@ -110,7 +110,7 @@ class WspolrzednaGeograficznaType extends AbstractStructBase
     /**
      * Set minuta value
      * @param int $minuta
-     * @return \app\modules\postal\sender\StructType\WspolrzednaGeograficznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WspolrzednaGeograficznaType
      */
     public function setMinuta(?int $minuta = null): self
     {
@@ -133,7 +133,7 @@ class WspolrzednaGeograficznaType extends AbstractStructBase
     /**
      * Set sekunda value
      * @param float $sekunda
-     * @return \app\modules\postal\sender\StructType\WspolrzednaGeograficznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WspolrzednaGeograficznaType
      */
     public function setSekunda(?float $sekunda = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,9 +17,9 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
      * The deklaracjaCelna2
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null;
     /**
      * The zawartosc
      * Meta information extracted from the WSDL
@@ -71,7 +71,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     protected ?string $numerPrzesylkiKlienta = null;
     /**
      * Constructor method for przesylkaZadeklarowanaWartoscZagranicznaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
      * @param string $zawartosc
      * @param bool $posteRestante
      * @param int $masa
@@ -86,7 +86,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
      * @uses PrzesylkaZadeklarowanaWartoscZagranicznaType::setWartosc()
      * @uses PrzesylkaZadeklarowanaWartoscZagranicznaType::setNumerPrzesylkiKlienta()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?int $masa = null, ?int $iloscPotwierdzenOdbioru = null, ?int $wartosc = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null, ?string $zawartosc = null, ?bool $posteRestante = false, ?int $masa = null, ?int $iloscPotwierdzenOdbioru = null, ?int $wartosc = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setDeklaracjaCelna2($deklaracjaCelna2)
@@ -99,18 +99,18 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     }
     /**
      * Get deklaracjaCelna2 value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type|null
      */
-    public function getDeklaracjaCelna2(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
+    public function getDeklaracjaCelna2(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type
     {
         return $this->deklaracjaCelna2;
     }
     /**
      * Set deklaracjaCelna2 value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
-    public function setDeklaracjaCelna2(?\app\modules\postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
+    public function setDeklaracjaCelna2(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DeklaracjaCelna2Type $deklaracjaCelna2 = null): self
     {
         $this->deklaracjaCelna2 = $deklaracjaCelna2;
         
@@ -127,7 +127,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -150,7 +150,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setPosteRestante(?bool $posteRestante = false): self
     {
@@ -173,7 +173,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -204,7 +204,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set iloscPotwierdzenOdbioru value
      * @param int $iloscPotwierdzenOdbioru
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setIloscPotwierdzenOdbioru(?int $iloscPotwierdzenOdbioru = null): self
     {
@@ -235,7 +235,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -266,7 +266,7 @@ class PrzesylkaZadeklarowanaWartoscZagranicznaType extends PrzesylkaRejestrowana
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaZadeklarowanaWartoscZagranicznaType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

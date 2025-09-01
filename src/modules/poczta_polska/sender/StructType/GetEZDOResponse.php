@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -16,14 +16,14 @@ class GetEZDOResponse extends AbstractStructBase
 {
     /**
      * The adres
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
     /**
      * The przesylka
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[]
      */
     protected ?array $przesylka = null;
     /**
@@ -31,7 +31,7 @@ class GetEZDOResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
@@ -46,9 +46,9 @@ class GetEZDOResponse extends AbstractStructBase
     protected ?string $numerEZDO = null;
     /**
      * Constructor method for getEZDOResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[] $przesylka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[] $przesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @param string $numerKD
      * @param string $numerEZDO
      * @uses GetEZDOResponse::setAdres()
@@ -57,7 +57,7 @@ class GetEZDOResponse extends AbstractStructBase
      * @uses GetEZDOResponse::setNumerKD()
      * @uses GetEZDOResponse::setNumerEZDO()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?array $przesylka = null, ?array $error = null, ?string $numerKD = null, ?string $numerEZDO = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?array $przesylka = null, ?array $error = null, ?string $numerKD = null, ?string $numerEZDO = null)
     {
         $this
             ->setAdres($adres)
@@ -68,18 +68,18 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Get adres value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdres(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdres(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adres;
     }
     /**
      * Set adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      */
-    public function setAdres(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
+    public function setAdres(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
     {
         $this->adres = $adres;
         
@@ -87,7 +87,7 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Get przesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[]
      */
     public function getPrzesylka(): ?array
     {
@@ -109,12 +109,12 @@ class GetEZDOResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEZDOResponsePrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$getEZDOResponsePrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType) {
+            if (!$getEZDOResponsePrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType) {
                 $invalidValues[] = is_object($getEZDOResponsePrzesylkaItem) ? get_class($getEZDOResponsePrzesylkaItem) : sprintf('%s(%s)', gettype($getEZDOResponsePrzesylkaItem), var_export($getEZDOResponsePrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\EZDOPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -122,8 +122,8 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Set przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[] $przesylka
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType[] $przesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      *@throws InvalidArgumentException
      */
     public function setPrzesylka(?array $przesylka = null): self
@@ -138,15 +138,15 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Add item to przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType $item
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      *@throws InvalidArgumentException
      */
-    public function addToPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType $item): self
+    public function addToPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType) {
-            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\EZDOPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EZDOPrzesylkaType) {
+            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EZDOPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->przesylka[] = $item;
         
@@ -154,7 +154,7 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -176,12 +176,12 @@ class GetEZDOResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEZDOResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getEZDOResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getEZDOResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getEZDOResponseErrorItem) ? get_class($getEZDOResponseErrorItem) : sprintf('%s(%s)', gettype($getEZDOResponseErrorItem), var_export($getEZDOResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -189,8 +189,8 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -205,15 +205,15 @@ class GetEZDOResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         
@@ -230,7 +230,7 @@ class GetEZDOResponse extends AbstractStructBase
     /**
      * Set numerKD value
      * @param string $numerKD
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      */
     public function setNumerKD(?string $numerKD = null): self
     {
@@ -253,7 +253,7 @@ class GetEZDOResponse extends AbstractStructBase
     /**
      * Set numerEZDO value
      * @param string $numerEZDO
-     * @return \app\modules\postal\sender\StructType\GetEZDOResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEZDOResponse
      */
     public function setNumerEZDO(?string $numerEZDO = null): self
     {

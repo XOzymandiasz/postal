@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -85,16 +85,16 @@ class PobranieType extends AbstractStructBase
     /**
      * Set sposobPobrania value
      * @param string $sposobPobrania
-     * @return \app\modules\postal\sender\StructType\PobranieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PobranieType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::valueIsValid()
      */
     public function setSposobPobrania(?string $sposobPobrania = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::valueIsValid($sposobPobrania)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SposobPobraniaType', is_array($sposobPobrania) ? implode(', ', $sposobPobrania) : var_export($sposobPobrania, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::valueIsValid($sposobPobrania)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SposobPobraniaType', is_array($sposobPobrania) ? implode(', ', $sposobPobrania) : var_export($sposobPobrania, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPobraniaType::getValidValues())), __LINE__);
         }
         $this->sposobPobrania = $sposobPobrania;
         
@@ -111,7 +111,7 @@ class PobranieType extends AbstractStructBase
     /**
      * Set kwotaPobrania value
      * @param int $kwotaPobrania
-     * @return \app\modules\postal\sender\StructType\PobranieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PobranieType
      */
     public function setKwotaPobrania(?int $kwotaPobrania = null): self
     {
@@ -142,7 +142,7 @@ class PobranieType extends AbstractStructBase
     /**
      * Set nrb value
      * @param string $nrb
-     * @return \app\modules\postal\sender\StructType\PobranieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PobranieType
      */
     public function setNrb(?string $nrb = null): self
     {
@@ -173,7 +173,7 @@ class PobranieType extends AbstractStructBase
     /**
      * Set tytulem value
      * @param string $tytulem
-     * @return \app\modules\postal\sender\StructType\PobranieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PobranieType
      */
     public function setTytulem(?string $tytulem = null): self
     {
@@ -204,7 +204,7 @@ class PobranieType extends AbstractStructBase
     /**
      * Set sprawdzenieZawartosciPrzesylkiPrzezOdbiorce value
      * @param bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce
-     * @return \app\modules\postal\sender\StructType\PobranieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PobranieType
      */
     public function setSprawdzenieZawartosciPrzesylkiPrzezOdbiorce(?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null): self
     {

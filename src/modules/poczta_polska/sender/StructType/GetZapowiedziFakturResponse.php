@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -71,7 +71,7 @@ class GetZapowiedziFakturResponse extends AbstractStructBase
      * Set zapowiedzFakturyZipFile value
      * @throws InvalidArgumentException
      * @param string[] $zapowiedzFakturyZipFile
-     * @return \app\modules\postal\sender\StructType\GetZapowiedziFakturResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetZapowiedziFakturResponse
      */
     public function setZapowiedzFakturyZipFile(?array $zapowiedzFakturyZipFile = null): self
     {
@@ -87,7 +87,7 @@ class GetZapowiedziFakturResponse extends AbstractStructBase
      * Add item to zapowiedzFakturyZipFile value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\GetZapowiedziFakturResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetZapowiedziFakturResponse
      */
     public function addToZapowiedzFakturyZipFile(string $item): self
     {

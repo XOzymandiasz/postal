@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetGuid extends AbstractStructBase
     /**
      * Set ilosc value
      * @param int $ilosc
-     * @return \app\modules\postal\sender\StructType\GetGuid
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetGuid
      */
     public function setIlosc(?int $ilosc = null): self
     {

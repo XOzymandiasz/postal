@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,7 +52,7 @@ class ReklamacjaInfoType extends AbstractStructBase
     /**
      * Set idReklamacja value
      * @param string $idReklamacja
-     * @return \app\modules\postal\sender\StructType\ReklamacjaInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaInfoType
      */
     public function setIdReklamacja(?string $idReklamacja = null): self
     {
@@ -75,7 +75,7 @@ class ReklamacjaInfoType extends AbstractStructBase
     /**
      * Set guidPrzesylki value
      * @param string $guidPrzesylki
-     * @return \app\modules\postal\sender\StructType\ReklamacjaInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaInfoType
      */
     public function setGuidPrzesylki(?string $guidPrzesylki = null): self
     {

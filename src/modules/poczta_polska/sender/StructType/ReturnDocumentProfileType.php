@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -184,7 +184,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set idProfile value
      * @param int $idProfile
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setIdProfile(?int $idProfile = null): self
     {
@@ -207,7 +207,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set name value
      * @param string $name
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setName(?string $name = null): self
     {
@@ -234,7 +234,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set name2 value
      * @param string $name2
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setName2(?string $name2 = null): self
     {
@@ -261,7 +261,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set friendlyName value
      * @param string $friendlyName
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setFriendlyName(?string $friendlyName = null): self
     {
@@ -288,7 +288,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set street value
      * @param string $street
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setStreet(?string $street = null): self
     {
@@ -315,7 +315,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set houseNumber value
      * @param string $houseNumber
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setHouseNumber(?string $houseNumber = null): self
     {
@@ -342,7 +342,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set premisesNumber value
      * @param string $premisesNumber
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setPremisesNumber(?string $premisesNumber = null): self
     {
@@ -369,7 +369,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set city value
      * @param string $city
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setCity(?string $city = null): self
     {
@@ -396,7 +396,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set postalCode value
      * @param string $postalCode
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setPostalCode(?string $postalCode = null): self
     {
@@ -423,7 +423,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set mobile value
      * @param string $mobile
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setMobile(?string $mobile = null): self
     {
@@ -450,7 +450,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set phonenumber value
      * @param string $phonenumber
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setPhonenumber(?string $phonenumber = null): self
     {
@@ -477,7 +477,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set email value
      * @param string $email
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setEmail(?string $email = null): self
     {
@@ -504,7 +504,7 @@ class ReturnDocumentProfileType extends AbstractStructBase
     /**
      * Set default value
      * @param bool $default
-     * @return \app\modules\postal\sender\StructType\ReturnDocumentProfileType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReturnDocumentProfileType
      */
     public function setDefault(?bool $default = null): self
     {

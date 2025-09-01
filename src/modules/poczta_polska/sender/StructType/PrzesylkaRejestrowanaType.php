@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,23 +17,23 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
      * The adres
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null;
     /**
      * The nadawca
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null;
     /**
      * The relatedToAllegro
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null;
     /**
      * The numerNadania
      * Meta information extracted from the WSDL
@@ -80,9 +80,9 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     protected ?bool $weryfikacjaPlatnosci = null;
     /**
      * Constructor method for przesylkaRejestrowanaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro
      * @param string $numerNadania
      * @param string $sygnatura
      * @param string $terminSprawy
@@ -97,7 +97,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
      * @uses PrzesylkaRejestrowanaType::setRodzaj()
      * @uses PrzesylkaRejestrowanaType::setWeryfikacjaPlatnosci()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null, ?string $numerNadania = null, ?string $sygnatura = null, ?string $terminSprawy = null, ?string $rodzaj = null, ?bool $weryfikacjaPlatnosci = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null, ?string $numerNadania = null, ?string $sygnatura = null, ?string $terminSprawy = null, ?string $rodzaj = null, ?bool $weryfikacjaPlatnosci = null)
     {
         $this
             ->setAdres($adres)
@@ -111,18 +111,18 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     }
     /**
      * Get adres value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdres(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdres(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adres;
     }
     /**
      * Set adres value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
-    public function setAdres(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
+    public function setAdres(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adres = null): self
     {
         $this->adres = $adres;
         
@@ -130,18 +130,18 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     }
     /**
      * Get nadawca value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getNadawca(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getNadawca(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->nadawca;
     }
     /**
      * Set nadawca value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
-    public function setNadawca(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
+    public function setNadawca(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $nadawca = null): self
     {
         $this->nadawca = $nadawca;
         
@@ -149,18 +149,18 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     }
     /**
      * Get relatedToAllegro value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType|null
      */
-    public function getRelatedToAllegro(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType
+    public function getRelatedToAllegro(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType
     {
         return $this->relatedToAllegro;
     }
     /**
      * Set relatedToAllegro value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
-    public function setRelatedToAllegro(?\app\modules\postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null): self
+    public function setRelatedToAllegro(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RelatedToAllegroType $relatedToAllegro = null): self
     {
         $this->relatedToAllegro = $relatedToAllegro;
         
@@ -177,7 +177,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -208,7 +208,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     /**
      * Set sygnatura value
      * @param string $sygnatura
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
     public function setSygnatura(?string $sygnatura = null): self
     {
@@ -239,7 +239,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     /**
      * Set terminSprawy value
      * @param string $terminSprawy
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
     public function setTerminSprawy(?string $terminSprawy = null): self
     {
@@ -262,7 +262,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     /**
      * Set rodzaj value
      * @param string $rodzaj
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
     public function setRodzaj(?string $rodzaj = null): self
     {
@@ -293,7 +293,7 @@ abstract class PrzesylkaRejestrowanaType extends PrzesylkaType
     /**
      * Set weryfikacjaPlatnosci value
      * @param bool $weryfikacjaPlatnosci
-     * @return \app\modules\postal\sender\StructType\PrzesylkaRejestrowanaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaRejestrowanaType
      */
     public function setWeryfikacjaPlatnosci(?bool $weryfikacjaPlatnosci = null): self
     {

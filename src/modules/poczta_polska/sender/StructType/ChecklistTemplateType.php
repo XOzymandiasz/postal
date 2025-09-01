@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -104,7 +104,7 @@ class ChecklistTemplateType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
      */
     protected ?array $additionalActivity = null;
     /**
@@ -131,7 +131,7 @@ class ChecklistTemplateType extends AbstractStructBase
      * @param string $validTo
      * @param string $logo
      * @param string $service
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
      * @param string $guid
      *@uses ChecklistTemplateType::setIdChecklistTemplate()
      * @uses ChecklistTemplateType::setIdKarta()
@@ -175,7 +175,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set idChecklistTemplate value
      * @param int $idChecklistTemplate
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setIdChecklistTemplate(?int $idChecklistTemplate = null): self
     {
@@ -198,7 +198,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -221,7 +221,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set name value
      * @param string $name
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setName(?string $name = null): self
     {
@@ -248,7 +248,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set title value
      * @param string $title
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setTitle(?string $title = null): self
     {
@@ -275,7 +275,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set description value
      * @param string $description
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setDescription(?string $description = null): self
     {
@@ -302,7 +302,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set infoForCourier value
      * @param string $infoForCourier
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setInfoForCourier(?string $infoForCourier = null): self
     {
@@ -329,7 +329,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set default value
      * @param bool $default
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setDefault(?bool $default = null): self
     {
@@ -352,7 +352,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set validFrom value
      * @param string $validFrom
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setValidFrom(?string $validFrom = null): self
     {
@@ -375,7 +375,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set validTo value
      * @param string $validTo
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setValidTo(?string $validTo = null): self
     {
@@ -398,7 +398,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set logo value
      * @param string $logo
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setLogo(?string $logo = null): self
     {
@@ -421,16 +421,16 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set service value
      * @param string $service
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::valueIsValid()
      */
     public function setService(?string $service = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::valueIsValid($service)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SerwisPrzesylkaProceduralnaType', is_array($service) ? implode(', ', $service) : var_export($service, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::valueIsValid($service)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SerwisPrzesylkaProceduralnaType', is_array($service) ? implode(', ', $service) : var_export($service, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SerwisPrzesylkaProceduralnaType::getValidValues())), __LINE__);
         }
         $this->service = $service;
         
@@ -438,7 +438,7 @@ class ChecklistTemplateType extends AbstractStructBase
     }
     /**
      * Get additionalActivity value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
      */
     public function getAdditionalActivity(): ?array
     {
@@ -460,12 +460,12 @@ class ChecklistTemplateType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $checklistTemplateTypeAdditionalActivityItem) {
             // validation for constraint: itemType
-            if (!$checklistTemplateTypeAdditionalActivityItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
+            if (!$checklistTemplateTypeAdditionalActivityItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
                 $invalidValues[] = is_object($checklistTemplateTypeAdditionalActivityItem) ? get_class($checklistTemplateTypeAdditionalActivityItem) : sprintf('%s(%s)', gettype($checklistTemplateTypeAdditionalActivityItem), var_export($checklistTemplateTypeAdditionalActivityItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The additionalActivity property can only contain items of type \app\modules\postal\sender\StructType\AdditionalActivityType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The additionalActivity property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -473,8 +473,8 @@ class ChecklistTemplateType extends AbstractStructBase
     }
     /**
      * Set additionalActivity value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      *@throws InvalidArgumentException
      */
     public function setAdditionalActivity(?array $additionalActivity = null): self
@@ -489,15 +489,15 @@ class ChecklistTemplateType extends AbstractStructBase
     }
     /**
      * Add item to additionalActivity value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      *@throws InvalidArgumentException
      */
-    public function addToAdditionalActivity(\app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item): self
+    public function addToAdditionalActivity(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
-            throw new InvalidArgumentException(sprintf('The additionalActivity property can only contain items of type \app\modules\postal\sender\StructType\AdditionalActivityType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
+            throw new InvalidArgumentException(sprintf('The additionalActivity property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->additionalActivity[] = $item;
         
@@ -514,7 +514,7 @@ class ChecklistTemplateType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ChecklistTemplateType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType
      */
     public function setGuid(?string $guid = null): self
     {

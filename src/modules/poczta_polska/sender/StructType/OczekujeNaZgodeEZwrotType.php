@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,9 +18,9 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
      * The sklepEZwrot
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null;
     /**
      * The idZgody
      * @var int|null
@@ -76,7 +76,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     protected ?string $guidZgodaEZwrot = null;
     /**
      * Constructor method for oczekujeNaZgodeEZwrotType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot
      * @param int $idZgody
      * @param string $nazwaProduktu
      * @param string $numerZamowienia
@@ -93,7 +93,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
      * @uses OczekujeNaZgodeEZwrotType::setDataNadania()
      * @uses OczekujeNaZgodeEZwrotType::setGuidZgodaEZwrot()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null, ?int $idZgody = null, ?string $nazwaProduktu = null, ?string $numerZamowienia = null, ?string $numerNadania = null, ?string $email = null, ?string $dataNadania = null, ?string $guidZgodaEZwrot = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null, ?int $idZgody = null, ?string $nazwaProduktu = null, ?string $numerZamowienia = null, ?string $numerNadania = null, ?string $email = null, ?string $dataNadania = null, ?string $guidZgodaEZwrot = null)
     {
         $this
             ->setSklepEZwrot($sklepEZwrot)
@@ -107,18 +107,18 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     }
     /**
      * Get sklepEZwrot value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType|null
      */
-    public function getSklepEZwrot(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType
+    public function getSklepEZwrot(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType
     {
         return $this->sklepEZwrot;
     }
     /**
      * Set sklepEZwrot value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
-    public function setSklepEZwrot(?\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null): self
+    public function setSklepEZwrot(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyType $sklepEZwrot = null): self
     {
         $this->sklepEZwrot = $sklepEZwrot;
         
@@ -135,7 +135,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set idZgody value
      * @param int $idZgody
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setIdZgody(?int $idZgody = null): self
     {
@@ -158,7 +158,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set nazwaProduktu value
      * @param string $nazwaProduktu
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setNazwaProduktu(?string $nazwaProduktu = null): self
     {
@@ -185,7 +185,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set numerZamowienia value
      * @param string $numerZamowienia
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setNumerZamowienia(?string $numerZamowienia = null): self
     {
@@ -212,7 +212,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -243,7 +243,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set email value
      * @param string $email
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setEmail(?string $email = null): self
     {
@@ -274,7 +274,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set dataNadania value
      * @param string $dataNadania
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setDataNadania(?string $dataNadania = null): self
     {
@@ -297,7 +297,7 @@ class OczekujeNaZgodeEZwrotType extends AbstractStructBase
     /**
      * Set guidZgodaEZwrot value
      * @param string $guidZgodaEZwrot
-     * @return \app\modules\postal\sender\StructType\OczekujeNaZgodeEZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OczekujeNaZgodeEZwrotType
      */
     public function setGuidZgodaEZwrot(?string $guidZgodaEZwrot = null): self
     {

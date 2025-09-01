@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -70,7 +70,7 @@ class GetPlacowkaPocztowa extends AbstractStructBase
      * Set pni value
      * @throws InvalidArgumentException
      * @param int[] $pni
-     * @return \app\modules\postal\sender\StructType\GetPlacowkaPocztowa
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPlacowkaPocztowa
      */
     public function setPni(?array $pni = null): self
     {
@@ -90,7 +90,7 @@ class GetPlacowkaPocztowa extends AbstractStructBase
      * Add item to pni value
      * @throws InvalidArgumentException
      * @param int $item
-     * @return \app\modules\postal\sender\StructType\GetPlacowkaPocztowa
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPlacowkaPocztowa
      */
     public function addToPni(int $item): self
     {

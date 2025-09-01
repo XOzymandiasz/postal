@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -15,9 +15,9 @@ class SubPrzesylkaPaletowaType extends PrzesylkaType
 {
     /**
      * The paleta
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null;
     /**
      * The zawartosc
      * @var string|null
@@ -35,14 +35,14 @@ class SubPrzesylkaPaletowaType extends PrzesylkaType
     protected ?int $masa = null;
     /**
      * Constructor method for subPrzesylkaPaletowaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType $paleta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType $paleta
      * @param string $zawartosc
      * @param int $masa
      *@uses SubPrzesylkaPaletowaType::setPaleta()
      * @uses SubPrzesylkaPaletowaType::setZawartosc()
      * @uses SubPrzesylkaPaletowaType::setMasa()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null, ?string $zawartosc = null, ?int $masa = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null, ?string $zawartosc = null, ?int $masa = null)
     {
         $this
             ->setPaleta($paleta)
@@ -51,18 +51,18 @@ class SubPrzesylkaPaletowaType extends PrzesylkaType
     }
     /**
      * Get paleta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType|null
      */
-    public function getPaleta(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType
+    public function getPaleta(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType
     {
         return $this->paleta;
     }
     /**
      * Set paleta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType $paleta
-     * @return \app\modules\postal\sender\StructType\SubPrzesylkaPaletowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType $paleta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPrzesylkaPaletowaType
      */
-    public function setPaleta(?\app\modules\postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null): self
+    public function setPaleta(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PaletaType $paleta = null): self
     {
         $this->paleta = $paleta;
         
@@ -79,7 +79,7 @@ class SubPrzesylkaPaletowaType extends PrzesylkaType
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\SubPrzesylkaPaletowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPrzesylkaPaletowaType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -102,7 +102,7 @@ class SubPrzesylkaPaletowaType extends PrzesylkaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\SubPrzesylkaPaletowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SubPrzesylkaPaletowaType
      */
     public function setMasa(?int $masa = null): self
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\models;
+namespace XOzymandias\Yii2Postal\models;
 
 use yii\db\ActiveRecord;
 

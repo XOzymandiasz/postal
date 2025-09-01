@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelope;
-use app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelope;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 
@@ -39,7 +39,7 @@ class Send extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SendEnvelopeResponseType
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

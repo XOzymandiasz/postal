@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -24,16 +24,16 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
      * The epo
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
     /**
      * The potwierdzenieDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
     /**
      * The idLibraryForLegalDeposit
      * Meta information extracted from the WSDL
@@ -119,8 +119,8 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Constructor method for przesylkaPoleconaKrajowaType
      * @param string $kategoria
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
      * @param string $idLibraryForLegalDeposit
      * @param string $zasadySpecjalne
      * @param bool $posteRestante
@@ -149,7 +149,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
      * @uses PrzesylkaPoleconaKrajowaType::setMiejscowa()
      * @uses PrzesylkaPoleconaKrajowaType::setNumerPrzesylkiKlienta()
      */
-    public function __construct(string $kategoria, ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?string $idLibraryForLegalDeposit = null, ?string $zasadySpecjalne = null, ?bool $posteRestante = false, ?int $iloscPotwierdzenOdbioru = 0, ?string $gabaryt = null, ?string $format = null, ?int $masa = null, ?bool $egzemplarzBiblioteczny = null, ?bool $dlaOciemnialych = null, ?bool $obszarMiasto = null, ?bool $miejscowa = null, ?string $numerPrzesylkiKlienta = null)
+    public function __construct(string $kategoria, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?string $idLibraryForLegalDeposit = null, ?string $zasadySpecjalne = null, ?bool $posteRestante = false, ?int $iloscPotwierdzenOdbioru = 0, ?string $gabaryt = null, ?string $format = null, ?int $masa = null, ?bool $egzemplarzBiblioteczny = null, ?bool $dlaOciemnialych = null, ?bool $obszarMiasto = null, ?bool $miejscowa = null, ?string $numerPrzesylkiKlienta = null)
     {
         $this
             ->setKategoria($kategoria)
@@ -179,16 +179,16 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(string $kategoria): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -196,18 +196,18 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get epo value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    public function getEpo(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType
+    public function getEpo(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType
     {
         return $this->epo;
     }
     /**
      * Set epo value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
-    public function setEpo(?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
+    public function setEpo(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
     {
         $this->epo = $epo;
         
@@ -215,18 +215,18 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    public function getPotwierdzenieDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
+    public function getPotwierdzenieDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
     {
         return $this->potwierdzenieDoreczenia;
     }
     /**
      * Set potwierdzenieDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
-    public function setPotwierdzenieDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
+    public function setPotwierdzenieDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
     {
         $this->potwierdzenieDoreczenia = $potwierdzenieDoreczenia;
         
@@ -243,7 +243,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set idLibraryForLegalDeposit value
      * @param string $idLibraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setIdLibraryForLegalDeposit(?string $idLibraryForLegalDeposit = null): self
     {
@@ -274,16 +274,16 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set zasadySpecjalne value
      * @param string $zasadySpecjalne
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
      */
     public function setZasadySpecjalne(?string $zasadySpecjalne = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
         }
         $this->zasadySpecjalne = $zasadySpecjalne;
         
@@ -300,7 +300,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setPosteRestante(?bool $posteRestante = false): self
     {
@@ -323,7 +323,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set iloscPotwierdzenOdbioru value
      * @param int $iloscPotwierdzenOdbioru
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setIloscPotwierdzenOdbioru(?int $iloscPotwierdzenOdbioru = 0): self
     {
@@ -354,16 +354,16 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set gabaryt value
      * @param string $gabaryt
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
      */
     public function setGabaryt(?string $gabaryt = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
         }
         $this->gabaryt = $gabaryt;
         
@@ -380,16 +380,16 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -406,7 +406,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -437,7 +437,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set egzemplarzBiblioteczny value
      * @param bool $egzemplarzBiblioteczny
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setEgzemplarzBiblioteczny(?bool $egzemplarzBiblioteczny = null): self
     {
@@ -460,7 +460,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set dlaOciemnialych value
      * @param bool $dlaOciemnialych
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setDlaOciemnialych(?bool $dlaOciemnialych = null): self
     {
@@ -483,7 +483,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set obszarMiasto value
      * @param bool $obszarMiasto
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setObszarMiasto(?bool $obszarMiasto = null): self
     {
@@ -506,7 +506,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set miejscowa value
      * @param bool $miejscowa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setMiejscowa(?bool $miejscowa = null): self
     {
@@ -529,7 +529,7 @@ class PrzesylkaPoleconaKrajowaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\PrzesylkaPoleconaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaPoleconaKrajowaType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {

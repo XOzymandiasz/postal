@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class IsMiejscowaResponse extends AbstractStructBase
      * The trasaResponse
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType[]
      */
     protected ?array $trasaResponse = null;
     /**
      * Constructor method for isMiejscowaResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType[] $trasaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType[] $trasaResponse
      * @uses IsMiejscowaResponse::setTrasaResponse()
      */
     public function __construct(?array $trasaResponse = null)
@@ -33,7 +33,7 @@ class IsMiejscowaResponse extends AbstractStructBase
     }
     /**
      * Get trasaResponse value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType[]
      */
     public function getTrasaResponse(): ?array
     {
@@ -55,12 +55,12 @@ class IsMiejscowaResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $isMiejscowaResponseTrasaResponseItem) {
             // validation for constraint: itemType
-            if (!$isMiejscowaResponseTrasaResponseItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType) {
+            if (!$isMiejscowaResponseTrasaResponseItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType) {
                 $invalidValues[] = is_object($isMiejscowaResponseTrasaResponseItem) ? get_class($isMiejscowaResponseTrasaResponseItem) : sprintf('%s(%s)', gettype($isMiejscowaResponseTrasaResponseItem), var_export($isMiejscowaResponseTrasaResponseItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The trasaResponse property can only contain items of type \app\modules\postal\sender\StructType\TrasaResponseType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The trasaResponse property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\TrasaResponseType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class IsMiejscowaResponse extends AbstractStructBase
     }
     /**
      * Set trasaResponse value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType[] $trasaResponse
-     * @return \app\modules\postal\sender\StructType\IsMiejscowaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType[] $trasaResponse
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsMiejscowaResponse
      *@throws InvalidArgumentException
      */
     public function setTrasaResponse(?array $trasaResponse = null): self
@@ -88,15 +88,15 @@ class IsMiejscowaResponse extends AbstractStructBase
     }
     /**
      * Add item to trasaResponse value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType $item
-     * @return \app\modules\postal\sender\StructType\IsMiejscowaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsMiejscowaResponse
      *@throws InvalidArgumentException
      */
-    public function addToTrasaResponse(\app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType $item): self
+    public function addToTrasaResponse(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaResponseType) {
-            throw new InvalidArgumentException(sprintf('The trasaResponse property can only contain items of type \app\modules\postal\sender\StructType\TrasaResponseType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaResponseType) {
+            throw new InvalidArgumentException(sprintf('The trasaResponse property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\TrasaResponseType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->trasaResponse) && count($this->trasaResponse) >= 500) {

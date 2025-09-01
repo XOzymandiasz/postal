@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -100,7 +100,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set IdParcelContent value
      * @param int $idParcelContent
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setIdParcelContent(?int $idParcelContent = null): self
     {
@@ -123,7 +123,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set order value
      * @param int $order
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setOrder(?int $order = null): self
     {
@@ -146,7 +146,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set name value
      * @param string $name
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setName(?string $name = null): self
     {
@@ -173,7 +173,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set description value
      * @param string $description
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setDescription(?string $description = null): self
     {
@@ -200,7 +200,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -223,7 +223,7 @@ class ParcelContentType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ParcelContentType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType
      */
     public function setGuid(?string $guid = null): self
     {

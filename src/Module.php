@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal;
+namespace XOzymandias\Yii2Postal;
 
-use app\modules\postal\components\ShipmentRelationComponent;
-use app\modules\postal\components\ShipmentUrlComponent;
-use app\modules\postal\events\ShipmentEvent;
-use app\modules\postal\models\Shipment;
+use XOzymandias\Yii2Postal\components\ShipmentRelationComponent;
+use XOzymandias\Yii2Postal\components\ShipmentUrlComponent;
+use XOzymandias\Yii2Postal\events\ShipmentEvent;
+use XOzymandias\Yii2Postal\models\Shipment;
 use Yii;
 use yii\base\Module as BaseModule;
 use yii\di\Instance;

@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\content;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\content;
 
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
 use FunctionalTester;
 use yii\helpers\Url;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -64,7 +64,7 @@ class AwizoPrzesylkiType extends AbstractStructBase
     /**
      * Set dataPierwszegoAwizowania value
      * @param string $dataPierwszegoAwizowania
-     * @return \app\modules\postal\sender\StructType\AwizoPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizoPrzesylkiType
      */
     public function setDataPierwszegoAwizowania(?string $dataPierwszegoAwizowania = null): self
     {
@@ -87,7 +87,7 @@ class AwizoPrzesylkiType extends AbstractStructBase
     /**
      * Set dataDrugiegoAwizowania value
      * @param string $dataDrugiegoAwizowania
-     * @return \app\modules\postal\sender\StructType\AwizoPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizoPrzesylkiType
      */
     public function setDataDrugiegoAwizowania(?string $dataDrugiegoAwizowania = null): self
     {
@@ -110,16 +110,16 @@ class AwizoPrzesylkiType extends AbstractStructBase
     /**
      * Set miejscePozostawienia value
      * @param string $miejscePozostawienia
-     * @return \app\modules\postal\sender\StructType\AwizoPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizoPrzesylkiType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::valueIsValid()
      */
     public function setMiejscePozostawienia(?string $miejscePozostawienia = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::valueIsValid($miejscePozostawienia)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\MiejscaPozostawieniaAwizoEnum', is_array($miejscePozostawienia) ? implode(', ', $miejscePozostawienia) : var_export($miejscePozostawienia, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::valueIsValid($miejscePozostawienia)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\MiejscaPozostawieniaAwizoEnum', is_array($miejscePozostawienia) ? implode(', ', $miejscePozostawienia) : var_export($miejscePozostawienia, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscaPozostawieniaAwizoEnum::getValidValues())), __LINE__);
         }
         $this->miejscePozostawienia = $miejscePozostawienia;
         
@@ -136,7 +136,7 @@ class AwizoPrzesylkiType extends AbstractStructBase
     /**
      * Set idPlacowkaPocztowaWydajaca value
      * @param int $idPlacowkaPocztowaWydajaca
-     * @return \app\modules\postal\sender\StructType\AwizoPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizoPrzesylkiType
      */
     public function setIdPlacowkaPocztowaWydajaca(?int $idPlacowkaPocztowaWydajaca = null): self
     {

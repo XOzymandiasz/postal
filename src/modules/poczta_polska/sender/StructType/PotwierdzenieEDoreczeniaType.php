@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,16 +52,16 @@ class PotwierdzenieEDoreczeniaType extends AbstractStructBase
     /**
      * Set sposob value
      * @param string $sposob
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieEDoreczeniaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieEDoreczeniaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::valueIsValid()
      */
     public function setSposob(?string $sposob = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::valueIsValid($sposob)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ESposobPowiadomieniaType', is_array($sposob) ? implode(', ', $sposob) : var_export($sposob, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::valueIsValid($sposob)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ESposobPowiadomieniaType', is_array($sposob) ? implode(', ', $sposob) : var_export($sposob, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ESposobPowiadomieniaType::getValidValues())), __LINE__);
         }
         $this->sposob = $sposob;
         
@@ -78,7 +78,7 @@ class PotwierdzenieEDoreczeniaType extends AbstractStructBase
     /**
      * Set kontakt value
      * @param string $kontakt
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieEDoreczeniaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieEDoreczeniaType
      */
     public function setKontakt(?string $kontakt = null): self
     {

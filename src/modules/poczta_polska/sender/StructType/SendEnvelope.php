@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -27,7 +27,7 @@ class SendEnvelope extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType[]
      */
     protected ?array $pakiet = null;
     /**
@@ -41,21 +41,21 @@ class SendEnvelope extends AbstractStructBase
      * The profil
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null;
     /**
      * Constructor method for sendEnvelope
      * @param int $urzadNadania
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType[] $pakiet
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType[] $pakiet
      * @param int $idBufor
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil
      * @uses SendEnvelope::setUrzadNadania()
      * @uses SendEnvelope::setPakiet()
      * @uses SendEnvelope::setIdBufor()
      * @uses SendEnvelope::setProfil()
      */
-    public function __construct(?int $urzadNadania = null, ?array $pakiet = null, ?int $idBufor = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null)
+    public function __construct(?int $urzadNadania = null, ?array $pakiet = null, ?int $idBufor = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null)
     {
         $this
             ->setUrzadNadania($urzadNadania)
@@ -74,7 +74,7 @@ class SendEnvelope extends AbstractStructBase
     /**
      * Set urzadNadania value
      * @param int $urzadNadania
-     * @return \app\modules\postal\sender\StructType\SendEnvelope
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SendEnvelope
      */
     public function setUrzadNadania(?int $urzadNadania = null): self
     {
@@ -88,7 +88,7 @@ class SendEnvelope extends AbstractStructBase
     }
     /**
      * Get pakiet value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType[]
      */
     public function getPakiet(): ?array
     {
@@ -110,12 +110,12 @@ class SendEnvelope extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $sendEnvelopePakietItem) {
             // validation for constraint: itemType
-            if (!$sendEnvelopePakietItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType) {
+            if (!$sendEnvelopePakietItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType) {
                 $invalidValues[] = is_object($sendEnvelopePakietItem) ? get_class($sendEnvelopePakietItem) : sprintf('%s(%s)', gettype($sendEnvelopePakietItem), var_export($sendEnvelopePakietItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The pakiet property can only contain items of type \app\modules\postal\sender\StructType\PakietType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The pakiet property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PakietType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -123,8 +123,8 @@ class SendEnvelope extends AbstractStructBase
     }
     /**
      * Set pakiet value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType[] $pakiet
-     * @return \app\modules\postal\sender\StructType\SendEnvelope
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType[] $pakiet
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SendEnvelope
      *@throws InvalidArgumentException
      */
     public function setPakiet(?array $pakiet = null): self
@@ -139,15 +139,15 @@ class SendEnvelope extends AbstractStructBase
     }
     /**
      * Add item to pakiet value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType $item
-     * @return \app\modules\postal\sender\StructType\SendEnvelope
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SendEnvelope
      *@throws InvalidArgumentException
      */
-    public function addToPakiet(\app\modules\postal\modules\poczta_polska\sender\StructType\PakietType $item): self
+    public function addToPakiet(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PakietType) {
-            throw new InvalidArgumentException(sprintf('The pakiet property can only contain items of type \app\modules\postal\sender\StructType\PakietType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PakietType) {
+            throw new InvalidArgumentException(sprintf('The pakiet property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PakietType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->pakiet[] = $item;
         
@@ -164,7 +164,7 @@ class SendEnvelope extends AbstractStructBase
     /**
      * Set idBufor value
      * @param int $idBufor
-     * @return \app\modules\postal\sender\StructType\SendEnvelope
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SendEnvelope
      */
     public function setIdBufor(?int $idBufor = null): self
     {
@@ -178,18 +178,18 @@ class SendEnvelope extends AbstractStructBase
     }
     /**
      * Get profil value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    public function getProfil(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType
+    public function getProfil(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType
     {
         return $this->profil;
     }
     /**
      * Set profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil
-     * @return \app\modules\postal\sender\StructType\SendEnvelope
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SendEnvelope
      */
-    public function setProfil(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null): self
+    public function setProfil(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $profil = null): self
     {
         $this->profil = $profil;
         

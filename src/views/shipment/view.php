@@ -1,11 +1,11 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\models\Shipment $model */
+/** @var XOzymandias\Yii2Postal\models\Shipment $model */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => Module::t('common', 'Postal Shipments'), 'url' => ['index']];

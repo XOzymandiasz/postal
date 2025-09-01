@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\controllers;
+namespace XOzymandias\Yii2Postal\controllers;
 
-use app\modules\postal\forms\AddressTypeForm;
-use app\modules\postal\models\search\ShipmentAddressPostSearch;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\models\search\ShipmentAddressPostSearch;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\Module;
 use Throwable;
 use yii\db\Exception;
 use yii\db\StaleObjectException;

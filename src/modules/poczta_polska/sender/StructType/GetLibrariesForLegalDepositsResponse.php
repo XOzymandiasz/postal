@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetLibrariesForLegalDepositsResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[]
      */
     protected ?array $libraryForLegalDeposit = null;
     /**
      * Constructor method for getLibrariesForLegalDepositsResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[] $libraryForLegalDeposit
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[] $libraryForLegalDeposit
      * @uses GetLibrariesForLegalDepositsResponse::setLibraryForLegalDeposit()
      */
     public function __construct(?array $libraryForLegalDeposit = null)
@@ -34,7 +34,7 @@ class GetLibrariesForLegalDepositsResponse extends AbstractStructBase
     }
     /**
      * Get libraryForLegalDeposit value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[]
      */
     public function getLibraryForLegalDeposit(): ?array
     {
@@ -56,12 +56,12 @@ class GetLibrariesForLegalDepositsResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem) {
             // validation for constraint: itemType
-            if (!$getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType) {
+            if (!$getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType) {
                 $invalidValues[] = is_object($getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem) ? get_class($getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem) : sprintf('%s(%s)', gettype($getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem), var_export($getLibrariesForLegalDepositsResponseLibraryForLegalDepositItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The libraryForLegalDeposit property can only contain items of type \app\modules\postal\sender\StructType\LibraryForLegalDepositType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The libraryForLegalDeposit property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetLibrariesForLegalDepositsResponse extends AbstractStructBase
     }
     /**
      * Set libraryForLegalDeposit value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[] $libraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\GetLibrariesForLegalDepositsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType[] $libraryForLegalDeposit
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetLibrariesForLegalDepositsResponse
      *@throws InvalidArgumentException
      */
     public function setLibraryForLegalDeposit(?array $libraryForLegalDeposit = null): self
@@ -85,15 +85,15 @@ class GetLibrariesForLegalDepositsResponse extends AbstractStructBase
     }
     /**
      * Add item to libraryForLegalDeposit value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType $item
-     * @return \app\modules\postal\sender\StructType\GetLibrariesForLegalDepositsResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetLibrariesForLegalDepositsResponse
      *@throws InvalidArgumentException
      */
-    public function addToLibraryForLegalDeposit(\app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType $item): self
+    public function addToLibraryForLegalDeposit(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType) {
-            throw new InvalidArgumentException(sprintf('The libraryForLegalDeposit property can only contain items of type \app\modules\postal\sender\StructType\LibraryForLegalDepositType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\LibraryForLegalDepositType) {
+            throw new InvalidArgumentException(sprintf('The libraryForLegalDeposit property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\LibraryForLegalDepositType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->libraryForLegalDeposit[] = $item;
         

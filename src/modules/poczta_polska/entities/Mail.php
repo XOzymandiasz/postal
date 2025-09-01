@@ -1,9 +1,9 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\entities;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\entities;
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\components\ShipmentInterface;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\ShipmentInterface;
 use yii\base\Model;
 
 class Mail extends Model implements ShipmentInterface

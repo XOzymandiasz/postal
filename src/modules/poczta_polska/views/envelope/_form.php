@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\forms\BufferForm;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\BufferForm;
 use edzima\teryt\models\Region;
 use kartik\depdrop\DepDrop;
 use kartik\select2\Select2;

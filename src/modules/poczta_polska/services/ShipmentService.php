@@ -1,16 +1,16 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\services;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\services;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\AddShipment;
-use app\modules\postal\modules\poczta_polska\sender\StructType\AddShipmentResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuids;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBufor;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPrintForParcel;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrintType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipment;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AddShipmentResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuids;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ClearEnvelopeByGuidsResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBufor;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetEnvelopeBuforResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPrintForParcel;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetPrintForParcelResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType;
 use SoapFault;
 
 class ShipmentService extends BaseService

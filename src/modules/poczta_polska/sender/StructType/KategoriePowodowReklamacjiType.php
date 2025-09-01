@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -23,13 +23,13 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
      * The powodReklamacji
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[]
      */
     protected ?array $powodReklamacji = null;
     /**
      * Constructor method for kategoriePowodowReklamacjiType
      * @param string $nazwa
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[] $powodReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[] $powodReklamacji
      *@uses KategoriePowodowReklamacjiType::setNazwa()
      * @uses KategoriePowodowReklamacjiType::setPowodReklamacji()
      */
@@ -50,7 +50,7 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
     /**
      * Set nazwa value
      * @param string $nazwa
-     * @return \app\modules\postal\sender\StructType\KategoriePowodowReklamacjiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KategoriePowodowReklamacjiType
      */
     public function setNazwa(?string $nazwa = null): self
     {
@@ -64,7 +64,7 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
     }
     /**
      * Get powodReklamacji value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[]
      */
     public function getPowodReklamacji(): ?array
     {
@@ -86,12 +86,12 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $kategoriePowodowReklamacjiTypePowodReklamacjiItem) {
             // validation for constraint: itemType
-            if (!$kategoriePowodowReklamacjiTypePowodReklamacjiItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType) {
+            if (!$kategoriePowodowReklamacjiTypePowodReklamacjiItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType) {
                 $invalidValues[] = is_object($kategoriePowodowReklamacjiTypePowodReklamacjiItem) ? get_class($kategoriePowodowReklamacjiTypePowodReklamacjiItem) : sprintf('%s(%s)', gettype($kategoriePowodowReklamacjiTypePowodReklamacjiItem), var_export($kategoriePowodowReklamacjiTypePowodReklamacjiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The powodReklamacji property can only contain items of type \app\modules\postal\sender\StructType\PowodReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The powodReklamacji property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -99,8 +99,8 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
     }
     /**
      * Set powodReklamacji value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[] $powodReklamacji
-     * @return \app\modules\postal\sender\StructType\KategoriePowodowReklamacjiType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType[] $powodReklamacji
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KategoriePowodowReklamacjiType
      *@throws InvalidArgumentException
      */
     public function setPowodReklamacji(?array $powodReklamacji = null): self
@@ -115,15 +115,15 @@ class KategoriePowodowReklamacjiType extends AbstractStructBase
     }
     /**
      * Add item to powodReklamacji value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $item
-     * @return \app\modules\postal\sender\StructType\KategoriePowodowReklamacjiType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KategoriePowodowReklamacjiType
      *@throws InvalidArgumentException
      */
-    public function addToPowodReklamacji(\app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $item): self
+    public function addToPowodReklamacji(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType) {
-            throw new InvalidArgumentException(sprintf('The powodReklamacji property can only contain items of type \app\modules\postal\sender\StructType\PowodReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PowodReklamacjiType) {
+            throw new InvalidArgumentException(sprintf('The powodReklamacji property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PowodReklamacjiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->powodReklamacji[] = $item;
         

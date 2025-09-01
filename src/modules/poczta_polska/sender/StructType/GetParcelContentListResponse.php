@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetParcelContentListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType[]
      */
     protected ?array $parcelContent = null;
     /**
@@ -27,13 +27,13 @@ class GetParcelContentListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getParcelContentListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType[] $parcelContent
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType[] $parcelContent
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses GetParcelContentListResponse::setParcelContent()
      * @uses GetParcelContentListResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Get parcelContent value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType[]
      */
     public function getParcelContent(): ?array
     {
@@ -67,12 +67,12 @@ class GetParcelContentListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getParcelContentListResponseParcelContentItem) {
             // validation for constraint: itemType
-            if (!$getParcelContentListResponseParcelContentItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType) {
+            if (!$getParcelContentListResponseParcelContentItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType) {
                 $invalidValues[] = is_object($getParcelContentListResponseParcelContentItem) ? get_class($getParcelContentListResponseParcelContentItem) : sprintf('%s(%s)', gettype($getParcelContentListResponseParcelContentItem), var_export($getParcelContentListResponseParcelContentItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The parcelContent property can only contain items of type \app\modules\postal\sender\StructType\ParcelContentType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The parcelContent property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Set parcelContent value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType[] $parcelContent
-     * @return \app\modules\postal\sender\StructType\GetParcelContentListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType[] $parcelContent
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetParcelContentListResponse
      *@throws InvalidArgumentException
      */
     public function setParcelContent(?array $parcelContent = null): self
@@ -96,15 +96,15 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Add item to parcelContent value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType $item
-     * @return \app\modules\postal\sender\StructType\GetParcelContentListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetParcelContentListResponse
      *@throws InvalidArgumentException
      */
-    public function addToParcelContent(\app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType $item): self
+    public function addToParcelContent(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ParcelContentType) {
-            throw new InvalidArgumentException(sprintf('The parcelContent property can only contain items of type \app\modules\postal\sender\StructType\ParcelContentType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ParcelContentType) {
+            throw new InvalidArgumentException(sprintf('The parcelContent property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ParcelContentType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->parcelContent[] = $item;
         
@@ -112,7 +112,7 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetParcelContentListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getParcelContentListResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getParcelContentListResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getParcelContentListResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getParcelContentListResponseErrorItem) ? get_class($getParcelContentListResponseErrorItem) : sprintf('%s(%s)', gettype($getParcelContentListResponseErrorItem), var_export($getParcelContentListResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetParcelContentListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetParcelContentListResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetParcelContentListResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetParcelContentListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetParcelContentListResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

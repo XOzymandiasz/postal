@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -52,7 +52,7 @@ class PotwierdzenieOdbioruPocztex2021Type extends AbstractStructBase
     /**
      * Set ilosc value
      * @param int $ilosc
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
      */
     public function setIlosc(?int $ilosc = null): self
     {
@@ -83,16 +83,16 @@ class PotwierdzenieOdbioruPocztex2021Type extends AbstractStructBase
     /**
      * Set sposobPotwierdzeniaOdbioru value
      * @param string $sposobPotwierdzeniaOdbioru
-     * @return \app\modules\postal\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PotwierdzenieOdbioruPocztex2021Type
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::valueIsValid()
      */
     public function setSposobPotwierdzeniaOdbioru(?string $sposobPotwierdzeniaOdbioru = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::valueIsValid($sposobPotwierdzeniaOdbioru)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum', is_array($sposobPotwierdzeniaOdbioru) ? implode(', ', $sposobPotwierdzeniaOdbioru) : var_export($sposobPotwierdzeniaOdbioru, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::valueIsValid($sposobPotwierdzeniaOdbioru)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum', is_array($sposobPotwierdzeniaOdbioru) ? implode(', ', $sposobPotwierdzeniaOdbioru) : var_export($sposobPotwierdzeniaOdbioru, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobPrzekazaniaPotwierdzeniaOdbioruPocztex2021Enum::getValidValues())), __LINE__);
         }
         $this->sposobPotwierdzeniaOdbioru = $sposobPotwierdzeniaOdbioru;
         

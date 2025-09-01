@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use InvalidArgumentException;
 use Yii;
 use yii\base\Component;

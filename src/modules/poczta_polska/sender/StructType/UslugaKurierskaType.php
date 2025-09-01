@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -17,23 +17,23 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * The pobranie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null;
     /**
      * The odbiorPrzesylkiOdNadawcy
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null;
     /**
      * The potwierdzenieDoreczenia
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null;
     /**
      * The urzadWydaniaEPrzesylki
      * Meta information extracted from the WSDL
@@ -41,9 +41,9 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * - choiceMaxOccurs: 1
      * - choiceMinOccurs: 1
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null;
     /**
      * The subPrzesylka
      * Meta information extracted from the WSDL
@@ -51,30 +51,30 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * - choiceMaxOccurs: 1
      * - choiceMinOccurs: 1
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[]
      */
     protected ?array $subPrzesylka = null;
     /**
      * The potwierdzenieOdbioru
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null;
     /**
      * The ubezpieczenie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null;
     /**
      * The zwrotDokumentow
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null;
     /**
      * The idDokumentyZwrotneAdresy
      * Meta information extracted from the WSDL
@@ -86,23 +86,23 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * The doreczenie
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null;
     /**
      * The epo
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null;
     /**
      * The adresDlaZwrotu
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null;
     /**
      * The zasadySpecjalne
      * @var string|null
@@ -183,18 +183,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     protected ?string $numerTransakcjiOdbioru = null;
     /**
      * Constructor method for uslugaKurierskaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[] $subPrzesylka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[] $subPrzesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow
      * @param int $idDokumentyZwrotneAdresy
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
      * @param string $zasadySpecjalne
      * @param int $masa
      * @param int $wartosc
@@ -234,7 +234,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * @uses UslugaKurierskaType::setNumerPrzesylkiKlienta()
      * @uses UslugaKurierskaType::setNumerTransakcjiOdbioru()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null, ?array $subPrzesylka = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null, ?int $idDokumentyZwrotneAdresy = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null, ?string $zasadySpecjalne = null, ?int $masa = null, ?int $wartosc = null, ?bool $ponadgabaryt = null, ?int $odleglosc = null, ?string $zawartosc = null, ?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null, ?bool $ostroznie = null, ?string $uiszczaOplate = null, ?string $termin = null, ?string $opakowanie = null, ?string $numerPrzesylkiKlienta = null, ?string $numerTransakcjiOdbioru = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null, ?array $subPrzesylka = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null, ?int $idDokumentyZwrotneAdresy = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null, ?string $zasadySpecjalne = null, ?int $masa = null, ?int $wartosc = null, ?bool $ponadgabaryt = null, ?int $odleglosc = null, ?string $zawartosc = null, ?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null, ?bool $ostroznie = null, ?string $uiszczaOplate = null, ?string $termin = null, ?string $opakowanie = null, ?string $numerPrzesylkiKlienta = null, ?string $numerTransakcjiOdbioru = null)
     {
         $this
             ->setPobranie($pobranie)
@@ -265,18 +265,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get pobranie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType|null
      */
-    public function getPobranie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType
+    public function getPobranie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType
     {
         return $this->pobranie;
     }
     /**
      * Set pobranie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setPobranie(?\app\modules\postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
+    public function setPobranie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PobranieType $pobranie = null): self
     {
         $this->pobranie = $pobranie;
         
@@ -284,18 +284,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get odbiorPrzesylkiOdNadawcy value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType|null
      */
-    public function getOdbiorPrzesylkiOdNadawcy(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType
+    public function getOdbiorPrzesylkiOdNadawcy(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType
     {
         return $this->odbiorPrzesylkiOdNadawcy;
     }
     /**
      * Set odbiorPrzesylkiOdNadawcy value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setOdbiorPrzesylkiOdNadawcy(?\app\modules\postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null): self
+    public function setOdbiorPrzesylkiOdNadawcy(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OdbiorPrzesylkiOdNadawcyType $odbiorPrzesylkiOdNadawcy = null): self
     {
         $this->odbiorPrzesylkiOdNadawcy = $odbiorPrzesylkiOdNadawcy;
         
@@ -303,18 +303,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieDoreczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType|null
      */
-    public function getPotwierdzenieDoreczenia(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
+    public function getPotwierdzenieDoreczenia(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType
     {
         return $this->potwierdzenieDoreczenia;
     }
     /**
      * Set potwierdzenieDoreczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setPotwierdzenieDoreczenia(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
+    public function setPotwierdzenieDoreczenia(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieDoreczeniaType $potwierdzenieDoreczenia = null): self
     {
         $this->potwierdzenieDoreczenia = $potwierdzenieDoreczenia;
         
@@ -322,9 +322,9 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get urzadWydaniaEPrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType|null
      */
-    public function getUrzadWydaniaEPrzesylki(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType
+    public function getUrzadWydaniaEPrzesylki(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType
     {
         return $this->urzadWydaniaEPrzesylki ?? null;
     }
@@ -361,11 +361,11 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * This property belongs to a choice that allows only one property to exist. It is
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      *@throws InvalidArgumentException
      */
-    public function setUrzadWydaniaEPrzesylki(?\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null): self
+    public function setUrzadWydaniaEPrzesylki(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $urzadWydaniaEPrzesylki = null): self
     {
         // validation for constraint: choice(urzadWydaniaEPrzesylki, subPrzesylka)
         if ('' !== ($urzadWydaniaEPrzesylkiChoiceErrorMessage = self::validateUrzadWydaniaEPrzesylkiForChoiceConstraintFromSetUrzadWydaniaEPrzesylki($urzadWydaniaEPrzesylki))) {
@@ -381,7 +381,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get subPrzesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[]|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[]|null
      */
     public function getSubPrzesylka(): ?array
     {
@@ -403,12 +403,12 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
         $invalidValues = [];
         foreach ($values as $uslugaKurierskaTypeSubPrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$uslugaKurierskaTypeSubPrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType) {
+            if (!$uslugaKurierskaTypeSubPrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType) {
                 $invalidValues[] = is_object($uslugaKurierskaTypeSubPrzesylkaItem) ? get_class($uslugaKurierskaTypeSubPrzesylkaItem) : sprintf('%s(%s)', gettype($uslugaKurierskaTypeSubPrzesylkaItem), var_export($uslugaKurierskaTypeSubPrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubUslugaKurierskaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubUslugaKurierskaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -447,8 +447,8 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
      * This property belongs to a choice that allows only one property to exist. It is
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[] $subPrzesylka
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType[] $subPrzesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      *@throws InvalidArgumentException
      * @throws InvalidArgumentException
      */
@@ -504,15 +504,15 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Add item to subPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType $item
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      *@throws InvalidArgumentException
      */
-    public function addToSubPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType $item): self
+    public function addToSubPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType) {
-            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubUslugaKurierskaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubUslugaKurierskaType) {
+            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubUslugaKurierskaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: choice(urzadWydaniaEPrzesylki, subPrzesylka)
         if ('' !== ($itemChoiceErrorMessage = self::validateItemForChoiceConstraintFromAddToSubPrzesylka($item))) {
@@ -528,18 +528,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get potwierdzenieOdbioru value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType|null
      */
-    public function getPotwierdzenieOdbioru(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType
+    public function getPotwierdzenieOdbioru(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType
     {
         return $this->potwierdzenieOdbioru;
     }
     /**
      * Set potwierdzenieOdbioru value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setPotwierdzenieOdbioru(?\app\modules\postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null): self
+    public function setPotwierdzenieOdbioru(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PotwierdzenieOdbioruKurierskaType $potwierdzenieOdbioru = null): self
     {
         $this->potwierdzenieOdbioru = $potwierdzenieOdbioru;
         
@@ -547,18 +547,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get ubezpieczenie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType|null
      */
-    public function getUbezpieczenie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
+    public function getUbezpieczenie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType
     {
         return $this->ubezpieczenie;
     }
     /**
      * Set ubezpieczenie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setUbezpieczenie(?\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
+    public function setUbezpieczenie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczenieType $ubezpieczenie = null): self
     {
         $this->ubezpieczenie = $ubezpieczenie;
         
@@ -566,18 +566,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get zwrotDokumentow value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType|null
      */
-    public function getZwrotDokumentow(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType
+    public function getZwrotDokumentow(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType
     {
         return $this->zwrotDokumentow;
     }
     /**
      * Set zwrotDokumentow value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setZwrotDokumentow(?\app\modules\postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null): self
+    public function setZwrotDokumentow(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZwrotDokumentowKurierskaType $zwrotDokumentow = null): self
     {
         $this->zwrotDokumentow = $zwrotDokumentow;
         
@@ -594,7 +594,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set idDokumentyZwrotneAdresy value
      * @param int $idDokumentyZwrotneAdresy
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setIdDokumentyZwrotneAdresy(?int $idDokumentyZwrotneAdresy = null): self
     {
@@ -608,18 +608,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get doreczenie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType|null
      */
-    public function getDoreczenie(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType
+    public function getDoreczenie(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType
     {
         return $this->doreczenie;
     }
     /**
      * Set doreczenie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setDoreczenie(?\app\modules\postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null): self
+    public function setDoreczenie(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DoreczenieUslugaKurierskaType $doreczenie = null): self
     {
         $this->doreczenie = $doreczenie;
         
@@ -627,18 +627,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get epo value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType|null
      */
-    public function getEpo(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType
+    public function getEpo(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType
     {
         return $this->epo;
     }
     /**
      * Set epo value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setEpo(?\app\modules\postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
+    public function setEpo(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EPOType $epo = null): self
     {
         $this->epo = $epo;
         
@@ -646,18 +646,18 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     }
     /**
      * Get adresDlaZwrotu value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType|null
      */
-    public function getAdresDlaZwrotu(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType
+    public function getAdresDlaZwrotu(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType
     {
         return $this->adresDlaZwrotu;
     }
     /**
      * Set adresDlaZwrotu value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
-    public function setAdresDlaZwrotu(?\app\modules\postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null): self
+    public function setAdresDlaZwrotu(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType $adresDlaZwrotu = null): self
     {
         $this->adresDlaZwrotu = $adresDlaZwrotu;
         
@@ -674,16 +674,16 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set zasadySpecjalne value
      * @param string $zasadySpecjalne
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid()
      */
     public function setZasadySpecjalne(?string $zasadySpecjalne = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::valueIsValid($zasadySpecjalne)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZasadySpecjalneEnum', is_array($zasadySpecjalne) ? implode(', ', $zasadySpecjalne) : var_export($zasadySpecjalne, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZasadySpecjalneEnum::getValidValues())), __LINE__);
         }
         $this->zasadySpecjalne = $zasadySpecjalne;
         
@@ -700,7 +700,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -731,7 +731,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -762,7 +762,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set ponadgabaryt value
      * @param bool $ponadgabaryt
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setPonadgabaryt(?bool $ponadgabaryt = null): self
     {
@@ -785,7 +785,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set odleglosc value
      * @param int $odleglosc
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setOdleglosc(?int $odleglosc = null): self
     {
@@ -808,7 +808,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -831,7 +831,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set sprawdzenieZawartosciPrzesylkiPrzezOdbiorce value
      * @param bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setSprawdzenieZawartosciPrzesylkiPrzezOdbiorce(?bool $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce = null): self
     {
@@ -854,7 +854,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set ostroznie value
      * @param bool $ostroznie
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setOstroznie(?bool $ostroznie = null): self
     {
@@ -877,16 +877,16 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set uiszczaOplate value
      * @param string $uiszczaOplate
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid()
      */
     public function setUiszczaOplate(?string $uiszczaOplate = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::valueIsValid($uiszczaOplate)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\UiszczaOplateType', is_array($uiszczaOplate) ? implode(', ', $uiszczaOplate) : var_export($uiszczaOplate, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\UiszczaOplateType::getValidValues())), __LINE__);
         }
         $this->uiszczaOplate = $uiszczaOplate;
         
@@ -903,16 +903,16 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set termin value
      * @param string $termin
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::valueIsValid()
      */
     public function setTermin(?string $termin = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::valueIsValid($termin)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TerminKurierskaType', is_array($termin) ? implode(', ', $termin) : var_export($termin, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::valueIsValid($termin)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TerminKurierskaType', is_array($termin) ? implode(', ', $termin) : var_export($termin, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminKurierskaType::getValidValues())), __LINE__);
         }
         $this->termin = $termin;
         
@@ -929,16 +929,16 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set opakowanie value
      * @param string $opakowanie
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::valueIsValid()
      */
     public function setOpakowanie(?string $opakowanie = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::valueIsValid($opakowanie)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\OpakowanieKurierskaType', is_array($opakowanie) ? implode(', ', $opakowanie) : var_export($opakowanie, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::valueIsValid($opakowanie)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\OpakowanieKurierskaType', is_array($opakowanie) ? implode(', ', $opakowanie) : var_export($opakowanie, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OpakowanieKurierskaType::getValidValues())), __LINE__);
         }
         $this->opakowanie = $opakowanie;
         
@@ -955,7 +955,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerPrzesylkiKlienta value
      * @param string $numerPrzesylkiKlienta
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setNumerPrzesylkiKlienta(?string $numerPrzesylkiKlienta = null): self
     {
@@ -978,7 +978,7 @@ class UslugaKurierskaType extends PrzesylkaRejestrowanaType
     /**
      * Set numerTransakcjiOdbioru value
      * @param string $numerTransakcjiOdbioru
-     * @return \app\modules\postal\sender\StructType\UslugaKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UslugaKurierskaType
      */
     public function setNumerTransakcjiOdbioru(?string $numerTransakcjiOdbioru = null): self
     {

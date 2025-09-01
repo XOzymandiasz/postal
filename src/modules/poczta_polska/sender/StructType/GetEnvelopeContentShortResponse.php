@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetEnvelopeContentShortResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[]
      */
     protected ?array $przesylka = null;
     /**
      * Constructor method for getEnvelopeContentShortResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[] $przesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[] $przesylka
      * @uses GetEnvelopeContentShortResponse::setPrzesylka()
      */
     public function __construct(?array $przesylka = null)
@@ -34,7 +34,7 @@ class GetEnvelopeContentShortResponse extends AbstractStructBase
     }
     /**
      * Get przesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[]
      */
     public function getPrzesylka(): ?array
     {
@@ -56,12 +56,12 @@ class GetEnvelopeContentShortResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEnvelopeContentShortResponsePrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$getEnvelopeContentShortResponsePrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType) {
+            if (!$getEnvelopeContentShortResponsePrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType) {
                 $invalidValues[] = is_object($getEnvelopeContentShortResponsePrzesylkaItem) ? get_class($getEnvelopeContentShortResponsePrzesylkaItem) : sprintf('%s(%s)', gettype($getEnvelopeContentShortResponsePrzesylkaItem), var_export($getEnvelopeContentShortResponsePrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaShortType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetEnvelopeContentShortResponse extends AbstractStructBase
     }
     /**
      * Set przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[] $przesylka
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeContentShortResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType[] $przesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeContentShortResponse
      *@throws InvalidArgumentException
      */
     public function setPrzesylka(?array $przesylka = null): self
@@ -85,15 +85,15 @@ class GetEnvelopeContentShortResponse extends AbstractStructBase
     }
     /**
      * Add item to przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $item
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeContentShortResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeContentShortResponse
      *@throws InvalidArgumentException
      */
-    public function addToPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $item): self
+    public function addToPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType) {
-            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaShortType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaShortType) {
+            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->przesylka[] = $item;
         

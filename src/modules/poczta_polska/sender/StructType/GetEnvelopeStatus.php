@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class GetEnvelopeStatus extends AbstractStructBase
     /**
      * Set idEnvelope value
      * @param int $idEnvelope
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeStatus
      */
     public function setIdEnvelope(?int $idEnvelope = null): self
     {

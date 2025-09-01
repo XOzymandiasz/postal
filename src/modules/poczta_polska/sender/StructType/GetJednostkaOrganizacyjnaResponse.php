@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
      */
     protected ?array $jednostkaOrganizacyjna = null;
     /**
@@ -27,13 +27,13 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getJednostkaOrganizacyjnaResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostkaOrganizacyjna
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostkaOrganizacyjna
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses GetJednostkaOrganizacyjnaResponse::setJednostkaOrganizacyjna()
      * @uses GetJednostkaOrganizacyjnaResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Get jednostkaOrganizacyjna value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
      */
     public function getJednostkaOrganizacyjna(): ?array
     {
@@ -67,12 +67,12 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem) {
             // validation for constraint: itemType
-            if (!$getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
+            if (!$getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
                 $invalidValues[] = is_object($getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem) ? get_class($getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem) : sprintf('%s(%s)', gettype($getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem), var_export($getJednostkaOrganizacyjnaResponseJednostkaOrganizacyjnaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The jednostkaOrganizacyjna property can only contain items of type \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The jednostkaOrganizacyjna property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Set jednostkaOrganizacyjna value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostkaOrganizacyjna
-     * @return \app\modules\postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostkaOrganizacyjna
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
      *@throws InvalidArgumentException
      */
     public function setJednostkaOrganizacyjna(?array $jednostkaOrganizacyjna = null): self
@@ -96,15 +96,15 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Add item to jednostkaOrganizacyjna value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item
-     * @return \app\modules\postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
      *@throws InvalidArgumentException
      */
-    public function addToJednostkaOrganizacyjna(\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item): self
+    public function addToJednostkaOrganizacyjna(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
-            throw new InvalidArgumentException(sprintf('The jednostkaOrganizacyjna property can only contain items of type \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
+            throw new InvalidArgumentException(sprintf('The jednostkaOrganizacyjna property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->jednostkaOrganizacyjna[] = $item;
         
@@ -112,7 +112,7 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getJednostkaOrganizacyjnaResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getJednostkaOrganizacyjnaResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getJednostkaOrganizacyjnaResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getJednostkaOrganizacyjnaResponseErrorItem) ? get_class($getJednostkaOrganizacyjnaResponseErrorItem) : sprintf('%s(%s)', gettype($getJednostkaOrganizacyjnaResponseErrorItem), var_export($getJednostkaOrganizacyjnaResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetJednostkaOrganizacyjnaResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetJednostkaOrganizacyjnaResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

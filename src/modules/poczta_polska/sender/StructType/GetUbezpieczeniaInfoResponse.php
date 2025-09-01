@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetUbezpieczeniaInfoResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[]
      */
     protected ?array $poziomyUbezpieczenia = null;
     /**
      * Constructor method for getUbezpieczeniaInfoResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[] $poziomyUbezpieczenia
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[] $poziomyUbezpieczenia
      * @uses GetUbezpieczeniaInfoResponse::setPoziomyUbezpieczenia()
      */
     public function __construct(?array $poziomyUbezpieczenia = null)
@@ -34,7 +34,7 @@ class GetUbezpieczeniaInfoResponse extends AbstractStructBase
     }
     /**
      * Get poziomyUbezpieczenia value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[]
      */
     public function getPoziomyUbezpieczenia(): ?array
     {
@@ -56,12 +56,12 @@ class GetUbezpieczeniaInfoResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem) {
             // validation for constraint: itemType
-            if (!$getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType) {
+            if (!$getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType) {
                 $invalidValues[] = is_object($getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem) ? get_class($getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem) : sprintf('%s(%s)', gettype($getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem), var_export($getUbezpieczeniaInfoResponsePoziomyUbezpieczeniaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The poziomyUbezpieczenia property can only contain items of type \app\modules\postal\sender\StructType\UbezpieczeniaInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The poziomyUbezpieczenia property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UbezpieczeniaInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetUbezpieczeniaInfoResponse extends AbstractStructBase
     }
     /**
      * Set poziomyUbezpieczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[] $poziomyUbezpieczenia
-     * @return \app\modules\postal\sender\StructType\GetUbezpieczeniaInfoResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType[] $poziomyUbezpieczenia
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUbezpieczeniaInfoResponse
      *@throws InvalidArgumentException
      */
     public function setPoziomyUbezpieczenia(?array $poziomyUbezpieczenia = null): self
@@ -85,15 +85,15 @@ class GetUbezpieczeniaInfoResponse extends AbstractStructBase
     }
     /**
      * Add item to poziomyUbezpieczenia value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType $item
-     * @return \app\modules\postal\sender\StructType\GetUbezpieczeniaInfoResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUbezpieczeniaInfoResponse
      *@throws InvalidArgumentException
      */
-    public function addToPoziomyUbezpieczenia(\app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType $item): self
+    public function addToPoziomyUbezpieczenia(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType) {
-            throw new InvalidArgumentException(sprintf('The poziomyUbezpieczenia property can only contain items of type \app\modules\postal\sender\StructType\UbezpieczeniaInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UbezpieczeniaInfoType) {
+            throw new InvalidArgumentException(sprintf('The poziomyUbezpieczenia property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UbezpieczeniaInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->poziomyUbezpieczenia[] = $item;
         

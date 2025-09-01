@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use yii\data\DataProviderInterface;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;

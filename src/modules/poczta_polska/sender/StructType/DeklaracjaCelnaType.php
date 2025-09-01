@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,7 +18,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
      * The szczegoly
      * Meta information extracted from the WSDL
      * - maxOccurs: 5
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[]
      */
     protected ?array $szczegoly = null;
     /**
@@ -98,7 +98,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     protected ?string $waluta = null;
     /**
      * Constructor method for deklaracjaCelnaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[] $szczegoly
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[] $szczegoly
      * @param bool $podarunek
      * @param bool $dokument
      * @param bool $probkaHandlowa
@@ -153,7 +153,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     }
     /**
      * Get szczegoly value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[]
      */
     public function getSzczegoly(): ?array
     {
@@ -175,12 +175,12 @@ class DeklaracjaCelnaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $deklaracjaCelnaTypeSzczegolyItem) {
             // validation for constraint: itemType
-            if (!$deklaracjaCelnaTypeSzczegolyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType) {
+            if (!$deklaracjaCelnaTypeSzczegolyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType) {
                 $invalidValues[] = is_object($deklaracjaCelnaTypeSzczegolyItem) ? get_class($deklaracjaCelnaTypeSzczegolyItem) : sprintf('%s(%s)', gettype($deklaracjaCelnaTypeSzczegolyItem), var_export($deklaracjaCelnaTypeSzczegolyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The szczegoly property can only contain items of type \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The szczegoly property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -188,8 +188,8 @@ class DeklaracjaCelnaType extends AbstractStructBase
     }
     /**
      * Set szczegoly value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[] $szczegoly
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType[] $szczegoly
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      *@throws InvalidArgumentException
      */
     public function setSzczegoly(?array $szczegoly = null): self
@@ -208,15 +208,15 @@ class DeklaracjaCelnaType extends AbstractStructBase
     }
     /**
      * Add item to szczegoly value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType $item
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      *@throws InvalidArgumentException
      */
-    public function addToSzczegoly(\app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType $item): self
+    public function addToSzczegoly(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType) {
-            throw new InvalidArgumentException(sprintf('The szczegoly property can only contain items of type \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyDeklaracjiCelnejType) {
+            throw new InvalidArgumentException(sprintf('The szczegoly property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(5)
         if (is_array($this->szczegoly) && count($this->szczegoly) >= 5) {
@@ -237,7 +237,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set podarunek value
      * @param bool $podarunek
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setPodarunek(?bool $podarunek = null): self
     {
@@ -260,7 +260,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set dokument value
      * @param bool $dokument
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setDokument(?bool $dokument = null): self
     {
@@ -283,7 +283,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set probkaHandlowa value
      * @param bool $probkaHandlowa
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setProbkaHandlowa(?bool $probkaHandlowa = null): self
     {
@@ -306,7 +306,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set zwrotTowaru value
      * @param bool $zwrotTowaru
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setZwrotTowaru(?bool $zwrotTowaru = null): self
     {
@@ -329,7 +329,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set towary value
      * @param bool $towary
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setTowary(?bool $towary = null): self
     {
@@ -352,7 +352,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set inny value
      * @param bool $inny
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setInny(?bool $inny = null): self
     {
@@ -375,7 +375,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set wyjasnienie value
      * @param string $wyjasnienie
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setWyjasnienie(?string $wyjasnienie = null): self
     {
@@ -398,7 +398,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set oplatyPocztowe value
      * @param string $oplatyPocztowe
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setOplatyPocztowe(?string $oplatyPocztowe = null): self
     {
@@ -421,7 +421,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set uwagi value
      * @param string $uwagi
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setUwagi(?string $uwagi = null): self
     {
@@ -444,7 +444,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set licencja value
      * @param string $licencja
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setLicencja(?string $licencja = null): self
     {
@@ -467,7 +467,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set swiadectwo value
      * @param string $swiadectwo
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setSwiadectwo(?string $swiadectwo = null): self
     {
@@ -490,7 +490,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set faktura value
      * @param string $faktura
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setFaktura(?string $faktura = null): self
     {
@@ -513,7 +513,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set numerReferencyjnyImportera value
      * @param string $numerReferencyjnyImportera
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setNumerReferencyjnyImportera(?string $numerReferencyjnyImportera = null): self
     {
@@ -536,7 +536,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set numerTelefonuImportera value
      * @param string $numerTelefonuImportera
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setNumerTelefonuImportera(?string $numerTelefonuImportera = null): self
     {
@@ -559,7 +559,7 @@ class DeklaracjaCelnaType extends AbstractStructBase
     /**
      * Set waluta value
      * @param string $waluta
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelnaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelnaType
      */
     public function setWaluta(?string $waluta = null): self
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use Codeception\Test\Unit;
 use UnitTester;
 

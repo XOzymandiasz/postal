@@ -1,10 +1,10 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\forms\ShipmentForm $model */
+/** @var XOzymandias\Yii2Postal\forms\ShipmentForm $model */
 
 $this->title = Module::t('postal', 'Update Postal Shipment: {name}', [
     'name' => $model->getModel()->id,

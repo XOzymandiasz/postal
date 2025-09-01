@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -87,17 +87,17 @@ class ZawartoscPocztex2021Type extends AbstractStructBase
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
      * @param string $zawartoscSpecjalna
-     * @return \app\modules\postal\sender\StructType\ZawartoscPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZawartoscPocztex2021Type
      *@throws InvalidArgumentException
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::valueIsValid()
      */
     public function setZawartoscSpecjalna(?string $zawartoscSpecjalna = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::valueIsValid($zawartoscSpecjalna)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZawartoscSpecjalnaEnum', is_array($zawartoscSpecjalna) ? implode(', ', $zawartoscSpecjalna) : var_export($zawartoscSpecjalna, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::valueIsValid($zawartoscSpecjalna)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZawartoscSpecjalnaEnum', is_array($zawartoscSpecjalna) ? implode(', ', $zawartoscSpecjalna) : var_export($zawartoscSpecjalna, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscSpecjalnaEnum::getValidValues())), __LINE__);
         }
         // validation for constraint: choice(zawartoscSpecjalna, zawartoscInna)
         if ('' !== ($zawartoscSpecjalnaChoiceErrorMessage = self::validateZawartoscSpecjalnaForChoiceConstraintFromSetZawartoscSpecjalna($zawartoscSpecjalna))) {
@@ -154,7 +154,7 @@ class ZawartoscPocztex2021Type extends AbstractStructBase
      * property is null, the property is removed from this object
      * @throws InvalidArgumentException
      * @param string $zawartoscInna
-     * @return \app\modules\postal\sender\StructType\ZawartoscPocztex2021Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZawartoscPocztex2021Type
      */
     public function setZawartoscInna(?string $zawartoscInna = null): self
     {

@@ -1,11 +1,11 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $model */
+/** @var XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $model */
 /** @var  title */
 $this->title = $model->getNazwaSkrocona();
 $this->params['breadcrumbs'][] = ['label' => Module::t('poczta-polska', 'Profile'), 'url' => ['index']];

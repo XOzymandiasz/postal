@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,15 +19,15 @@ class PakietType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - documentation: Uwaga w tym miejscu wystarczy jak obiekt kierunke będzie miał ustawioną tylko własność id (nie jest potrzebne przesyłanie pełnego obiektu kierunekType pobranego z metody getKierunki)
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null;
     /**
      * The opakowanie
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType[]
      */
     protected ?array $opakowanie = null;
     /**
@@ -61,8 +61,8 @@ class PakietType extends AbstractStructBase
     protected ?string $sposobNadania = null;
     /**
      * Constructor method for pakietType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType[] $opakowanie
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType[] $opakowanie
      * @param string[] $czynnoscUpustowa
      * @param string $pakietGuid
      * @param string $miejsceOdbioru
@@ -74,7 +74,7 @@ class PakietType extends AbstractStructBase
      * @uses PakietType::setMiejsceOdbioru()
      * @uses PakietType::setSposobNadania()
      */
-    public function __construct(?\app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null, ?array $opakowanie = null, ?array $czynnoscUpustowa = null, ?string $pakietGuid = null, ?string $miejsceOdbioru = null, ?string $sposobNadania = null)
+    public function __construct(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null, ?array $opakowanie = null, ?array $czynnoscUpustowa = null, ?string $pakietGuid = null, ?string $miejsceOdbioru = null, ?string $sposobNadania = null)
     {
         $this
             ->setKierunek($kierunek)
@@ -86,18 +86,18 @@ class PakietType extends AbstractStructBase
     }
     /**
      * Get kierunek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType|null
      */
-    public function getKierunek(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType
+    public function getKierunek(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType
     {
         return $this->kierunek;
     }
     /**
      * Set kierunek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      */
-    public function setKierunek(?\app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null): self
+    public function setKierunek(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $kierunek = null): self
     {
         $this->kierunek = $kierunek;
         
@@ -105,7 +105,7 @@ class PakietType extends AbstractStructBase
     }
     /**
      * Get opakowanie value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType[]
      */
     public function getOpakowanie(): ?array
     {
@@ -127,12 +127,12 @@ class PakietType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $pakietTypeOpakowanieItem) {
             // validation for constraint: itemType
-            if (!$pakietTypeOpakowanieItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType) {
+            if (!$pakietTypeOpakowanieItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType) {
                 $invalidValues[] = is_object($pakietTypeOpakowanieItem) ? get_class($pakietTypeOpakowanieItem) : sprintf('%s(%s)', gettype($pakietTypeOpakowanieItem), var_export($pakietTypeOpakowanieItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The opakowanie property can only contain items of type \app\modules\postal\sender\StructType\OpakowanieType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The opakowanie property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -140,8 +140,8 @@ class PakietType extends AbstractStructBase
     }
     /**
      * Set opakowanie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType[] $opakowanie
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType[] $opakowanie
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      *@throws InvalidArgumentException
      */
     public function setOpakowanie(?array $opakowanie = null): self
@@ -156,15 +156,15 @@ class PakietType extends AbstractStructBase
     }
     /**
      * Add item to opakowanie value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType $item
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      *@throws InvalidArgumentException
      */
-    public function addToOpakowanie(\app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType $item): self
+    public function addToOpakowanie(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\OpakowanieType) {
-            throw new InvalidArgumentException(sprintf('The opakowanie property can only contain items of type \app\modules\postal\sender\StructType\OpakowanieType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OpakowanieType) {
+            throw new InvalidArgumentException(sprintf('The opakowanie property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->opakowanie[] = $item;
         
@@ -194,12 +194,12 @@ class PakietType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $pakietTypeCzynnoscUpustowaItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($pakietTypeCzynnoscUpustowaItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($pakietTypeCzynnoscUpustowaItem)) {
                 $invalidValues[] = is_object($pakietTypeCzynnoscUpustowaItem) ? get_class($pakietTypeCzynnoscUpustowaItem) : sprintf('%s(%s)', gettype($pakietTypeCzynnoscUpustowaItem), var_export($pakietTypeCzynnoscUpustowaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CzynnoscUpustowaType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CzynnoscUpustowaType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()));
         }
         unset($invalidValues);
         
@@ -208,10 +208,10 @@ class PakietType extends AbstractStructBase
     /**
      * Set czynnoscUpustowa value
      * @param string[] $czynnoscUpustowa
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
      */
     public function setCzynnoscUpustowa(?array $czynnoscUpustowa = null): self
     {
@@ -226,16 +226,16 @@ class PakietType extends AbstractStructBase
     /**
      * Add item to czynnoscUpustowa value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
      */
     public function addToCzynnoscUpustowa(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CzynnoscUpustowaType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CzynnoscUpustowaType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues())), __LINE__);
         }
         $this->czynnoscUpustowa[] = $item;
         
@@ -252,7 +252,7 @@ class PakietType extends AbstractStructBase
     /**
      * Set pakietGuid value
      * @param string $pakietGuid
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      */
     public function setPakietGuid(?string $pakietGuid = null): self
     {
@@ -279,16 +279,16 @@ class PakietType extends AbstractStructBase
     /**
      * Set miejsceOdbioru value
      * @param string $miejsceOdbioru
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::valueIsValid()
      */
     public function setMiejsceOdbioru(?string $miejsceOdbioru = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::valueIsValid($miejsceOdbioru)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\MiejsceOdbioruType', is_array($miejsceOdbioru) ? implode(', ', $miejsceOdbioru) : var_export($miejsceOdbioru, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::valueIsValid($miejsceOdbioru)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\MiejsceOdbioruType', is_array($miejsceOdbioru) ? implode(', ', $miejsceOdbioru) : var_export($miejsceOdbioru, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejsceOdbioruType::getValidValues())), __LINE__);
         }
         $this->miejsceOdbioru = $miejsceOdbioru;
         
@@ -305,16 +305,16 @@ class PakietType extends AbstractStructBase
     /**
      * Set sposobNadania value
      * @param string $sposobNadania
-     * @return \app\modules\postal\sender\StructType\PakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PakietType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::valueIsValid()
      */
     public function setSposobNadania(?string $sposobNadania = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::valueIsValid($sposobNadania)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SposobNadaniaType', is_array($sposobNadania) ? implode(', ', $sposobNadania) : var_export($sposobNadania, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::valueIsValid($sposobNadania)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SposobNadaniaType', is_array($sposobNadania) ? implode(', ', $sposobNadania) : var_export($sposobNadania, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobNadaniaType::getValidValues())), __LINE__);
         }
         $this->sposobNadania = $sposobNadania;
         

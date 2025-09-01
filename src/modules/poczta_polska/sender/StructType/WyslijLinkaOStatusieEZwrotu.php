@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -97,7 +97,7 @@ class WyslijLinkaOStatusieEZwrotu extends AbstractStructBase
      * Set guidZgodaEZwrot value
      * @throws InvalidArgumentException
      * @param string[] $guidZgodaEZwrot
-     * @return \app\modules\postal\sender\StructType\WyslijLinkaOStatusieEZwrotu
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WyslijLinkaOStatusieEZwrotu
      */
     public function setGuidZgodaEZwrot(?array $guidZgodaEZwrot = null): self
     {
@@ -117,7 +117,7 @@ class WyslijLinkaOStatusieEZwrotu extends AbstractStructBase
      * Add item to guidZgodaEZwrot value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\WyslijLinkaOStatusieEZwrotu
+     * @return \XOzymandias\Yii2Postal\sender\StructType\WyslijLinkaOStatusieEZwrotu
      */
     public function addToGuidZgodaEZwrot(string $item): self
     {

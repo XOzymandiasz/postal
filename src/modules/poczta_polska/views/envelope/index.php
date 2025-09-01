@@ -1,8 +1,8 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\models\search\EnvelopeSearch;
-use app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\models\search\EnvelopeSearch;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
 use yii\bootstrap5\Nav;
 use yii\data\DataProviderInterface;
 use yii\grid\ActionColumn;

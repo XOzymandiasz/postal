@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class ProduktyInKartaType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[]
      */
     protected ?array $produktInKarta = null;
     /**
      * Constructor method for produktyInKartaType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[] $produktInKarta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[] $produktInKarta
      * @uses ProduktyInKartaType::setProduktInKarta()
      */
     public function __construct(?array $produktInKarta = null)
@@ -34,7 +34,7 @@ class ProduktyInKartaType extends AbstractStructBase
     }
     /**
      * Get produktInKarta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[]
      */
     public function getProduktInKarta(): ?array
     {
@@ -56,12 +56,12 @@ class ProduktyInKartaType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $produktyInKartaTypeProduktInKartaItem) {
             // validation for constraint: itemType
-            if (!$produktyInKartaTypeProduktInKartaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType) {
+            if (!$produktyInKartaTypeProduktInKartaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType) {
                 $invalidValues[] = is_object($produktyInKartaTypeProduktInKartaItem) ? get_class($produktyInKartaTypeProduktInKartaItem) : sprintf('%s(%s)', gettype($produktyInKartaTypeProduktInKartaItem), var_export($produktyInKartaTypeProduktInKartaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The produktInKarta property can only contain items of type \app\modules\postal\sender\StructType\ProduktInKartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The produktInKarta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProduktInKartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class ProduktyInKartaType extends AbstractStructBase
     }
     /**
      * Set produktInKarta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[] $produktInKarta
-     * @return \app\modules\postal\sender\StructType\ProduktyInKartaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType[] $produktInKarta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProduktyInKartaType
      *@throws InvalidArgumentException
      */
     public function setProduktInKarta(?array $produktInKarta = null): self
@@ -85,15 +85,15 @@ class ProduktyInKartaType extends AbstractStructBase
     }
     /**
      * Add item to produktInKarta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType $item
-     * @return \app\modules\postal\sender\StructType\ProduktyInKartaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProduktyInKartaType
      *@throws InvalidArgumentException
      */
-    public function addToProduktInKarta(\app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType $item): self
+    public function addToProduktInKarta(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProduktInKartaType) {
-            throw new InvalidArgumentException(sprintf('The produktInKarta property can only contain items of type \app\modules\postal\sender\StructType\ProduktInKartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProduktInKartaType) {
+            throw new InvalidArgumentException(sprintf('The produktInKarta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProduktInKartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->produktInKarta[] = $item;
         

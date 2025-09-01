@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\tests\unit\forms;
+namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 
 
 use _support\UnitModelTrait;
-use app\modules\postal\forms\AddressTypeForm;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\tests\fixtures\ShipmentAddressFixture;
+use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use Codeception\Test\Unit;
 use Throwable;
 use UnitTester;

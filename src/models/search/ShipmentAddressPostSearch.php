@@ -1,13 +1,13 @@
 <?php
 
-namespace app\modules\postal\models\search;
+namespace XOzymandias\Yii2Postal\models\search;
 
-use app\modules\postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 /**
- * ShipmentAddressPostSearch represents the model behind the search form of `app\modules\postal\models\ShipmentAddress`.
+ * ShipmentAddressPostSearch represents the model behind the search form of `XOzymandias\Yii2Postal\models\ShipmentAddress`.
  */
 class ShipmentAddressPostSearch extends ShipmentAddress
 {

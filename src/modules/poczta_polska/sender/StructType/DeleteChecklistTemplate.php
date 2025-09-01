@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class DeleteChecklistTemplate extends AbstractStructBase
      * The checklistTemplate
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
      */
     protected ?array $checklistTemplate = null;
     /**
      * Constructor method for deleteChecklistTemplate
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
      * @uses DeleteChecklistTemplate::setChecklistTemplate()
      */
     public function __construct(?array $checklistTemplate = null)
@@ -33,7 +33,7 @@ class DeleteChecklistTemplate extends AbstractStructBase
     }
     /**
      * Get checklistTemplate value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[]
      */
     public function getChecklistTemplate(): ?array
     {
@@ -55,12 +55,12 @@ class DeleteChecklistTemplate extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $deleteChecklistTemplateChecklistTemplateItem) {
             // validation for constraint: itemType
-            if (!$deleteChecklistTemplateChecklistTemplateItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
+            if (!$deleteChecklistTemplateChecklistTemplateItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
                 $invalidValues[] = is_object($deleteChecklistTemplateChecklistTemplateItem) ? get_class($deleteChecklistTemplateChecklistTemplateItem) : sprintf('%s(%s)', gettype($deleteChecklistTemplateChecklistTemplateItem), var_export($deleteChecklistTemplateChecklistTemplateItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The checklistTemplate property can only contain items of type \app\modules\postal\sender\StructType\ChecklistTemplateType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The checklistTemplate property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class DeleteChecklistTemplate extends AbstractStructBase
     }
     /**
      * Set checklistTemplate value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
-     * @return \app\modules\postal\sender\StructType\DeleteChecklistTemplate
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType[] $checklistTemplate
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeleteChecklistTemplate
      *@throws InvalidArgumentException
      */
     public function setChecklistTemplate(?array $checklistTemplate = null): self
@@ -84,15 +84,15 @@ class DeleteChecklistTemplate extends AbstractStructBase
     }
     /**
      * Add item to checklistTemplate value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item
-     * @return \app\modules\postal\sender\StructType\DeleteChecklistTemplate
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeleteChecklistTemplate
      *@throws InvalidArgumentException
      */
-    public function addToChecklistTemplate(\app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item): self
+    public function addToChecklistTemplate(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
-            throw new InvalidArgumentException(sprintf('The checklistTemplate property can only contain items of type \app\modules\postal\sender\StructType\ChecklistTemplateType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ChecklistTemplateType) {
+            throw new InvalidArgumentException(sprintf('The checklistTemplate property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ChecklistTemplateType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->checklistTemplate[] = $item;
         

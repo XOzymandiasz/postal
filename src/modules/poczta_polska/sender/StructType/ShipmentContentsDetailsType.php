@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -93,7 +93,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set description value
      * @param string $description
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setDescription(?string $description = null): self
     {
@@ -116,7 +116,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set quantity value
      * @param int $quantity
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setQuantity(?int $quantity = null): self
     {
@@ -139,7 +139,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set netWeight value
      * @param int $netWeight
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setNetWeight(?int $netWeight = null): self
     {
@@ -162,7 +162,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set declaredValue value
      * @param int $declaredValue
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setDeclaredValue(?int $declaredValue = null): self
     {
@@ -185,7 +185,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set harmonizedSystemCode value
      * @param string $harmonizedSystemCode
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setHarmonizedSystemCode(?string $harmonizedSystemCode = null): self
     {
@@ -212,7 +212,7 @@ class ShipmentContentsDetailsType extends AbstractStructBase
     /**
      * Set originLocationCode value
      * @param string $originLocationCode
-     * @return \app\modules\postal\sender\StructType\ShipmentContentsDetailsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType
      */
     public function setOriginLocationCode(?string $originLocationCode = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -29,7 +29,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
@@ -54,7 +54,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     /**
      * Constructor method for addShipmentResponseItemType
      * @param string $guid
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @param string $numerNadania
      * @param string $numerTransakcjiOdbioru
      * @param string $numerListuPrzewozowego
@@ -84,7 +84,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      */
     public function setGuid(string $guid): self
     {
@@ -102,7 +102,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -124,12 +124,12 @@ class AddShipmentResponseItemType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addShipmentResponseItemTypeErrorItem) {
             // validation for constraint: itemType
-            if (!$addShipmentResponseItemTypeErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$addShipmentResponseItemTypeErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($addShipmentResponseItemTypeErrorItem) ? get_class($addShipmentResponseItemTypeErrorItem) : sprintf('%s(%s)', gettype($addShipmentResponseItemTypeErrorItem), var_export($addShipmentResponseItemTypeErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -137,8 +137,8 @@ class AddShipmentResponseItemType extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -153,15 +153,15 @@ class AddShipmentResponseItemType extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         
@@ -178,7 +178,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -209,7 +209,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     /**
      * Set numerTransakcjiOdbioru value
      * @param string $numerTransakcjiOdbioru
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      */
     public function setNumerTransakcjiOdbioru(?string $numerTransakcjiOdbioru = null): self
     {
@@ -232,7 +232,7 @@ class AddShipmentResponseItemType extends AbstractStructBase
     /**
      * Set numerListuPrzewozowego value
      * @param string $numerListuPrzewozowego
-     * @return \app\modules\postal\sender\StructType\AddShipmentResponseItemType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddShipmentResponseItemType
      */
     public function setNumerListuPrzewozowego(?string $numerListuPrzewozowego = null): self
     {

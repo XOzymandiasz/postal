@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -50,7 +50,7 @@ class UbezpieczeniaInfoType extends AbstractStructBase
     /**
      * Set typPrzesylki value
      * @param string $typPrzesylki
-     * @return \app\modules\postal\sender\StructType\UbezpieczeniaInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UbezpieczeniaInfoType
      */
     public function setTypPrzesylki(?string $typPrzesylki = null): self
     {
@@ -73,7 +73,7 @@ class UbezpieczeniaInfoType extends AbstractStructBase
     /**
      * Set kwota value
      * @param float $kwota
-     * @return \app\modules\postal\sender\StructType\UbezpieczeniaInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\UbezpieczeniaInfoType
      */
     public function setKwota(?float $kwota = null): self
     {

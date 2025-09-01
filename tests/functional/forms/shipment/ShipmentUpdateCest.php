@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\tests\functional\forms\shipment;
+namespace XOzymandias\Yii2Postal\tests\functional\forms\shipment;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\models\ShipmentProviderInterface;
-use app\modules\postal\tests\fixtures\ShipmentAddressFixture;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
-use app\modules\postal\tests\fixtures\ShipmentFixture;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Util\HttpCode;
 use FunctionalTester;
 

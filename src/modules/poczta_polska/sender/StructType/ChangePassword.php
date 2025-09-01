@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -40,7 +40,7 @@ class ChangePassword extends AbstractStructBase
     /**
      * Set newPassword value
      * @param string $newPassword
-     * @return \app\modules\postal\sender\StructType\ChangePassword
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ChangePassword
      */
     public function setNewPassword(?string $newPassword = null): self
     {

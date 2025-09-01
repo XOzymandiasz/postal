@@ -1,8 +1,8 @@
 <?php
 
-use app\modules\postal\forms\ShipmentForm;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;

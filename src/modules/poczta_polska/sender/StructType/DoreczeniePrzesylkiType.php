@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -88,7 +88,7 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set data value
      * @param string $data
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      */
     public function setData(?string $data = null): self
     {
@@ -111,7 +111,7 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set osobaOdbierajaca value
      * @param string $osobaOdbierajaca
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      */
     public function setOsobaOdbierajaca(?string $osobaOdbierajaca = null): self
     {
@@ -134,16 +134,16 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set podmiotDoreczenia value
      * @param string $podmiotDoreczenia
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::valueIsValid()
      */
     public function setPodmiotDoreczenia(?string $podmiotDoreczenia = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::valueIsValid($podmiotDoreczenia)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PodmiotDoreczeniaEnum', is_array($podmiotDoreczenia) ? implode(', ', $podmiotDoreczenia) : var_export($podmiotDoreczenia, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::valueIsValid($podmiotDoreczenia)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PodmiotDoreczeniaEnum', is_array($podmiotDoreczenia) ? implode(', ', $podmiotDoreczenia) : var_export($podmiotDoreczenia, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PodmiotDoreczeniaEnum::getValidValues())), __LINE__);
         }
         $this->podmiotDoreczenia = $podmiotDoreczenia;
         
@@ -160,7 +160,7 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set dataPelnomocnictwa value
      * @param string $dataPelnomocnictwa
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      */
     public function setDataPelnomocnictwa(?string $dataPelnomocnictwa = null): self
     {
@@ -183,7 +183,7 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set numerPelnomocnictwa value
      * @param string $numerPelnomocnictwa
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      */
     public function setNumerPelnomocnictwa(?string $numerPelnomocnictwa = null): self
     {
@@ -206,7 +206,7 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set pieczecFirmowa value
      * @param bool $pieczecFirmowa
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      */
     public function setPieczecFirmowa(?bool $pieczecFirmowa = null): self
     {
@@ -229,16 +229,16 @@ class DoreczeniePrzesylkiType extends AbstractStructBase
     /**
      * Set miejscePozostawieniaZawiadomieniaODoreczeniu value
      * @param string $miejscePozostawieniaZawiadomieniaODoreczeniu
-     * @return \app\modules\postal\sender\StructType\DoreczeniePrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczeniePrzesylkiType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::valueIsValid()
      */
     public function setMiejscePozostawieniaZawiadomieniaODoreczeniu(?string $miejscePozostawieniaZawiadomieniaODoreczeniu = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::valueIsValid($miejscePozostawieniaZawiadomieniaODoreczeniu)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum', is_array($miejscePozostawieniaZawiadomieniaODoreczeniu) ? implode(', ', $miejscePozostawieniaZawiadomieniaODoreczeniu) : var_export($miejscePozostawieniaZawiadomieniaODoreczeniu, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::valueIsValid($miejscePozostawieniaZawiadomieniaODoreczeniu)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum', is_array($miejscePozostawieniaZawiadomieniaODoreczeniu) ? implode(', ', $miejscePozostawieniaZawiadomieniaODoreczeniu) : var_export($miejscePozostawieniaZawiadomieniaODoreczeniu, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\MiejscePozostawieniaZawiadomieniaODoreczeniuEnum::getValidValues())), __LINE__);
         }
         $this->miejscePozostawieniaZawiadomieniaODoreczeniu = $miejscePozostawieniaZawiadomieniaODoreczeniu;
         

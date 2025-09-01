@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -31,17 +31,17 @@ class ZwrotDokumentowKurierskaType extends AbstractStructBase
      * - choiceMaxOccurs: 1
      * - choiceMinOccurs: 1
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null;
     /**
      * Constructor method for zwrotDokumentowKurierskaType
      * @param string $rodzajPocztex
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList
      *@uses ZwrotDokumentowKurierskaType::setRodzajPocztex()
      * @uses ZwrotDokumentowKurierskaType::setRodzajList()
      */
-    public function __construct(?string $rodzajPocztex = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null)
+    public function __construct(?string $rodzajPocztex = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null)
     {
         $this
             ->setRodzajPocztex($rodzajPocztex)
@@ -89,17 +89,17 @@ class ZwrotDokumentowKurierskaType extends AbstractStructBase
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
      * @param string $rodzajPocztex
-     * @return \app\modules\postal\sender\StructType\ZwrotDokumentowKurierskaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotDokumentowKurierskaType
      *@throws InvalidArgumentException
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::valueIsValid()
      */
     public function setRodzajPocztex(?string $rodzajPocztex = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::valueIsValid($rodzajPocztex)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TerminZwrotDokumentowKurierskaType', is_array($rodzajPocztex) ? implode(', ', $rodzajPocztex) : var_export($rodzajPocztex, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::valueIsValid($rodzajPocztex)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TerminZwrotDokumentowKurierskaType', is_array($rodzajPocztex) ? implode(', ', $rodzajPocztex) : var_export($rodzajPocztex, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TerminZwrotDokumentowKurierskaType::getValidValues())), __LINE__);
         }
         // validation for constraint: choice(rodzajPocztex, rodzajList)
         if ('' !== ($rodzajPocztexChoiceErrorMessage = self::validateRodzajPocztexForChoiceConstraintFromSetRodzajPocztex($rodzajPocztex))) {
@@ -115,9 +115,9 @@ class ZwrotDokumentowKurierskaType extends AbstractStructBase
     }
     /**
      * Get rodzajList value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType|null
      */
-    public function getRodzajList(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType
+    public function getRodzajList(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType
     {
         return $this->rodzajList ?? null;
     }
@@ -154,11 +154,11 @@ class ZwrotDokumentowKurierskaType extends AbstractStructBase
      * This property belongs to a choice that allows only one property to exist. It is
      * therefore removable from the request, consequently if the value assigned to this
      * property is null, the property is removed from this object
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList
-     * @return \app\modules\postal\sender\StructType\ZwrotDokumentowKurierskaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotDokumentowKurierskaType
      *@throws InvalidArgumentException
      */
-    public function setRodzajList(?\app\modules\postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null): self
+    public function setRodzajList(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\RodzajListType $rodzajList = null): self
     {
         // validation for constraint: choice(rodzajPocztex, rodzajList)
         if ('' !== ($rodzajListChoiceErrorMessage = self::validateRodzajListForChoiceConstraintFromSetRodzajList($rodzajList))) {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Zamow extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named zamowKuriera
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ZamowKuriera $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZamowKurieraResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZamowKuriera $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZamowKurieraResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function zamowKuriera(\app\modules\postal\modules\poczta_polska\sender\StructType\ZamowKuriera $parameters)
+    public function zamowKuriera(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZamowKuriera $parameters)
     {
         try {
             $this->setResult($resultZamowKuriera = $this->getSoapClient()->__soapCall('zamowKuriera', [
@@ -37,7 +37,7 @@ class Zamow extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ZamowKurieraResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ZamowKurieraResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

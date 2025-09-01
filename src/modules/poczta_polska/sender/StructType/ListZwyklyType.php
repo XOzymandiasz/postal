@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -118,7 +118,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set idLibraryForLegalDeposit value
      * @param string $idLibraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setIdLibraryForLegalDeposit(?string $idLibraryForLegalDeposit = null): self
     {
@@ -149,7 +149,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setPosteRestante(?bool $posteRestante = null): self
     {
@@ -172,16 +172,16 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -198,16 +198,16 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set gabaryt value
      * @param string $gabaryt
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid()
      */
     public function setGabaryt(?string $gabaryt = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::valueIsValid($gabaryt)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\GabarytType', is_array($gabaryt) ? implode(', ', $gabaryt) : var_export($gabaryt, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\GabarytType::getValidValues())), __LINE__);
         }
         $this->gabaryt = $gabaryt;
         
@@ -224,7 +224,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -255,7 +255,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set egzemplarzBiblioteczny value
      * @param bool $egzemplarzBiblioteczny
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setEgzemplarzBiblioteczny(?bool $egzemplarzBiblioteczny = false): self
     {
@@ -278,7 +278,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set dlaOciemnialych value
      * @param bool $dlaOciemnialych
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setDlaOciemnialych(?bool $dlaOciemnialych = false): self
     {
@@ -301,7 +301,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set obszarMiasto value
      * @param bool $obszarMiasto
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setObszarMiasto(?bool $obszarMiasto = null): self
     {
@@ -324,7 +324,7 @@ class ListZwyklyType extends PrzesylkaNieRejestrowanaType
     /**
      * Set miejscowa value
      * @param bool $miejscowa
-     * @return \app\modules\postal\sender\StructType\ListZwyklyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListZwyklyType
      */
     public function setMiejscowa(?bool $miejscowa = null): self
     {

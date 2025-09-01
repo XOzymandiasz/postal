@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -186,7 +186,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set nazwa value
      * @param string $nazwa
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setNazwa(?string $nazwa = null): self
     {
@@ -217,7 +217,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set nazwa2 value
      * @param string $nazwa2
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setNazwa2(?string $nazwa2 = null): self
     {
@@ -248,7 +248,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set ulica value
      * @param string $ulica
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setUlica(?string $ulica = null): self
     {
@@ -279,7 +279,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set numerDomu value
      * @param string $numerDomu
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setNumerDomu(?string $numerDomu = null): self
     {
@@ -310,7 +310,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set numerLokalu value
      * @param string $numerLokalu
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setNumerLokalu(?string $numerLokalu = null): self
     {
@@ -341,7 +341,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set miejscowosc value
      * @param string $miejscowosc
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setMiejscowosc(?string $miejscowosc = null): self
     {
@@ -372,7 +372,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set kodPocztowy value
      * @param string $kodPocztowy
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setKodPocztowy(?string $kodPocztowy = null): self
     {
@@ -403,7 +403,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set kraj value
      * @param string $kraj
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setKraj(?string $kraj = 'Polska'): self
     {
@@ -434,7 +434,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set telefon value
      * @param string $telefon
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setTelefon(?string $telefon = null): self
     {
@@ -465,7 +465,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set email value
      * @param string $email
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setEmail(?string $email = null): self
     {
@@ -496,7 +496,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set mobile value
      * @param string $mobile
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setMobile(?string $mobile = null): self
     {
@@ -519,7 +519,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set osobaKontaktowa value
      * @param string $osobaKontaktowa
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setOsobaKontaktowa(?string $osobaKontaktowa = null): self
     {
@@ -542,7 +542,7 @@ class AdresType extends AbstractStructBase
     /**
      * Set nip value
      * @param string $nip
-     * @return \app\modules\postal\sender\StructType\AdresType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresType
      */
     public function setNip(?string $nip = null): self
     {

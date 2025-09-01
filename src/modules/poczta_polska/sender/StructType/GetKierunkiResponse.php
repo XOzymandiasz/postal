@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetKierunkiResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: 1000
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType[]
      */
     protected ?array $kierunek = null;
     /**
@@ -27,13 +27,13 @@ class GetKierunkiResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getKierunkiResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType[] $kierunek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType[] $kierunek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses GetKierunkiResponse::setKierunek()
      * @uses GetKierunkiResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Get kierunek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType[]
      */
     public function getKierunek(): ?array
     {
@@ -67,12 +67,12 @@ class GetKierunkiResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getKierunkiResponseKierunekItem) {
             // validation for constraint: itemType
-            if (!$getKierunkiResponseKierunekItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType) {
+            if (!$getKierunkiResponseKierunekItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType) {
                 $invalidValues[] = is_object($getKierunkiResponseKierunekItem) ? get_class($getKierunkiResponseKierunekItem) : sprintf('%s(%s)', gettype($getKierunkiResponseKierunekItem), var_export($getKierunkiResponseKierunekItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The kierunek property can only contain items of type \app\modules\postal\sender\StructType\KierunekType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The kierunek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KierunekType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Set kierunek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType[] $kierunek
-     * @return \app\modules\postal\sender\StructType\GetKierunkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType[] $kierunek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKierunkiResponse
      *@throws InvalidArgumentException
      */
     public function setKierunek(?array $kierunek = null): self
@@ -100,15 +100,15 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Add item to kierunek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $item
-     * @return \app\modules\postal\sender\StructType\GetKierunkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKierunkiResponse
      *@throws InvalidArgumentException
      */
-    public function addToKierunek(\app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType $item): self
+    public function addToKierunek(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KierunekType) {
-            throw new InvalidArgumentException(sprintf('The kierunek property can only contain items of type \app\modules\postal\sender\StructType\KierunekType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KierunekType) {
+            throw new InvalidArgumentException(sprintf('The kierunek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KierunekType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(1000)
         if (is_array($this->kierunek) && count($this->kierunek) >= 1000) {
@@ -120,7 +120,7 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -142,12 +142,12 @@ class GetKierunkiResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getKierunkiResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getKierunkiResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getKierunkiResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getKierunkiResponseErrorItem) ? get_class($getKierunkiResponseErrorItem) : sprintf('%s(%s)', gettype($getKierunkiResponseErrorItem), var_export($getKierunkiResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -155,8 +155,8 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetKierunkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKierunkiResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -171,15 +171,15 @@ class GetKierunkiResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetKierunkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKierunkiResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

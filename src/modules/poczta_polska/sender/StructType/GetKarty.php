@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -71,7 +71,7 @@ class GetKarty extends AbstractStructBase
      * Set idKarta value
      * @throws InvalidArgumentException
      * @param int[] $idKarta
-     * @return \app\modules\postal\sender\StructType\GetKarty
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKarty
      */
     public function setIdKarta(?array $idKarta = null): self
     {
@@ -87,7 +87,7 @@ class GetKarty extends AbstractStructBase
      * Add item to idKarta value
      * @throws InvalidArgumentException
      * @param int $item
-     * @return \app\modules\postal\sender\StructType\GetKarty
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKarty
      */
     public function addToIdKarta(int $item): self
     {

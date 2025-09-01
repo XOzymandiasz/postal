@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -63,7 +63,7 @@ class ProfilType extends AdresType
     /**
      * Set idProfil value
      * @param int $idProfil
-     * @return \app\modules\postal\sender\StructType\ProfilType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProfilType
      */
     public function setIdProfil(?int $idProfil = null): self
     {
@@ -86,7 +86,7 @@ class ProfilType extends AdresType
     /**
      * Set nazwaSkrocona value
      * @param string $nazwaSkrocona
-     * @return \app\modules\postal\sender\StructType\ProfilType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProfilType
      */
     public function setNazwaSkrocona(?string $nazwaSkrocona = null): self
     {
@@ -109,7 +109,7 @@ class ProfilType extends AdresType
     /**
      * Set fax value
      * @param string $fax
-     * @return \app\modules\postal\sender\StructType\ProfilType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProfilType
      */
     public function setFax(?string $fax = null): self
     {
@@ -132,7 +132,7 @@ class ProfilType extends AdresType
     /**
      * Set mpk value
      * @param string $mpk
-     * @return \app\modules\postal\sender\StructType\ProfilType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ProfilType
      */
     public function setMpk(?string $mpk = null): self
     {

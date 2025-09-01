@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class AddOdwolanieDoReklamacji extends AbstractStructBase
      * The reklamacja
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
      */
     protected ?array $reklamacja = null;
     /**
      * Constructor method for addOdwolanieDoReklamacji
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamacja
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamacja
      * @uses AddOdwolanieDoReklamacji::setReklamacja()
      */
     public function __construct(?array $reklamacja = null)
@@ -33,7 +33,7 @@ class AddOdwolanieDoReklamacji extends AbstractStructBase
     }
     /**
      * Get reklamacja value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
      */
     public function getReklamacja(): ?array
     {
@@ -55,12 +55,12 @@ class AddOdwolanieDoReklamacji extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addOdwolanieDoReklamacjiReklamacjaItem) {
             // validation for constraint: itemType
-            if (!$addOdwolanieDoReklamacjiReklamacjaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
+            if (!$addOdwolanieDoReklamacjiReklamacjaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
                 $invalidValues[] = is_object($addOdwolanieDoReklamacjiReklamacjaItem) ? get_class($addOdwolanieDoReklamacjiReklamacjaItem) : sprintf('%s(%s)', gettype($addOdwolanieDoReklamacjiReklamacjaItem), var_export($addOdwolanieDoReklamacjiReklamacjaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The reklamacja property can only contain items of type \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The reklamacja property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class AddOdwolanieDoReklamacji extends AbstractStructBase
     }
     /**
      * Set reklamacja value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamacja
-     * @return \app\modules\postal\sender\StructType\AddOdwolanieDoReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamacja
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddOdwolanieDoReklamacji
      *@throws InvalidArgumentException
      */
     public function setReklamacja(?array $reklamacja = null): self
@@ -88,15 +88,15 @@ class AddOdwolanieDoReklamacji extends AbstractStructBase
     }
     /**
      * Add item to reklamacja value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item
-     * @return \app\modules\postal\sender\StructType\AddOdwolanieDoReklamacji
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddOdwolanieDoReklamacji
      *@throws InvalidArgumentException
      */
-    public function addToReklamacja(\app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item): self
+    public function addToReklamacja(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
-            throw new InvalidArgumentException(sprintf('The reklamacja property can only contain items of type \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
+            throw new InvalidArgumentException(sprintf('The reklamacja property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->reklamacja) && count($this->reklamacja) >= 500) {

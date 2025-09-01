@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class AwizacjaType extends AbstractStructBase
     /**
      * Set od value
      * @param string $od
-     * @return \app\modules\postal\sender\StructType\AwizacjaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizacjaType
      */
     public function setOd(?string $od = null): self
     {
@@ -71,7 +71,7 @@ class AwizacjaType extends AbstractStructBase
     /**
      * Set do value
      * @param string $do
-     * @return \app\modules\postal\sender\StructType\AwizacjaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AwizacjaType
      */
     public function setDo(?string $do = null): self
     {

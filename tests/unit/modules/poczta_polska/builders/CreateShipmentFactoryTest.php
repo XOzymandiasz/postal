@@ -1,10 +1,10 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\builders;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\builders;
 
-use app\modules\postal\modules\poczta_polska\builders\CreateShipmentFactory;
-use app\modules\postal\modules\poczta_polska\forms\ShipmentForm;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\builders\CreateShipmentFactory;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
 use Codeception\Stub;
 use Codeception\Test\Unit;
 use UnitTester;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -64,16 +64,16 @@ class PaletaType extends AbstractStructBase
     /**
      * Set rodzajPalety value
      * @param string $rodzajPalety
-     * @return \app\modules\postal\sender\StructType\PaletaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaletaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::valueIsValid()
      */
     public function setRodzajPalety(?string $rodzajPalety = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::valueIsValid($rodzajPalety)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPaletyType', is_array($rodzajPalety) ? implode(', ', $rodzajPalety) : var_export($rodzajPalety, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::valueIsValid($rodzajPalety)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPaletyType', is_array($rodzajPalety) ? implode(', ', $rodzajPalety) : var_export($rodzajPalety, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPaletyType::getValidValues())), __LINE__);
         }
         $this->rodzajPalety = $rodzajPalety;
         
@@ -90,7 +90,7 @@ class PaletaType extends AbstractStructBase
     /**
      * Set szerokosc value
      * @param int $szerokosc
-     * @return \app\modules\postal\sender\StructType\PaletaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaletaType
      */
     public function setSzerokosc(?int $szerokosc = null): self
     {
@@ -113,7 +113,7 @@ class PaletaType extends AbstractStructBase
     /**
      * Set dlugosc value
      * @param string $dlugosc
-     * @return \app\modules\postal\sender\StructType\PaletaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaletaType
      */
     public function setDlugosc(?string $dlugosc = null): self
     {
@@ -136,7 +136,7 @@ class PaletaType extends AbstractStructBase
     /**
      * Set wysokosc value
      * @param string $wysokosc
-     * @return \app\modules\postal\sender\StructType\PaletaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PaletaType
      */
     public function setWysokosc(?string $wysokosc = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetShopEZwrotyListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[]
      */
     protected ?array $shops = null;
     /**
      * Constructor method for getShopEZwrotyListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[] $shops
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[] $shops
      * @uses GetShopEZwrotyListResponse::setShops()
      */
     public function __construct(?array $shops = null)
@@ -34,7 +34,7 @@ class GetShopEZwrotyListResponse extends AbstractStructBase
     }
     /**
      * Get shops value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[]
      */
     public function getShops(): ?array
     {
@@ -56,12 +56,12 @@ class GetShopEZwrotyListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getShopEZwrotyListResponseShopsItem) {
             // validation for constraint: itemType
-            if (!$getShopEZwrotyListResponseShopsItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType) {
+            if (!$getShopEZwrotyListResponseShopsItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType) {
                 $invalidValues[] = is_object($getShopEZwrotyListResponseShopsItem) ? get_class($getShopEZwrotyListResponseShopsItem) : sprintf('%s(%s)', gettype($getShopEZwrotyListResponseShopsItem), var_export($getShopEZwrotyListResponseShopsItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The shops property can only contain items of type \app\modules\postal\sender\StructType\ShopEZwrotyInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The shops property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetShopEZwrotyListResponse extends AbstractStructBase
     }
     /**
      * Set shops value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[] $shops
-     * @return \app\modules\postal\sender\StructType\GetShopEZwrotyListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType[] $shops
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetShopEZwrotyListResponse
      *@throws InvalidArgumentException
      */
     public function setShops(?array $shops = null): self
@@ -85,15 +85,15 @@ class GetShopEZwrotyListResponse extends AbstractStructBase
     }
     /**
      * Add item to shops value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType $item
-     * @return \app\modules\postal\sender\StructType\GetShopEZwrotyListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetShopEZwrotyListResponse
      *@throws InvalidArgumentException
      */
-    public function addToShops(\app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType $item): self
+    public function addToShops(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType) {
-            throw new InvalidArgumentException(sprintf('The shops property can only contain items of type \app\modules\postal\sender\StructType\ShopEZwrotyInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShopEZwrotyInfoType) {
+            throw new InvalidArgumentException(sprintf('The shops property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ShopEZwrotyInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->shops[] = $item;
         

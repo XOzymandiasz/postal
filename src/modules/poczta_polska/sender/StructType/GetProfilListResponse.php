@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class GetProfilListResponse extends AbstractStructBase
      * The profil
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[]
      */
     protected ?array $profil = null;
     /**
      * Constructor method for getProfilListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
      * @uses GetProfilListResponse::setProfil()
      */
     public function __construct(?array $profil = null)
@@ -33,7 +33,7 @@ class GetProfilListResponse extends AbstractStructBase
     }
     /**
      * Get profil value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[]
      */
     public function getProfil(): ?array
     {
@@ -55,12 +55,12 @@ class GetProfilListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getProfilListResponseProfilItem) {
             // validation for constraint: itemType
-            if (!$getProfilListResponseProfilItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType) {
+            if (!$getProfilListResponseProfilItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType) {
                 $invalidValues[] = is_object($getProfilListResponseProfilItem) ? get_class($getProfilListResponseProfilItem) : sprintf('%s(%s)', gettype($getProfilListResponseProfilItem), var_export($getProfilListResponseProfilItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The profil property can only contain items of type \app\modules\postal\sender\StructType\ProfilType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The profil property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProfilType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class GetProfilListResponse extends AbstractStructBase
     }
     /**
      * Set profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
-     * @return \app\modules\postal\sender\StructType\GetProfilListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetProfilListResponse
      *@throws InvalidArgumentException
      */
     public function setProfil(?array $profil = null): self
@@ -84,15 +84,15 @@ class GetProfilListResponse extends AbstractStructBase
     }
     /**
      * Add item to profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $item
-     * @return \app\modules\postal\sender\StructType\GetProfilListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetProfilListResponse
      *@throws InvalidArgumentException
      */
-    public function addToProfil(\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $item): self
+    public function addToProfil(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType) {
-            throw new InvalidArgumentException(sprintf('The profil property can only contain items of type \app\modules\postal\sender\StructType\ProfilType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType) {
+            throw new InvalidArgumentException(sprintf('The profil property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProfilType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->profil[] = $item;
         

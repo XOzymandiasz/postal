@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -76,7 +76,7 @@ class OpakowanieType extends AbstractStructBase
     /**
      * Set opakowanieGuid value
      * @param string $opakowanieGuid
-     * @return \app\modules\postal\sender\StructType\OpakowanieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType
      */
     public function setOpakowanieGuid(?string $opakowanieGuid = null): self
     {
@@ -103,16 +103,16 @@ class OpakowanieType extends AbstractStructBase
     /**
      * Set typ value
      * @param string $typ
-     * @return \app\modules\postal\sender\StructType\OpakowanieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::valueIsValid()
      */
     public function setTyp(?string $typ = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::valueIsValid($typ)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\TypOpakowanieType', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::valueIsValid($typ)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\TypOpakowanieType', is_array($typ) ? implode(', ', $typ) : var_export($typ, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\TypOpakowanieType::getValidValues())), __LINE__);
         }
         $this->typ = $typ;
         
@@ -129,7 +129,7 @@ class OpakowanieType extends AbstractStructBase
     /**
      * Set sygnatura value
      * @param string $sygnatura
-     * @return \app\modules\postal\sender\StructType\OpakowanieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType
      */
     public function setSygnatura(?string $sygnatura = null): self
     {
@@ -152,7 +152,7 @@ class OpakowanieType extends AbstractStructBase
     /**
      * Set ilosc value
      * @param int $ilosc
-     * @return \app\modules\postal\sender\StructType\OpakowanieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType
      */
     public function setIlosc(?int $ilosc = null): self
     {
@@ -175,7 +175,7 @@ class OpakowanieType extends AbstractStructBase
     /**
      * Set numerOpakowaniaZbiorczego value
      * @param string $numerOpakowaniaZbiorczego
-     * @return \app\modules\postal\sender\StructType\OpakowanieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\OpakowanieType
      */
     public function setNumerOpakowaniaZbiorczego(?string $numerOpakowaniaZbiorczego = null): self
     {

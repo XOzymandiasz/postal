@@ -1,12 +1,12 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\models\search;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\models\search;
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\base\Model;

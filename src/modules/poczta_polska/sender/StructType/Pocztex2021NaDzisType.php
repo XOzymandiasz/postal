@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -18,7 +18,7 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[]
      */
     protected ?array $subPrzesylka = null;
     /**
@@ -37,7 +37,7 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     protected ?string $obszar = null;
     /**
      * Constructor method for pocztex2021NaDzisType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[] $subPrzesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[] $subPrzesylka
      * @param int $odleglosc
      * @param string $obszar
      *@uses  Pocztex2021NaDzisType::setSubPrzesylka()
@@ -53,7 +53,7 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     }
     /**
      * Get subPrzesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[]
      */
     public function getSubPrzesylka(): ?array
     {
@@ -75,12 +75,12 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
         $invalidValues = [];
         foreach ($values as $pocztex2021NaDzisTypeSubPrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$pocztex2021NaDzisTypeSubPrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType) {
+            if (!$pocztex2021NaDzisTypeSubPrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType) {
                 $invalidValues[] = is_object($pocztex2021NaDzisTypeSubPrzesylkaItem) ? get_class($pocztex2021NaDzisTypeSubPrzesylkaItem) : sprintf('%s(%s)', gettype($pocztex2021NaDzisTypeSubPrzesylkaItem), var_export($pocztex2021NaDzisTypeSubPrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubPocztex2021NaDzisType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021NaDzisType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -88,8 +88,8 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     }
     /**
      * Set subPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[] $subPrzesylka
-     * @return \app\modules\postal\sender\StructType\Pocztex2021NaDzisType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType[] $subPrzesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021NaDzisType
      *@throws InvalidArgumentException
      */
     public function setSubPrzesylka(?array $subPrzesylka = null): self
@@ -104,15 +104,15 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     }
     /**
      * Add item to subPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType $item
-     * @return \app\modules\postal\sender\StructType\Pocztex2021NaDzisType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021NaDzisType
      *@throws InvalidArgumentException
      */
-    public function addToSubPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType $item): self
+    public function addToSubPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType) {
-            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\SubPocztex2021NaDzisType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SubPocztex2021NaDzisType) {
+            throw new InvalidArgumentException(sprintf('The subPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SubPocztex2021NaDzisType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->subPrzesylka[] = $item;
         
@@ -129,7 +129,7 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     /**
      * Set odleglosc value
      * @param int $odleglosc
-     * @return \app\modules\postal\sender\StructType\Pocztex2021NaDzisType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021NaDzisType
      */
     public function setOdleglosc(?int $odleglosc = null): self
     {
@@ -152,16 +152,16 @@ class Pocztex2021NaDzisType extends Pocztex2021Type
     /**
      * Set obszar value
      * @param string $obszar
-     * @return \app\modules\postal\sender\StructType\Pocztex2021NaDzisType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\Pocztex2021NaDzisType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ObszarType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ObszarType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ObszarType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ObszarType::valueIsValid()
      */
     public function setObszar(?string $obszar = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ObszarType::valueIsValid($obszar)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ObszarType', is_array($obszar) ? implode(', ', $obszar) : var_export($obszar, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ObszarType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ObszarType::valueIsValid($obszar)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ObszarType', is_array($obszar) ? implode(', ', $obszar) : var_export($obszar, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ObszarType::getValidValues())), __LINE__);
         }
         $this->obszar = $obszar;
         

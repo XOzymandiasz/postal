@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetUrzedyNadaniaResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[]
      */
     protected ?array $urzedyNadania = null;
     /**
      * Constructor method for getUrzedyNadaniaResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[] $urzedyNadania
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[] $urzedyNadania
      * @uses GetUrzedyNadaniaResponse::setUrzedyNadania()
      */
     public function __construct(?array $urzedyNadania = null)
@@ -34,7 +34,7 @@ class GetUrzedyNadaniaResponse extends AbstractStructBase
     }
     /**
      * Get urzedyNadania value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[]
      */
     public function getUrzedyNadania(): ?array
     {
@@ -56,12 +56,12 @@ class GetUrzedyNadaniaResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getUrzedyNadaniaResponseUrzedyNadaniaItem) {
             // validation for constraint: itemType
-            if (!$getUrzedyNadaniaResponseUrzedyNadaniaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType) {
+            if (!$getUrzedyNadaniaResponseUrzedyNadaniaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType) {
                 $invalidValues[] = is_object($getUrzedyNadaniaResponseUrzedyNadaniaItem) ? get_class($getUrzedyNadaniaResponseUrzedyNadaniaItem) : sprintf('%s(%s)', gettype($getUrzedyNadaniaResponseUrzedyNadaniaItem), var_export($getUrzedyNadaniaResponseUrzedyNadaniaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The urzedyNadania property can only contain items of type \app\modules\postal\sender\StructType\UrzadNadaniaFullType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The urzedyNadania property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UrzadNadaniaFullType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetUrzedyNadaniaResponse extends AbstractStructBase
     }
     /**
      * Set urzedyNadania value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[] $urzedyNadania
-     * @return \app\modules\postal\sender\StructType\GetUrzedyNadaniaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType[] $urzedyNadania
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUrzedyNadaniaResponse
      *@throws InvalidArgumentException
      */
     public function setUrzedyNadania(?array $urzedyNadania = null): self
@@ -85,15 +85,15 @@ class GetUrzedyNadaniaResponse extends AbstractStructBase
     }
     /**
      * Add item to urzedyNadania value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType $item
-     * @return \app\modules\postal\sender\StructType\GetUrzedyNadaniaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUrzedyNadaniaResponse
      *@throws InvalidArgumentException
      */
-    public function addToUrzedyNadania(\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType $item): self
+    public function addToUrzedyNadania(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType) {
-            throw new InvalidArgumentException(sprintf('The urzedyNadania property can only contain items of type \app\modules\postal\sender\StructType\UrzadNadaniaFullType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadNadaniaFullType) {
+            throw new InvalidArgumentException(sprintf('The urzedyNadania property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UrzadNadaniaFullType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->urzedyNadania[] = $item;
         

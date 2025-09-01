@@ -1,12 +1,12 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\controllers;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\controllers;
 
-use app\modules\postal\modules\poczta_polska\forms\BufferForm;
-use app\modules\postal\modules\poczta_polska\models\search\EnvelopeSearch;
-use app\modules\postal\modules\poczta_polska\Module;
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ProfileRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\BufferForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\models\search\EnvelopeSearch;
+use XOzymandias\Yii2Postal\modules\poczta_polska\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\filters\AccessControl;

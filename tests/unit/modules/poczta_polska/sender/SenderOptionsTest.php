@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\sender;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\sender;
 
 use Codeception\Test\Unit;
 use UnitTester;

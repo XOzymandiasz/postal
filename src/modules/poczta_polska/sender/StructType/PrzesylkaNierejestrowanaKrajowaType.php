@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -84,7 +84,7 @@ class PrzesylkaNierejestrowanaKrajowaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set idLibraryForLegalDeposit value
      * @param string $idLibraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
      */
     public function setIdLibraryForLegalDeposit(?string $idLibraryForLegalDeposit = null): self
     {
@@ -115,16 +115,16 @@ class PrzesylkaNierejestrowanaKrajowaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -141,16 +141,16 @@ class PrzesylkaNierejestrowanaKrajowaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -167,7 +167,7 @@ class PrzesylkaNierejestrowanaKrajowaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -198,7 +198,7 @@ class PrzesylkaNierejestrowanaKrajowaType extends PrzesylkaNieRejestrowanaType
     /**
      * Set egzemplarzBiblioteczny value
      * @param bool $egzemplarzBiblioteczny
-     * @return \app\modules\postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaNierejestrowanaKrajowaType
      */
     public function setEgzemplarzBiblioteczny(?bool $egzemplarzBiblioteczny = null): self
     {

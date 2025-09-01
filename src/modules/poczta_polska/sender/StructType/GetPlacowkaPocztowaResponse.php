@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class GetPlacowkaPocztowaResponse extends AbstractStructBase
      * The placowka
      * Meta information extracted from the WSDL
      * - maxOccurs: 5000
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[]
      */
     protected ?array $placowka = null;
     /**
      * Constructor method for getPlacowkaPocztowaResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[] $placowka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[] $placowka
      * @uses GetPlacowkaPocztowaResponse::setPlacowka()
      */
     public function __construct(?array $placowka = null)
@@ -33,7 +33,7 @@ class GetPlacowkaPocztowaResponse extends AbstractStructBase
     }
     /**
      * Get placowka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[]
      */
     public function getPlacowka(): ?array
     {
@@ -55,12 +55,12 @@ class GetPlacowkaPocztowaResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getPlacowkaPocztowaResponsePlacowkaItem) {
             // validation for constraint: itemType
-            if (!$getPlacowkaPocztowaResponsePlacowkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType) {
+            if (!$getPlacowkaPocztowaResponsePlacowkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType) {
                 $invalidValues[] = is_object($getPlacowkaPocztowaResponsePlacowkaItem) ? get_class($getPlacowkaPocztowaResponsePlacowkaItem) : sprintf('%s(%s)', gettype($getPlacowkaPocztowaResponsePlacowkaItem), var_export($getPlacowkaPocztowaResponsePlacowkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The placowka property can only contain items of type \app\modules\postal\sender\StructType\PlacowkaPocztowaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The placowka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class GetPlacowkaPocztowaResponse extends AbstractStructBase
     }
     /**
      * Set placowka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[] $placowka
-     * @return \app\modules\postal\sender\StructType\GetPlacowkaPocztowaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType[] $placowka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPlacowkaPocztowaResponse
      *@throws InvalidArgumentException
      */
     public function setPlacowka(?array $placowka = null): self
@@ -88,15 +88,15 @@ class GetPlacowkaPocztowaResponse extends AbstractStructBase
     }
     /**
      * Add item to placowka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType $item
-     * @return \app\modules\postal\sender\StructType\GetPlacowkaPocztowaResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetPlacowkaPocztowaResponse
      *@throws InvalidArgumentException
      */
-    public function addToPlacowka(\app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType $item): self
+    public function addToPlacowka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType) {
-            throw new InvalidArgumentException(sprintf('The placowka property can only contain items of type \app\modules\postal\sender\StructType\PlacowkaPocztowaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType) {
+            throw new InvalidArgumentException(sprintf('The placowka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PlacowkaPocztowaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(5000)
         if (is_array($this->placowka) && count($this->placowka) >= 5000) {

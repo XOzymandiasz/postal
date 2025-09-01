@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\Module;
-use app\modules\postal\modules\poczta_polska\forms\ProfileForm;
+use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ProfileForm;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */

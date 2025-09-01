@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
      */
     protected ?array $additionalActivity = null;
     /**
@@ -27,13 +27,13 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getAdditionalActivitiesListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @uses GetAdditionalActivitiesListResponse::setAdditionalActivity()
      * @uses GetAdditionalActivitiesListResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Get additionalActivity value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[]
      */
     public function getAdditionalActivity(): ?array
     {
@@ -67,12 +67,12 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getAdditionalActivitiesListResponseAdditionalActivityItem) {
             // validation for constraint: itemType
-            if (!$getAdditionalActivitiesListResponseAdditionalActivityItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
+            if (!$getAdditionalActivitiesListResponseAdditionalActivityItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
                 $invalidValues[] = is_object($getAdditionalActivitiesListResponseAdditionalActivityItem) ? get_class($getAdditionalActivitiesListResponseAdditionalActivityItem) : sprintf('%s(%s)', gettype($getAdditionalActivitiesListResponseAdditionalActivityItem), var_export($getAdditionalActivitiesListResponseAdditionalActivityItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The additionalActivity property can only contain items of type \app\modules\postal\sender\StructType\AdditionalActivityType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The additionalActivity property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Set additionalActivity value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
-     * @return \app\modules\postal\sender\StructType\GetAdditionalActivitiesListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType[] $additionalActivity
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAdditionalActivitiesListResponse
      *@throws InvalidArgumentException
      */
     public function setAdditionalActivity(?array $additionalActivity = null): self
@@ -96,15 +96,15 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Add item to additionalActivity value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item
-     * @return \app\modules\postal\sender\StructType\GetAdditionalActivitiesListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAdditionalActivitiesListResponse
      *@throws InvalidArgumentException
      */
-    public function addToAdditionalActivity(\app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item): self
+    public function addToAdditionalActivity(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
-            throw new InvalidArgumentException(sprintf('The additionalActivity property can only contain items of type \app\modules\postal\sender\StructType\AdditionalActivityType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdditionalActivityType) {
+            throw new InvalidArgumentException(sprintf('The additionalActivity property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->additionalActivity[] = $item;
         
@@ -112,7 +112,7 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getAdditionalActivitiesListResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getAdditionalActivitiesListResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getAdditionalActivitiesListResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getAdditionalActivitiesListResponseErrorItem) ? get_class($getAdditionalActivitiesListResponseErrorItem) : sprintf('%s(%s)', gettype($getAdditionalActivitiesListResponseErrorItem), var_export($getAdditionalActivitiesListResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetAdditionalActivitiesListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAdditionalActivitiesListResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetAdditionalActivitiesListResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetAdditionalActivitiesListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetAdditionalActivitiesListResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

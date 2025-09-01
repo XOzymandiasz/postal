@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Move extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named moveShipments
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\MoveShipments $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\MoveShipmentsResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\MoveShipments $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\MoveShipmentsResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function moveShipments(\app\modules\postal\modules\poczta_polska\sender\StructType\MoveShipments $parameters)
+    public function moveShipments(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\MoveShipments $parameters)
     {
         try {
             $this->setResult($resultMoveShipments = $this->getSoapClient()->__soapCall('moveShipments', [
@@ -37,7 +37,7 @@ class Move extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\MoveShipmentsResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\MoveShipmentsResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

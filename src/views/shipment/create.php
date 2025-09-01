@@ -1,7 +1,7 @@
 <?php
 
-use app\modules\postal\forms\ShipmentForm;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */

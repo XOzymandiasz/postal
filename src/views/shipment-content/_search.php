@@ -1,11 +1,11 @@
 <?php
 
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\web\View $this */
-/** @var \app\modules\postal\models\search\ShipmentContentPostSearch $model */
+/** @var \XOzymandias\Yii2Postal\models\search\ShipmentContentPostSearch $model */
 /** @var yii\widgets\ActiveForm $form */
 ?>
 

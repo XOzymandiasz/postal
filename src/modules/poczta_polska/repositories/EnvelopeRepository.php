@@ -1,12 +1,12 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\repositories;
 
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType;
-use app\modules\postal\modules\poczta_polska\services\EnvelopeService;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PlacowkaPocztowaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\services\EnvelopeService;
 use yii\base\InvalidConfigException;
 
 class EnvelopeRepository extends BaseRepository

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -56,7 +56,7 @@ class EZDOPakietType extends AbstractStructBase
     /**
      * Set idEZDOPakiet value
      * @param int $idEZDOPakiet
-     * @return \app\modules\postal\sender\StructType\EZDOPakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPakietType
      */
     public function setIdEZDOPakiet(?int $idEZDOPakiet = null): self
     {
@@ -79,7 +79,7 @@ class EZDOPakietType extends AbstractStructBase
     /**
      * Set exported value
      * @param string $exported
-     * @return \app\modules\postal\sender\StructType\EZDOPakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPakietType
      */
     public function setExported(?string $exported = null): self
     {
@@ -102,7 +102,7 @@ class EZDOPakietType extends AbstractStructBase
     /**
      * Set idEZDOFile value
      * @param string $idEZDOFile
-     * @return \app\modules\postal\sender\StructType\EZDOPakietType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZDOPakietType
      */
     public function setIdEZDOFile(?string $idEZDOFile = null): self
     {

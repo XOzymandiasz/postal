@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Order extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named orderEasyReturnSolutionLabel
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabel $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabelResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabel $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabelResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function orderEasyReturnSolutionLabel(\app\modules\postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabel $parameters)
+    public function orderEasyReturnSolutionLabel(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabel $parameters)
     {
         try {
             $this->setResult($resultOrderEasyReturnSolutionLabel = $this->getSoapClient()->__soapCall('orderEasyReturnSolutionLabel', [
@@ -37,7 +37,7 @@ class Order extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabelResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OrderEasyReturnSolutionLabelResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

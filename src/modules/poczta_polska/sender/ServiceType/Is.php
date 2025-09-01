@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\ServiceType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\ServiceType;
 
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
@@ -15,13 +15,13 @@ class Is extends AbstractSoapClientBase
 {
     /**
      * Method to call the operation originally named isMiejscowa
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\IsMiejscowa $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\IsMiejscowaResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsMiejscowa $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsMiejscowaResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function isMiejscowa(\app\modules\postal\modules\poczta_polska\sender\StructType\IsMiejscowa $parameters)
+    public function isMiejscowa(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsMiejscowa $parameters)
     {
         try {
             $this->setResult($resultIsMiejscowa = $this->getSoapClient()->__soapCall('isMiejscowa', [
@@ -37,13 +37,13 @@ class Is extends AbstractSoapClientBase
     }
     /**
      * Method to call the operation originally named isObszarMiasto
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\IsObszarMiasto $parameters
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\IsObszarMiastoResponse|bool
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsObszarMiasto $parameters
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsObszarMiastoResponse|bool
      * @uses AbstractSoapClientBase::saveLastError()
      * @uses AbstractSoapClientBase::getSoapClient()
      * @uses AbstractSoapClientBase::setResult()
      */
-    public function isObszarMiasto(\app\modules\postal\modules\poczta_polska\sender\StructType\IsObszarMiasto $parameters)
+    public function isObszarMiasto(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsObszarMiasto $parameters)
     {
         try {
             $this->setResult($resultIsObszarMiasto = $this->getSoapClient()->__soapCall('isObszarMiasto', [
@@ -59,7 +59,7 @@ class Is extends AbstractSoapClientBase
     }
     /**
      * Returns the result
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\IsMiejscowaResponse|\app\modules\postal\modules\poczta_polska\sender\StructType\IsObszarMiastoResponse
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsMiejscowaResponse|\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\IsObszarMiastoResponse
      * @see AbstractSoapClientBase::getResult()
      */
     public function getResult()

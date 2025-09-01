@@ -85,13 +85,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "app\\": ""
+            "XOzymandias\\Yii2Postal\\": "src/",
+            "XOzymandias\\Yii2Postal\\tests\\": "tests/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "tests\\": "tests/",
-            "app\\modules\\postal\\tests\\": "../../vestra_backup/yii2-app-basic/modules/postal/tests"
+            "XOzymandias\\Yii2Postal\\tests\\": "tests/"
         }
     }
 

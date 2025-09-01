@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class GetUrzedyWydajaceEPrzesylkiResponse extends AbstractStructBase
      * The urzadWydaniaEPrzesylki
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[]
      */
     protected ?array $urzadWydaniaEPrzesylki = null;
     /**
      * Constructor method for getUrzedyWydajaceEPrzesylkiResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[] $urzadWydaniaEPrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[] $urzadWydaniaEPrzesylki
      * @uses GetUrzedyWydajaceEPrzesylkiResponse::setUrzadWydaniaEPrzesylki()
      */
     public function __construct(?array $urzadWydaniaEPrzesylki = null)
@@ -33,7 +33,7 @@ class GetUrzedyWydajaceEPrzesylkiResponse extends AbstractStructBase
     }
     /**
      * Get urzadWydaniaEPrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[]
      */
     public function getUrzadWydaniaEPrzesylki(): ?array
     {
@@ -55,12 +55,12 @@ class GetUrzedyWydajaceEPrzesylkiResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem) {
             // validation for constraint: itemType
-            if (!$getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType) {
+            if (!$getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType) {
                 $invalidValues[] = is_object($getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem) ? get_class($getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem) : sprintf('%s(%s)', gettype($getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem), var_export($getUrzedyWydajaceEPrzesylkiResponseUrzadWydaniaEPrzesylkiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The urzadWydaniaEPrzesylki property can only contain items of type \app\modules\postal\sender\StructType\UrzadWydaniaEPrzesylkiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The urzadWydaniaEPrzesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UrzadWydaniaEPrzesylkiType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class GetUrzedyWydajaceEPrzesylkiResponse extends AbstractStructBase
     }
     /**
      * Set urzadWydaniaEPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[] $urzadWydaniaEPrzesylki
-     * @return \app\modules\postal\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType[] $urzadWydaniaEPrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse
      *@throws InvalidArgumentException
      */
     public function setUrzadWydaniaEPrzesylki(?array $urzadWydaniaEPrzesylki = null): self
@@ -84,15 +84,15 @@ class GetUrzedyWydajaceEPrzesylkiResponse extends AbstractStructBase
     }
     /**
      * Add item to urzadWydaniaEPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $item
-     * @return \app\modules\postal\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetUrzedyWydajaceEPrzesylkiResponse
      *@throws InvalidArgumentException
      */
-    public function addToUrzadWydaniaEPrzesylki(\app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $item): self
+    public function addToUrzadWydaniaEPrzesylki(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType) {
-            throw new InvalidArgumentException(sprintf('The urzadWydaniaEPrzesylki property can only contain items of type \app\modules\postal\sender\StructType\UrzadWydaniaEPrzesylkiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UrzadWydaniaEPrzesylkiType) {
+            throw new InvalidArgumentException(sprintf('The urzadWydaniaEPrzesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\UrzadWydaniaEPrzesylkiType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->urzadWydaniaEPrzesylki[] = $item;
         

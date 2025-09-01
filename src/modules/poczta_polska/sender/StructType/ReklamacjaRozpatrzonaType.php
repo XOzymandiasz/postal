@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -120,7 +120,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setGuid(?string $guid = null): self
     {
@@ -147,7 +147,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -178,16 +178,16 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set rozstrzygniecie value
      * @param string $rozstrzygniecie
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::valueIsValid()
      */
     public function setRozstrzygniecie(?string $rozstrzygniecie = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::valueIsValid($rozstrzygniecie)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RozstrzygniecieType', is_array($rozstrzygniecie) ? implode(', ', $rozstrzygniecie) : var_export($rozstrzygniecie, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::valueIsValid($rozstrzygniecie)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RozstrzygniecieType', is_array($rozstrzygniecie) ? implode(', ', $rozstrzygniecie) : var_export($rozstrzygniecie, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RozstrzygniecieType::getValidValues())), __LINE__);
         }
         $this->rozstrzygniecie = $rozstrzygniecie;
         
@@ -204,7 +204,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set przyznaneOdszkodowanie value
      * @param int $przyznaneOdszkodowanie
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setPrzyznaneOdszkodowanie(?int $przyznaneOdszkodowanie = null): self
     {
@@ -227,7 +227,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set uzasadnienie value
      * @param string $uzasadnienie
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setUzasadnienie(?string $uzasadnienie = null): self
     {
@@ -250,7 +250,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set dataRozpatrzenia value
      * @param string $dataRozpatrzenia
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setDataRozpatrzenia(?string $dataRozpatrzenia = null): self
     {
@@ -273,7 +273,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set nazwaJednostkiRozpatrujacej value
      * @param string $nazwaJednostkiRozpatrujacej
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setNazwaJednostkiRozpatrujacej(?string $nazwaJednostkiRozpatrujacej = null): self
     {
@@ -296,7 +296,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set osobaRozpatrujaca value
      * @param string $osobaRozpatrujaca
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setOsobaRozpatrujaca(?string $osobaRozpatrujaca = null): self
     {
@@ -319,7 +319,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set idReklamacja value
      * @param string $idReklamacja
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setIdReklamacja(?string $idReklamacja = null): self
     {
@@ -342,7 +342,7 @@ class ReklamacjaRozpatrzonaType extends AbstractStructBase
     /**
      * Set numerReklamacji value
      * @param string $numerReklamacji
-     * @return \app\modules\postal\sender\StructType\ReklamacjaRozpatrzonaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ReklamacjaRozpatrzonaType
      */
     public function setNumerReklamacji(?string $numerReklamacji = null): self
     {

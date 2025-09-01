@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\components;
+namespace XOzymandias\Yii2Postal\components;
 
 use yii\base\Component;
 use yii\base\InvalidArgumentException;

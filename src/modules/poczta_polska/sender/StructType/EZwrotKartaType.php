@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,7 +48,7 @@ class EZwrotKartaType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\EZwrotKartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZwrotKartaType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -71,7 +71,7 @@ class EZwrotKartaType extends AbstractStructBase
     /**
      * Set idAdresKorespondencyjny value
      * @param int $idAdresKorespondencyjny
-     * @return \app\modules\postal\sender\StructType\EZwrotKartaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EZwrotKartaType
      */
     public function setIdAdresKorespondencyjny(?int $idAdresKorespondencyjny = null): self
     {

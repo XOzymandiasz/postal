@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class AddReklamacje extends AbstractStructBase
      * The reklamowanaPrzesylka
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
      */
     protected ?array $reklamowanaPrzesylka = null;
     /**
      * Constructor method for addReklamacje
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamowanaPrzesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamowanaPrzesylka
      *@uses AddReklamacje::setReklamowanaPrzesylka()
      */
     public function __construct(?array $reklamowanaPrzesylka = null)
@@ -33,7 +33,7 @@ class AddReklamacje extends AbstractStructBase
     }
     /**
      * Get reklamowanaPrzesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[]
      */
     public function getReklamowanaPrzesylka(): ?array
     {
@@ -55,12 +55,12 @@ class AddReklamacje extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $addReklamacjeReklamowanaPrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$addReklamacjeReklamowanaPrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
+            if (!$addReklamacjeReklamowanaPrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
                 $invalidValues[] = is_object($addReklamacjeReklamowanaPrzesylkaItem) ? get_class($addReklamacjeReklamowanaPrzesylkaItem) : sprintf('%s(%s)', gettype($addReklamacjeReklamowanaPrzesylkaItem), var_export($addReklamacjeReklamowanaPrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The reklamowanaPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The reklamowanaPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class AddReklamacje extends AbstractStructBase
     }
     /**
      * Set reklamowanaPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamowanaPrzesylka
-     * @return \app\modules\postal\sender\StructType\AddReklamacje
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType[] $reklamowanaPrzesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddReklamacje
      *@throws InvalidArgumentException
      */
     public function setReklamowanaPrzesylka(?array $reklamowanaPrzesylka = null): self
@@ -88,15 +88,15 @@ class AddReklamacje extends AbstractStructBase
     }
     /**
      * Add item to reklamowanaPrzesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item
-     * @return \app\modules\postal\sender\StructType\AddReklamacje
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AddReklamacje
      *@throws InvalidArgumentException
      */
-    public function addToReklamowanaPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item): self
+    public function addToReklamowanaPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
-            throw new InvalidArgumentException(sprintf('The reklamowanaPrzesylka property can only contain items of type \app\modules\postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ReklamowanaPrzesylkaType) {
+            throw new InvalidArgumentException(sprintf('The reklamowanaPrzesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ReklamowanaPrzesylkaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->reklamowanaPrzesylka) && count($this->reklamowanaPrzesylka) >= 500) {

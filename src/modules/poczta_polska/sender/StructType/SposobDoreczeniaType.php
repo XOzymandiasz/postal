@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -53,7 +53,7 @@ class SposobDoreczeniaType extends AbstractStructBase
     /**
      * Set kod value
      * @param string $kod
-     * @return \app\modules\postal\sender\StructType\SposobDoreczeniaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SposobDoreczeniaType
      */
     public function setKod(?string $kod = null): self
     {
@@ -76,7 +76,7 @@ class SposobDoreczeniaType extends AbstractStructBase
     /**
      * Set identyfikatorPunktuOdbioru value
      * @param string $identyfikatorPunktuOdbioru
-     * @return \app\modules\postal\sender\StructType\SposobDoreczeniaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SposobDoreczeniaType
      */
     public function setIdentyfikatorPunktuOdbioru(?string $identyfikatorPunktuOdbioru = null): self
     {

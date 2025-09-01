@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class EnvelopeInfoType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
@@ -54,7 +54,7 @@ class EnvelopeInfoType extends AbstractStructBase
     protected ?string $dataTransmisji = null;
     /**
      * Constructor method for envelopeInfoType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      * @param string[] $envelopeFilename
      * @param int $idKarta
      * @param int $idEnvelope
@@ -79,7 +79,7 @@ class EnvelopeInfoType extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -101,12 +101,12 @@ class EnvelopeInfoType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $envelopeInfoTypeErrorItem) {
             // validation for constraint: itemType
-            if (!$envelopeInfoTypeErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$envelopeInfoTypeErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($envelopeInfoTypeErrorItem) ? get_class($envelopeInfoTypeErrorItem) : sprintf('%s(%s)', gettype($envelopeInfoTypeErrorItem), var_export($envelopeInfoTypeErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -114,8 +114,8 @@ class EnvelopeInfoType extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -130,15 +130,15 @@ class EnvelopeInfoType extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         
@@ -183,7 +183,7 @@ class EnvelopeInfoType extends AbstractStructBase
      * Set envelopeFilename value
      * @throws InvalidArgumentException
      * @param string[] $envelopeFilename
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      */
     public function setEnvelopeFilename(?array $envelopeFilename = null): self
     {
@@ -199,7 +199,7 @@ class EnvelopeInfoType extends AbstractStructBase
      * Add item to envelopeFilename value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      */
     public function addToEnvelopeFilename(string $item): self
     {
@@ -222,7 +222,7 @@ class EnvelopeInfoType extends AbstractStructBase
     /**
      * Set idKarta value
      * @param int $idKarta
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      */
     public function setIdKarta(?int $idKarta = null): self
     {
@@ -245,7 +245,7 @@ class EnvelopeInfoType extends AbstractStructBase
     /**
      * Set idEnvelope value
      * @param int $idEnvelope
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      */
     public function setIdEnvelope(?int $idEnvelope = null): self
     {
@@ -268,16 +268,16 @@ class EnvelopeInfoType extends AbstractStructBase
     /**
      * Set envelopeStatus value
      * @param string $envelopeStatus
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::valueIsValid()
      */
     public function setEnvelopeStatus(?string $envelopeStatus = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::valueIsValid($envelopeStatus)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\EnvelopeStatusType', is_array($envelopeStatus) ? implode(', ', $envelopeStatus) : var_export($envelopeStatus, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::valueIsValid($envelopeStatus)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\EnvelopeStatusType', is_array($envelopeStatus) ? implode(', ', $envelopeStatus) : var_export($envelopeStatus, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\EnvelopeStatusType::getValidValues())), __LINE__);
         }
         $this->envelopeStatus = $envelopeStatus;
         
@@ -294,7 +294,7 @@ class EnvelopeInfoType extends AbstractStructBase
     /**
      * Set dataTransmisji value
      * @param string $dataTransmisji
-     * @return \app\modules\postal\sender\StructType\EnvelopeInfoType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType
      */
     public function setDataTransmisji(?string $dataTransmisji = null): self
     {

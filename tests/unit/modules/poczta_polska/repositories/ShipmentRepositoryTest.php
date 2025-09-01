@@ -1,21 +1,21 @@
 <?php
 
-namespace app\modules\postal\tests\unit\modules\poczta_polska\repositories;
+namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ShipmentRepository;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\PrintKindEnum;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum;
-use app\modules\postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum;
-use app\modules\postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
-use app\modules\postal\modules\poczta_polska\sender\StructType\AdresType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\BuforType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrintType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use Codeception\Test\Unit;
 use InvalidArgumentException;
 use UnitTester;

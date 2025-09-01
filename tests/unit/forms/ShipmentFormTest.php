@@ -1,19 +1,19 @@
 <?php
 
-namespace app\modules\postal\tests\unit\forms;
+namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 use _support\UnitModelTrait;
-use app\modules\postal\forms\ShipmentForm;
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentAddress;
-use app\modules\postal\models\ShipmentAddressLink;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\models\ShipmentProviderInterface;
-use app\modules\postal\tests\fixtures\ShipmentAddressFixture;
-use app\modules\postal\tests\fixtures\ShipmentAddressLinkFixture;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
-use app\modules\postal\tests\fixtures\ShipmentFixture;
-use app\modules\postal\tests\fixtures\UserFixture;
+use XOzymandias\Yii2Postal\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\models\ShipmentAddressLink;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressLinkFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentFixture;
+use XOzymandias\Yii2Postal\tests\fixtures\UserFixture;
 use Codeception\Test\Unit;
 use UnitTester;
 use yii\base\Model;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -48,16 +48,16 @@ class AccompanyingDocumentsType extends AbstractStructBase
     /**
      * Set type value
      * @param string $type
-     * @return \app\modules\postal\sender\StructType\AccompanyingDocumentsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccompanyingDocumentsType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::valueIsValid()
      */
     public function setType(?string $type = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::valueIsValid($type)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\AccompanyingDocumentsEnum', is_array($type) ? implode(', ', $type) : var_export($type, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::valueIsValid($type)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\AccompanyingDocumentsEnum', is_array($type) ? implode(', ', $type) : var_export($type, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\AccompanyingDocumentsEnum::getValidValues())), __LINE__);
         }
         $this->type = $type;
         
@@ -74,7 +74,7 @@ class AccompanyingDocumentsType extends AbstractStructBase
     /**
      * Set number value
      * @param string $number
-     * @return \app\modules\postal\sender\StructType\AccompanyingDocumentsType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccompanyingDocumentsType
      */
     public function setNumber(?string $number = null): self
     {

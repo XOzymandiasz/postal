@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -115,7 +115,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set idActivity value
      * @param int $idActivity
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setIdActivity(?int $idActivity = null): self
     {
@@ -138,7 +138,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set name value
      * @param string $name
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setName(?string $name = null): self
     {
@@ -165,7 +165,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set description value
      * @param string $description
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setDescription(?string $description = null): self
     {
@@ -192,7 +192,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set critical value
      * @param bool $critical
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setCritical(?bool $critical = null): self
     {
@@ -215,7 +215,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set order value
      * @param int $order
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setOrder(?int $order = null): self
     {
@@ -238,7 +238,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set validFrom value
      * @param string $validFrom
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setValidFrom(?string $validFrom = null): self
     {
@@ -261,7 +261,7 @@ class AdditionalActivityType extends AbstractStructBase
     /**
      * Set validTo value
      * @param string $validTo
-     * @return \app\modules\postal\sender\StructType\AdditionalActivityType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdditionalActivityType
      */
     public function setValidTo(?string $validTo = null): self
     {

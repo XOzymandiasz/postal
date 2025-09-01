@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -29,7 +29,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: 5
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[]
      */
     protected ?array $dokumentyTowarzyszace = null;
     /**
@@ -78,7 +78,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
      * The szczegolyZawartosciPrzesylki
      * Meta information extracted from the WSDL
      * - maxOccurs: 5
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[]
      */
     protected ?array $szczegolyZawartosciPrzesylki = null;
     /**
@@ -92,14 +92,14 @@ class DeklaracjaCelna2Type extends AbstractStructBase
      * Constructor method for deklaracjaCelna2Type
      * @param string $rodzaj
      * @param string $zawartoscPrzesylki
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[] $dokumentyTowarzyszace
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[] $dokumentyTowarzyszace
      * @param string $wyjasnienie
      * @param string $oplatyPocztowe
      * @param string $uwagi
      * @param string $numerReferencyjnyImportera
      * @param string $numerTelefonuImportera
      * @param string $walutaKodISO
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[] $szczegolyZawartosciPrzesylki
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[] $szczegolyZawartosciPrzesylki
      * @param string $numerReferencyjnyCelny
      *@uses DeklaracjaCelna2Type::setRodzaj()
      * @uses DeklaracjaCelna2Type::setZawartoscPrzesylki()
@@ -139,16 +139,16 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set rodzaj value
      * @param string $rodzaj
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::valueIsValid()
      */
     public function setRodzaj(?string $rodzaj = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::valueIsValid($rodzaj)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\DeklaracaCelnaRodzajEnum', is_array($rodzaj) ? implode(', ', $rodzaj) : var_export($rodzaj, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::valueIsValid($rodzaj)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\DeklaracaCelnaRodzajEnum', is_array($rodzaj) ? implode(', ', $rodzaj) : var_export($rodzaj, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\DeklaracaCelnaRodzajEnum::getValidValues())), __LINE__);
         }
         $this->rodzaj = $rodzaj;
         
@@ -165,16 +165,16 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set zawartoscPrzesylki value
      * @param string $zawartoscPrzesylki
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::valueIsValid()
      */
     public function setZawartoscPrzesylki(?string $zawartoscPrzesylki = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::valueIsValid($zawartoscPrzesylki)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum', is_array($zawartoscPrzesylki) ? implode(', ', $zawartoscPrzesylki) : var_export($zawartoscPrzesylki, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::valueIsValid($zawartoscPrzesylki)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum', is_array($zawartoscPrzesylki) ? implode(', ', $zawartoscPrzesylki) : var_export($zawartoscPrzesylki, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\ZawartoscPrzesylkiZagranicznejEnum::getValidValues())), __LINE__);
         }
         $this->zawartoscPrzesylki = $zawartoscPrzesylki;
         
@@ -182,7 +182,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Get dokumentyTowarzyszace value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[]
      */
     public function getDokumentyTowarzyszace(): ?array
     {
@@ -204,12 +204,12 @@ class DeklaracjaCelna2Type extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $deklaracjaCelna2TypeDokumentyTowarzyszaceItem) {
             // validation for constraint: itemType
-            if (!$deklaracjaCelna2TypeDokumentyTowarzyszaceItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType) {
+            if (!$deklaracjaCelna2TypeDokumentyTowarzyszaceItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType) {
                 $invalidValues[] = is_object($deklaracjaCelna2TypeDokumentyTowarzyszaceItem) ? get_class($deklaracjaCelna2TypeDokumentyTowarzyszaceItem) : sprintf('%s(%s)', gettype($deklaracjaCelna2TypeDokumentyTowarzyszaceItem), var_export($deklaracjaCelna2TypeDokumentyTowarzyszaceItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The dokumentyTowarzyszace property can only contain items of type \app\modules\postal\sender\StructType\DokumentyTowarzyszaceType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The dokumentyTowarzyszace property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\DokumentyTowarzyszaceType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -217,8 +217,8 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Set dokumentyTowarzyszace value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[] $dokumentyTowarzyszace
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType[] $dokumentyTowarzyszace
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
      */
     public function setDokumentyTowarzyszace(?array $dokumentyTowarzyszace = null): self
@@ -237,15 +237,15 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Add item to dokumentyTowarzyszace value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType $item
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
      */
-    public function addToDokumentyTowarzyszace(\app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType $item): self
+    public function addToDokumentyTowarzyszace(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType) {
-            throw new InvalidArgumentException(sprintf('The dokumentyTowarzyszace property can only contain items of type \app\modules\postal\sender\StructType\DokumentyTowarzyszaceType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\DokumentyTowarzyszaceType) {
+            throw new InvalidArgumentException(sprintf('The dokumentyTowarzyszace property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\DokumentyTowarzyszaceType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(5)
         if (is_array($this->dokumentyTowarzyszace) && count($this->dokumentyTowarzyszace) >= 5) {
@@ -266,7 +266,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set wyjasnienie value
      * @param string $wyjasnienie
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setWyjasnienie(?string $wyjasnienie = null): self
     {
@@ -289,7 +289,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set oplatyPocztowe value
      * @param string $oplatyPocztowe
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setOplatyPocztowe(?string $oplatyPocztowe = null): self
     {
@@ -312,7 +312,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set uwagi value
      * @param string $uwagi
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setUwagi(?string $uwagi = null): self
     {
@@ -335,7 +335,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set numerReferencyjnyImportera value
      * @param string $numerReferencyjnyImportera
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setNumerReferencyjnyImportera(?string $numerReferencyjnyImportera = null): self
     {
@@ -358,7 +358,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set numerTelefonuImportera value
      * @param string $numerTelefonuImportera
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setNumerTelefonuImportera(?string $numerTelefonuImportera = null): self
     {
@@ -381,7 +381,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set walutaKodISO value
      * @param string $walutaKodISO
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setWalutaKodISO(?string $walutaKodISO = null): self
     {
@@ -395,7 +395,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Get szczegolyZawartosciPrzesylki value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[]
      */
     public function getSzczegolyZawartosciPrzesylki(): ?array
     {
@@ -417,12 +417,12 @@ class DeklaracjaCelna2Type extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem) {
             // validation for constraint: itemType
-            if (!$deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType) {
+            if (!$deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType) {
                 $invalidValues[] = is_object($deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem) ? get_class($deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem) : sprintf('%s(%s)', gettype($deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem), var_export($deklaracjaCelna2TypeSzczegolyZawartosciPrzesylkiItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The szczegolyZawartosciPrzesylki property can only contain items of type \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The szczegolyZawartosciPrzesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -430,8 +430,8 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Set szczegolyZawartosciPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[] $szczegolyZawartosciPrzesylki
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType[] $szczegolyZawartosciPrzesylki
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
      */
     public function setSzczegolyZawartosciPrzesylki(?array $szczegolyZawartosciPrzesylki = null): self
@@ -450,15 +450,15 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     }
     /**
      * Add item to szczegolyZawartosciPrzesylki value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType $item
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      *@throws InvalidArgumentException
      */
-    public function addToSzczegolyZawartosciPrzesylki(\app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType $item): self
+    public function addToSzczegolyZawartosciPrzesylki(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType) {
-            throw new InvalidArgumentException(sprintf('The szczegolyZawartosciPrzesylki property can only contain items of type \app\modules\postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType) {
+            throw new InvalidArgumentException(sprintf('The szczegolyZawartosciPrzesylki property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\SzczegolyZawartosciPrzesylkiZagranicznejType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(5)
         if (is_array($this->szczegolyZawartosciPrzesylki) && count($this->szczegolyZawartosciPrzesylki) >= 5) {
@@ -479,7 +479,7 @@ class DeklaracjaCelna2Type extends AbstractStructBase
     /**
      * Set numerReferencyjnyCelny value
      * @param string $numerReferencyjnyCelny
-     * @return \app\modules\postal\sender\StructType\DeklaracjaCelna2Type
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DeklaracjaCelna2Type
      */
     public function setNumerReferencyjnyCelny(?string $numerReferencyjnyCelny = null): self
     {

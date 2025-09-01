@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -35,7 +35,7 @@ class CustomsDeclarationType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[]
      */
     protected ?array $accompanyingDocuments = null;
     /**
@@ -84,7 +84,7 @@ class CustomsDeclarationType extends AbstractStructBase
      * The shipmentContentsDetails
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[]
      */
     protected ?array $shipmentContentsDetails = null;
     /**
@@ -96,14 +96,14 @@ class CustomsDeclarationType extends AbstractStructBase
      * Constructor method for CustomsDeclarationType
      * @param string $type
      * @param string $content
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[] $accompanyingDocuments
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[] $accompanyingDocuments
      * @param string $explanation
      * @param string $postalCharges
      * @param string $comments
      * @param string $importerReferenceNumber
      * @param string $importerPhoneNumber
      * @param string $currencyCode
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[] $shipmentContentsDetails
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[] $shipmentContentsDetails
      * @param string $customsReferenceNumber
      *@uses CustomsDeclarationType::setType()
      * @uses CustomsDeclarationType::setContent()
@@ -143,16 +143,16 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set type value
      * @param string $type
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::valueIsValid()
      */
     public function setType(?string $type = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::valueIsValid($type)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CustomsDeclarationTypeEnum', is_array($type) ? implode(', ', $type) : var_export($type, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::valueIsValid($type)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CustomsDeclarationTypeEnum', is_array($type) ? implode(', ', $type) : var_export($type, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationTypeEnum::getValidValues())), __LINE__);
         }
         $this->type = $type;
         
@@ -169,16 +169,16 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set content value
      * @param string $content
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::valueIsValid()
      */
     public function setContent(?string $content = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::valueIsValid($content)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CustomsDeclarationContentEnum', is_array($content) ? implode(', ', $content) : var_export($content, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::valueIsValid($content)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CustomsDeclarationContentEnum', is_array($content) ? implode(', ', $content) : var_export($content, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CustomsDeclarationContentEnum::getValidValues())), __LINE__);
         }
         $this->content = $content;
         
@@ -186,7 +186,7 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Get accompanyingDocuments value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[]
      */
     public function getAccompanyingDocuments(): ?array
     {
@@ -208,12 +208,12 @@ class CustomsDeclarationType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $customsDeclarationTypeAccompanyingDocumentsItem) {
             // validation for constraint: itemType
-            if (!$customsDeclarationTypeAccompanyingDocumentsItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType) {
+            if (!$customsDeclarationTypeAccompanyingDocumentsItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType) {
                 $invalidValues[] = is_object($customsDeclarationTypeAccompanyingDocumentsItem) ? get_class($customsDeclarationTypeAccompanyingDocumentsItem) : sprintf('%s(%s)', gettype($customsDeclarationTypeAccompanyingDocumentsItem), var_export($customsDeclarationTypeAccompanyingDocumentsItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The accompanyingDocuments property can only contain items of type \app\modules\postal\sender\StructType\AccompanyingDocumentsType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The accompanyingDocuments property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccompanyingDocumentsType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -221,8 +221,8 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Set accompanyingDocuments value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[] $accompanyingDocuments
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType[] $accompanyingDocuments
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
      */
     public function setAccompanyingDocuments(?array $accompanyingDocuments = null): self
@@ -237,15 +237,15 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Add item to accompanyingDocuments value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType $item
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
      */
-    public function addToAccompanyingDocuments(\app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType $item): self
+    public function addToAccompanyingDocuments(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType) {
-            throw new InvalidArgumentException(sprintf('The accompanyingDocuments property can only contain items of type \app\modules\postal\sender\StructType\AccompanyingDocumentsType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AccompanyingDocumentsType) {
+            throw new InvalidArgumentException(sprintf('The accompanyingDocuments property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\AccompanyingDocumentsType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->accompanyingDocuments[] = $item;
         
@@ -262,7 +262,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set explanation value
      * @param string $explanation
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setExplanation(?string $explanation = null): self
     {
@@ -285,7 +285,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set postalCharges value
      * @param string $postalCharges
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setPostalCharges(?string $postalCharges = null): self
     {
@@ -308,7 +308,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set comments value
      * @param string $comments
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setComments(?string $comments = null): self
     {
@@ -331,7 +331,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set importerReferenceNumber value
      * @param string $importerReferenceNumber
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setImporterReferenceNumber(?string $importerReferenceNumber = null): self
     {
@@ -354,7 +354,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set importerPhoneNumber value
      * @param string $importerPhoneNumber
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setImporterPhoneNumber(?string $importerPhoneNumber = null): self
     {
@@ -377,7 +377,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set currencyCode value
      * @param string $currencyCode
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setCurrencyCode(?string $currencyCode = null): self
     {
@@ -391,7 +391,7 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Get shipmentContentsDetails value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[]
      */
     public function getShipmentContentsDetails(): ?array
     {
@@ -413,12 +413,12 @@ class CustomsDeclarationType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $customsDeclarationTypeShipmentContentsDetailsItem) {
             // validation for constraint: itemType
-            if (!$customsDeclarationTypeShipmentContentsDetailsItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType) {
+            if (!$customsDeclarationTypeShipmentContentsDetailsItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType) {
                 $invalidValues[] = is_object($customsDeclarationTypeShipmentContentsDetailsItem) ? get_class($customsDeclarationTypeShipmentContentsDetailsItem) : sprintf('%s(%s)', gettype($customsDeclarationTypeShipmentContentsDetailsItem), var_export($customsDeclarationTypeShipmentContentsDetailsItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The shipmentContentsDetails property can only contain items of type \app\modules\postal\sender\StructType\ShipmentContentsDetailsType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The shipmentContentsDetails property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -426,8 +426,8 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Set shipmentContentsDetails value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[] $shipmentContentsDetails
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType[] $shipmentContentsDetails
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
      */
     public function setShipmentContentsDetails(?array $shipmentContentsDetails = null): self
@@ -442,15 +442,15 @@ class CustomsDeclarationType extends AbstractStructBase
     }
     /**
      * Add item to shipmentContentsDetails value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType $item
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      *@throws InvalidArgumentException
      */
-    public function addToShipmentContentsDetails(\app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType $item): self
+    public function addToShipmentContentsDetails(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType) {
-            throw new InvalidArgumentException(sprintf('The shipmentContentsDetails property can only contain items of type \app\modules\postal\sender\StructType\ShipmentContentsDetailsType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ShipmentContentsDetailsType) {
+            throw new InvalidArgumentException(sprintf('The shipmentContentsDetails property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ShipmentContentsDetailsType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->shipmentContentsDetails[] = $item;
         
@@ -467,7 +467,7 @@ class CustomsDeclarationType extends AbstractStructBase
     /**
      * Set customsReferenceNumber value
      * @param string $customsReferenceNumber
-     * @return \app\modules\postal\sender\StructType\CustomsDeclarationType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\CustomsDeclarationType
      */
     public function setCustomsReferenceNumber(?string $customsReferenceNumber = null): self
     {

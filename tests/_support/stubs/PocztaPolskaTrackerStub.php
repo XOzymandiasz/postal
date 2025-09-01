@@ -2,7 +2,7 @@
 
 namespace tests\_support\stubs;
 
-use app\modules\postal\modules\poczta_polska\components\PocztaPolskaTracker;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaTracker;
 
 final class PocztaPolskaTrackerStub extends PocztaPolskaTracker{
     public function __construct(array $config = [])

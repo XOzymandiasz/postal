@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class IsMiejscowa extends AbstractStructBase
      * The trasaRequest
      * Meta information extracted from the WSDL
      * - maxOccurs: 500
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType[]
      */
     protected ?array $trasaRequest = null;
     /**
      * Constructor method for isMiejscowa
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType[] $trasaRequest
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType[] $trasaRequest
      * @uses IsMiejscowa::setTrasaRequest()
      */
     public function __construct(?array $trasaRequest = null)
@@ -33,7 +33,7 @@ class IsMiejscowa extends AbstractStructBase
     }
     /**
      * Get trasaRequest value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType[]
      */
     public function getTrasaRequest(): ?array
     {
@@ -55,12 +55,12 @@ class IsMiejscowa extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $isMiejscowaTrasaRequestItem) {
             // validation for constraint: itemType
-            if (!$isMiejscowaTrasaRequestItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType) {
+            if (!$isMiejscowaTrasaRequestItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType) {
                 $invalidValues[] = is_object($isMiejscowaTrasaRequestItem) ? get_class($isMiejscowaTrasaRequestItem) : sprintf('%s(%s)', gettype($isMiejscowaTrasaRequestItem), var_export($isMiejscowaTrasaRequestItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The trasaRequest property can only contain items of type \app\modules\postal\sender\StructType\TrasaRequestType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The trasaRequest property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\TrasaRequestType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class IsMiejscowa extends AbstractStructBase
     }
     /**
      * Set trasaRequest value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType[] $trasaRequest
-     * @return \app\modules\postal\sender\StructType\IsMiejscowa
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType[] $trasaRequest
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsMiejscowa
      *@throws InvalidArgumentException
      */
     public function setTrasaRequest(?array $trasaRequest = null): self
@@ -88,15 +88,15 @@ class IsMiejscowa extends AbstractStructBase
     }
     /**
      * Add item to trasaRequest value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType $item
-     * @return \app\modules\postal\sender\StructType\IsMiejscowa
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\IsMiejscowa
      *@throws InvalidArgumentException
      */
-    public function addToTrasaRequest(\app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType $item): self
+    public function addToTrasaRequest(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\TrasaRequestType) {
-            throw new InvalidArgumentException(sprintf('The trasaRequest property can only contain items of type \app\modules\postal\sender\StructType\TrasaRequestType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\TrasaRequestType) {
+            throw new InvalidArgumentException(sprintf('The trasaRequest property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\TrasaRequestType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         // validation for constraint: maxOccurs(500)
         if (is_array($this->trasaRequest) && count($this->trasaRequest) >= 500) {

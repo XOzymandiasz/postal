@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -68,16 +68,16 @@ class PrintType extends AbstractStructBase
     /**
      * Set kind value
      * @param string $kind
-     * @return \app\modules\postal\sender\StructType\PrintType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::valueIsValid()
      */
     public function setKind(?string $kind = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::valueIsValid($kind)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PrintKindEnum', is_array($kind) ? implode(', ', $kind) : var_export($kind, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::valueIsValid($kind)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PrintKindEnum', is_array($kind) ? implode(', ', $kind) : var_export($kind, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum::getValidValues())), __LINE__);
         }
         $this->kind = $kind;
         
@@ -94,16 +94,16 @@ class PrintType extends AbstractStructBase
     /**
      * Set method value
      * @param string $method
-     * @return \app\modules\postal\sender\StructType\PrintType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::valueIsValid()
      */
     public function setMethod(?string $method = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::valueIsValid($method)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PrintMethodEnum', is_array($method) ? implode(', ', $method) : var_export($method, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::valueIsValid($method)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PrintMethodEnum', is_array($method) ? implode(', ', $method) : var_export($method, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum::getValidValues())), __LINE__);
         }
         $this->method = $method;
         
@@ -120,16 +120,16 @@ class PrintType extends AbstractStructBase
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\PrintType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PrintFormatEnum', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PrintFormatEnum', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -146,16 +146,16 @@ class PrintType extends AbstractStructBase
     /**
      * Set resolution value
      * @param string $resolution
-     * @return \app\modules\postal\sender\StructType\PrintType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrintType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::valueIsValid()
      */
     public function setResolution(?string $resolution = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::valueIsValid($resolution)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PrintResolutionEnum', is_array($resolution) ? implode(', ', $resolution) : var_export($resolution, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::valueIsValid($resolution)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PrintResolutionEnum', is_array($resolution) ? implode(', ', $resolution) : var_export($resolution, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum::getValidValues())), __LINE__);
         }
         $this->resolution = $resolution;
         

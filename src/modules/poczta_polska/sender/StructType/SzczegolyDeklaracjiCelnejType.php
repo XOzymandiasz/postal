@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -80,7 +80,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set zawartosc value
      * @param string $zawartosc
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setZawartosc(?string $zawartosc = null): self
     {
@@ -103,7 +103,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set ilosc value
      * @param float $ilosc
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setIlosc(?float $ilosc = null): self
     {
@@ -126,7 +126,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -149,7 +149,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -172,7 +172,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set numerTaryfowy value
      * @param string $numerTaryfowy
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setNumerTaryfowy(?string $numerTaryfowy = null): self
     {
@@ -195,7 +195,7 @@ class SzczegolyDeklaracjiCelnejType extends AbstractStructBase
     /**
      * Set krajPochodzenia value
      * @param string $krajPochodzenia
-     * @return \app\modules\postal\sender\StructType\SzczegolyDeklaracjiCelnejType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SzczegolyDeklaracjiCelnejType
      */
     public function setKrajPochodzenia(?string $krajPochodzenia = null): self
     {

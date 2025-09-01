@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -133,7 +133,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set idLibraryForLegalDeposit value
      * @param string $idLibraryForLegalDeposit
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setIdLibraryForLegalDeposit(?string $idLibraryForLegalDeposit = null): self
     {
@@ -164,7 +164,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set posteRestante value
      * @param bool $posteRestante
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setPosteRestante(?bool $posteRestante = null): self
     {
@@ -187,7 +187,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set wartosc value
      * @param int $wartosc
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setWartosc(?int $wartosc = null): self
     {
@@ -218,7 +218,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set iloscPotwierdzenOdbioru value
      * @param int $iloscPotwierdzenOdbioru
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setIloscPotwierdzenOdbioru(?int $iloscPotwierdzenOdbioru = null): self
     {
@@ -249,16 +249,16 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set kategoria value
      * @param string $kategoria
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid()
      */
     public function setKategoria(?string $kategoria = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::valueIsValid($kategoria)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\KategoriaType', is_array($kategoria) ? implode(', ', $kategoria) : var_export($kategoria, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType::getValidValues())), __LINE__);
         }
         $this->kategoria = $kategoria;
         
@@ -275,16 +275,16 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set format value
      * @param string $format
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid()
      */
     public function setFormat(?string $format = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::valueIsValid($format)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\FormatType', is_array($format) ? implode(', ', $format) : var_export($format, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType::getValidValues())), __LINE__);
         }
         $this->format = $format;
         
@@ -301,7 +301,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set masa value
      * @param int $masa
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setMasa(?int $masa = null): self
     {
@@ -332,7 +332,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set numerWewnetrznyPrzesylki value
      * @param string $numerWewnetrznyPrzesylki
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setNumerWewnetrznyPrzesylki(?string $numerWewnetrznyPrzesylki = null): self
     {
@@ -355,7 +355,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set egzemplarzBiblioteczny value
      * @param bool $egzemplarzBiblioteczny
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setEgzemplarzBiblioteczny(?bool $egzemplarzBiblioteczny = null): self
     {
@@ -378,7 +378,7 @@ class ListWartosciowyKrajowyType extends PrzesylkaRejestrowanaType
     /**
      * Set dlaOciemnialych value
      * @param bool $dlaOciemnialych
-     * @return \app\modules\postal\sender\StructType\ListWartosciowyKrajowyType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ListWartosciowyKrajowyType
      */
     public function setDlaOciemnialych(?bool $dlaOciemnialych = null): self
     {

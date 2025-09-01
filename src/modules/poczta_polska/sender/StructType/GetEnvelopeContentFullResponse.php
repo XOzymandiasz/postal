@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetEnvelopeContentFullResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[]
      */
     protected ?array $przesylka = null;
     /**
      * Constructor method for getEnvelopeContentFullResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[] $przesylka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[] $przesylka
      * @uses GetEnvelopeContentFullResponse::setPrzesylka()
      */
     public function __construct(?array $przesylka = null)
@@ -34,7 +34,7 @@ class GetEnvelopeContentFullResponse extends AbstractStructBase
     }
     /**
      * Get przesylka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[]
      */
     public function getPrzesylka(): ?array
     {
@@ -56,12 +56,12 @@ class GetEnvelopeContentFullResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEnvelopeContentFullResponsePrzesylkaItem) {
             // validation for constraint: itemType
-            if (!$getEnvelopeContentFullResponsePrzesylkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType) {
+            if (!$getEnvelopeContentFullResponsePrzesylkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType) {
                 $invalidValues[] = is_object($getEnvelopeContentFullResponsePrzesylkaItem) ? get_class($getEnvelopeContentFullResponsePrzesylkaItem) : sprintf('%s(%s)', gettype($getEnvelopeContentFullResponsePrzesylkaItem), var_export($getEnvelopeContentFullResponsePrzesylkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaFullType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaFullType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetEnvelopeContentFullResponse extends AbstractStructBase
     }
     /**
      * Set przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[] $przesylka
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeContentFullResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType[] $przesylka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeContentFullResponse
      *@throws InvalidArgumentException
      */
     public function setPrzesylka(?array $przesylka = null): self
@@ -85,15 +85,15 @@ class GetEnvelopeContentFullResponse extends AbstractStructBase
     }
     /**
      * Add item to przesylka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType $item
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeContentFullResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeContentFullResponse
      *@throws InvalidArgumentException
      */
-    public function addToPrzesylka(\app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType $item): self
+    public function addToPrzesylka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType) {
-            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \app\modules\postal\sender\StructType\PrzesylkaFullType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaFullType) {
+            throw new InvalidArgumentException(sprintf('The przesylka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaFullType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->przesylka[] = $item;
         

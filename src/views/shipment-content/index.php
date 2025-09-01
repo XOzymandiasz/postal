@@ -1,8 +1,8 @@
 <?php
 
-use app\modules\postal\models\search\ShipmentContentPostSearch;
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\models\search\ShipmentContentPostSearch;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\Module;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
 use yii\helpers\Html;

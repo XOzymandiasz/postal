@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -28,9 +28,9 @@ abstract class PrzesylkaType extends AbstractStructBase
      * The oplacaOdbiorca
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null;
     /**
      * The mpk
      * Meta information extracted from the WSDL
@@ -73,7 +73,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Constructor method for przesylkaType
      * @param string $guid
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca
      * @param string $mpk
      * @param string $pakietGuid
      * @param string $opakowanieGuid
@@ -87,7 +87,7 @@ abstract class PrzesylkaType extends AbstractStructBase
      * @uses PrzesylkaType::setOpis()
      * @uses PrzesylkaType::setPlanowanaDataNadania()
      */
-    public function __construct(string $guid, ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null, ?string $mpk = null, ?string $pakietGuid = null, ?string $opakowanieGuid = null, ?string $opis = null, ?string $planowanaDataNadania = null)
+    public function __construct(string $guid, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null, ?string $mpk = null, ?string $pakietGuid = null, ?string $opakowanieGuid = null, ?string $opis = null, ?string $planowanaDataNadania = null)
     {
         $this
             ->setGuid($guid)
@@ -109,7 +109,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setGuid(string $guid): self
     {
@@ -127,18 +127,18 @@ abstract class PrzesylkaType extends AbstractStructBase
     }
     /**
      * Get oplacaOdbiorca value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType|null
      */
-    public function getOplacaOdbiorca(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType
+    public function getOplacaOdbiorca(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType
     {
         return $this->oplacaOdbiorca;
     }
     /**
      * Set oplacaOdbiorca value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
-    public function setOplacaOdbiorca(?\app\modules\postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null): self
+    public function setOplacaOdbiorca(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\OplacaOdbiorcaType $oplacaOdbiorca = null): self
     {
         $this->oplacaOdbiorca = $oplacaOdbiorca;
         
@@ -155,7 +155,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set mpk value
      * @param string $mpk
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setMpk(?string $mpk = null): self
     {
@@ -178,7 +178,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set pakietGuid value
      * @param string $pakietGuid
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setPakietGuid(?string $pakietGuid = null): self
     {
@@ -205,7 +205,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set opakowanieGuid value
      * @param string $opakowanieGuid
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setOpakowanieGuid(?string $opakowanieGuid = null): self
     {
@@ -232,7 +232,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -259,7 +259,7 @@ abstract class PrzesylkaType extends AbstractStructBase
     /**
      * Set planowanaDataNadania value
      * @param string $planowanaDataNadania
-     * @return \app\modules\postal\sender\StructType\PrzesylkaType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaType
      */
     public function setPlanowanaDataNadania(?string $planowanaDataNadania = null): self
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -100,7 +100,7 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set guid value
      * @param string $guid
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      */
     public function setGuid(string $guid): self
     {
@@ -140,12 +140,12 @@ class PrzesylkaShortType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $przesylkaShortTypeCzynnosciUpustoweItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($przesylkaShortTypeCzynnosciUpustoweItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($przesylkaShortTypeCzynnosciUpustoweItem)) {
                 $invalidValues[] = is_object($przesylkaShortTypeCzynnosciUpustoweItem) ? get_class($przesylkaShortTypeCzynnosciUpustoweItem) : sprintf('%s(%s)', gettype($przesylkaShortTypeCzynnosciUpustoweItem), var_export($przesylkaShortTypeCzynnosciUpustoweItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CzynnoscUpustowaType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CzynnoscUpustowaType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()));
         }
         unset($invalidValues);
         
@@ -154,10 +154,10 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set czynnosciUpustowe value
      * @param string[] $czynnosciUpustowe
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
      */
     public function setCzynnosciUpustowe(?array $czynnosciUpustowe = null): self
     {
@@ -172,16 +172,16 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Add item to czynnosciUpustowe value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid()
      */
     public function addToCzynnosciUpustowe(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\CzynnoscUpustowaType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\CzynnoscUpustowaType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\CzynnoscUpustowaType::getValidValues())), __LINE__);
         }
         $this->czynnosciUpustowe[] = $item;
         
@@ -198,7 +198,7 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set numerNadania value
      * @param string $numerNadania
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      */
     public function setNumerNadania(?string $numerNadania = null): self
     {
@@ -229,7 +229,7 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set dataNadania value
      * @param string $dataNadania
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      */
     public function setDataNadania(?string $dataNadania = null): self
     {
@@ -252,7 +252,7 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set razem value
      * @param int $razem
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      */
     public function setRazem(?int $razem = null): self
     {
@@ -275,7 +275,7 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set pobranie value
      * @param int $pobranie
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      */
     public function setPobranie(?int $pobranie = null): self
     {
@@ -298,16 +298,16 @@ class PrzesylkaShortType extends AbstractStructBase
     /**
      * Set status value
      * @param string $status
-     * @return \app\modules\postal\sender\StructType\PrzesylkaShortType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\PrzesylkaShortType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusType::valueIsValid()
      */
     public function setStatus(?string $status = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\StatusType::valueIsValid($status)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\StatusType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusType::valueIsValid($status)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\StatusType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusType::getValidValues())), __LINE__);
         }
         $this->status = $status;
         

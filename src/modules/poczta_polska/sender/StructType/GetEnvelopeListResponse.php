@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,12 +19,12 @@ class GetEnvelopeListResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[]
      */
     protected ?array $envelopes = null;
     /**
      * Constructor method for getEnvelopeListResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[] $envelopes
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[] $envelopes
      * @uses GetEnvelopeListResponse::setEnvelopes()
      */
     public function __construct(?array $envelopes = null)
@@ -34,7 +34,7 @@ class GetEnvelopeListResponse extends AbstractStructBase
     }
     /**
      * Get envelopes value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[]
      */
     public function getEnvelopes(): ?array
     {
@@ -56,12 +56,12 @@ class GetEnvelopeListResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getEnvelopeListResponseEnvelopesItem) {
             // validation for constraint: itemType
-            if (!$getEnvelopeListResponseEnvelopesItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType) {
+            if (!$getEnvelopeListResponseEnvelopesItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType) {
                 $invalidValues[] = is_object($getEnvelopeListResponseEnvelopesItem) ? get_class($getEnvelopeListResponseEnvelopesItem) : sprintf('%s(%s)', gettype($getEnvelopeListResponseEnvelopesItem), var_export($getEnvelopeListResponseEnvelopesItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The envelopes property can only contain items of type \app\modules\postal\sender\StructType\EnvelopeInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The envelopes property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -69,8 +69,8 @@ class GetEnvelopeListResponse extends AbstractStructBase
     }
     /**
      * Set envelopes value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[] $envelopes
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType[] $envelopes
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeListResponse
      *@throws InvalidArgumentException
      */
     public function setEnvelopes(?array $envelopes = null): self
@@ -85,15 +85,15 @@ class GetEnvelopeListResponse extends AbstractStructBase
     }
     /**
      * Add item to envelopes value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType $item
-     * @return \app\modules\postal\sender\StructType\GetEnvelopeListResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEnvelopeListResponse
      *@throws InvalidArgumentException
      */
-    public function addToEnvelopes(\app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType $item): self
+    public function addToEnvelopes(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType) {
-            throw new InvalidArgumentException(sprintf('The envelopes property can only contain items of type \app\modules\postal\sender\StructType\EnvelopeInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\EnvelopeInfoType) {
+            throw new InvalidArgumentException(sprintf('The envelopes property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\EnvelopeInfoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->envelopes[] = $item;
         

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -18,12 +18,12 @@ class SetStatusZgodyNaEZwrot extends AbstractStructBase
      * The statusZgody
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[]
      */
     protected ?array $statusZgody = null;
     /**
      * Constructor method for setStatusZgodyNaEZwrot
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[] $statusZgody
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[] $statusZgody
      * @uses SetStatusZgodyNaEZwrot::setStatusZgody()
      */
     public function __construct(?array $statusZgody = null)
@@ -33,7 +33,7 @@ class SetStatusZgodyNaEZwrot extends AbstractStructBase
     }
     /**
      * Get statusZgody value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[]
      */
     public function getStatusZgody(): ?array
     {
@@ -55,12 +55,12 @@ class SetStatusZgodyNaEZwrot extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $setStatusZgodyNaEZwrotStatusZgodyItem) {
             // validation for constraint: itemType
-            if (!$setStatusZgodyNaEZwrotStatusZgodyItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType) {
+            if (!$setStatusZgodyNaEZwrotStatusZgodyItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType) {
                 $invalidValues[] = is_object($setStatusZgodyNaEZwrotStatusZgodyItem) ? get_class($setStatusZgodyNaEZwrotStatusZgodyItem) : sprintf('%s(%s)', gettype($setStatusZgodyNaEZwrotStatusZgodyItem), var_export($setStatusZgodyNaEZwrotStatusZgodyItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The statusZgody property can only contain items of type \app\modules\postal\sender\StructType\StatusZgodyEZwrotType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The statusZgody property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -68,8 +68,8 @@ class SetStatusZgodyNaEZwrot extends AbstractStructBase
     }
     /**
      * Set statusZgody value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[] $statusZgody
-     * @return \app\modules\postal\sender\StructType\SetStatusZgodyNaEZwrot
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType[] $statusZgody
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SetStatusZgodyNaEZwrot
      *@throws InvalidArgumentException
      */
     public function setStatusZgody(?array $statusZgody = null): self
@@ -84,15 +84,15 @@ class SetStatusZgodyNaEZwrot extends AbstractStructBase
     }
     /**
      * Add item to statusZgody value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType $item
-     * @return \app\modules\postal\sender\StructType\SetStatusZgodyNaEZwrot
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\SetStatusZgodyNaEZwrot
      *@throws InvalidArgumentException
      */
-    public function addToStatusZgody(\app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType $item): self
+    public function addToStatusZgody(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType) {
-            throw new InvalidArgumentException(sprintf('The statusZgody property can only contain items of type \app\modules\postal\sender\StructType\StatusZgodyEZwrotType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\StatusZgodyEZwrotType) {
+            throw new InvalidArgumentException(sprintf('The statusZgody property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\StatusZgodyEZwrotType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->statusZgody[] = $item;
         

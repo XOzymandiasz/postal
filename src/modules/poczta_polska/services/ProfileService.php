@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\services;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\services;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateProfil;
-use app\modules\postal\modules\poczta_polska\sender\StructType\CreateProfilResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilList;
-use app\modules\postal\modules\poczta_polska\sender\StructType\GetProfilListResponse;
-use app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateProfil;
-use app\modules\postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateProfil;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\CreateProfilResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilList;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GetProfilListResponse;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateProfil;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\UpdateProfilResponse;
 use SoapFault;
 use WsdlToPhp\PackageBase\AbstractSoapClientBase;
 

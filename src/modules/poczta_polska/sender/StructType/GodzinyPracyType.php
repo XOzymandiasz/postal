@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $poniedzialek = null;
     /**
@@ -27,7 +27,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $wtorek = null;
     /**
@@ -35,7 +35,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $sroda = null;
     /**
@@ -43,7 +43,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $czwartek = null;
     /**
@@ -51,7 +51,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $piatek = null;
     /**
@@ -59,7 +59,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $sobota = null;
     /**
@@ -67,7 +67,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $niedziela = null;
     /**
@@ -75,7 +75,7 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $robocze = null;
     /**
@@ -83,20 +83,20 @@ class GodzinyPracyType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     protected ?array $swieta = null;
     /**
      * Constructor method for godzinyPracyType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $poniedzialek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $wtorek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sroda
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $czwartek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $piatek
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sobota
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $niedziela
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $robocze
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $swieta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $poniedzialek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $wtorek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sroda
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $czwartek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $piatek
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sobota
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $niedziela
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $robocze
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $swieta
      *@uses GodzinyPracyType::setPoniedzialek()
      * @uses GodzinyPracyType::setWtorek()
      * @uses GodzinyPracyType::setSroda()
@@ -122,7 +122,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get poniedzialek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getPoniedzialek(): ?array
     {
@@ -144,12 +144,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypePoniedzialekItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypePoniedzialekItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypePoniedzialekItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypePoniedzialekItem) ? get_class($godzinyPracyTypePoniedzialekItem) : sprintf('%s(%s)', gettype($godzinyPracyTypePoniedzialekItem), var_export($godzinyPracyTypePoniedzialekItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The poniedzialek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The poniedzialek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -157,8 +157,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set poniedzialek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $poniedzialek
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $poniedzialek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setPoniedzialek(?array $poniedzialek = null): self
@@ -173,15 +173,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to poniedzialek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToPoniedzialek(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToPoniedzialek(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The poniedzialek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The poniedzialek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->poniedzialek[] = $item;
         
@@ -189,7 +189,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get wtorek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getWtorek(): ?array
     {
@@ -211,12 +211,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeWtorekItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeWtorekItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeWtorekItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeWtorekItem) ? get_class($godzinyPracyTypeWtorekItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeWtorekItem), var_export($godzinyPracyTypeWtorekItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The wtorek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The wtorek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -224,8 +224,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set wtorek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $wtorek
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $wtorek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setWtorek(?array $wtorek = null): self
@@ -240,15 +240,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to wtorek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToWtorek(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToWtorek(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The wtorek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The wtorek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->wtorek[] = $item;
         
@@ -256,7 +256,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get sroda value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getSroda(): ?array
     {
@@ -278,12 +278,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeSrodaItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeSrodaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeSrodaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeSrodaItem) ? get_class($godzinyPracyTypeSrodaItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeSrodaItem), var_export($godzinyPracyTypeSrodaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The sroda property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The sroda property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -291,8 +291,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set sroda value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sroda
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sroda
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setSroda(?array $sroda = null): self
@@ -307,15 +307,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to sroda value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToSroda(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToSroda(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The sroda property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The sroda property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->sroda[] = $item;
         
@@ -323,7 +323,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get czwartek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getCzwartek(): ?array
     {
@@ -345,12 +345,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeCzwartekItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeCzwartekItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeCzwartekItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeCzwartekItem) ? get_class($godzinyPracyTypeCzwartekItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeCzwartekItem), var_export($godzinyPracyTypeCzwartekItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The czwartek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The czwartek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -358,8 +358,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set czwartek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $czwartek
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $czwartek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setCzwartek(?array $czwartek = null): self
@@ -374,15 +374,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to czwartek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToCzwartek(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToCzwartek(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The czwartek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The czwartek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->czwartek[] = $item;
         
@@ -390,7 +390,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get piatek value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getPiatek(): ?array
     {
@@ -412,12 +412,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypePiatekItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypePiatekItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypePiatekItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypePiatekItem) ? get_class($godzinyPracyTypePiatekItem) : sprintf('%s(%s)', gettype($godzinyPracyTypePiatekItem), var_export($godzinyPracyTypePiatekItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The piatek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The piatek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -425,8 +425,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set piatek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $piatek
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $piatek
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setPiatek(?array $piatek = null): self
@@ -441,15 +441,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to piatek value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToPiatek(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToPiatek(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The piatek property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The piatek property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->piatek[] = $item;
         
@@ -457,7 +457,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get sobota value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getSobota(): ?array
     {
@@ -479,12 +479,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeSobotaItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeSobotaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeSobotaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeSobotaItem) ? get_class($godzinyPracyTypeSobotaItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeSobotaItem), var_export($godzinyPracyTypeSobotaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The sobota property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The sobota property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -492,8 +492,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set sobota value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sobota
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $sobota
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setSobota(?array $sobota = null): self
@@ -508,15 +508,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to sobota value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToSobota(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToSobota(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The sobota property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The sobota property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->sobota[] = $item;
         
@@ -524,7 +524,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get niedziela value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getNiedziela(): ?array
     {
@@ -546,12 +546,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeNiedzielaItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeNiedzielaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeNiedzielaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeNiedzielaItem) ? get_class($godzinyPracyTypeNiedzielaItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeNiedzielaItem), var_export($godzinyPracyTypeNiedzielaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The niedziela property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The niedziela property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -559,8 +559,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set niedziela value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $niedziela
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $niedziela
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setNiedziela(?array $niedziela = null): self
@@ -575,15 +575,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to niedziela value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToNiedziela(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToNiedziela(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The niedziela property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The niedziela property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->niedziela[] = $item;
         
@@ -591,7 +591,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get robocze value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getRobocze(): ?array
     {
@@ -613,12 +613,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeRoboczeItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeRoboczeItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeRoboczeItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeRoboczeItem) ? get_class($godzinyPracyTypeRoboczeItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeRoboczeItem), var_export($godzinyPracyTypeRoboczeItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The robocze property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The robocze property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -626,8 +626,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set robocze value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $robocze
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $robocze
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setRobocze(?array $robocze = null): self
@@ -642,15 +642,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to robocze value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToRobocze(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToRobocze(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The robocze property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The robocze property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->robocze[] = $item;
         
@@ -658,7 +658,7 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Get swieta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[]
      */
     public function getSwieta(): ?array
     {
@@ -680,12 +680,12 @@ class GodzinyPracyType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $godzinyPracyTypeSwietaItem) {
             // validation for constraint: itemType
-            if (!$godzinyPracyTypeSwietaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            if (!$godzinyPracyTypeSwietaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
                 $invalidValues[] = is_object($godzinyPracyTypeSwietaItem) ? get_class($godzinyPracyTypeSwietaItem) : sprintf('%s(%s)', gettype($godzinyPracyTypeSwietaItem), var_export($godzinyPracyTypeSwietaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The swieta property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The swieta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -693,8 +693,8 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Set swieta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $swieta
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType[] $swieta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
     public function setSwieta(?array $swieta = null): self
@@ -709,15 +709,15 @@ class GodzinyPracyType extends AbstractStructBase
     }
     /**
      * Add item to swieta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
-     * @return \app\modules\postal\sender\StructType\GodzinyPracyType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyType
      *@throws InvalidArgumentException
      */
-    public function addToSwieta(\app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
+    public function addToSwieta(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
-            throw new InvalidArgumentException(sprintf('The swieta property can only contain items of type \app\modules\postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\GodzinyPracyOdDoType) {
+            throw new InvalidArgumentException(sprintf('The swieta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\GodzinyPracyOdDoType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->swieta[] = $item;
         

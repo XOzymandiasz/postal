@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -56,7 +56,7 @@ class ZwrotType extends AbstractStructBase
     /**
      * Set zwrotPoLiczbieDni value
      * @param int $zwrotPoLiczbieDni
-     * @return \app\modules\postal\sender\StructType\ZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotType
      */
     public function setZwrotPoLiczbieDni(?int $zwrotPoLiczbieDni = null): self
     {
@@ -79,7 +79,7 @@ class ZwrotType extends AbstractStructBase
     /**
      * Set traktowacJakPorzucona value
      * @param bool $traktowacJakPorzucona
-     * @return \app\modules\postal\sender\StructType\ZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotType
      */
     public function setTraktowacJakPorzucona(?bool $traktowacJakPorzucona = null): self
     {
@@ -102,16 +102,16 @@ class ZwrotType extends AbstractStructBase
     /**
      * Set sposobZwrotu value
      * @param string $sposobZwrotu
-     * @return \app\modules\postal\sender\StructType\ZwrotType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::valueIsValid()
      */
     public function setSposobZwrotu(?string $sposobZwrotu = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::valueIsValid($sposobZwrotu)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\SposobZwrotuType', is_array($sposobZwrotu) ? implode(', ', $sposobZwrotu) : var_export($sposobZwrotu, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::valueIsValid($sposobZwrotu)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\SposobZwrotuType', is_array($sposobZwrotu) ? implode(', ', $sposobZwrotu) : var_export($sposobZwrotu, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\SposobZwrotuType::getValidValues())), __LINE__);
         }
         $this->sposobZwrotu = $sposobZwrotu;
         

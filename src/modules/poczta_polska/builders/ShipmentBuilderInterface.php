@@ -1,8 +1,8 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\builders;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\builders;
 
-use app\modules\postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 
 interface ShipmentBuilderInterface
 {

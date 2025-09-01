@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class GetKartyResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[]
      */
     protected ?array $karta = null;
     /**
@@ -27,13 +27,13 @@ class GetKartyResponse extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     protected ?array $error = null;
     /**
      * Constructor method for getKartyResponse
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
      *@uses GetKartyResponse::setKarta()
      * @uses GetKartyResponse::setError()
      */
@@ -45,7 +45,7 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Get karta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[]
      */
     public function getKarta(): ?array
     {
@@ -67,12 +67,12 @@ class GetKartyResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getKartyResponseKartaItem) {
             // validation for constraint: itemType
-            if (!$getKartyResponseKartaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType) {
+            if (!$getKartyResponseKartaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType) {
                 $invalidValues[] = is_object($getKartyResponseKartaItem) ? get_class($getKartyResponseKartaItem) : sprintf('%s(%s)', gettype($getKartyResponseKartaItem), var_export($getKartyResponseKartaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The karta property can only contain items of type \app\modules\postal\sender\StructType\KartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The karta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -80,8 +80,8 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Set karta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
-     * @return \app\modules\postal\sender\StructType\GetKartyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKartyResponse
      *@throws InvalidArgumentException
      */
     public function setKarta(?array $karta = null): self
@@ -96,15 +96,15 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Add item to karta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType $item
-     * @return \app\modules\postal\sender\StructType\GetKartyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKartyResponse
      *@throws InvalidArgumentException
      */
-    public function addToKarta(\app\modules\postal\modules\poczta_polska\sender\StructType\KartaType $item): self
+    public function addToKarta(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType) {
-            throw new InvalidArgumentException(sprintf('The karta property can only contain items of type \app\modules\postal\sender\StructType\KartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType) {
+            throw new InvalidArgumentException(sprintf('The karta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->karta[] = $item;
         
@@ -112,7 +112,7 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Get error value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[]
      */
     public function getError(): ?array
     {
@@ -134,12 +134,12 @@ class GetKartyResponse extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $getKartyResponseErrorItem) {
             // validation for constraint: itemType
-            if (!$getKartyResponseErrorItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            if (!$getKartyResponseErrorItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
                 $invalidValues[] = is_object($getKartyResponseErrorItem) ? get_class($getKartyResponseErrorItem) : sprintf('%s(%s)', gettype($getKartyResponseErrorItem), var_export($getKartyResponseErrorItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -147,8 +147,8 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Set error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
-     * @return \app\modules\postal\sender\StructType\GetKartyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType[] $error
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKartyResponse
      *@throws InvalidArgumentException
      */
     public function setError(?array $error = null): self
@@ -163,15 +163,15 @@ class GetKartyResponse extends AbstractStructBase
     }
     /**
      * Add item to error value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item
-     * @return \app\modules\postal\sender\StructType\GetKartyResponse
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetKartyResponse
      *@throws InvalidArgumentException
      */
-    public function addToError(\app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
+    public function addToError(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ErrorType) {
-            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \app\modules\postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ErrorType) {
+            throw new InvalidArgumentException(sprintf('The error property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ErrorType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->error[] = $item;
         

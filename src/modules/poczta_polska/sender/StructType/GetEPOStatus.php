@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -124,7 +124,7 @@ class GetEPOStatus extends AbstractStructBase
      * Set guid value
      * @throws InvalidArgumentException
      * @param string[] $guid
-     * @return \app\modules\postal\sender\StructType\GetEPOStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEPOStatus
      */
     public function setGuid(?array $guid = null): self
     {
@@ -148,7 +148,7 @@ class GetEPOStatus extends AbstractStructBase
      * Add item to guid value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\GetEPOStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEPOStatus
      */
     public function addToGuid(string $item): self
     {
@@ -179,7 +179,7 @@ class GetEPOStatus extends AbstractStructBase
     /**
      * Set endedOnly value
      * @param bool $endedOnly
-     * @return \app\modules\postal\sender\StructType\GetEPOStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEPOStatus
      */
     public function setEndedOnly(?bool $endedOnly = null): self
     {
@@ -202,7 +202,7 @@ class GetEPOStatus extends AbstractStructBase
     /**
      * Set idEnvelope value
      * @param int $idEnvelope
-     * @return \app\modules\postal\sender\StructType\GetEPOStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEPOStatus
      */
     public function setIdEnvelope(?int $idEnvelope = null): self
     {
@@ -225,7 +225,7 @@ class GetEPOStatus extends AbstractStructBase
     /**
      * Set withBioepo value
      * @param bool $withBioepo
-     * @return \app\modules\postal\sender\StructType\GetEPOStatus
+     * @return \XOzymandias\Yii2Postal\sender\StructType\GetEPOStatus
      */
     public function setWithBioepo(?bool $withBioepo = null): self
     {

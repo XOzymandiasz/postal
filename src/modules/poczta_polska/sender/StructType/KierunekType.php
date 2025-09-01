@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -78,7 +78,7 @@ class KierunekType extends AbstractStructBase
     /**
      * Set id value
      * @param int $id
-     * @return \app\modules\postal\sender\StructType\KierunekType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KierunekType
      */
     public function setId(int $id): self
     {
@@ -177,7 +177,7 @@ class KierunekType extends AbstractStructBase
      * Set kodPocztowy value
      * @throws InvalidArgumentException
      * @param string[] $kodPocztowy
-     * @return \app\modules\postal\sender\StructType\KierunekType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KierunekType
      */
     public function setKodPocztowy(?array $kodPocztowy = null): self
     {
@@ -201,7 +201,7 @@ class KierunekType extends AbstractStructBase
      * Add item to kodPocztowy value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\KierunekType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KierunekType
      */
     public function addToKodPocztowy(string $item): self
     {
@@ -232,7 +232,7 @@ class KierunekType extends AbstractStructBase
     /**
      * Set opis value
      * @param string $opis
-     * @return \app\modules\postal\sender\StructType\KierunekType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KierunekType
      */
     public function setOpis(?string $opis = null): self
     {
@@ -255,7 +255,7 @@ class KierunekType extends AbstractStructBase
     /**
      * Set pna value
      * @param string $pna
-     * @return \app\modules\postal\sender\StructType\KierunekType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\KierunekType
      */
     public function setPna(?string $pna = null): self
     {

@@ -1,11 +1,11 @@
 <?php
 
-namespace app\modules\postal\tests\unit\forms;
+namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 use _support\UnitModelTrait;
-use app\modules\postal\forms\ContentTypeForm;
-use app\modules\postal\models\ShipmentContent;
-use app\modules\postal\tests\fixtures\ShipmentContentFixture;
+use XOzymandias\Yii2Postal\forms\ContentTypeForm;
+use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
 use Codeception\Test\Unit;
 use Throwable;
 use UnitTester;

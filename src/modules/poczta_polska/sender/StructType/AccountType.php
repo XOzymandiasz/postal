@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -19,7 +19,7 @@ class AccountType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[]
      */
     protected ?array $karta = null;
     /**
@@ -34,7 +34,7 @@ class AccountType extends AbstractStructBase
      * The profil
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[]
      */
     protected ?array $profil = null;
     /**
@@ -42,23 +42,23 @@ class AccountType extends AbstractStructBase
      * Meta information extracted from the WSDL
      * - maxOccurs: unbounded
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
      */
     protected ?array $jednostka = null;
     /**
      * The domyslnaJednostka
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null;
     /**
      * The domyslnyProfil
      * Meta information extracted from the WSDL
      * - minOccurs: 0
-     * @var \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @var \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    protected ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null;
+    protected ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null;
     /**
      * The dostepPoAdresieIP
      * Meta information extracted from the WSDL
@@ -116,12 +116,12 @@ class AccountType extends AbstractStructBase
     protected ?string $status = null;
     /**
      * Constructor method for accountType
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
      * @param string[] $permision
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil
      * @param string[] $dostepPoAdresieIP
      * @param int $idDomyslnyProfilDokZwrKlient
      * @param int $idDomyslnyProfilDokZwrUzytk
@@ -147,7 +147,7 @@ class AccountType extends AbstractStructBase
      * @uses AccountType::setEmail()
      * @uses AccountType::setStatus()
      */
-    public function __construct(?array $karta = null, ?array $permision = null, ?array $profil = null, ?array $jednostka = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null, ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null, ?array $dostepPoAdresieIP = null, ?int $idDomyslnyProfilDokZwrKlient = null, ?int $idDomyslnyProfilDokZwrUzytk = null, ?array $rodzajPrzypisania = null, ?string $userName = null, ?string $firstName = null, ?string $lastName = null, ?string $email = null, ?string $status = null)
+    public function __construct(?array $karta = null, ?array $permision = null, ?array $profil = null, ?array $jednostka = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null, ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null, ?array $dostepPoAdresieIP = null, ?int $idDomyslnyProfilDokZwrKlient = null, ?int $idDomyslnyProfilDokZwrUzytk = null, ?array $rodzajPrzypisania = null, ?string $userName = null, ?string $firstName = null, ?string $lastName = null, ?string $email = null, ?string $status = null)
     {
         $this
             ->setKarta($karta)
@@ -168,7 +168,7 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Get karta value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[]
      */
     public function getKarta(): ?array
     {
@@ -190,12 +190,12 @@ class AccountType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $accountTypeKartaItem) {
             // validation for constraint: itemType
-            if (!$accountTypeKartaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType) {
+            if (!$accountTypeKartaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType) {
                 $invalidValues[] = is_object($accountTypeKartaItem) ? get_class($accountTypeKartaItem) : sprintf('%s(%s)', gettype($accountTypeKartaItem), var_export($accountTypeKartaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The karta property can only contain items of type \app\modules\postal\sender\StructType\KartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The karta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KartaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -203,8 +203,8 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Set karta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType[] $karta
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
     public function setKarta(?array $karta = null): self
@@ -219,15 +219,15 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Add item to karta value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
-    public function addToKarta(\app\modules\postal\modules\poczta_polska\sender\StructType\KartaType $item): self
+    public function addToKarta(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\KartaType) {
-            throw new InvalidArgumentException(sprintf('The karta property can only contain items of type \app\modules\postal\sender\StructType\KartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\KartaType) {
+            throw new InvalidArgumentException(sprintf('The karta property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\KartaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->karta[] = $item;
         
@@ -257,12 +257,12 @@ class AccountType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $accountTypePermisionItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid($accountTypePermisionItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid($accountTypePermisionItem)) {
                 $invalidValues[] = is_object($accountTypePermisionItem) ? get_class($accountTypePermisionItem) : sprintf('%s(%s)', gettype($accountTypePermisionItem), var_export($accountTypePermisionItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PermisionType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PermisionType', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()));
         }
         unset($invalidValues);
         
@@ -271,10 +271,10 @@ class AccountType extends AbstractStructBase
     /**
      * Set permision value
      * @param string[] $permision
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid()
      */
     public function setPermision(?array $permision = null): self
     {
@@ -289,16 +289,16 @@ class AccountType extends AbstractStructBase
     /**
      * Add item to permision value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid()
      */
     public function addToPermision(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PermisionType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PermisionType', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PermisionType::getValidValues())), __LINE__);
         }
         $this->permision[] = $item;
         
@@ -306,7 +306,7 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Get profil value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[]
      */
     public function getProfil(): ?array
     {
@@ -328,12 +328,12 @@ class AccountType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $accountTypeProfilItem) {
             // validation for constraint: itemType
-            if (!$accountTypeProfilItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType) {
+            if (!$accountTypeProfilItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType) {
                 $invalidValues[] = is_object($accountTypeProfilItem) ? get_class($accountTypeProfilItem) : sprintf('%s(%s)', gettype($accountTypeProfilItem), var_export($accountTypeProfilItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The profil property can only contain items of type \app\modules\postal\sender\StructType\ProfilType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The profil property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProfilType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -341,8 +341,8 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Set profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType[] $profil
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
     public function setProfil(?array $profil = null): self
@@ -357,15 +357,15 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Add item to profil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
-    public function addToProfil(\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $item): self
+    public function addToProfil(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType) {
-            throw new InvalidArgumentException(sprintf('The profil property can only contain items of type \app\modules\postal\sender\StructType\ProfilType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType) {
+            throw new InvalidArgumentException(sprintf('The profil property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\ProfilType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->profil[] = $item;
         
@@ -373,7 +373,7 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Get jednostka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[]
      */
     public function getJednostka(): ?array
     {
@@ -395,12 +395,12 @@ class AccountType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $accountTypeJednostkaItem) {
             // validation for constraint: itemType
-            if (!$accountTypeJednostkaItem instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
+            if (!$accountTypeJednostkaItem instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
                 $invalidValues[] = is_object($accountTypeJednostkaItem) ? get_class($accountTypeJednostkaItem) : sprintf('%s(%s)', gettype($accountTypeJednostkaItem), var_export($accountTypeJednostkaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('The jednostka property can only contain items of type \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
+            $message = sprintf('The jednostka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($invalidValues) ? get_class($invalidValues) : (is_array($invalidValues) ? implode(', ', $invalidValues) : gettype($invalidValues)));
         }
         unset($invalidValues);
         
@@ -408,8 +408,8 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Set jednostka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostka
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType[] $jednostka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
     public function setJednostka(?array $jednostka = null): self
@@ -424,15 +424,15 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Add item to jednostka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
      */
-    public function addToJednostka(\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item): self
+    public function addToJednostka(\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $item): self
     {
         // validation for constraint: itemType
-        if (!$item instanceof \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
-            throw new InvalidArgumentException(sprintf('The jednostka property can only contain items of type \app\modules\postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
+        if (!$item instanceof \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType) {
+            throw new InvalidArgumentException(sprintf('The jednostka property can only contain items of type \XOzymandias\Yii2Postal\sender\StructType\JednostkaOrganizacyjnaType, %s given', is_object($item) ? get_class($item) : (is_array($item) ? implode(', ', $item) : gettype($item))), __LINE__);
         }
         $this->jednostka[] = $item;
         
@@ -440,18 +440,18 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Get domyslnaJednostka value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType|null
      */
-    public function getDomyslnaJednostka(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType
+    public function getDomyslnaJednostka(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType
     {
         return $this->domyslnaJednostka;
     }
     /**
      * Set domyslnaJednostka value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
-    public function setDomyslnaJednostka(?\app\modules\postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null): self
+    public function setDomyslnaJednostka(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\JednostkaOrganizacyjnaType $domyslnaJednostka = null): self
     {
         $this->domyslnaJednostka = $domyslnaJednostka;
         
@@ -459,18 +459,18 @@ class AccountType extends AbstractStructBase
     }
     /**
      * Get domyslnyProfil value
-     * @return \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType|null
+     * @return \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType|null
      */
-    public function getDomyslnyProfil(): ?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType
+    public function getDomyslnyProfil(): ?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType
     {
         return $this->domyslnyProfil;
     }
     /**
      * Set domyslnyProfil value
-     * @param \app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @param \XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
-    public function setDomyslnyProfil(?\app\modules\postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null): self
+    public function setDomyslnyProfil(?\XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType $domyslnyProfil = null): self
     {
         $this->domyslnyProfil = $domyslnyProfil;
         
@@ -515,7 +515,7 @@ class AccountType extends AbstractStructBase
      * Set dostepPoAdresieIP value
      * @throws InvalidArgumentException
      * @param string[] $dostepPoAdresieIP
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setDostepPoAdresieIP(?array $dostepPoAdresieIP = null): self
     {
@@ -531,7 +531,7 @@ class AccountType extends AbstractStructBase
      * Add item to dostepPoAdresieIP value
      * @throws InvalidArgumentException
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function addToDostepPoAdresieIP(string $item): self
     {
@@ -554,7 +554,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set idDomyslnyProfilDokZwrKlient value
      * @param int $idDomyslnyProfilDokZwrKlient
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setIdDomyslnyProfilDokZwrKlient(?int $idDomyslnyProfilDokZwrKlient = null): self
     {
@@ -577,7 +577,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set idDomyslnyProfilDokZwrUzytk value
      * @param int $idDomyslnyProfilDokZwrUzytk
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setIdDomyslnyProfilDokZwrUzytk(?int $idDomyslnyProfilDokZwrUzytk = null): self
     {
@@ -613,12 +613,12 @@ class AccountType extends AbstractStructBase
         $invalidValues = [];
         foreach ($values as $accountTypeRodzajPrzypisaniaItem) {
             // validation for constraint: enumeration
-            if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($accountTypeRodzajPrzypisaniaItem)) {
+            if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($accountTypeRodzajPrzypisaniaItem)) {
                 $invalidValues[] = is_object($accountTypeRodzajPrzypisaniaItem) ? get_class($accountTypeRodzajPrzypisaniaItem) : sprintf('%s(%s)', gettype($accountTypeRodzajPrzypisaniaItem), var_export($accountTypeRodzajPrzypisaniaItem, true));
             }
         }
         if (!empty($invalidValues)) {
-            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()));
+            $message = sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($invalidValues) ? implode(', ', $invalidValues) : var_export($invalidValues, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()));
         }
         unset($invalidValues);
         
@@ -627,10 +627,10 @@ class AccountType extends AbstractStructBase
     /**
      * Set rodzajPrzypisania value
      * @param string[] $rodzajPrzypisania
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
      */
     public function setRodzajPrzypisania(?array $rodzajPrzypisania = null): self
     {
@@ -649,16 +649,16 @@ class AccountType extends AbstractStructBase
     /**
      * Add item to rodzajPrzypisania value
      * @param string $item
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid()
      */
     public function addToRodzajPrzypisania(string $item): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($item)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::valueIsValid($item)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum', is_array($item) ? implode(', ', $item) : var_export($item, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\RodzajPrzypisaniaDoJednostkiEnum::getValidValues())), __LINE__);
         }
         // validation for constraint: maxOccurs(2)
         if (is_array($this->rodzajPrzypisania) && count($this->rodzajPrzypisania) >= 2) {
@@ -679,7 +679,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set userName value
      * @param string $userName
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setUserName(?string $userName = null): self
     {
@@ -702,7 +702,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set firstName value
      * @param string $firstName
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setFirstName(?string $firstName = null): self
     {
@@ -725,7 +725,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set lastName value
      * @param string $lastName
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setLastName(?string $lastName = null): self
     {
@@ -748,7 +748,7 @@ class AccountType extends AbstractStructBase
     /**
      * Set email value
      * @param string $email
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      */
     public function setEmail(?string $email = null): self
     {
@@ -771,16 +771,16 @@ class AccountType extends AbstractStructBase
     /**
      * Set status value
      * @param string $status
-     * @return \app\modules\postal\sender\StructType\AccountType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AccountType
      *@throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusAccountType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusAccountType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusAccountType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusAccountType::valueIsValid()
      */
     public function setStatus(?string $status = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\StatusAccountType::valueIsValid($status)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\StatusAccountType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\StatusAccountType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusAccountType::valueIsValid($status)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\StatusAccountType', is_array($status) ? implode(', ', $status) : var_export($status, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\StatusAccountType::getValidValues())), __LINE__);
         }
         $this->status = $status;
         

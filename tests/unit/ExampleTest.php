@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\postal\tests\unit;
+namespace XOzymandias\Yii2Postal\tests\unit;
 
 use Codeception\Test\Unit;
 use Yii;

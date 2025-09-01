@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -60,16 +60,16 @@ class ZwrotPrzesylkiType extends AbstractStructBase
     /**
      * Set przyczyna value
      * @param string $przyczyna
-     * @return \app\modules\postal\sender\StructType\ZwrotPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotPrzesylkiType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::valueIsValid()
      */
     public function setPrzyczyna(?string $przyczyna = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::valueIsValid($przyczyna)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\PrzyczynaZwrotuEnum', is_array($przyczyna) ? implode(', ', $przyczyna) : var_export($przyczyna, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::valueIsValid($przyczyna)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\PrzyczynaZwrotuEnum', is_array($przyczyna) ? implode(', ', $przyczyna) : var_export($przyczyna, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrzyczynaZwrotuEnum::getValidValues())), __LINE__);
         }
         $this->przyczyna = $przyczyna;
         
@@ -86,7 +86,7 @@ class ZwrotPrzesylkiType extends AbstractStructBase
     /**
      * Set data value
      * @param string $data
-     * @return \app\modules\postal\sender\StructType\ZwrotPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotPrzesylkiType
      */
     public function setData(?string $data = null): self
     {
@@ -109,7 +109,7 @@ class ZwrotPrzesylkiType extends AbstractStructBase
     /**
      * Set przyczynaZwrotuDodatkowa value
      * @param string $przyczynaZwrotuDodatkowa
-     * @return \app\modules\postal\sender\StructType\ZwrotPrzesylkiType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\ZwrotPrzesylkiType
      */
     public function setPrzyczynaZwrotuDodatkowa(?string $przyczynaZwrotuDodatkowa = null): self
     {

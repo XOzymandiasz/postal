@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 use WsdlToPhp\PackageBase\AbstractStructBase;
@@ -88,7 +88,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set oczekiwanyTerminDoreczenia value
      * @param string $oczekiwanyTerminDoreczenia
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setOczekiwanyTerminDoreczenia(?string $oczekiwanyTerminDoreczenia = null): self
     {
@@ -111,16 +111,16 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set oczekiwanaGodzinaDoreczenia value
      * @param string $oczekiwanaGodzinaDoreczenia
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      * @throws InvalidArgumentException
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::getValidValues()
-     * @uses \app\modules\postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::valueIsValid()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::getValidValues()
+     * @uses \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::valueIsValid()
      */
     public function setOczekiwanaGodzinaDoreczenia(?string $oczekiwanaGodzinaDoreczenia = null): self
     {
         // validation for constraint: enumeration
-        if (!\app\modules\postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::valueIsValid($oczekiwanaGodzinaDoreczenia)) {
-            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \app\modules\postal\sender\EnumType\OczekiwanaGodzinaDoreczeniaType', is_array($oczekiwanaGodzinaDoreczenia) ? implode(', ', $oczekiwanaGodzinaDoreczenia) : var_export($oczekiwanaGodzinaDoreczenia, true), implode(', ', \app\modules\postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::getValidValues())), __LINE__);
+        if (!\XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::valueIsValid($oczekiwanaGodzinaDoreczenia)) {
+            throw new InvalidArgumentException(sprintf('Invalid value(s) %s, please use one of: %s from enumeration class \XOzymandias\Yii2Postal\sender\EnumType\OczekiwanaGodzinaDoreczeniaType', is_array($oczekiwanaGodzinaDoreczenia) ? implode(', ', $oczekiwanaGodzinaDoreczenia) : var_export($oczekiwanaGodzinaDoreczenia, true), implode(', ', \XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\OczekiwanaGodzinaDoreczeniaType::getValidValues())), __LINE__);
         }
         $this->oczekiwanaGodzinaDoreczenia = $oczekiwanaGodzinaDoreczenia;
         
@@ -137,7 +137,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set wSobote value
      * @param bool $wSobote
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setWSobote(?bool $wSobote = null): self
     {
@@ -160,7 +160,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set w90Minut value
      * @param bool $w90Minut
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setW90Minut(?bool $w90Minut = null): self
     {
@@ -183,7 +183,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set wNiedzieleLubSwieto value
      * @param bool $wNiedzieleLubSwieto
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setWNiedzieleLubSwieto(?bool $wNiedzieleLubSwieto = null): self
     {
@@ -206,7 +206,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set doRakWlasnych value
      * @param bool $doRakWlasnych
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setDoRakWlasnych(?bool $doRakWlasnych = null): self
     {
@@ -229,7 +229,7 @@ class DoreczenieType extends AbstractStructBase
     /**
      * Set wGodzinachOd20Do7 value
      * @param bool $wGodzinachOd20Do7
-     * @return \app\modules\postal\sender\StructType\DoreczenieType
+     * @return \XOzymandias\Yii2Postal\sender\StructType\DoreczenieType
      */
     public function setWGodzinachOd20Do7(?bool $wGodzinachOd20Do7 = null): self
     {

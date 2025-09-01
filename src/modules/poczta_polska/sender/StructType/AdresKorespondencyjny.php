@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\modules\postal\modules\poczta_polska\sender\StructType;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType;
 
 use InvalidArgumentException;
 
@@ -41,7 +41,7 @@ class AdresKorespondencyjny extends AdresType
     /**
      * Set id value
      * @param int $id
-     * @return \app\modules\postal\sender\StructType\AdresKorespondencyjny
+     * @return \XOzymandias\Yii2Postal\sender\StructType\AdresKorespondencyjny
      */
     public function setId(?int $id = null): self
     {

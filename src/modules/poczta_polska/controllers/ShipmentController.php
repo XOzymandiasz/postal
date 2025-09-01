@@ -1,14 +1,14 @@
 <?php
 
-namespace app\modules\postal\modules\poczta_polska\controllers;
+namespace XOzymandias\Yii2Postal\modules\poczta_polska\controllers;
 
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentProviderInterface;
-use app\modules\postal\modules\poczta_polska\forms\ShipmentForm;
-use app\modules\postal\modules\poczta_polska\Module;
-use app\modules\postal\Module as PostalModule;
-use app\modules\postal\modules\poczta_polska\repositories\EnvelopeRepository;
-use app\modules\postal\modules\poczta_polska\repositories\ShipmentRepository;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentProviderInterface;
+use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\Module;
+use XOzymandias\Yii2Postal\Module as PostalModule;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
+use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use Throwable;
 use Yii;
 use yii\base\InvalidConfigException;

@@ -1,12 +1,12 @@
 <?php
 
-namespace app\modules\postal\controllers;
+namespace XOzymandias\Yii2Postal\controllers;
 
-use app\modules\postal\forms\ShipmentForm;
-use app\modules\postal\models\search\ShipmentPostSearch;
-use app\modules\postal\models\Shipment;
-use app\modules\postal\models\ShipmentDirectionInterface;
-use app\modules\postal\Module;
+use XOzymandias\Yii2Postal\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\models\search\ShipmentPostSearch;
+use XOzymandias\Yii2Postal\models\Shipment;
+use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\Module;
 use Throwable;
 use Yii;
 use yii\db\StaleObjectException;
