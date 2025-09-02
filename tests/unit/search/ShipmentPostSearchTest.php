@@ -83,7 +83,7 @@ class ShipmentPostSearchTest extends Unit
         $address = $this->tester->grabFixture('address', 'sender');
 
         $dataProvider = $this->search->search(['ShipmentPostSearch' => [
-            'senderName' => $address->getFullName()
+            'senderName' => 'Jan Kowalski Biuro'
         ]]);
 
         $senderId = $dataProvider->getModels()[0]->senderAddress->id;
@@ -100,7 +100,7 @@ class ShipmentPostSearchTest extends Unit
         $address = $this->tester->grabFixture('address', 'receiver');
 
         $dataProvider = $this->search->search(['ShipmentPostSearch' => [
-            'receiverName' => $address->getFullName()
+            'receiverName' => 'Marek Nowak Zakład'
         ]]);
 
         $receiverId = $dataProvider->getModels()[0]->receiverAddress->id;
@@ -117,7 +117,7 @@ class ShipmentPostSearchTest extends Unit
         $address = $this->tester->grabFixture('address', 'sender');
 
         $dataProvider = $this->search->search(['ShipmentPostSearch' => [
-            'senderAddress' => $address->getFullInfo()
+            'senderAddress' => '00123 Warszawa Marszałkowska 12A'
         ]]);
 
         $senderId = $dataProvider->getModels()[0]->senderAddress->id;
@@ -134,7 +134,7 @@ class ShipmentPostSearchTest extends Unit
         $address = $this->tester->grabFixture('address', 'receiver');
 
         $dataProvider = $this->search->search(['ShipmentPostSearch' => [
-            'receiverAddress' => $address->getFullInfo()
+            'receiverAddress' => '33-210 Kraków Piastowska 1'
         ]]);
 
         $senderId = $dataProvider->getModels()[0]->receiverAddress->id;
@@ -149,11 +149,41 @@ class ShipmentPostSearchTest extends Unit
         $receiver = $this->tester->grabFixture('address', 'receiver');
 
         $dataProvider = $this->search->search(['ShipmentPostSearch' => [
-            'receiverName' => $receiver->getFullName(),
-            'senderName' => $sender->getFullName()
+            'senderName' => 'Jan Kowalski Biuro',
         ]]);
 
-        $this->tester->assertCount(0, $dataProvider->getModels());
+        $this->tester->assertNotEmpty($dataProvider->getModels());
+
+        foreach ($dataProvider->getModels() as $index => $model) {
+            /**
+             * @var Shipment $model
+             */
+            $shipmentSenderAddress = $model->senderAddress;
+            $this->tester->assertSame($sender->id, $shipmentSenderAddress->id);
+        }
+
+        $dataProvider = $this->search->search(['ShipmentPostSearch' => [
+            'receiverName' => 'Marek Nowak Zakład',
+        ]]);
+
+        $this->tester->assertNotEmpty($dataProvider->getModels());
+
+        foreach ($dataProvider->getModels() as $index => $model) {
+            /**
+             * @var Shipment $model
+             */
+            $shipmentReceiverAddress = $model->receiverAddress;
+            $this->tester->assertSame($receiver->id, $shipmentReceiverAddress->id);
+        }
+
+        $this->tester->assertCount(1, $dataProvider->getModels());
+
+        $dataProvider = $this->search->search(['ShipmentPostSearch' => [
+            'receiverName' => 'Marek Nowak Zakład',
+            'senderName' => 'Jan Kowalski Biuro'
+        ]]);
+
+        $this->tester->assertCount(1, $dataProvider->getModels());
     }
 
     public function testNoJoinWhenNoCompositeFilters(): void
