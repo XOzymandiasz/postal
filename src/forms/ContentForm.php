@@ -11,7 +11,7 @@ use yii\db\Exception;
  *
  * @property-read ShipmentContent $model
  */
-class ContentTypeForm extends Model
+class ContentForm extends Model
 {
     public string $name = '';
     public int $is_active = 0;

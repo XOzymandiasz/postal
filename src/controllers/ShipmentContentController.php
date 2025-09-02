@@ -2,7 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\controllers;
 
-use XOzymandias\Yii2Postal\forms\ContentTypeForm;
+use XOzymandias\Yii2Postal\forms\ContentForm;
 use XOzymandias\Yii2Postal\models\search\ShipmentContentPostSearch;
 use XOzymandias\Yii2Postal\models\ShipmentContent;
 use XOzymandias\Yii2Postal\Module;
@@ -69,7 +69,7 @@ class ShipmentContentController extends Controller
      */
     public function actionCreate(): Response|string
     {
-        $model = new ContentTypeForm();
+        $model = new ContentForm();
 
         if ($model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->getID()]);
