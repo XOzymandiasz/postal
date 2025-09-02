@@ -2,7 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\controllers;
 
-use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\forms\AddressForm;
 use XOzymandias\Yii2Postal\models\search\ShipmentAddressPostSearch;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\Module;
@@ -79,8 +79,8 @@ class ShipmentAddressController extends Controller
      */
     public function actionCreate(?string $direction = null): Response|string
     {
-        $model = new AddressTypeForm();
-        $model->option = $direction;
+        $model = new AddressForm();
+        $model->default_direction = $defaultDirection;
 
         if ($model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->getModel()->id]);

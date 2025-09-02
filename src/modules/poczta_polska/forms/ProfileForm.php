@@ -2,14 +2,14 @@
 
 namespace XOzymandias\Yii2Postal\modules\poczta_polska\forms;
 
-use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\forms\AddressForm;
 use XOzymandias\Yii2Postal\Module as PostalModule;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use yii\base\InvalidConfigException;
 
 
-class ProfileForm extends AddressTypeForm
+class ProfileForm extends AddressForm
 {
     public ?int $idProfil = null;
     public ?string $profileName = null;
