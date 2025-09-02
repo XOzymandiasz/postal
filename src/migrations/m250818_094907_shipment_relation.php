@@ -1,6 +1,6 @@
 <?php
 
-namespace XOzymandias\Yii2Postal\tests\migrations;
+namespace XOzymandias\Yii2Postal\migrations;
 
 use XOzymandias\Yii2Postal\components\ShipmentRelationComponent;
 use XOzymandias\Yii2Postal\ModuleEnsureTrait;
