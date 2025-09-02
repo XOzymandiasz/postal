@@ -5,7 +5,7 @@ namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 
 use _support\UnitModelTrait;
-use XOzymandias\Yii2Postal\forms\AddressTypeForm;
+use XOzymandias\Yii2Postal\forms\AddressForm;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
@@ -23,11 +23,11 @@ class AddressFormTest extends Unit
 {
     use UnitModelTrait;
 
-    protected AddressTypeForm $model;
+    protected AddressForm $model;
 
     protected function _before(): void
     {
-        $this->model = new AddressTypeForm();
+        $this->model = new AddressForm();
     }
 
     public function _fixtures(): array
@@ -91,19 +91,6 @@ class AddressFormTest extends Unit
         $this->thenSeeError('Country should contain at most 2 characters.', 'country');
         $this->thenSeeError('Postal Code should contain at most 10 characters.', 'postal_code');
         $this->thenSeeError('Apartment Number should contain at most 10 characters.', 'apartment_number');
-    }
-
-    public function testOptionOutOfRange(): void
-    {
-        $this->model->name = "Firma";
-        $this->model->house_number = "1";
-        $this->model->postal_code = "11111";
-        $this->model->city = "Miasto";
-        $this->model->option = "OUTOFRANGE";
-
-        $this->thenUnsuccessValidate();
-
-        $this->thenSeeError('Option is invalid.', 'option');
     }
 
     public function testEmailTooShort(): void
