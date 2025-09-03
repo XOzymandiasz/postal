@@ -38,5 +38,11 @@ return [
     'Date at' => 'Data',
     'District' => 'Powiat',
     'Commune' => 'Gmina',
-    'Create Poczta Polska Shipment' => 'Utwórz przesyłkę poczty polskiej'
+    'Create Poczta Polska Shipment' => 'Utwórz przesyłkę poczty polskiej',
+    'Sender' => 'Nadawca',
+    'Receiver Address' => 'Adres odbiorcy',
+    'Sender Name' => 'Nazwa nadawcy',
+    'Sender Address' => 'Adres nadawcy',
+    'Receiver Name' => 'Nazwa odbiorcy',
+    'Receiver' => 'Odbiorca'
 ];

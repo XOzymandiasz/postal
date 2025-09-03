@@ -55,5 +55,18 @@ return [
     'Choose sender profile' => 'Wybierz profil nadawcy',
     'Profile name' => 'Nazwa profilu',
     'Update Postal Shipment: {name}' => 'Zaktualizuj przesyłkę: {name}',
-    'Create Content' => 'Utwórz zawartość'
+    'Create Content' => 'Utwórz zawartość',
+    'Sender Address' => 'Adres nadawcy',
+    'Create Receiver Address' => 'Utwórz adres odbiorcy',
+    'Receiver Name' => 'Nazwa odbiorcy',
+    'Receiver' => 'Odbiorca',
+    'Sender' => 'Nadawca',
+    'Role' => 'Rola',
+    'Is Both' => 'Nadawca i Odbiorca',
+    'Receiver Address' => 'Adres odbiorcy',
+    'Sender Name' => 'Nazwa nadawcy',
+    'Create Sender Address' => 'Utwórz adres nadawcy',
+    'Default Direction' => 'Domyślny kierunek',
+    'Search for an address...' => 'Wyszukiwanie adresu...',
+    'Both' => 'Nadawca i Odbiorca'
 ];

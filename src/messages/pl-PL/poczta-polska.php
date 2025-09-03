@@ -119,5 +119,6 @@ return [
     'Enevelope - Deleted' => 'Usunięte',
     'Not found buffor. Create before Add Shipment attemp' => 'Nie znaleziono bufora. Utwórz bufor przed próbą dodanias przesyłki',
     'Transmit At' => 'Wysłano dnia',
-    'Update Poczta Polska Shipment' => 'Zaktualizuj przesyłkę poczty polskiej'
+    'Update Poczta Polska Shipment' => 'Zaktualizuj przesyłkę poczty polskiej',
+    'Update Poczta Polska Buffer' => 'Zaktualizuj bufor Poczty Polskiej',
 ];
