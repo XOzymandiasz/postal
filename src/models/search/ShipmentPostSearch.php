@@ -2,12 +2,12 @@
 
 namespace XOzymandias\Yii2Postal\models\search;
 
+use XOzymandias\Yii2Postal\models\query\ShipmentAddressQuery;
+use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\models\ShipmentContent;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use yii\db\ActiveQuery;
-use yii\db\Expression;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -132,43 +132,43 @@ class ShipmentPostSearch extends Shipment
         return $dataProvider;
     }
 
-    protected function applySenderNameFilter(ActiveQuery $query): void
+    protected function applySenderNameFilter(ShipmentQuery $query): void
     {
         if (!empty($this->senderName)) {
-            $query->joinWith(['senderAddress SA']);
-            $query->andWhere(['like', new Expression(
-                'CONCAT_WS(" ", SA.name, SA.name_2)'),
-                $this->senderName]);
+            $query->joinWith(['senderAddress SA' =>
+                function (ShipmentAddressQuery $query) {
+                    $query->withName($this->senderName);
+            }]);
         }
     }
 
-    protected function applyReceiverNameFilter(ActiveQuery $query): void
+    protected function applyReceiverNameFilter(ShipmentQuery $query): void
     {
         if (!empty($this->receiverName)) {
-            $query->joinWith(['receiverAddress RA']);
-            $query->andWhere(['like', new Expression(
-                'CONCAT_WS(" ", RA.name, RA.name_2)'),
-                $this->receiverName]);
+            $query->joinWith(['receiverAddress RA' =>
+                function (ShipmentAddressQuery $query) {
+                    $query->withName($this->receiverName);
+            }]);
         }
     }
 
-    protected function applySenderAddressFilter(ActiveQuery $query): void
+    protected function applySenderAddressFilter(ShipmentQuery $query): void
     {
         if (!empty($this->senderAddress)) {
-            $query->joinWith(['senderAddress SA']);
-            $query->andWhere(['like', new Expression(
-                'CONCAT_WS(" ", REPLACE(SA.postal_code, "-", ""), SA.city, SA.street, SA.house_number)'),
-                str_replace('-', '', $this->senderAddress)]);
+            $query->joinWith(['senderAddress SA' =>
+                function (ShipmentAddressQuery $query) {
+                    $query->withLocation($this->senderAddress);
+                }]);
         }
     }
 
-    protected function applyReceiverAddressFilter(ActiveQuery $query): void
+    protected function applyReceiverAddressFilter(ShipmentQuery $query): void
     {
         if (!empty($this->receiverAddress)) {
-            $query->joinWith(['receiverAddress RA']);
-            $query->andWhere(['like', new Expression(
-                'CONCAT_WS(" ", REPLACE(RA.postal_code, "-", ""), RA.city, RA.street, RA.house_number)'),
-                str_replace('-', '', $this->receiverAddress)]);
+            $query->joinWith(['receiverAddress RA' =>
+                function (ShipmentAddressQuery $query) {
+                    $query->withLocation($this->receiverAddress);
+                }]);
         }
     }
 
