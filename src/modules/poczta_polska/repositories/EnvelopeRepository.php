@@ -11,8 +11,6 @@ use yii\base\InvalidConfigException;
 
 class EnvelopeRepository extends BaseRepository
 {
-
-
     private const KEY_BUFFER_LIST = 'buffer:list';
     protected array $serviceConfig = [
         'class' => EnvelopeService::class,
