@@ -3,6 +3,7 @@
 namespace XOzymandias\Yii2Postal\tests\unit\search;
 
 use XOzymandias\Yii2Postal\models\search\ShipmentPostSearch;
+use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressLinkFixture;
@@ -15,7 +16,6 @@ use UnitTester;
 /**
  * @property UnitTester $tester
  */
-
 class ShipmentPostSearchTest extends Unit
 {
     public ShipmentPostSearch $search;
@@ -24,6 +24,7 @@ class ShipmentPostSearchTest extends Unit
     {
         $this->search = new ShipmentPostSearch();
     }
+
     public function _fixtures(): array
     {
         return [
@@ -58,6 +59,13 @@ class ShipmentPostSearchTest extends Unit
 
         $this->search->creator_id = 123;
         $this->assertTrue($this->search->validate(['creator_id']));
+    }
+
+    public function testEmptySearch(): void
+    {
+        $dataProvider = $this->search->search(['ShipmentPostSearch' => []]);
+
+        $this->tester->assertSame($dataProvider->getTotalCount(), 2);
     }
 
     public function testBasicFilter(): void
