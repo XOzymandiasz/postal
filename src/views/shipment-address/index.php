@@ -44,10 +44,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'city',
             'country',
             [
-                'attribute' => 'option',
+                    'attribute' => 'default_role',
+                'label' => Module::t('postal', 'Role'),
                 'filter' => $searchModel::optionList(),
                 'value' => function (ShipmentAddress $model) use ($searchModel) {
-                    return $searchModel::optionList()[$model->option];
+                    return $model->default_role
+                        ? ShipmentAddress::getRolesNames()[$model->default_role]
+                        : Module::t('common', 'None');
                 }
             ],
             [
