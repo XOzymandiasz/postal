@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'class' => ActionColumn::class,
-                'template' => '{view} {update}',
+                'template' => '{view}',
                 'urlCreator' => function ($action, $model, $key) {
                     return Url::to([$action, 'id' => $key]);
                 },
