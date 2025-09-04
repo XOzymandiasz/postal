@@ -1,8 +1,9 @@
 <?php
 
 use XOzymandias\Yii2Postal\forms\ShipmentForm;
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\widgets\ShipmentAddressWidget;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
@@ -39,22 +40,22 @@ use kartik\select2\Select2;
         ]
     )) ?>
 
-    <?= $form->field($model, 'sender_id')->widget(Select2::class, [
-        'data' => $model->getSenderAddressesNames(),
+    <?= $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
+        'addressListRoute' => ['/postal/shipment-address/list'],
+        'role' => ShipmentAddress::ROLE_SENDER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
     ])->hint(Html::a(
         Module::t('postal', 'Create Sender Address'), [
-            'shipment-address/create', 'direction' => ShipmentDirectionInterface::DIRECTION_IN
-        ]
+            'shipment-address/create']
     )) ?>
 
-    <?= $form->field($model, 'receiver_id')->widget(Select2::class, [
-        'data' => $model->getReceiverAddressesNames(),
+    <?= $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
+        'addressListRoute' => ['/postal/shipment-address/list'],
+        'role' => ShipmentAddress::ROLE_RECEIVER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
     ])->hint(Html::a(
         Module::t('postal', 'Create Receiver Address'), [
-            'shipment-address/create', 'direction' => ShipmentDirectionInterface::DIRECTION_OUT
-        ]
+            'shipment-address/create']
     )) ?>
 
 
