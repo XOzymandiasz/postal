@@ -20,6 +20,8 @@ use yii\web\Response;
  */
 class ShipmentAddressController extends Controller
 {
+    public int $minLengthAddressListQuery;
+
     public function behaviors(): array
     {
         return array_merge(
@@ -44,6 +46,12 @@ class ShipmentAddressController extends Controller
                 ]
             ]
         );
+    }
+
+    public function init(): void
+    {
+        parent::init();
+        $this->minLengthAddressListQuery = $this->module->minLengthAddressListQuery;
     }
 
     /**
