@@ -6,6 +6,7 @@ namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\forms\AddressForm;
+use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use Codeception\Test\Unit;
@@ -118,7 +119,7 @@ class AddressFormTest extends Unit
 
     public function testSave(): void
     {
-        $this->model->name = "Jan Kowalski";
+        $this->model->name = "Marek";
         $this->model->street = "Dmowskiego";
         $this->model->postal_code = "83314";
         $this->model->city = "Warszawa";
@@ -131,10 +132,11 @@ class AddressFormTest extends Unit
         $this->model->mobile = '987654321';
         $this->model->contact_person = '333333333';
         $this->model->taxID = '1234567890';
-        $this->model->default_role = ShipmentAddress::ROLE_RECEIVER;
+        $this->model->isSender = true;
 
         $this->thenSuccessValidate();
         $this->thenSuccessSave();
+
         $this->tester->seeRecord(ShipmentAddress::class, [
             'name' => $this->model->name,
             'street' => $this->model->street,
@@ -149,7 +151,7 @@ class AddressFormTest extends Unit
             'mobile' => $this->model->mobile,
             'contact_person' => $this->model->contact_person,
             'taxID' => $this->model->taxID,
-            'default_role' => $this->model->default_role,
+            'default_role' => ShipmentAddress::ROLE_SENDER,
         ]);
     }
 

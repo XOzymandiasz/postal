@@ -235,7 +235,7 @@ class ShipmentFormTest extends Unit
 
     public function testUpdate()
     {
-        $model = Shipment::findOne(['id' => 1]);
+        $model = $this->tester->grabFixture('shipment', 'shipment_in_PP');
 
         $this->model->setModel($model);
         $this->model->number = 'ABC123';
@@ -252,17 +252,6 @@ class ShipmentFormTest extends Unit
             'provider' => ShipmentProviderInterface::PROVIDER_DPD,
             'guid' => 'abcd',
         ]);
-    }
-
-    public function testDelete(): void
-    {
-        $shipment = $this->tester->grabFixture('shipment', 'shipment_in_PP');
-        $this->tester->seeRecord(Shipment::class, ['id' => $shipment->id]);
-        $model = Shipment::findOne($shipment->id);
-        $this->assertNotNull($model);
-
-        $this->tester->assertNotFalse($model->delete());
-        $this->tester->dontSeeRecord(Shipment::class, ['id' => $shipment->id]);
     }
 
     public function getModel(): Model

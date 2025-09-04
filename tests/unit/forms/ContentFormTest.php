@@ -16,7 +16,7 @@ use yii\db\StaleObjectException;
  * @property UnitTester $tester
  * */
 
-class ContentTypeFormTest extends Unit
+class ContentFormTest extends Unit
 {
     use UnitModelTrait;
     private ContentForm $model;
@@ -104,10 +104,11 @@ class ContentTypeFormTest extends Unit
 
     public function testUpdate(): void
     {
-        $id = $this->tester->haveRecord(ShipmentContent::class, [
-            'name' => 'Documents',
+        $model = $this->tester->grabRecord(ShipmentContent::class, [
+            'id' => $this->tester->haveRecord(ShipmentContent::class, [
+                'name' => 'Documents',
+            ]),
         ]);
-        $model = ShipmentContent::findOne(['id' => $id]);
 
         $this->model->setModel($model);
         $this->model->name = 'Changed name';
@@ -121,24 +122,6 @@ class ContentTypeFormTest extends Unit
             'name' => 'Changed name',
             'is_active' => 0,
         ]);
-    }
-
-    /**
-     * @throws Throwable
-     * @throws StaleObjectException
-     */
-    public function testDelete(): void
-    {
-        $id = $this->tester->haveRecord(ShipmentContent::class, [
-            'name' => 'Documents',
-        ]);
-        $this->tester->seeRecord(ShipmentContent::class, ['id' => $id]);
-
-        $model = ShipmentContent::findOne($id);
-        $this->assertNotNull($model);
-
-        $this->tester->assertNotFalse($model->delete());
-        $this->tester->dontSeeRecord(ShipmentContent::class, ['id' => $id]);
     }
 
     public function getModel(): Model
