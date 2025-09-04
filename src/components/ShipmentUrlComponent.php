@@ -9,18 +9,22 @@ use yii\helpers\Url;
 class ShipmentUrlComponent extends Component
 {
     public array $providersCreateRoutes = [
-        Providers::PROVIDER_POCZTA_POLSKA => '/postal/poczta_polska/shipment/create-from-shipment',
+        Providers::PROVIDER_POCZTA_POLSKA => 'poczta_polska/shipment/create-from-shipment',
     ];
     public array $providersUpdateRoutes = [
-        Providers::PROVIDER_POCZTA_POLSKA => '/postal/poczta_polska/shipment/update',
+        Providers::PROVIDER_POCZTA_POLSKA => 'poczta_polska/shipment/update',
     ];
 
     public string $paramShipmentId = 'id';
     public string $paramBufferId = 'bufferId';
     public string $paramGuid = 'guid';
-
+    public ?string $moduleId = null;
     public function getAfterCreateURL(int $shipmentId, string $provider, array $params = []): ?string
     {
+        if($this->moduleId == null){
+            return null;
+        }
+
         $route = $this->providersCreateRoutes[$provider] ?? null;
         if ($route === null) {
             return null;
@@ -28,11 +32,15 @@ class ShipmentUrlComponent extends Component
 
         $params[$this->paramShipmentId] = $shipmentId;
 
-        return Url::to([$route] + $params);
+        return Url::to([$this->getFullRoute($route)] + $params);
     }
 
     public function getAfterUpdateURL(int $bufferId, string $guid, string $provider, array $params = []): ?string
     {
+        if($this->moduleId == null){
+            return null;
+        }
+
         $route = $this->providersUpdateRoutes[$provider] ?? null;
         if ($route === null) {
             return null;
@@ -41,7 +49,13 @@ class ShipmentUrlComponent extends Component
         $params[$this->paramBufferId] = $bufferId;
         $params[$this->paramGuid] = $guid;
 
-        return Url::to([$route] + $params);
+        return Url::to([$this->getFullRoute($route)] + $params);
+    }
+
+    private function getFullRoute(string $route): string
+    {
+        $base = '/' . trim($this->moduleId, '/');
+        return $base . '/' . ltrim($route, '/');
     }
 
 }
