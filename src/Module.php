@@ -35,6 +35,7 @@ class Module extends BaseModule
 
     public bool $isOnlyCreator = true;
 
+    public int $minLengthAddressListQuery = 4;
     public function init(): void
     {
         parent::init();
