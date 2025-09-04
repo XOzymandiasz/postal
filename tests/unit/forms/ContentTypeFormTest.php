@@ -3,7 +3,7 @@
 namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 use _support\UnitModelTrait;
-use XOzymandias\Yii2Postal\forms\ContentTypeForm;
+use XOzymandias\Yii2Postal\forms\ContentForm;
 use XOzymandias\Yii2Postal\models\ShipmentContent;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentContentFixture;
 use Codeception\Test\Unit;
@@ -19,11 +19,11 @@ use yii\db\StaleObjectException;
 class ContentTypeFormTest extends Unit
 {
     use UnitModelTrait;
-    private ContentTypeForm $model;
+    private ContentForm $model;
 
     protected function _before(): void
     {
-        $this->model = new ContentTypeForm();
+        $this->model = new ContentForm();
     }
     public function _fixtures(): array
     {
