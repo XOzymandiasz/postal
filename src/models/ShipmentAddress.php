@@ -2,8 +2,9 @@
 
 namespace XOzymandias\Yii2Postal\models;
 
+use XOzymandias\Yii2Postal\models\query\ShipmentAddressQuery;
 use XOzymandias\Yii2Postal\Module;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType; #@todo:
+use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType;
 use yii\base\InvalidConfigException;
 use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
@@ -17,7 +18,7 @@ use yii\db\ActiveRecord;
  * @property string $postal_code
  * @property string $city
  * @property string $country
- * @property string $option
+ * @property string|null $default_role
  * @property int|null $city_id
  * @property string|null $street
  * @property string|null $apartment_number
@@ -183,6 +184,11 @@ class ShipmentAddress extends ActiveRecord
     public function getRole(): string
     {
         return $this->default_role;
+    }
+
+    public static function find(): ShipmentAddressQuery
+    {
+        return new ShipmentAddressQuery(static::class);
     }
 
 }
