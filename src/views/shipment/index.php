@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
             [
                 'attribute' => 'direction',
                 'filter' => $searchModel::getDirectionsNames(),
@@ -80,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'senderAddress',
                 'label' => Module::t('postal', 'Sender Address'),
                 'value' => function (Shipment $model) {
-                    return $model->senderAddress->getFullInfo();
+                    return $model->senderAddress->getFullLocation();
                 }
             ],
             [
@@ -94,7 +93,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'receiverAddress',
                 'label' => Module::t('postal', 'Receiver Address'),
                 'value' => function (Shipment $model) {
-                    return $model->receiverAddress->getFullInfo();
+                    return $model->receiverAddress->getFullLocation();
                 }
             ],
             [

@@ -31,7 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'name',
             'street',
             'house_number',
@@ -39,10 +38,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'postal_code',
             'city',
             'country',
+            'phone',
+            'email',
             [
-                    'attribute' => 'option',
+                    'attribute' => Module::t('postal', 'Role'),
                 'value' => function (ShipmentAddress $model) {
-                    return ShipmentAddress::getDirectionsNames()[$model->option];
+                    return $model->default_role
+                        ? ShipmentAddress::getRolesNames()[$model->default_role]
+                        : Module::t('common', 'None');
                 }
             ]
         ],

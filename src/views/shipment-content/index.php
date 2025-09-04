@@ -30,12 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'name',
             [
                 'attribute' => 'is_active',
-                'format' => 'boolean',
                 'filter' => $searchModel::activeOptions(),
                 'value' => function (ShipmentContent $model) {
                     return $model->is_active
