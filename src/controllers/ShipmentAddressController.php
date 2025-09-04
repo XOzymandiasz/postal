@@ -81,7 +81,7 @@ class ShipmentAddressController extends Controller
     /**
      * @throws Exception
      */
-    public function actionCreate(?string $direction = null): Response|string
+    public function actionCreate(): Response|string
     {
         $model = new AddressForm();
 
