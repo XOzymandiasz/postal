@@ -27,6 +27,7 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
     public ?string $contact_person = null;
     public ?string $taxID = null;
     public string $country = self::DEFAULT_COUNTRY;
+    public ?string $default_role = null;
     private ?ShipmentAddress $model = null;
 
     public function rules(): array
@@ -44,6 +45,7 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
             [['country'], 'string', 'max' => 2],
             [['apartment_number', 'postal_code'], 'string', 'max' => 10],
             ['email', 'email'],
+            [['default_role'], 'in', 'range' => array_keys($this->getRolesNames())],
         ];
     }
 
@@ -114,7 +116,7 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
         $this->mobile = $model->mobile;
         $this->contact_person = $model->contact_person;
         $this->taxID = $model->taxID;
-        $this->option = $model->option;
+        $this->default_role = $model->default_role;
     }
 
     public function getModel(): ShipmentAddress
@@ -125,18 +127,18 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
         return $this->model;
     }
 
-    public function getDirection(): string
+    public function getRole(): string
     {
-        return $this->model ? $this->model->getDirection() : '';
+        return $this->model ? $this->model->getRole() : '';
     }
 
-    public function getDirectionName(): string
+    public function getRoleName(): string
     {
-        return $this->model ? $this->model->getDirectionName() : '';
+        return $this->model ? $this->model->getRoleName() : '';
     }
 
-    public static function getDirectionsNames(): array
+    public static function getRolesNames(): array
     {
-        return ShipmentAddress::getDirectionsNames();
+        return ShipmentAddress::getRolesNames();
     }
 }

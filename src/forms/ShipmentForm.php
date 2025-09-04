@@ -194,7 +194,7 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     {
         return $this->isInScenario() ? ArrayHelper::map(
             ShipmentAddress::find()
-                ->where(['option' => ShipmentDirectionInterface::DIRECTION_OUT])
+                ->where(['default_role' => ShipmentDirectionInterface::DIRECTION_OUT])
                 ->all(),
             'id',
             'fullInfo'
@@ -205,7 +205,7 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     {
         return $this->isOutScenario() ? ArrayHelper::map(
             ShipmentAddress::find()
-                ->where(['option' => ShipmentDirectionInterface::DIRECTION_IN])
+                ->where(['default_role' => ShipmentDirectionInterface::DIRECTION_IN])
                 ->all(),
             'id',
             'fullInfo'
@@ -215,7 +215,6 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     public function getContentNames(): array
     {
         $models = ShipmentContent::find()
-            ->andWhere(['is_active' => true])
             ->orFilterWhere(['id' => $this->getModel()->content_id])
             ->all();
         return ArrayHelper::map($models, 'id', 'name');

@@ -18,8 +18,8 @@ class ShipmentAddressPostSearch extends ShipmentAddress
     {
         return [
             [['id'], 'integer'],
-            ['option', 'in', 'range' => array_keys($this->optionList())],
-            [['name', 'street', 'house_number', 'apartment_number', 'postal_code', 'city', 'country'], 'safe'],
+            ['default_role', 'in', 'range' => array_keys($this->optionList())],
+            [['default_role', 'name', 'street', 'house_number', 'apartment_number', 'postal_code', 'city', 'country', 'phone', 'email'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class ShipmentAddressPostSearch extends ShipmentAddress
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'option' => $this->option,
+            'default_role' => $this->default_role,
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
@@ -77,11 +77,12 @@ class ShipmentAddressPostSearch extends ShipmentAddress
             ->andFilterWhere(['like', 'email', $this->email]);
 
 
+
         return $dataProvider;
     }
 
     public static function optionList(): array
     {
-        return ShipmentAddress::getDirectionsNames();
+        return ShipmentAddress::getRolesNames();
     }
 }
