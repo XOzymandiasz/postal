@@ -78,19 +78,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         'value' => function (BuforType $model) {
                             return $model->getActive();
                         },
-                        'filter' => Html::activeDropDownList(
-                                $searchModel,
-                            'active',
-                            [
-                                '1' => Module::t('poczta-polska', 'Yes'),
-                                '0' => Module::t('poczta-polska', 'No'),
-                            ],
-                            [
-                                'class' => 'form-select',
-                                'prompt' => '--any--',
-                            ]
-                        )
-
                     ],
                     [
                         'class' => ActionColumn::class,
