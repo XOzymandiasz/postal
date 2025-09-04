@@ -22,9 +22,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a(Module::t('common', 'Create Shipment Address Sender'),
-            ['create', 'direction' => ShipmentDirectionInterface::DIRECTION_OUT], ['class' => 'btn btn-success']) ?>
+            ['create', 'defaultRole' => ShipmentAddress::ROLE_SENDER], ['class' => 'btn btn-success']) ?>
         <?= Html::a(Module::t('common', 'Create Shipment Address Receiver'),
-            ['create', 'direction' => ShipmentDirectionInterface::DIRECTION_IN], ['class' => 'btn btn-success']) ?>
+            ['create', 'defaultRole' => ShipmentAddress::ROLE_RECEIVER], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
