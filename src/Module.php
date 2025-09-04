@@ -16,7 +16,6 @@ use yii\di\Instance;
  */
 class Module extends BaseModule
 {
-
     public const EVENT_AFTER_CREATE_SHIPMENT_OUT = 'afterCreateShipmentOut';
     public const EVENT_AFTER_CREATE_SHIPMENT_IN = 'afterCreateShipmentIn';
 
@@ -45,6 +44,7 @@ class Module extends BaseModule
 
         $this->shipmentRelation = Instance::ensure($this->shipmentRelation, ShipmentRelationComponent::class, $this);
         $this->shipmentUrl = Instance::ensure($this->shipmentUrl, ShipmentUrlComponent::class, $this);
+        $this->shipmentUrl->moduleId = $this->uniqueId;
 
         static::registerTranslations();
     }
