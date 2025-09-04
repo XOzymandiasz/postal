@@ -90,7 +90,7 @@ class EnvelopeSearch extends Model
             $models = $this->filterStatus($models);
         }
         $dataProvider->allModels = $models;
-        Yii::warning($this->startDate);
+
         return $dataProvider;
     }
 
