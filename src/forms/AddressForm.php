@@ -3,20 +3,20 @@
 namespace XOzymandias\Yii2Postal\forms;
 
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 use yii\db\Exception;
 
-class AddressTypeForm extends Model implements ShipmentDirectionInterface
+class AddressForm extends Model
 {
     public const DEFAULT_COUNTRY = 'PL';
 
+    public string $direction = '';
     public string $name = '';
     public string $postal_code = '';
     public string $city = '';
-    public string $option = ShipmentForm::SCENARIO_DIRECTION_OUT;
-    public ?string $direction = null;
+    public bool $isSender = false;
+    public bool $isReceiver = false;
     public ?string $street = null;
     public ?string $name_2 = null;
     public ?string $house_number = null;
@@ -33,10 +33,10 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
     public function rules(): array
     {
         return [
-            [['name', 'city', 'postal_code', 'house_number', 'option'], 'required'],
+            [['name', 'city', 'postal_code', 'house_number'], 'required'],
             ['!direction', 'string'],
+            [['isSender', 'isReceiver'], 'boolean'],
             [['name', 'name_2'], 'string', 'max' => 100],
-            [['option'], 'in', 'range' => array_keys(ShipmentForm::getDirectionsNames())],
             [['phone', 'mobile', 'contact_person'], 'string', 'max' => 15],
             [['email'], 'string', 'min' => 5, 'max' => 320],
             [['taxID'], 'string', 'max' => 15],
@@ -65,10 +65,10 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
             'mobile' => Module::t('postal', 'Mobile'),
             'contact_person' => Module::t('postal', 'Contact Person'),
             'taxID' => Module::t('postal', 'Tax ID'),
-            'option' => Module::t('postal', 'Option'),
+            'isReceiver' => Module::t('postal', 'Is Receiver'),
+            'isSender' => Module::t('postal', 'Is Sender'),
         ];
     }
-
 
     /**
      * @throws Exception
@@ -94,8 +94,16 @@ class AddressTypeForm extends Model implements ShipmentDirectionInterface
         $model->mobile = $this->mobile;
         $model->contact_person = $this->contact_person;
         $model->taxID = $this->taxID;
-        $model->option = $this->option;
 
+        if ($this->isSender && $this->isReceiver) {
+            $model->default_role = ShipmentAddress::ROLE_BOTH;
+        }
+        elseif ($this->isSender) {
+            $model->default_role = ShipmentAddress::ROLE_SENDER;
+        }
+        elseif ($this->isReceiver) {
+            $model->default_role = ShipmentAddress::ROLE_RECEIVER;
+        }
 
         return $model->save(false);
     }
