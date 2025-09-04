@@ -2,7 +2,6 @@
 
 use XOzymandias\Yii2Postal\models\search\ShipmentAddressPostSearch;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use XOzymandias\Yii2Postal\Module;
 use yii\grid\ActionColumn;
 use yii\grid\GridView;
@@ -41,6 +40,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'postal_code',
             'city',
             'country',
+            'phone',
+            'email',
             [
                     'attribute' => 'default_role',
                 'label' => Module::t('postal', 'Role'),
