@@ -29,6 +29,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'country')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'phone')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'isSender')->checkbox() ?>
+
+    <?= $form->field($model, 'isReceiver')->checkbox() ?>
+
     <div class="form-group">
         <?= Html::submitButton(Module::t('common', 'Save'), ['class' => 'btn btn-success']) ?>
     </div>
