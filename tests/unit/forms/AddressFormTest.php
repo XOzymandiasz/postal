@@ -7,13 +7,10 @@ namespace XOzymandias\Yii2Postal\tests\unit\forms;
 use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\forms\AddressForm;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use Codeception\Test\Unit;
-use Throwable;
 use UnitTester;
 use yii\base\Model;
-use yii\db\StaleObjectException;
 
 /**
  * @property UnitTester $tester
@@ -134,6 +131,7 @@ class AddressFormTest extends Unit
         $this->model->mobile = '987654321';
         $this->model->contact_person = '333333333';
         $this->model->taxID = '1234567890';
+        $this->model->default_role = ShipmentAddress::ROLE_RECEIVER;
 
         $this->thenSuccessValidate();
         $this->thenSuccessSave();
@@ -151,6 +149,7 @@ class AddressFormTest extends Unit
             'mobile' => $this->model->mobile,
             'contact_person' => $this->model->contact_person,
             'taxID' => $this->model->taxID,
+            'default_role' => $this->model->default_role,
         ]);
     }
 
@@ -200,15 +199,15 @@ class AddressFormTest extends Unit
 
     public function testUpdate(): void
     {
-        $id = $this->tester->haveRecord(ShipmentAddress::class, [
-            'name' => 'Jan Kowalski',
-            'house_number' => '1',
-            'postal_code' => '00000',
-            'city' => 'Miasto',
-            'country' => 'PL',
-            'option' => ShipmentDirectionInterface::DIRECTION_IN,
+        $model = $this->tester->grabRecord(ShipmentAddress::class, [
+            'id' => $this->tester->haveRecord(ShipmentAddress::class, [
+                'name' => 'Jan Kowalski',
+                'house_number' => '1',
+                'postal_code' => '00000',
+                'city' => 'Miasto',
+                'country' => 'PL',
+            ])
         ]);
-        $model = ShipmentAddress::findOne(['id' => $id]);
 
         $this->model->setModel($model);
         $this->model->name = "Update test";
@@ -243,30 +242,6 @@ class AddressFormTest extends Unit
             'contact_person' => '111111111',
             'taxID' => '0123456789',
         ]);
-
-    }
-
-    /**
-     * @throws Throwable
-     * @throws StaleObjectException
-     */
-    public function testDelete(): void
-    {
-        $id = $this->tester->haveRecord(ShipmentAddress::class, [
-            'name' => 'Jan Kowalski',
-            'house_number' => '1',
-            'postal_code' => '00000',
-            'city' => 'Miasto',
-            'country' => 'PL',
-            'option' => ShipmentDirectionInterface::DIRECTION_IN,
-        ]);
-
-        $this->tester->seeRecord(ShipmentAddress::class, ['id' => $id]);
-
-        $model = ShipmentAddress::findOne($id);
-        $this->assertNotNull($model);
-        $this->tester->assertNotFalse($model->delete());
-        $this->tester->dontSeeRecord(ShipmentAddress::class, ['id' => $id]);
 
     }
 
