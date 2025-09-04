@@ -32,8 +32,12 @@ use yii\db\ActiveRecord;
  * @property ShipmentAddressLink[] $addressLinks
  * @property Shipment[] $shipments
  */
-class ShipmentAddress extends ActiveRecord implements ShipmentDirectionInterface
+class ShipmentAddress extends ActiveRecord
 {
+    public const ROLE_SENDER = ShipmentDirectionInterface::DIRECTION_OUT;
+    public const ROLE_RECEIVER = ShipmentDirectionInterface::DIRECTION_IN;
+    public const ROLE_BOTH = 'BOTH';
+
     public static function tableName(): string
     {
         return '{{%shipment_address}}';
@@ -51,9 +55,9 @@ class ShipmentAddress extends ActiveRecord implements ShipmentDirectionInterface
             [['phone', 'mobile', 'contact_person'], 'string', 'max' => 11],
             [['house_number', 'apartment_number', 'postal_code'], 'string', 'max' => 10],
             [['country'], 'string', 'max' => 2],
+            [['default_role'], 'in', 'range' => array_keys(static::getRolesNames())]
         ];
     }
-
 
     public function attributeLabels(): array
     {
@@ -73,6 +77,7 @@ class ShipmentAddress extends ActiveRecord implements ShipmentDirectionInterface
             'name_2' => Module::t('postal', 'Alternative Name'),
             'city_id' => Module::t('postal', 'City ID'),
             'taxID' => Module::t('postal', 'Tax ID'),
+            'default_role' => Module::t('postal', 'Default Direction'),
         ];
     }
 
@@ -126,10 +131,26 @@ class ShipmentAddress extends ActiveRecord implements ShipmentDirectionInterface
 
     protected function getFormatedPostalCode(): string
     {
-        return substr($this->postal_code, 0, 2) . '-' . substr($this->postal_code, 2);
+        if ($this->postal_code[2] !== '-') {
+            return substr($this->postal_code, 0, 2) . '-' . substr($this->postal_code, 2);
+        }else{
+            return $this->postal_code;
+        }
     }
 
-    public function getFullInfo(array $params = []):string
+    public function getFullInfo(): string
+    {
+        $content = [$this->name,
+                    $this->name_2 ,
+                    $this->getFormatedPostalCode(),
+                    $this->city,
+                    $this->street,
+                    $this->house_number];
+
+        return implode(' ', $content);
+    }
+
+    public function getFullLocation(): string
     {
         $content = [$this->getFormatedPostalCode(), $this->city, $this->street, $this->house_number];
 
@@ -145,22 +166,23 @@ class ShipmentAddress extends ActiveRecord implements ShipmentDirectionInterface
         return $name;
     }
 
-    public function getDirectionName(): string
+    public function getRoleName(): string
     {
-        return static::getDirectionsNames()[$this->option];
+        return static::getRolesNames()[$this->default_role];
     }
 
-    public static function getDirectionsNames(): array
+    public static function getRolesNames(): array
     {
         return [
-            static::DIRECTION_OUT => Module::t('postal', 'Out'),
-            static::DIRECTION_IN => Module::t('postal', 'In'),
+            self::ROLE_RECEIVER => Module::t('postal', 'Receiver'),
+            self::ROLE_SENDER => Module::t('postal', 'Sender'),
+            self::ROLE_BOTH => Module::t('postal', 'Both'),
         ];
     }
 
-    public function getDirection(): string
+    public function getRole(): string
     {
-        return $this->option;
+        return $this->default_role;
     }
 
 }
