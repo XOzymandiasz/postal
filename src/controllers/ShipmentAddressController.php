@@ -16,7 +16,7 @@ use yii\web\NotFoundHttpException;
 use yii\web\Response;
 
 /**
- * ShipmentAddressController implements the CRUD actions for ShipmentAddress model.
+ * @property Module $module
  */
 class ShipmentAddressController extends Controller
 {
@@ -47,8 +47,6 @@ class ShipmentAddressController extends Controller
     }
 
     /**
-     * Lists all ShipmentAddress models.
-     *
      * @return string
      */
     public function actionIndex(): string
@@ -62,7 +60,6 @@ class ShipmentAddressController extends Controller
         ]);
     }
 
-
     /**
      * @throws NotFoundHttpException
      */
@@ -73,14 +70,12 @@ class ShipmentAddressController extends Controller
         ]);
     }
 
-
     /**
      * @throws Exception
      */
     public function actionCreate(?string $direction = null): Response|string
     {
         $model = new AddressForm();
-        $model->default_direction = $defaultDirection;
 
         if ($model->load($this->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->getModel()->id]);
@@ -97,17 +92,25 @@ class ShipmentAddressController extends Controller
      */
     public function actionUpdate(int $id): Response|string
     {
-        $model = $this->findModel($id);
+        $model = new AddressForm();
+        $model->setModel($this->findModel($id));
+
+        if ($model->default_role = ShipmentAddress::ROLE_BOTH){
+            $model->isSender = $model->isReceiver = true;
+        } elseif ($model->default_role = ShipmentAddress::ROLE_SENDER){
+            $model->isSender = true;
+        } elseif ($model->default_role = ShipmentAddress::ROLE_RECEIVER){
+            $model->isReceiver = true;
+        }
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->getModel()->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
         ]);
     }
-
 
     /**
      * @throws StaleObjectException
@@ -121,6 +124,48 @@ class ShipmentAddressController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionList(?string $query = null, ?string $role = null, int $id = 0): Response
+    {
+        $data = ['result' => []];
+
+        if ($query !== null && strlen($query) >= $this->minLengthAddressListQuery) {
+            $models = ShipmentAddress::find()
+                ->filterByFullAddress($query)
+                ->all();
+            $address = [];
+            foreach ($models as $model) {
+                $address[] = $this->parseAddress($model);
+            }
+            $data['result'] = $address;
+        } elseif ($id > 0) {
+            $model = ShipmentAddress::find()
+                ->where(['id' => $id])
+                ->one();
+
+            if ($model) {
+                $data['result'] = $this->parseAddress($model);
+            }
+        } elseif ($role !== null) {
+            $models = [];
+            if ($role === ShipmentAddress::ROLE_SENDER) {
+                $models = ShipmentAddress::find()
+                    ->defaultOutDirection()
+                    ->all();
+            } elseif ($role === ShipmentAddress::ROLE_RECEIVER) {
+                $models = ShipmentAddress::find()
+                    ->defaultInDirection()
+                    ->all();
+            }
+
+            $address = [];
+            foreach ($models as $model) {
+                $address[] = $this->parseAddress($model);
+            }
+            $data['result'] = $address;
+        }
+
+        return $this->asJson($data);
+    }
 
     /**
      * @throws NotFoundHttpException
@@ -133,4 +178,14 @@ class ShipmentAddressController extends Controller
 
         throw new NotFoundHttpException(Module::t('postal', 'The requested page does not exist.'));
     }
+
+    protected function parseAddress(ShipmentAddress $model): array
+    {
+        return [
+            'id' => $model->id,
+            'text' => $model->getFullInfo(),
+        ];
+    }
+
+
 }
