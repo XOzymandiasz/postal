@@ -46,7 +46,7 @@ class m250725_112007_init_shipment extends Migration
             'postal_code' => $this->string(10)->notNull(),
             'city' => $this->string(60)->notNull(),
             'country' => $this->char(2)->notNull()->defaultValue('PL'),
-            'default_direction' => $this->string(4)->null(),
+            'default_role' => $this->string(4)->null(),
             'street' => $this->string(60)->null(),
             'apartment_number' => $this->string(10)->null(),
             'city_id' => $this->integer()->null(),
