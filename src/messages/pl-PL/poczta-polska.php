@@ -106,7 +106,7 @@ return [
     'Create Profile' => 'Utwórz profil',
     'Profile Name' => 'Nazwa profilu',
     'Create Poczta Polska Envelope' => 'Utwórz koperte poczty polskiej',
-    'Send Buffer' => 'Wysłij bufor',
+    'Send Buffer' => 'Wyślij bufor',
     'Buffers' => 'Bufory',
     'Update Poczta Polska Profile' => 'Zaktualizuj profil poczty polskiej',
     'Shipper Address' => 'Adres nadawcy',
