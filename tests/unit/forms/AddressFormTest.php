@@ -226,7 +226,7 @@ class AddressFormTest extends Unit
         $this->model->contact_person = '111111111';
         $this->model->taxID = '0123456789';
 
-        $this->assertNotNull($model);
+        $this->tester->assertNotNull($model);
         $this->thenSuccessValidate();
         $this->thenSuccessSave();
         $this->tester->seeRecord(ShipmentAddress::class, [

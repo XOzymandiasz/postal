@@ -242,7 +242,7 @@ class ShipmentFormTest extends Unit
         $this->model->provider = ShipmentProviderInterface::PROVIDER_DPD;
         $this->model->guid = 'abcd';
 
-        $this->assertNotNull($model);
+        $this->tester->assertNotNull($model);
         $this->thenSuccessValidate();
         $this->thenSuccessSave();
 

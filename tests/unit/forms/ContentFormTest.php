@@ -99,7 +99,7 @@ class ContentFormTest extends Unit
     {
         $model = $this->model->getModel();
 
-        $this->assertInstanceOf(ShipmentContent::class, $model);
+        $this->tester->assertInstanceOf(ShipmentContent::class, $model);
     }
 
     public function testUpdate(): void
@@ -114,7 +114,7 @@ class ContentFormTest extends Unit
         $this->model->name = 'Changed name';
         $this->model->is_active = 0;
 
-        $this->assertNotNull($model);
+        $this->tester->assertNotNull($model);
         $this->thenSuccessValidate();
         $this->thenSuccessSave();
         $this->tester->seeRecord(ShipmentContent::class, [
