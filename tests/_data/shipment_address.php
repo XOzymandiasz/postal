@@ -1,6 +1,6 @@
 <?php
 
-use XOzymandias\Yii2Postal\models\ShipmentDirectionInterface;
+use XOzymandias\Yii2Postal\models\ShipmentAddress;
 
 return [
     'sender' => [
@@ -9,7 +9,7 @@ return [
         'postal_code' => '00123',
         'city' => 'Warszawa',
         'country' => 'PL',
-        'default_role' => ShipmentDirectionInterface::DIRECTION_IN,
+        'default_role' => ShipmentAddress::ROLE_SENDER,
         'city_id' => 101,
         'street' => 'Marszałkowska',
         'apartment_number' => '5',
@@ -27,7 +27,7 @@ return [
         'postal_code' => '33210',
         'city' => 'Kraków',
         'country' => 'PL',
-        'default_role' => ShipmentDirectionInterface::DIRECTION_OUT,
+        'default_role' => ShipmentAddress::ROLE_RECEIVER,
         'city_id' => 101,
         'street' => 'Piastowska',
         'apartment_number' => '1',
@@ -39,9 +39,27 @@ return [
         'email' => 'kowal@example.com',
         'taxID' => '1234567890',
     ],
-    'address_only_required' => [
+    'both' => [
         'id' => 3,
-        'name' => 'Firma ABC',
+        'name' => 'Tom Johnson',
+        'postal_code' => '34310',
+        'city' => 'New York',
+        'country' => 'US',
+        'default_role' => ShipmentAddress::ROLE_BOTH,
+        'city_id' => 101,
+        'street' => 'Jenkins',
+        'apartment_number' => '1',
+        'house_number' => '1',
+        'name_2' => 'Office',
+        'phone' => '124351789',
+        'mobile' => '987604321',
+        'contact_person' => '023456780',
+        'email' => 'john@snow.com',
+        'taxID' => '1234167890',
+    ],
+    'address_only_required' => [
+        'id' => 4,
+        'name' => 'Marek Krwawdoń',
         'house_number' => '8',
         'postal_code' => '54321',
         'city' => 'Kraków',
@@ -57,10 +75,10 @@ return [
         'taxID' => null,
     ],
     [
-        'id' => 4,
+        'id' => 5,
         'name' => 'Jan Kowalski',
         'postal_code' => '31210',
-        'city' => 'Łódź',
+        'city' => 'Kraków',
         'country' => 'PL',
         'city_id' => 101,
         'street' => 'Chrobrzysta',
