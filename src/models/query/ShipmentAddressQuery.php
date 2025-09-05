@@ -94,18 +94,6 @@ class ShipmentAddressQuery extends ActiveQuery
         return $this;
     }
 
-    public function byRole(string $role): self
-    {
-
-        if ($role === ShipmentAddress::ROLE_BOTH) {
-            $this->andWhere(['default_role' => ShipmentAddress::ROLE_BOTH]);
-            return $this;
-        }
-
-        $this->andWhere(['in', 'default_role', [$role, ShipmentAddress::ROLE_BOTH]]);
-        return $this;
-    }
-
     /**
      * {@inheritdoc }
      * @param $db
