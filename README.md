@@ -55,6 +55,9 @@ composer require xozymandias/postal
                        ],
                        'senderOptions' => [
                              'class' => XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions::class,
+                             'login => 'login', // <--- replace with your login
+                             'password' => 'password', // <--- replace with your password
+                             'isTest' => true // <--- set only in test environment
                        ]
                  ],
            ],
@@ -114,23 +117,5 @@ and use command
 php yii migrate/up
 ```
 
-# Environment variables
-
-The module requires a `.env` file in your project root.  
-Make sure to include the following variables:
-
-POCZTA_POLSKA_TRACKER_LOGIN=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_USERNAME=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_PASSWORD=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_ADMIN_USERNAME=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_ADMIN_PASSWORD=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_TEST_USERNAME=
-
-POCZTA_POLSKA_ELEKTRONICZNY_NADAWCA_TEST_PASSWORD=
 
 
