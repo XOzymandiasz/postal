@@ -14,7 +14,7 @@ class PocztaPolskaSenderOptions extends Component
 
     public bool $useLocalFile = true;
 
-    public bool $isTest = true;
+    public bool $isTest = false;
     public int $cache = WSDL_CACHE_NONE;
 
     public array $options = [];
