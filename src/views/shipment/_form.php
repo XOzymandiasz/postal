@@ -41,7 +41,6 @@ use kartik\select2\Select2;
     )) ?>
 
     <?= $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
-        'addressListRoute' => ['/postal/shipment-address/list'],
         'role' => ShipmentAddress::ROLE_SENDER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
     ])->hint(Html::a(
@@ -50,7 +49,6 @@ use kartik\select2\Select2;
     )) ?>
 
     <?= $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
-        'addressListRoute' => ['/postal/shipment-address/list'],
         'role' => ShipmentAddress::ROLE_RECEIVER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
     ])->hint(Html::a(
