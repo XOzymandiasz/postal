@@ -41,8 +41,6 @@ class Module extends BaseModule
 
     public function getRepositoryFactory(): RepositoryFactory
     {
-        return new RepositoryFactory(
-            PocztaPolskaSenderOptions::testInstance()
-        );
+        return new RepositoryFactory($this->senderOptions);
     }
 }
