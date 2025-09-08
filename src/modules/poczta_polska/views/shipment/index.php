@@ -1,6 +1,7 @@
 <?php
 
 use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\modules\poczta_polska\components\PocztaPolskaShipmentUrlComponent;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaRejestrowanaType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use yii\data\DataProviderInterface;
@@ -12,6 +13,7 @@ use yii\helpers\Url;
 /** @var yii\web\View $this */
 /** @var DataProviderInterface $dataProvider */
 /** @var int $bufferId */
+/** @var PocztaPolskaShipmentUrlComponent $urls */
 
 $this->title = Module::t('poczta-polska', 'Shipments');
 $this->params['breadcrumbs'][] = ['url' => ['buffer/index'], 'label' => Module::t('poczta-polska', 'Buffers')];
@@ -26,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a(Module::t('poczta-polska', 'Send Buffer'), ['send', 'bufferId' => $bufferId], ['class' => 'btn btn-success']) ?>
         <?= Html::a(Module::t('poczta-polska', 'Refresh Buffer'), ['index', 'bufferId' => $bufferId, 'refresh' => 1], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Module::t('poczta-polska', 'Add Shipment'), [$urls->getCreateInURL($bufferId)], ['class' => 'btn btn-success']) ?>
     </p>
 
 

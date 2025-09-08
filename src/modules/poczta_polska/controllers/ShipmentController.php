@@ -95,6 +95,7 @@ class ShipmentController extends Controller
         return $this->render('index', [
             'dataProvider' => $dataProvider,
             'bufferId' => $bufferId,
+            'urls' => $this->module->shipmentUrl
         ]);
     }
 
