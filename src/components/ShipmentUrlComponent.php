@@ -4,6 +4,7 @@ namespace XOzymandias\Yii2Postal\components;
 
 use XOzymandias\Yii2Postal\models\ShipmentProviderInterface as Providers;
 use yii\base\Component;
+use yii\base\InvalidConfigException;
 use yii\helpers\Url;
 
 class ShipmentUrlComponent extends Component
@@ -22,7 +23,7 @@ class ShipmentUrlComponent extends Component
     public function getAfterCreateURL(int $shipmentId, string $provider, array $params = []): ?string
     {
         if($this->moduleId == null){
-            return null;
+            throw new InvalidConfigException('moduleId is required');
         }
 
         $route = $this->providersCreateRoutes[$provider] ?? null;
@@ -38,7 +39,7 @@ class ShipmentUrlComponent extends Component
     public function getAfterUpdateURL(int $bufferId, string $guid, string $provider, array $params = []): ?string
     {
         if($this->moduleId == null){
-            return null;
+            throw new InvalidConfigException('moduleId is required');
         }
 
         $route = $this->providersUpdateRoutes[$provider] ?? null;
