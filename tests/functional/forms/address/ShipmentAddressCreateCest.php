@@ -61,7 +61,7 @@ class ShipmentAddressCreateCest
         $I->amLoggedInAs($user->id);
         $I->amOnRoute(Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_IN]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_IN]));
 
         $I->submitForm('#shipment-address-form', [
             'AddressTypeForm[name]' => 'Functional',
@@ -77,7 +77,7 @@ class ShipmentAddressCreateCest
             'house_number' => 0,
             'postal_code' => 33333,
             'city' => 'City',
-            'option' => ShipmentDirectionInterface::DIRECTION_IN
+            'default_role' => ShipmentDirectionInterface::DIRECTION_IN
         ]);
 
         $id = $I->grabRecord(ShipmentAddress::class, [
@@ -93,7 +93,7 @@ class ShipmentAddressCreateCest
         $I->amLoggedInAs($user->id);
         $I->amOnRoute(Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_IN]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_IN]));
 
         $I->submitForm('#shipment-address-form', [
             'ShipmentAddress[name]'             => '',

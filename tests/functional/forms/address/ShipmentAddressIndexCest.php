@@ -30,12 +30,12 @@ class ShipmentAddressIndexCest
 
         $I->seeLink('Create Shipment Address Receiver', Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_IN]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_IN]));
 
 
         $I->seeLink('Create Shipment Address Sender', Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_OUT]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_OUT]));
     }
 
     public function checkPostSearch(FunctionalTester $I): void
@@ -73,7 +73,7 @@ class ShipmentAddressIndexCest
         $I->seeResponseCodeIs(200);
         $I->seeInCurrentUrl(Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_IN]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_IN]));
     }
 
     public function checkCreateOUTButtonNavigates(FunctionalTester $I): void
@@ -87,6 +87,6 @@ class ShipmentAddressIndexCest
         $I->seeResponseCodeIs(200);
         $I->seeInCurrentUrl(Url::to([
             static::ROUTE_CREATE,
-            'direction' => ShipmentDirectionInterface::DIRECTION_OUT]));
+            'defaultRole' => ShipmentDirectionInterface::DIRECTION_OUT]));
     }
 }
