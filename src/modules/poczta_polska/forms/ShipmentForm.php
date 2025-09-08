@@ -3,7 +3,7 @@
 namespace XOzymandias\Yii2Postal\modules\poczta_polska\forms;
 
 use XOzymandias\Yii2Postal\forms\ShipmentForm as BaseShipmentForm;
-use XOzymandias\Yii2Postal\models\Shipment; #todo:
+use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\Module as BaseModule;
 use XOzymandias\Yii2Postal\modules\poczta_polska\builders\CreateShipmentFactory;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
