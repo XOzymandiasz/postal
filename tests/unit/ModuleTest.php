@@ -30,18 +30,18 @@ class ModuleTest extends Unit
     {
         $this->module = static::ensureModule();
 
-        $alias = Yii::getAlias('@edzima/postal', false);
-        $this->assertNotFalse($alias);
-        $this->assertDirectoryExists($alias);
+        $alias = Yii::getAlias('@xozymandias/postal', false);
+        $this->tester->assertNotFalse($alias);
+        $this->tester->assertDirectoryExists($alias);
     }
 
     public function testTranslationsAreRegistered(): void
     {
         $this->module = static::ensureModule();
 
-        $this->assertArrayHasKey('edzima/postal/*', Yii::$app->i18n->translations);
+        $this->assertArrayHasKey('xozymandias/postal/*', Yii::$app->i18n->translations);
         $translated = Module::t('common', 'Save');
-        $this->assertIsString($translated);
-        $this->assertNotEmpty($translated);
+        $this->tester->assertIsString($translated);
+        $this->tester->assertNotEmpty($translated);
     }
 }

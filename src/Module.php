@@ -40,7 +40,7 @@ class Module extends BaseModule
     {
         parent::init();
 
-        Yii::setAlias('@edzima/postal', __DIR__);
+        Yii::setAlias('@xozymandias/postal', __DIR__);
         Yii::configure($this, require __DIR__ . '/config.php');
 
         $this->shipmentRelation = Instance::ensure($this->shipmentRelation, ShipmentRelationComponent::class, $this);
@@ -52,21 +52,21 @@ class Module extends BaseModule
 
     public static function registerTranslations(): void
     {
-        Yii::$app->i18n->translations['edzima/postal/*'] = [
+        Yii::$app->i18n->translations['xozymandias/postal/*'] = [
             'class' => 'yii\i18n\PhpMessageSource',
             'sourceLanguage' => 'en-US',
-            'basePath' => '@edzima/postal/messages',
+            'basePath' => '@xozymandias/postal/messages',
             'fileMap' => [
-                'edzima/postal/poczta-polska' => 'poczta-polska.php',
-                'edzima/postal/common' => 'common.php',
-                'edzima/postal/postal' => 'postal.php',
+                'xozymandias/postal/poczta-polska' => 'poczta-polska.php',
+                'xozymandias/postal/common' => 'common.php',
+                'xozymandias/postal/postal' => 'postal.php',
             ],
         ];
     }
 
     public static function t($category, $message, $params = [], $language = null): string
     {
-        return Yii::t('edzima/postal/' . $category, $message, $params, $language);
+        return Yii::t('xozymandias/postal/' . $category, $message, $params, $language);
     }
 
     public function afterCreateInShipment(Shipment $model): void
