@@ -11,6 +11,7 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOption
 use yii\caching\DummyCache;
 
 $db = require dirname(__DIR__, 2) . '/config/test_db.php';
+
 $params = array_merge(
     require __DIR__ . '/params.php',
 );
@@ -20,10 +21,11 @@ $params = array_merge(
  */
 return [
     'id' => 'postal-tests',
-    'basePath' => dirname(__DIR__, 3),
+    'basePath' => '/app',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
+        '@app' => '/app',
     ],
     'language' => 'en-US',
     'modules' => [
@@ -66,7 +68,7 @@ return [
     'components' => [
         'db' => $db,
         'assetManager' => [
-            'basePath' => dirname(__DIR__, 3) . '/web/assets',
+            'basePath' => '@app/web/assets',
             'baseUrl'  => '/assets-test',
             'appendTimestamp' => false,
         ],
@@ -83,7 +85,7 @@ return [
         'request' => [
             'cookieValidationKey' => 'test',
             'enableCsrfValidation' => false,
-            'scriptFile' => dirname(__DIR__, 3) . '/web/index.php',
+            'scriptFile' =>  '/app/web/index.php',
             'scriptUrl'  => '/index-test.php',
             // but if you absolutely need it set cookie domain to localhost
             /*
