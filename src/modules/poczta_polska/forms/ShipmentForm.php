@@ -213,7 +213,7 @@ class ShipmentForm extends BaseShipmentForm
 
     public static function getBufferFullName(BuforType $buffer): string
     {
-        return $buffer->getOpis() . ' ShipmentForm.php' . $buffer->getDataNadania();
+        return $buffer->getOpis() . ' ' . $buffer->getDataNadania();
     }
 
 }
