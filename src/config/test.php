@@ -47,6 +47,9 @@ return [
                     ],
                     'senderOptions' => [
                         'class' => PocztaPolskaSenderOptions::class,
+                        'login' => $params['elektroniczny_nadawca.login'],
+                        'password' => $params['elektroniczny_nadawca.password'],
+                        'isTest' => $params['elektroniczny_nadawca.isTest'],
                     ]
                 ],
             ],

@@ -1,8 +1,7 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
-    'senderEmail' => 'noreply@example.com',
-    'senderName' => 'Example.com mailer',
-    'bsVersion' => '5.x',
+    'elektroniczny_nadawca.login' => '',
+    'elektroniczny_nadawca.password' => '',
+    'elektroniczny_nadawca.isTest' => True,
 ];
