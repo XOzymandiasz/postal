@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
+use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
@@ -10,7 +11,6 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintFormatEnum
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintKindEnum;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintMethodEnum;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\PrintResolutionEnum;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrintType;
@@ -26,15 +26,14 @@ use yii\base\InvalidConfigException;
  */
 class ShipmentRepositoryTest extends Unit
 {
+    use ModuleEnsureTrait;
     private ShipmentRepository $repository;
     private ?EnvelopeRepository $bufferRepository = null;
 
     public function _before(): void
     {
         parent::_before();
-        $this->repository = new ShipmentRepository(
-            PocztaPolskaSenderOptions::testInstance()
-        );
+        $this->repository = static::ensureModule()->getRepositoryFactory()->getShipmentRepository();
     }
 
     public function testAddAndClear(): void
@@ -201,9 +200,8 @@ class ShipmentRepositoryTest extends Unit
 
     private function getBufferRepository(): ?EnvelopeRepository
     {
-        $options = PocztaPolskaSenderOptions::testInstance();
         if (null === $this->bufferRepository) {
-            $this->bufferRepository = new EnvelopeRepository($options);
+            $this->bufferRepository = static::ensureModule()->getRepositoryFactory()->getEnvelopeRepository();
         }
         return $this->bufferRepository;
     }

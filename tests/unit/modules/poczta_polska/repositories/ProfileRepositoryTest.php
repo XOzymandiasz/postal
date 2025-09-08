@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
+use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
@@ -14,14 +15,13 @@ use UnitTester;
 
 class ProfileRepositoryTest extends Unit
 {
+    use ModuleEnsureTrait;
     private ProfileRepository $repository;
 
     public function _before(): void
     {
         parent::_before();
-        $this->repository = new ProfileRepository(
-            PocztaPolskaSenderOptions::testInstance()
-        );
+        $this->repository = static::ensureModule()->getRepositoryFactory()->getProfileRepository();
     }
 
     public function testGetList(): void

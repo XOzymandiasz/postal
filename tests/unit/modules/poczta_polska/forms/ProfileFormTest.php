@@ -4,6 +4,7 @@ namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\forms;
 
 use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ProfileForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Codeception\Test\Unit;
@@ -16,6 +17,7 @@ use yii\base\Model;
 class ProfileFormTest extends Unit
 {
     use UnitModelTrait;
+    use ModuleEnsureTrait;
     protected ProfileForm $model;
 
     private ProfileRepository $repository;
@@ -23,7 +25,7 @@ class ProfileFormTest extends Unit
     public function _before(): void
     {
         parent::_before();
-        $this->repository = new ProfileRepository(PocztaPolskaSenderOptions::testInstance());
+        $this->repository = static::ensureModule()->getRepositoryFactory()->getProfileRepository();
         $this->model = new ProfileForm();
     }
 

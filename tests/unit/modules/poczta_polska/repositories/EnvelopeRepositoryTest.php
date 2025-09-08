@@ -3,11 +3,11 @@
 namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
 use DateTime;
+use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\AdresType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\BuforType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaPoleconaKrajowaType;
@@ -22,6 +22,8 @@ use UnitTester;
  */
 class EnvelopeRepositoryTest extends Unit
 {
+    use ModuleEnsureTrait;
+
     private EnvelopeRepository $repository;
     private ?ProfileRepository $profileRepository = null;
 
@@ -32,9 +34,7 @@ class EnvelopeRepositoryTest extends Unit
     public function _before(): void
     {
         parent::_before();
-        $this->repository = new EnvelopeRepository(
-            PocztaPolskaSenderOptions::testInstance()
-        );
+        $this->repository = static::ensureModule()->getRepositoryFactory()->getEnvelopeRepository();
         $this->sendAt = (new DateTime('tomorrow'))->format('Y-m-d');
     }
 
@@ -265,18 +265,16 @@ class EnvelopeRepositoryTest extends Unit
 
     private function getProfileRepository(): ?ProfileRepository
     {
-        $options = PocztaPolskaSenderOptions::testInstance();
         if (null === $this->profileRepository) {
-            $this->profileRepository = new ProfileRepository($options);
+            $this->profileRepository = static::ensureModule()->getRepositoryFactory()->getProfileRepository();
         }
         return $this->profileRepository;
     }
 
     private function getShipmentRepository(): ?ShipmentRepository
     {
-        $options = PocztaPolskaSenderOptions::testInstance();
         if (null === $this->shipmentRepository) {
-            $this->shipmentRepository = new ShipmentRepository($options);
+            $this->shipmentRepository = static::ensureModule()->getRepositoryFactory()->getShipmentRepository();
         }
         return $this->shipmentRepository;
     }

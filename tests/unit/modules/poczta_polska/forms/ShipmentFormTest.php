@@ -5,6 +5,7 @@ namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\forms;
 use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ShipmentForm;
+use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
@@ -23,7 +24,7 @@ use yii\db\StaleObjectException;
 class ShipmentFormTest extends Unit
 {
     use UnitModelTrait;
-
+    use ModuleEnsureTrait;
     protected ShipmentForm $model;
 
     private ShipmentRepository $repository;
@@ -33,7 +34,7 @@ class ShipmentFormTest extends Unit
     {
         parent::_before();
         $this->model = new ShipmentForm();
-        $this->repository = new ShipmentRepository(PocztaPolskaSenderOptions::testInstance());
+        $this->repository = static::ensureModule()->getRepositoryFactory()->getShipmentRepository();
     }
 
     public function testValidateRequiredFields(): void
@@ -185,7 +186,7 @@ class ShipmentFormTest extends Unit
     public function getBufferRepository(): EnvelopeRepository
     {
         if($this->bufferRepository === null) {
-            $this->bufferRepository = new EnvelopeRepository(PocztaPolskaSenderOptions::testInstance());
+            $this->bufferRepository = static::ensureModule()->getRepositoryFactory()->getEnvelopeRepository();
         }
         return $this->bufferRepository;
     }
