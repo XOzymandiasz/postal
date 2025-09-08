@@ -210,6 +210,8 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
             static::PROVIDER_DPD => Module::t('postal', 'DPD'),
             static::PROVIDER_GLS => Module::t('postal', 'GLS'),
             static::PROVIDER_INPOST => Module::t('postal', 'Inpost'),
+            static::PROVIDER_FEDEX => Module::t('postal', 'Fedex'),
+            static::PROVIDER_UPS => Module::t('postal', 'UPS'),
         ];
     }
 
