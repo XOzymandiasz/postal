@@ -59,6 +59,9 @@ composer require xozymandias/postal
                              'password' => 'password', // <--- replace with your password
                              'isTest' => true // <--- set only in test environment
                        ]
+                       'shipmentUrl' => [
+                             'class' => XOzymandias\Yii2Postal\modules\poczta_polska\components\ShipmentUrlComponent::class
+                        ]
                  ],
            ],
            'shipmentRelation' => [
