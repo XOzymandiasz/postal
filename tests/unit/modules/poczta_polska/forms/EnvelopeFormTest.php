@@ -7,7 +7,6 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\forms\BufferForm;
 use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Codeception\Test\Unit;
 use edzima\teryt\models\Region;
 use UnitTester;

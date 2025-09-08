@@ -10,7 +10,6 @@ use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\EnvelopeRepository
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ShipmentRepository;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\FormatType;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\EnumType\KategoriaType;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\PrzesylkaType;
 use Codeception\Test\Unit;
 use Throwable;

@@ -6,7 +6,6 @@ use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\forms\ProfileForm;
 use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use Codeception\Test\Unit;
 use UnitTester;
 use yii\base\Model;

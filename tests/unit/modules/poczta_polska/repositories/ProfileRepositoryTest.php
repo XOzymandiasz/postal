@@ -4,7 +4,6 @@ namespace XOzymandias\Yii2Postal\tests\unit\modules\poczta_polska\repositories;
 
 use XOzymandias\Yii2Postal\modules\poczta_polska\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\repositories\ProfileRepository;
-use XOzymandias\Yii2Postal\modules\poczta_polska\sender\PocztaPolskaSenderOptions;
 use XOzymandias\Yii2Postal\modules\poczta_polska\sender\StructType\ProfilType;
 use Codeception\Test\Unit;
 use UnitTester;

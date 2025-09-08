@@ -43,7 +43,6 @@ use Dotenv\Dotenv;
 use InvalidArgumentException;
 use UnitTester;
 use WsdlToPhp\PackageBase\SoapClientInterface;
-use function unit\postal\poczta_polska\sender\sendEnvelope;
 
 /**
  * @property UnitTester $tester
