@@ -20,7 +20,7 @@ use kartik\select2\Select2;
     ]); ?>
 
 
-    <?= $form->field($model, 'number')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'number')->textInput(['maxlength' => true, 'autofocus' => true]) ?>
 
     <?= $form->field($model, 'provider')->widget(Select2::class, [
         'data' => $model::getProvidersNames(),
