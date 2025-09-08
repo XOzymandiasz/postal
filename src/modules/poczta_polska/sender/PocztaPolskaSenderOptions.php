@@ -12,7 +12,7 @@ class PocztaPolskaSenderOptions extends Component
     public string $password = '';
     public array $classMap = [];
 
-    public bool $useLocalFile = true;
+    public bool $useLocalFile = false;
 
     public bool $isTest = false;
     public int $cache = WSDL_CACHE_NONE;
