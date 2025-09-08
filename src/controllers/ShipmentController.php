@@ -74,7 +74,7 @@ class ShipmentController extends Controller
         ]);
     }
 
-    public function actionCreateOut(?string $refTo = null, array $refColumns = []): Response|string
+    public function actionCreateOut(): Response|string
     {
         $model = new ShipmentForm();
         $model->setScenario(ShipmentForm::SCENARIO_DIRECTION_OUT);
@@ -96,12 +96,13 @@ class ShipmentController extends Controller
         ]);
     }
 
-    public function actionCreateIn(): Response|string
+    public function actionCreateIn(?int $bufferId = null): Response|string
     {
         $model = new ShipmentForm();
         $model->setScenario(ShipmentForm::SCENARIO_DIRECTION_IN);
         $model->direction = ShipmentDirectionInterface::DIRECTION_IN;
         $model->creator_id = Yii::$app->user->id;
+        $model->buffer_id = $bufferId;
         //$model->finished_at = date(DATE_ATOM);
         $model->finished_at = date('Y-m-d H-i-s');
         if ($model->load($this->request->post()) && $model->save()) {
