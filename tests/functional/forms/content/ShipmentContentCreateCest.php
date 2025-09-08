@@ -33,8 +33,8 @@ class ShipmentContentCreateCest
         $I->seeResponseCodeIs(HttpCode::OK);
         $I->see('Create Shipment Content', 'h1');
         $I->seeElement('form');
-        $I->seeElement('input', ['name' => 'ContentTypeForm[name]']);
-        $I->seeElement('input', ['name' => 'ContentTypeForm[is_active]']);
+        $I->seeElement('input', ['name' => 'ContentForm[name]']);
+        $I->seeElement('input', ['name' => 'ContentForm[is_active]']);
     }
 
     public function checkGuestCannotAccessCreate(FunctionalTester $I): void
@@ -53,8 +53,8 @@ class ShipmentContentCreateCest
         $I->amOnRoute(static::ROUTE_CREATE);
 
         $I->submitForm('#shipment-content-form', [
-            'ContentTypeForm[name]' => 'Documents',
-            'ContentTypeForm[is_active]' => 0,
+            'ContentForm[name]' => 'Documents',
+            'ContentForm[is_active]' => 0,
         ]);
 
         $I->seeResponseCodeIs(HttpCode::OK);
@@ -78,7 +78,7 @@ class ShipmentContentCreateCest
         $I->amOnRoute(static::ROUTE_CREATE);
 
         $I->submitForm('#shipment-content-form', [
-            'ContentTypeForm[name]' => '',
+            'ContentForm[name]' => '',
         ]);
 
         $I->seeResponseCodeIs(HttpCode::OK);

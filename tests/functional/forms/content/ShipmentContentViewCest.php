@@ -30,7 +30,6 @@ class ShipmentContentViewCest
 
         $I->seeLink('Update', Url::to([static::ROUTE_UPDATE, 'id' => $content->id]));
         $I->seeLink('Delete', Url::to([static::ROUTE_DELETE, 'id' => $content->id]));
-        $I->see('Id');
         $I->see('Name');
         $I->see('Is Active');
     }

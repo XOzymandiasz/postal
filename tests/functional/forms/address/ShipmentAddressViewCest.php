@@ -30,7 +30,6 @@ class ShipmentAddressViewCest
 
         $I->seeLink('Update', Url::to([static::ROUTE_UPDATE, 'id' => $address->id]));
         $I->seeLink('Delete', Url::to([static::ROUTE_DELETE, 'id' => $address->id]));
-        $I->see('Id');
         $I->see('Name');
         $I->see('Street');
         $I->see('House number');
@@ -38,6 +37,6 @@ class ShipmentAddressViewCest
         $I->see('City');
         $I->see('Country');
         $I->see('Postal Code');
-        $I->see('Option');
+        $I->see('Role');
     }
 }

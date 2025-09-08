@@ -37,13 +37,13 @@ class ShipmentAddressCreateCest
         $I->seeResponseCodeIs(HttpCode::OK);
         $I->see('Create Shipment Address', 'h1');
         $I->seeElement('form');
-        $I->seeElement('input', ['name' => 'AddressTypeForm[name]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[street]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[house_number]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[apartment_number]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[postal_code]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[city]']);
-        $I->seeElement('input', ['name' => 'AddressTypeForm[country]']);
+        $I->seeElement('input', ['name' => 'AddressForm[name]']);
+        $I->seeElement('input', ['name' => 'AddressForm[street]']);
+        $I->seeElement('input', ['name' => 'AddressForm[house_number]']);
+        $I->seeElement('input', ['name' => 'AddressForm[apartment_number]']);
+        $I->seeElement('input', ['name' => 'AddressForm[postal_code]']);
+        $I->seeElement('input', ['name' => 'AddressForm[city]']);
+        $I->seeElement('input', ['name' => 'AddressForm[country]']);
     }
 
     public function checkGuestCannotAccessCreate(FunctionalTester $I): void
@@ -64,10 +64,10 @@ class ShipmentAddressCreateCest
             'defaultRole' => ShipmentDirectionInterface::DIRECTION_IN]));
 
         $I->submitForm('#shipment-address-form', [
-            'AddressTypeForm[name]' => 'Functional',
-            'AddressTypeForm[house_number]' => 0,
-            'AddressTypeForm[postal_code]' => 33333,
-            'AddressTypeForm[city]' => 'City',
+            'AddressForm[name]' => 'Functional',
+            'AddressForm[house_number]' => 0,
+            'AddressForm[postal_code]' => 33333,
+            'AddressForm[city]' => 'City',
         ]);
 
         $I->seeResponseCodeIs(HttpCode::OK);
@@ -76,8 +76,7 @@ class ShipmentAddressCreateCest
             'name' => 'Functional',
             'house_number' => 0,
             'postal_code' => 33333,
-            'city' => 'City',
-            'default_role' => ShipmentDirectionInterface::DIRECTION_IN
+            'city' => 'City'
         ]);
 
         $id = $I->grabRecord(ShipmentAddress::class, [

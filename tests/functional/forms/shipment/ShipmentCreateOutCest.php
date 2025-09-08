@@ -15,7 +15,7 @@ use FunctionalTester;
 class ShipmentCreateOutCest
 {
     public const ROUTE_CREATE_OUT = 'postal/shipment/create-out';
-    public const ROUTE_AFTER_CREATE_IN = 'postal/poczta_polska/shipment/create-from-shipment';
+    public const ROUTE_VIEW = 'postal/shipment/view';
     public const ROUTE_LOG_IN = 'site/login';
     public function _fixtures(): array
     {
@@ -52,10 +52,7 @@ class ShipmentCreateOutCest
         $I->dontSeeElement('input[name="ShipmentForm[finished_at]"]');
 
         $I->seeLink('Create Content', '/postal/shipment-content/create');
-        $I->seeLink('Create Receiver Address', '/postal/shipment-address/create?direction='
-            . ShipmentDirectionInterface::DIRECTION_OUT);
-        $I->seeLink('Create Sender Address', '/postal/shipment-address/create?direction='
-            . ShipmentDirectionInterface::DIRECTION_IN);
+        $I->seeLink('Create Receiver Address', '/postal/shipment-address/create');
         $I->seeElement('button', ['type' => 'submit']);
     }
 
@@ -105,7 +102,7 @@ class ShipmentCreateOutCest
             'address_id' => $receiverAddress->id,
         ]);
 
-        $I->amOnRoute(static::ROUTE_AFTER_CREATE_IN . '?id=' . $id);
+        $I->amOnRoute(static::ROUTE_VIEW . '?id=' . $id);
     }
 
     public function checkCreateEmpty(FunctionalTester $I): void
@@ -117,7 +114,6 @@ class ShipmentCreateOutCest
         $content = $I->grabFixture('content', 'content_active');
         $senderAddress = $I->grabFixture('address', 'sender');
         $receiverAddress = $I->grabFixture('address', 'receiver');
-
 
         $I->submitForm('#shipment-form', [
             'ShipmentForm[content_id]'  => $content->id,

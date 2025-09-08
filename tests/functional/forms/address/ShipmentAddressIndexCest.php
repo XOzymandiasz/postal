@@ -42,7 +42,6 @@ class ShipmentAddressIndexCest
     {
         $I->amOnRoute(static::ROUTE_INDEX);
 
-        $I->see('Id');
         $I->see('Name');
         $I->see('Street');
         $I->see('House number');
@@ -50,8 +49,7 @@ class ShipmentAddressIndexCest
         $I->see('City');
         $I->see('Country');
         $I->see('Postal Code');
-        $I->see('Option');
-        $I->seeElement('input[name="ShipmentAddressPostSearch[id]"]');
+        $I->see('Role');
         $I->seeElement('input[name="ShipmentAddressPostSearch[name]"]');
         $I->seeElement('input[name="ShipmentAddressPostSearch[street]"]');
         $I->seeElement('input[name="ShipmentAddressPostSearch[house_number]"]');
@@ -59,7 +57,7 @@ class ShipmentAddressIndexCest
         $I->seeElement('input[name="ShipmentAddressPostSearch[postal_code]"]');
         $I->seeElement('input[name="ShipmentAddressPostSearch[city]"]');
         $I->seeElement('input[name="ShipmentAddressPostSearch[country]"]');
-        $I->seeElement('select[name="ShipmentAddressPostSearch[option]"]');
+        $I->seeElement('select[name="ShipmentAddressPostSearch[default_role]"]');
     }
 
     public function checkCreateINButtonNavigates(FunctionalTester $I): void

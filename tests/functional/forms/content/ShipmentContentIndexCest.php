@@ -33,10 +33,8 @@ class ShipmentContentIndexCest
     {
         $I->amOnRoute(static::ROUTE_INDEX);
 
-        $I->see('Id');
         $I->see('Name');
         $I->see('Is Active');
-        $I->seeElement('input[name="ShipmentContentPostSearch[id]"]');
         $I->seeElement('input[name="ShipmentContentPostSearch[name]"]');
         $I->seeElement('select[name="ShipmentContentPostSearch[is_active]"]');
     }
