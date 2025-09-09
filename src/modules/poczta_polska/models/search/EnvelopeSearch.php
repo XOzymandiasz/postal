@@ -25,8 +25,9 @@ class EnvelopeSearch extends Model
     public string $startDate = '';
     public string $endDate = '';
 
+    public ?string $name = null;
 
-    public $active;
+    public ?bool $active = null;
 
     private EnvelopeRepository $repository;
 
@@ -53,6 +54,7 @@ class EnvelopeSearch extends Model
             ['status', 'required'],
             [['startDate', 'endDate'], 'required', 'except' => static::SCENARIO_BUFFER],
             [['active'], 'boolean'],
+            [['name'], 'string'],
             ['status', 'in', 'range' => array_keys(static::getStatusNames())],
         ];
     }
@@ -79,16 +81,27 @@ class EnvelopeSearch extends Model
         if (!$this->validate()) {
             return $dataProvider;
         }
+
         if ($this->status === self::STATUS_BUFFER) {
             $models = $this->repository->getBuffersList();
-            $filtered = filter_var($this->active, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
-            $models = array_values(array_filter($models, static fn(BuforType $buffer) =>
-                $buffer->getActive() === $filtered
-            ));
+            if ($this->active !== null) {
+                $filtered = filter_var($this->active, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE);
+                $models = array_values(array_filter($models, static fn(BuforType $buffer) =>
+                    $buffer->getActive() === $filtered
+                ));
+            }
         } else {
             $models = $this->repository->getList($this->startDate, $this->endDate);
             $models = $this->filterStatus($models);
         }
+
+        if ($this->name !== null) {
+            $first = reset($models);
+            if ($first instanceof BuforType) {
+                $models = $this->filterName($models);
+            }
+        }
+
         $dataProvider->allModels = $models;
 
         return $dataProvider;
@@ -109,8 +122,17 @@ class EnvelopeSearch extends Model
                 default:
                     return false;
             }
-
         });
+    }
+
+    protected function filterName(array $models): array
+    {
+        $name_X = $this->name;
+        return array_filter($models,
+            static function(BuforType $model) use ($name_X) {
+                $name = $model->getOpis();
+                return $name !== null && mb_stripos($name, $name_X) !== false;
+            });
     }
 
     public function getStatusName(): string
