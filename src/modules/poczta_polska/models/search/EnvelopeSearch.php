@@ -127,11 +127,11 @@ class EnvelopeSearch extends Model
 
     protected function filterName(array $models): array
     {
-        $name_X = $this->name;
+        $searchedName = $this->name;
         return array_filter($models,
-            static function(BuforType $model) use ($name_X) {
+            static function(BuforType $model) use ($searchedName) {
                 $name = $model->getOpis();
-                return $name !== null && mb_stripos($name, $name_X) !== false;
+                return $name !== null && mb_stripos($name, $searchedName) !== false;
             });
     }
 
