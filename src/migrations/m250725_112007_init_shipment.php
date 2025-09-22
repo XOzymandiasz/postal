@@ -1,7 +1,5 @@
 <?php
 
-namespace XOzymandias\Yii2Postal\migrations;
-
 use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use yii\base\InvalidConfigException;
 use yii\db\Migration;
