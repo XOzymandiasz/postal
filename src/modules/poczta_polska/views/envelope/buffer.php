@@ -50,7 +50,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
                 'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
 
                     [   'attribute' => 'name',
                         'label' => Module::t('poczta-polska', 'Name'),
