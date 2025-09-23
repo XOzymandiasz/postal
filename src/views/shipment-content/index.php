@@ -29,9 +29,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            'name',
+                [
+                        'attribute' => 'name',
+                    'label' => Module::t('postal', 'Name'),
+                ],
             [
                 'attribute' => 'is_active',
+                'label' => Module::t('postal', 'Is Active'),
                 'filter' => $searchModel::activeOptions(),
                 'value' => function (ShipmentContent $model) {
                     return $model->is_active

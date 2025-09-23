@@ -37,17 +37,22 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'direction',
                 'filter' => $searchModel::getDirectionsNames(),
+                'label' => Module::t('postal', 'Direction'),
                 'value' => 'directionName',
             ],
-            'number',
+            [
+                    'attribute' => 'number',
+                'label' => Module::t('postal', 'Number'),
+            ],
             [
                 'attribute' => 'provider',
                 'value' => 'providerName',
+                'label' => Module::t('postal', 'Provider'),
                 'filter' => $searchModel::getProvidersNames(),
             ],
             [
                 'attribute' => 'content_id',
-                'label' => 'Content',
+                'label' => Module::t('postal', 'Content'),
                 'value' => function (Shipment $model) {
                     return $model->content->name ?? Module::t('common', '(empty)');
                 },
@@ -60,11 +65,8 @@ $this->params['breadcrumbs'][] = $this->title;
                 'visible' => !$searchModel->isCreatorScenario(),
             ],
             //'creator_id',
-            //'created_at',
-            //'updated_at',
             //'guid',
             //'buffer_id',
-            //'finished_at',
             //'shipment_at',
             //'api_data',
             [
@@ -96,11 +98,24 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
+                'attribute' => 'created_at',
+                'label' => Module::t('postal', 'Created At'),
+            ],
+            [
+                'attribute' => 'updated_at',
+                'label' => Module::t('postal', 'Updated At'),
+            ],
+            [
+                'attribute' => 'finished_at',
+                'label' => Module::t('postal', 'Finished At'),
+            ],
+            [
                 'class' => ActionColumn::class,
                 'urlCreator' => function ($action, Shipment $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 }
             ],
+
 
         ],
     ]); ?>
