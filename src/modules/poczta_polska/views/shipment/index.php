@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
             [
                 'label' => Module::t('poczta-polska', 'Number'),
                 'value' => function(PrzesylkaType $model): ?string {

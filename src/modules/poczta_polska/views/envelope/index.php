@@ -49,8 +49,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
                 'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
-
                     [   'attribute' => 'envelopeId',
                         'label' => Module::t('poczta-polska', 'Envelope ID'),
                         'value' => function (EnvelopeInfoType $data) {
