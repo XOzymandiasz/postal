@@ -68,5 +68,11 @@ return [
     'Create Sender Address' => 'Utwórz adres nadawcy',
     'Default Direction' => 'Domyślny kierunek',
     'Search for an address...' => 'Wyszukiwanie adresu...',
-    'Both' => 'Nadawca i Odbiorca'
+    'Both' => 'Nadawca i Odbiorca',
+    'Fedex' => 'Fedex',
+    'role' => 'rola',
+    'UPS' => 'UPS',
+    'rule' => 'zasada',
+    'Is Sender' => 'Czy nadawca',
+    'Is Receiver' => 'Czy odbiorca'
 ];
