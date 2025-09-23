@@ -35,7 +35,9 @@ return [
     'Creator ID' => 'ID twórcy',
     'Guid' => 'Guid',
     'Shipment At' => 'Nadane dnia',
-    'Finished At' => 'Zakończone dnia',
+    'Finished At' => 'Zakończenie',
+    'Created At' => 'Utworzono',
+    'Updated At' => 'Zaktualizowano',
     'Direction' => 'Kierunek',
     'The requested page does not exist.' => 'Nie znaleziono strony.',
     'Provider' => 'Dostawca',
@@ -74,5 +76,6 @@ return [
     'UPS' => 'UPS',
     'rule' => 'zasada',
     'Is Sender' => 'Czy nadawca',
-    'Is Receiver' => 'Czy odbiorca'
+    'Is Receiver' => 'Czy odbiorca',
+    'Content' => 'Zawartość'
 ];
