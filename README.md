@@ -7,7 +7,7 @@ Module for
 # INSTALLATION
 Add following lines to require section in composer.json:
 ```
-"xozymandias/postal": "1.0.3"
+"xozymandias/postal": "1.0.4"
 ```
 or use command
 ```
@@ -95,10 +95,8 @@ composer require xozymandias/postal
 'controllerMap' => [
         'migrate' => [
             'class' => yii\console\controllers\MigrateController::class,
-            'migrationPath' => null,
-            'migrationNamespaces' => [
-                'XOzymandias\Yii2Postal\migrations',
-                'app\migrations', // <--- replace with your migrations
+            'migrationsPath' => [
+                '@xozymandias\yii2postal\migrations',
             ],
         ],
     ],
