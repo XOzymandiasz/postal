@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\models;
 
+use JsonSerializable;
 use Throwable;
 use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\Module;
@@ -15,6 +16,7 @@ use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Json;
 use yii\web\IdentityInterface;
 
 /**
@@ -186,12 +188,23 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
     {
         $this->shipment_at = null;
         $this->finished_at = null;
+
         if ($mail === null) {
             $this->api_data = null;
             return;
         }
+
         $this->number = $mail->getShipmentNumber();
-        $this->api_data = serialize($mail);
+
+        if (method_exists($mail, 'toArray')) {
+            $this->api_data = Json::encode($mail->toArray());
+        }
+        elseif ($mail instanceof JsonSerializable) {
+            $this->api_data = Json::encode($mail->jsonSerialize());
+        }
+        else {
+            $this->api_data = Json::encode(json_decode(json_encode($mail), true));
+        }
 
         if ($mail->isFound()) {
             $this->shipment_at = $mail->getShipmentAt();
