@@ -40,7 +40,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'guid',
             'finished_at',
             'shipment_at',
-            'api_data',
         ],
     ]) ?>
 
