@@ -5,6 +5,7 @@ namespace XOzymandias\Yii2Postal\models;
 use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\Module;
 use XOzymandias\Yii2Postal\ModuleEnsureTrait;
+use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
 use yii\base\InvalidCallException;
 use yii\base\InvalidConfigException;
 use yii\behaviors\TimestampBehavior;
@@ -150,6 +151,31 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         return ArrayHelper::map($models, 'id', function ($model) {
             return $model->getFullInfo();
         });
+    }
+
+    public function getMail(): ?Mail
+    {
+        if (empty($this->api_data)) {
+            return null;
+        }
+        return unserialize($this->api_data);
+    }
+
+    public function setMail(?Mail $mail): void
+    {
+        $this->shipment_at = null;
+        $this->finished_at = null;
+        if ($mail === null) {
+            $this->api_data = null;
+            return;
+        }
+        $this->number = $mail->getShipmentNumber();
+        $this->api_data = serialize($mail);
+
+        if ($mail->isFound()) {
+            $this->shipment_at = $mail->getShipmentAt();
+            $this->finished_at = $mail->getFinishedAt();
+        }
     }
 
     public function getDirection(): string
