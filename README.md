@@ -7,7 +7,7 @@ Module for
 # INSTALLATION
 Add following lines to require section in composer.json:
 ```
-"xozymandias/postal": "1.0.6"
+"xozymandias/postal": "1.0.7"
 ```
 or use command
 ```
