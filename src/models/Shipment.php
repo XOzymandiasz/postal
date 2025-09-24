@@ -2,10 +2,12 @@
 
 namespace XOzymandias\Yii2Postal\models;
 
+use Throwable;
 use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\Module;
 use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
+use Yii;
 use yii\base\InvalidCallException;
 use yii\base\InvalidConfigException;
 use yii\behaviors\TimestampBehavior;
@@ -158,7 +160,22 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         if (empty($this->api_data)) {
             return null;
         }
-        return unserialize($this->api_data);
+
+        try {
+            $data = is_string($this->api_data) ? $this->api_data : json_decode($this->api_data);
+
+            if(!is_array($data)) {
+                return null;
+            }
+
+            return new Mail($data);
+        } catch (Throwable $exception) {
+            Yii::error([
+                'build_failed' => $this->api_data,
+                'exception' => $exception->getMessage(),
+            ], __METHOD__);
+            return null;
+        }
     }
 
     public function setMail(?Mail $mail): void
