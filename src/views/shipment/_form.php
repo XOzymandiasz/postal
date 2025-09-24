@@ -43,6 +43,7 @@ use kartik\select2\Select2;
     <?= $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
         'role' => ShipmentAddress::ROLE_SENDER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
+        'addressProperty' => 'senderAddress',
     ])->hint(Html::a(
         Module::t('postal', 'Create Sender Address'), [
             'shipment-address/create']
@@ -51,6 +52,7 @@ use kartik\select2\Select2;
     <?= $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
         'role' => ShipmentAddress::ROLE_RECEIVER,
         'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
+        'addressProperty' => 'receiverAddress',
     ])->hint(Html::a(
         Module::t('postal', 'Create Receiver Address'), [
             'shipment-address/create']
