@@ -2,13 +2,10 @@
 
 namespace XOzymandias\Yii2Postal\models;
 
-use Exception;
-use Throwable;
 use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\Module;
 use XOzymandias\Yii2Postal\ModuleEnsureTrait;
 use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
-use Yii;
 use yii\base\InvalidCallException;
 use yii\base\InvalidConfigException;
 use yii\behaviors\TimestampBehavior;
@@ -16,7 +13,6 @@ use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Json;
 use yii\web\IdentityInterface;
 
 /**
@@ -162,39 +158,7 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         if (empty($this->api_data)) {
             return null;
         }
-
-        $data = is_string($this->api_data) ? Json::decode($this->api_data) : $this->api_data;
-
-
-        try {
-            $data = is_string($this->api_data)
-                ? Json::decode($this->api_data, true)   // true => tablica, nie stdClass
-                : $this->api_data;
-
-            if (!is_array($data)) {
-                Yii::warning(['mail_build_skipped' => 'Api data is not an array', 'api_data_type' => gettype($data)], __METHOD__);
-                return null;
-            }
-
-            if (!array_key_exists('mailStatus', $data)) {
-                Yii::warning(['mail_build_missing_mailStatus' => $data], __METHOD__);
-            }
-            if (!isset($data['mailInfo']) || !is_array($data['mailInfo'])) {
-                Yii::warning(['mail_build_missing_mailInfo' => $data], __METHOD__);
-            }
-
-            return new Mail($data);
-
-        } catch (Throwable $e) {
-            Yii::error([
-                'mail_build_failed' => $this->api_data,
-                'exception' => [
-                    'message' => $e->getMessage(),
-                ],
-            ], __METHOD__);
-
-            return null;
-        }
+        return unserialize($this->api_data);
     }
 
     public function setMail(?Mail $mail): void
