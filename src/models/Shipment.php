@@ -162,7 +162,11 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         }
 
         try {
-            $data = is_string($this->api_data) ? $this->api_data : json_decode($this->api_data);
+            $data = is_string($this->api_data)
+                ? json_decode($this->api_data, true)
+                : (is_array($this->api_data)
+                    ? $this->api_data
+                    : json_decode(json_encode($this->api_data), true));
 
             if(!is_array($data)) {
                 return null;
