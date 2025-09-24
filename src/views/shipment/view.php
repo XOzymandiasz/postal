@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var XOzymandias\Yii2Postal\models\Shipment $model */
 
-$this->title = $model->number;
+$this->title = 'Przesyłka' . $model->number;
 $this->params['breadcrumbs'][] = ['label' => Module::t('common', 'Postal Shipments'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
@@ -33,11 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'direction',
             'number',
             'provider',
-            'content_id',
-            'creator_id',
+            //'content_id',
+            //'creator_id',
             'created_at',
             'updated_at',
-            'guid',
+            //'guid',
             'finished_at',
             'shipment_at',
         ],
