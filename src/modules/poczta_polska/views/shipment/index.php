@@ -91,13 +91,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'buttons' => [
                     'download-label' => function ($url) {
                         return Html::a(
-                            '<i class="fa fa-envelope"></i>',
+                            '📥',
                             $url,
                             [
                                 'title' => Module::t('poczta-polska', 'Label'),
                                 'aria-label' => Module::t('poczta-polska', 'Label'),
                                 'data-pjax' => '0',
-                                'class' => 'btn btn-xs btn-primary',
+                                'class' => 'btn btn-xs btn-default',
+                                'style' => '
+                                    font-size:14px;
+                                    line-height:1;
+                                    position:relative;
+                                    top:-2px;
+                                    padding:1px 1px;
+                                ',
                             ]
                         );
                     },

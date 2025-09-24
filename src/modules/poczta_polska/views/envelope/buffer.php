@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'class' => ActionColumn::class,
                         'visible' => $searchModel->isBuffer(),
-                        'template' => '{view} {delete} {shipment} {update}',
+                        'template' => '{view} {delete} {update} {shipment}',
                         'urlCreator' => function ($action, $model, $key) {
                             if ($action === 'shipment') {
                                 return Url::to(['shipment/index', 'bufferId' => $key]);
@@ -90,13 +90,17 @@ $this->params['breadcrumbs'][] = $this->title;
                         'buttons' => [
                             'shipment' => function ($url) {
                                 return Html::a(
-                                    '<i class="fa fa-envelope"></i>',
+                                    '📦',
                                     $url,
                                     [
-                                        'title' => Module::t('poczta-polska', 'Shipments'),
-                                        'aria-label' => Module::t('poczta-polska', 'Shipments'),
-                                        'data-pjax' => '0',
-                                        'class' => 'btn btn-xs btn-primary',
+                                        'data-method' => 'post',
+                                        'class' => 'btn btn-xs btn-default',
+                                        'style' => '
+                                            font-size:14px;
+                                            line-height:1;
+                                            position:relative;
+                                            top:-2px;
+                                            padding:1px 1px;',
                                     ]
                                 );
                             },

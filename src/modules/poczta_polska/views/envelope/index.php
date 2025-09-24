@@ -86,11 +86,22 @@ $this->params['breadcrumbs'][] = $this->title;
                         'template' => '{sender-book}',
                         'buttons' => [
                             'sender-book' => function ($url, EnvelopeInfoType $data) {
-                                return Html::a('BOOK', $url, [
-                                    'data-method' => 'post',
-                                ]);
-                            }
-                        ]
+                                return Html::a(
+                                    '📖',
+                                    $url,
+                                    [
+                                        'data-method' => 'post',
+                                        'class' => 'btn btn-xs btn-default',
+                                        'style' => '
+                                            font-size:14px;
+                                            line-height:1;
+                                            position:relative;
+                                            top:-2px;
+                                            padding:1px 1px;',
+                                    ]
+                                );
+                            },
+                        ],
                     ]
                 ],
             ]); ?>
