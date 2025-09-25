@@ -14,7 +14,7 @@ class PocztaPolskaShipmentUrlComponent extends Component
 
 
     public string $paramBufferId = 'bufferId';
-    public int $paramId = 0;
+    public string $paramId = 'id';
     public ?string $moduleId = null;
 
     public function getCreateInURL(int $bufferId, array $params = []): ?string
