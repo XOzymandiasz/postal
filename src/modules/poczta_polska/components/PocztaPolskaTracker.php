@@ -30,6 +30,10 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
         }
     }
 
+    public function externalTrackingUrl(string $number): string {
+        return $this->client->trackingUrl . $number;
+    }
+
     public function checkShipment(string $number): ?ShipmentInterface
     {
         return $this->checkMail($number);

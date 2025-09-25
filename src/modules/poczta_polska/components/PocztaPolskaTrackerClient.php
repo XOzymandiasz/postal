@@ -27,10 +27,6 @@ class PocztaPolskaTrackerClient extends Component
 
     public array $clientOptions = [];
 
-    public function externalTrackingUrl(string $number): string {
-        return $this->trackingUrl . $number;
-    }
-
     /**
      * @throws ForbiddenAuthException
      * @throws InvalidConfigException
