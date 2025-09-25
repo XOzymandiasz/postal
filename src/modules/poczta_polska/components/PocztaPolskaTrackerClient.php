@@ -19,6 +19,7 @@ class PocztaPolskaTrackerClient extends Component
 {
 
     public string $apiUrl = 'https://uss.poczta-polska.pl/uss/v2.0/tracking';
+    public string $trackingUrl = 'https://emonitoring.poczta-polska.pl/?numer=';
     public string $language = 'PL';
     public string $login = 'sledzeniepp';
     public string $password = '';
@@ -26,6 +27,9 @@ class PocztaPolskaTrackerClient extends Component
 
     public array $clientOptions = [];
 
+    public function externalTrackingUrl(string $number): string {
+        return $this->trackingUrl . $number;
+    }
 
     /**
      * @throws ForbiddenAuthException
@@ -106,7 +110,7 @@ class PocztaPolskaTrackerClient extends Component
             if ($response->isOk) {
                 return $response->getData();
             }
-            \Yii::warning([
+            Yii::warning([
                 'message' => 'Problem with checkMailex',
                 'response' => $response,
             ]);
@@ -114,7 +118,6 @@ class PocztaPolskaTrackerClient extends Component
             return null;
         }
     }
-
 
     /**
      * @throws Exception
