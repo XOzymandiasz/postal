@@ -51,7 +51,7 @@ class ShipmentController extends Controller
     {
 
         $searchModel = new ShipmentPostSearch();
-        if ($this->module->isOnlyCreator) {
+        if ($searchModel->creator_id !== null && $this->module->isOnlyCreator) {
             $searchModel->setScenario(ShipmentPostSearch::SCENARIO_CREATOR);
             $searchModel->creator_id = Yii::$app->user->getId();
         }
