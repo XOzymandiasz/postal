@@ -20,10 +20,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Module::t('common', 'Create Shipment Address Sender'),
-            ['create', 'defaultRole' => ShipmentAddress::ROLE_SENDER], ['class' => 'btn btn-success']) ?>
-        <?= Html::a(Module::t('common', 'Create Shipment Address Receiver'),
-            ['create', 'defaultRole' => ShipmentAddress::ROLE_RECEIVER], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Module::t('common', 'Create Shipment Address'),
+            ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
