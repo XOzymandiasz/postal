@@ -11,7 +11,6 @@ class AddressForm extends Model
 {
     public const DEFAULT_COUNTRY = 'PL';
 
-    public string $direction = '';
     public string $name = '';
     public string $postal_code = '';
     public string $city = '';
@@ -34,7 +33,6 @@ class AddressForm extends Model
     {
         return [
             [['name', 'city', 'postal_code', 'house_number'], 'required'],
-            ['!direction', 'string'],
             [['isSender', 'isReceiver'], 'boolean'],
             [['name', 'name_2'], 'string', 'max' => 100],
             [['phone', 'mobile', 'contact_person'], 'string', 'max' => 15],
