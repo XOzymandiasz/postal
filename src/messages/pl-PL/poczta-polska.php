@@ -136,5 +136,7 @@ return [
     'Invalid apartment number.' => 'Nieprawidłowy numer mieszkania.',
     'Add Shipment' => 'Dodaj przesyłkę',
     'Not exist' => 'Nie istnieje',
-    'Other error' => 'Inny błąd'
+    'Other error' => 'Inny błąd',
+	'Start Date' => 'Od',
+	'End Date' => 'Do',
 ];
