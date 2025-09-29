@@ -77,5 +77,6 @@ return [
     'rule' => 'zasada',
     'Is Sender' => 'Czy nadawca',
     'Is Receiver' => 'Czy odbiorca',
-    'Content' => 'Zawartość'
+    'Content' => 'Zawartość',
+    'None' => 'Brak',
 ];
