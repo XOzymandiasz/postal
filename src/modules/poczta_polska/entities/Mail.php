@@ -16,7 +16,7 @@ class Mail extends Model implements ShipmentInterface
 
     public int $mailStatus;
     public string $number;
-    public MailInfo $mailInfo;
+    public ?MailInfo $mailInfo;
 
     public function __construct(array $config = [])
     {
