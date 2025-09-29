@@ -30,8 +30,14 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     public ?string $finished_at = null;
     public ?string $shipment_at = null;
     public ?string $api_data = null;
-    public ?string $refTable = null;
-    public ?string $refId = null;
+    /**
+     * @var string[] $refTables
+     */
+    public array $refTables = [];
+    /**
+     * @var int[] $refIds
+     */
+    public array $refIds = [];
 
     private ?Shipment $model = null;
 
@@ -54,6 +60,8 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
             [['buffer_id'], 'integer'],
             [['number'], 'string', 'max' => 40],
             [['guid'], 'string', 'max' => 32],
+            ['refTables', 'each', 'rule' => ['string']],
+            ['refIds', 'each', 'rule' => ['integer']],
             [['content_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShipmentContent::class, 'targetAttribute' => ['content_id' => 'id']],
         ];
     }
@@ -117,10 +125,17 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
      */
     protected function saveRef(): bool
     {
-        if (!empty($this->refTable) && !empty($this->refId)) {
-            $this->getModel()->saveAllowedRelated($this->refTable, $this->refId);
+        if (empty($this->refTable) || empty($this->refId)) {
+            return false;
         }
-        return false;
+        foreach ($this->refTables as $idx => $refTable) {
+            $refId = $refIds[$idx] ?? null;
+            if ($refId === null || $refTable === null) {
+                continue;
+            }
+            $this->getModel()->saveAllowedRelated($refTable, $refId);
+        }
+        return true;
     }
 
     /**
