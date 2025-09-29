@@ -1,6 +1,7 @@
 <?php
 
 use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\widgets\ContentFormWidget;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
@@ -17,8 +18,8 @@ $this->params['breadcrumbs'][] = Module::t('common', 'Update');
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+	<?= ContentFormWidget::widget([
+		'model' => $model,
+	]) ?>
 
 </div>

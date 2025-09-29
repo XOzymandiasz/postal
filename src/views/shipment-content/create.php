@@ -2,6 +2,7 @@
 
 use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
+use XOzymandias\Yii2Postal\widgets\ContentFormWidget;
 
 /** @var yii\web\View $this */
 /** @var XOzymandias\Yii2Postal\models\ShipmentContent $model */
@@ -14,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
-        'model' => $model,
+    <?= ContentFormWidget::widget([
+			'model' => $model,
     ]) ?>
 
 </div>
