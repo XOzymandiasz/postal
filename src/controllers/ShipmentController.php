@@ -86,10 +86,8 @@ class ShipmentController extends Controller
                 return $this->redirect(['index']);
             }
         }
-
-        Yii::debug([
-            'model' => $model->getAttributes(),
-        ], __METHOD__);
+        
+        
         return $this->render('create', [
             'model' => $model,
             'direction' => ShipmentDirectionInterface::DIRECTION_OUT,
