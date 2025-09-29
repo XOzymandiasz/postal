@@ -73,28 +73,48 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'senderName',
                 'label' => Module::t('postal', 'Sender Name'),
                 'value' => function (Shipment $model) {
-                    return $model->senderAddress->getFullName();
+                    if ($model->senderAddress !== null) {
+                        return $model->senderAddress->getFullName();
+                    }
+                    else{
+                        return Module::t('postal', 'None');
+                    }
                 }
             ],
             [
                 'attribute' => 'senderAddress',
                 'label' => Module::t('postal', 'Sender Address'),
                 'value' => function (Shipment $model) {
-                    return $model->senderAddress->getFullLocation();
+                    if ($model->senderAddress !== null) {
+                        return $model->senderAddress->getFullLocation();
+                    }
+                    else{
+                        return Module::t('postal', 'None');
+                    }
                 }
             ],
             [
                 'attribute' => 'receiverName',
                 'label' => Module::t('postal', 'Receiver Name'),
                 'value' => function (Shipment $model) {
-                    return $model->receiverAddress->getFullName();
+                    if ($model->receiverAddress !== null) {
+                        return $model->receiverAddress->getFullName();
+                    }
+                    else{
+                        return Module::t('postal', 'None');
+                    }
                 }
             ],
             [
                 'attribute' => 'receiverAddress',
                 'label' => Module::t('postal', 'Receiver Address'),
                 'value' => function (Shipment $model) {
-                    return $model->receiverAddress->getFullLocation();
+                    if ($model->receiverAddress !== null) {
+                        return $model->receiverAddress->getFullLocation();
+                    }
+                    else{
+                        return Module::t('postal', 'None');
+                    }
                 }
             ],
             [
