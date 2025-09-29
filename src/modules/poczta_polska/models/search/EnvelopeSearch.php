@@ -59,6 +59,12 @@ class EnvelopeSearch extends Model
         ];
     }
 
+	public function attributeLabels(): array{
+		return [
+			'startDate' => Module::t('poczta-polska', 'Start Date'),
+			'endDate' => Module::t('poczta-polska', 'End Date'),
+		];
+	}
 
     /**
      * @throws InvalidConfigException
