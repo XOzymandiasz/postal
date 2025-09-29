@@ -20,12 +20,17 @@ class ShipmentUrlComponent extends Component
     public string $paramBufferId = 'bufferId';
     public string $paramGuid = 'guid';
     public ?string $moduleId = null;
+
+    public function init(): void
+    {
+        parent::init();
+        if (!empty($this->moduleId)) {
+            throw new InvalidConfigException('ModuleId is not configured');
+        }
+    }
+    
     public function getAfterCreateURL(int $shipmentId, string $provider, array $params = []): ?string
     {
-        if($this->moduleId == null){
-            throw new InvalidConfigException('moduleId is required');
-        }
-
         $route = $this->providersCreateRoutes[$provider] ?? null;
         if ($route === null) {
             return null;
@@ -38,10 +43,6 @@ class ShipmentUrlComponent extends Component
 
     public function getAfterUpdateURL(int $bufferId, string $guid, string $provider, array $params = []): ?string
     {
-        if($this->moduleId == null){
-            throw new InvalidConfigException('moduleId is required');
-        }
-
         $route = $this->providersUpdateRoutes[$provider] ?? null;
         if ($route === null) {
             return null;
