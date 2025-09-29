@@ -6,7 +6,6 @@ namespace XOzymandias\Yii2Postal\tests\unit\forms;
 
 use _support\UnitModelTrait;
 use XOzymandias\Yii2Postal\forms\AddressForm;
-use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\tests\fixtures\ShipmentAddressFixture;
 use Codeception\Test\Unit;
