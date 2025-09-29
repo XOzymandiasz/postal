@@ -13,7 +13,7 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
     public bool $addPostInfo = true;
     public ?string $language = null;
 
-    private PocztaPolskaTrackerClient $client;
+    private ?PocztaPolskaTrackerClient $client;
 
 
     public function __construct(PocztaPolskaTrackerClient $client, array $config = [])
@@ -39,22 +39,26 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
         return $this->checkMail($number);
     }
 
-    public function checkMail(string $number): ?Mail
-    {
-        $data = $this->getMailData($number, $this->language=null);
+	public function checkMail(string $number): ?Mail {
+		$data = $this->getMailData($number, $this->language = null);
 
-        if (!empty($data)) {
-            $mail = $this->createMail($data);
-            if ($mail->isFound()) {
-                return $mail;
-            }
-            if ($mail->isFoundMany()) {
-                Yii::warning('Find many mails for number: ' . $number, __METHOD__);
-                return $mail;
-            }
-        }
-        return null;
-    }
+		if (empty($data)) {
+			return null;
+		}
+
+		$mail = $this->createMail($data);
+		switch ($mail->mailStatus) {
+			case Mail::STATUS_FOUND_MANY:
+				Yii::warning('Find many mails for number: ' . $number, __METHOD__);
+				break;
+			case Mail::STATUS_NOT_FOUND:
+				Yii::warning('Not found any mails for number: ' . $number, __METHOD__);
+				break;
+			case Mail::STATUS_NUMBER_MISSING:
+				Yii::warning('Missing number', __METHOD__);
+		}
+		return $mail;
+	}
 
 
     public function updateModel(Shipment $model): void
