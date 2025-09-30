@@ -83,7 +83,57 @@ class ShipmentPostSearchTest extends Unit
         $this->tester->assertSame($shipment->id, $dataProvider->getModels()[0]->id);
     }
 
-    public function testSenderNameFilter(): void
+	public function testNoNumberFilter(): void{
+		$dataProvider = $this->search->search(['ShipmentPostSearch' => [
+			'noNumber' => true
+		]]);
+		$models = $dataProvider->getModels();
+		$this->tester->assertCount(1, $models);
+		$this->tester->assertSame(2, $models[0]->id);
+	}
+
+	public function testCreatedAtFilterFrom(): void
+	{
+		$dataProvider = $this->search->search([
+			'ShipmentPostSearch' => [
+				'createdAtFrom' => date('Y-m-d H:i:s', time() - 24 * 60 * 60),
+			],
+		]);
+		codecept_debug($dataProvider->query->createCommand()->rawSql);
+		$models = $dataProvider->getModels();
+		$this->tester->assertCount(1, $models);
+		$this->tester->assertSame(1, $models[0]->id);
+	}
+
+	public function testCreatedAtFilterTo(): void
+	{
+		$dataProvider = $this->search->search([
+			'ShipmentPostSearch' => [
+				'createdAtTo' => date('Y-m-d H:i:s', time() - 24 * 60 * 60),
+			],
+		]);
+
+		$models = $dataProvider->getModels();
+		$this->tester->assertCount(1, $models);
+		$this->tester->assertSame(2, $models[0]->id);
+	}
+
+	public function testCreatedAtFilterBetween(): void
+	{
+		$dataProvider = $this->search->search([
+			'ShipmentPostSearch' => [
+				'createdAtFrom' => date('Y-m-d H:i:s', time() - 24 * 60 * 60),
+				'createdAtTo'   => date('Y-m-d H:i:s'),
+			],
+		]);
+
+		$models = $dataProvider->getModels();
+		$this->tester->assertCount(1, $models);
+		$this->tester->assertSame(1, $models[0]->id);
+	}
+
+
+	public function testSenderNameFilter(): void
     {
         /**
          * @var ShipmentAddress $address
