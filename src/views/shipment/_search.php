@@ -17,17 +17,21 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+	<?= $form->field($model, 'createdAtFrom')->input('date') ?>
+	<?= $form->field($model, 'createdAtTo')->input('date') ?>
+	<?= $form->field($model, 'noNumber')->checkbox() ?>
 
-    <?= $form->field($model, 'direction') ?>
+    <?php //$form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'number') ?>
+    <?php //$form->field($model, 'direction') ?>
 
-    <?= $form->field($model, 'provider') ?>
+    <?php //$form->field($model, 'number') ?>
 
-    <?= $form->field($model, 'content_id') ?>
+    <?php //$form->field($model, 'provider') ?>
 
-    <?= $form->field($model, 'buffer_id') ?>
+    <?php //$form->field($model, 'content_id') ?>
+
+    <?php //$form->field($model, 'buffer_id') ?>
 
     <?php // echo $form->field($model, 'creator_id') ?>
 
