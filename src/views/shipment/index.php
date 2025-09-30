@@ -19,13 +19,31 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a(Module::t('common', 'Create In Postal Shipment'), ['create-in'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a(Module::t('common', 'Create Out Postal Shipment'), ['create-out'], ['class' => 'btn btn-success']) ?>
+	<p>
+		<?= Html::a(
+			'<i class="fa fa-inbox"></i>',
+			['create-in'],
+			[
+				'class' => 'btn btn-success',
+				'title' => Module::t('common', 'Create In Postal Shipment'),
+				'aria-label' => Module::t('common', 'Create In Postal Shipment'),
+				'data-toggle' => 'tooltip',
+			]
+		) ?>
 
-    </p>
+		<?= Html::a(
+			'<i class="fa fa-paper-plane"></i>',
+			['create-out'],
+			[
+				'class' => 'btn btn-success',
+				'title' => Module::t('common', 'Create Out Postal Shipment'),
+				'aria-label' => Module::t('common', 'Create Out Postal Shipment'),
+				'data-toggle' => 'tooltip',
+			]
+		) ?>
+	</p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
 
 
     <?=
