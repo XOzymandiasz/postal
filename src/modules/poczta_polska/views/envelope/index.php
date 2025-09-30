@@ -84,24 +84,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'class' => ActionColumn::class,
                         'template' => '{sender-book}',
-                        'buttons' => [
-                            'sender-book' => function ($url, EnvelopeInfoType $data) {
-                                return Html::a(
-                                    '📖',
-                                    $url,
-                                    [
-                                        'data-method' => 'post',
-                                        'class' => 'btn btn-xs btn-default',
-                                        'style' => '
-                                            font-size:14px;
-                                            line-height:1;
-                                            position:relative;
-                                            top:-2px;
-                                            padding:1px 1px;',
-                                    ]
-                                );
-                            },
-                        ],
+						'buttons' => [
+							'sender-book' => function ($url, EnvelopeInfoType $data) {
+								return Html::a(
+									'<i class="fa fa-book"></i>',
+									$url,
+									[
+										'data-method' => 'post',
+										'class' => 'btn btn-xs btn-default',
+										'title' => Module::t('poczta-polska', 'Sender Book'),
+										'aria-label' => Module::t('poczta-polska', 'Sender Book'),
+										'style' => 'position:relative; top:-1px;',
+									]
+								);
+							},
+						],
                     ]
                 ],
             ]); ?>

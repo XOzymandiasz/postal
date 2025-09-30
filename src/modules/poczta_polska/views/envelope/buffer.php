@@ -88,22 +88,19 @@ $this->params['breadcrumbs'][] = $this->title;
                             return Url::to([$action, 'id' => $key]);
                         },
                         'buttons' => [
-                            'shipment' => function ($url) {
-                                return Html::a(
-                                    '📦',
-                                    $url,
-                                    [
-                                        'data-method' => 'post',
-                                        'class' => 'btn btn-xs btn-default',
-                                        'style' => '
-                                            font-size:14px;
-                                            line-height:1;
-                                            position:relative;
-                                            top:-2px;
-                                            padding:1px 1px;',
-                                    ]
-                                );
-                            },
+							'shipment' => function ($url) {
+								return Html::a(
+									'<i class="fa fa-envelope"></i>',
+									$url,
+									[
+										'data-method' => 'post',
+										'class' => 'btn btn-xs btn-default',
+										'title' => Module::t('poczta-polska', 'Shipments'),
+										'aria-label' => Module::t('poczta-polska', 'Shipments'),
+										'style' => 'position:relative; top:-1px;',
+									]
+								);
+							},
                         ],
                         'contentOptions' => ['style' => 'white-space:nowrap;'],
                         'headerOptions' => ['style' => 'width:1%'],
