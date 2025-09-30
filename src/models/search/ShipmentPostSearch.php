@@ -6,6 +6,7 @@ use XOzymandias\Yii2Postal\models\query\ShipmentAddressQuery;
 use XOzymandias\Yii2Postal\models\query\ShipmentQuery;
 use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\models\ShipmentContent;
+use XOzymandias\Yii2Postal\Module;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
@@ -21,6 +22,10 @@ class ShipmentPostSearch extends Shipment
     public ?string $senderAddress = null;
     public ?string $receiverAddress = null;
 
+	public ?string $createdAtFrom = null;
+	public ?string $createdAtTo = null;
+
+	public bool $noNumber = false;
 
     public static function getDirectionsNames(): array
     {
@@ -47,7 +52,7 @@ class ShipmentPostSearch extends Shipment
         );
     }
 
-    public static function getCreatorsNames(): array
+    public static function getCreatorsNames(): array #todo:
     {
         return ArrayHelper::map(
             ShipmentContent::find()->andWhere([
@@ -70,13 +75,22 @@ class ShipmentPostSearch extends Shipment
             [['senderName', 'receiverName', 'senderAddress', 'receiverAddress'], 'trim'],
             [['senderName', 'receiverName', 'senderAddress', 'receiverAddress', 'direction', 'number', 'provider',
                 'created_at', 'updated_at', 'guid', 'buffer_id', 'finished_at', 'shipment_at', 'api_data'], 'safe'],
+			[['createdAtFrom', 'createdAtTo'], 'string'],
+			[['noNumber'], 'boolean'],
         ];
     }
 
-    public function attributes(): array
-    {
-        return array_merge(parent::attributes(), ['sender_name', 'receiver_name', 'sender_address', 'receiver_address']);
-    }
+	public function attributeLabels(): array {
+		return [
+			'noNumber' => Module::t('postal', 'No Number'),
+			'createdAtFrom' => Module::t('postal', 'From'),
+			'createdAtTo' => Module::t('postal', 'To'),
+			'sender_name' => Module::t('postal', 'Sender Name'),
+			'receiver_name' => Module::t('postal', 'Receiver Name'),
+			'sender_address' => Module::t('postal', 'Sender Address'),
+			'receiver_address' => Module::t('postal', 'Receiver Address'),
+		];
+	}
 
     public function scenarios(): array
     {
@@ -123,6 +137,8 @@ class ShipmentPostSearch extends Shipment
             ->andFilterWhere(['like', 'guid', $this->guid])
             ->andFilterWhere(['like', 'api_data', $this->api_data]);
 
+		$this->applyCreatedAtFilter($query);
+		$this->applyNoNumberFilter($query);
 
         $this->applyReceiverNameFilter($query);
         $this->applySenderNameFilter($query);
@@ -131,6 +147,23 @@ class ShipmentPostSearch extends Shipment
 
         return $dataProvider;
     }
+
+	protected function applyNoNumberFilter(ShipmentQuery $query): void{
+		if($this->noNumber){
+			$query->andWhere(['or', ['number' => null], ['number' => '']]);
+		}
+	}
+
+	protected function applyCreatedAtFilter(ShipmentQuery $query): void{
+		if (!empty($this->createdAtFrom) && !empty($this->createdAtTo)) {
+			$query->andFilterWhere(['between', 'created_at', $this->createdAtFrom, $this->createdAtTo]);
+		}elseif (!empty($this->createdAtFrom)) {
+			$query->andFilterWhere(['>=', 'created_at', $this->createdAtFrom]);
+		}
+		elseif (!empty($this->createdAtTo)) {
+			$query->andFilterWhere(['<=', 'created_at', $this->createdAtTo]);
+		}
+	}
 
     protected function applySenderNameFilter(ShipmentQuery $query): void
     {
