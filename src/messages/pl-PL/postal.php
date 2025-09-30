@@ -81,4 +81,7 @@ return [
     'None' => 'Brak',
 	'Create Shipment - IN' => 'Utwórz przesyłkę przychodzącą',
 	'Create Shipment - OUT' => 'Utwórz przesyłkę wychodzącą',
+	'No Number' => 'Bez numeru',
+	'From' => 'Od',
+	'To' => 'Do',
 ];
