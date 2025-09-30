@@ -139,4 +139,5 @@ return [
     'Other error' => 'Inny błąd',
 	'Start Date' => 'Od',
 	'End Date' => 'Do',
+	'Sender Book' => 'Książka',
 ];
