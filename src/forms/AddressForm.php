@@ -19,7 +19,6 @@ class AddressForm extends Model
     public bool $isReceiver = false;
     public ?string $street = null;
     public ?string $name_2 = null;
-    public ?string $house_number = null;
     public ?string $apartment_number = null;
     public ?string $phone = null;
     public ?string $email = null;
@@ -28,7 +27,9 @@ class AddressForm extends Model
     public ?string $taxID = null;
     public string $country = self::DEFAULT_COUNTRY;
     public ?string $default_role = null;
-    private ?ShipmentAddress $model = null;
+	private ?string $formName = null;
+
+	private ?ShipmentAddress $model = null;
 
     public function rules(): array
     {
@@ -152,4 +153,13 @@ class AddressForm extends Model
     {
         return ShipmentAddress::getRolesNames();
     }
+
+	public function setFormName(string $formName): void {
+		$this->formName = $formName;
+	}
+
+	public function formName(): string {
+		return $this->formName ?? parent::formName();
+	}
+
 }
