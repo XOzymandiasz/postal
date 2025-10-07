@@ -2,6 +2,7 @@
 
 use XOzymandias\Yii2Postal\models\search\ShipmentPostSearch;
 use XOzymandias\Yii2Postal\Module;
+use XOzymandias\Yii2Postal\widgets\DateWidget;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -17,9 +18,21 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-	<?= $form->field($model, 'createdAtFrom')->input('date') ?>
-	<?= $form->field($model, 'createdAtTo')->input('date') ?>
-	<?= $form->field($model, 'noNumber')->checkbox() ?>
+	<div class="row">
+
+		<?= $form->field($model, 'createdAtFrom', ['options' => ['class' => 'col-md-3']])
+			->widget(DateWidget::class)
+		?>
+
+		<?= $form->field($model, 'createdAtTo', ['options' => ['class' => 'col-md-3']])
+			->widget(DateWidget::class)
+		?>
+
+		<?= $form->field($model, 'noNumber', ['options' => ['class' => 'col-md-2']])
+			->checkbox()
+		?>
+
+	</div>
 
     <?php //$form->field($model, 'id') ?>
 
