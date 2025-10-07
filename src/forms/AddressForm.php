@@ -93,19 +93,23 @@ class AddressForm extends Model
         $model->mobile = $this->mobile;
         $model->contact_person = $this->contact_person;
         $model->taxID = $this->taxID;
-
-        if ($this->isSender && $this->isReceiver) {
-            $model->default_role = ShipmentAddress::ROLE_BOTH;
-        }
-        elseif ($this->isSender) {
-            $model->default_role = ShipmentAddress::ROLE_SENDER;
-        }
-        elseif ($this->isReceiver) {
-            $model->default_role = ShipmentAddress::ROLE_RECEIVER;
-        }
-
+		$model->default_role = $this->getDefaultRole();
+		
         return $model->save(false);
     }
+
+	protected function getDefaultRole(): ?string {
+		if ($this->isSender && $this->isReceiver) {
+			return ShipmentAddress::ROLE_BOTH;
+		}
+		elseif ($this->isSender) {
+			return ShipmentAddress::ROLE_SENDER;
+		}
+		elseif ($this->isReceiver) {
+			return ShipmentAddress::ROLE_RECEIVER;
+		}
+		return null;
+	}
 
     public function setModel(ShipmentAddress $model): void
     {
