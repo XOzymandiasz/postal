@@ -11,63 +11,89 @@ use kartik\select2\Select2;
 /** @var yii\web\View $this */
 /** @var ShipmentForm $model */
 /** @var yii\widgets\ActiveForm $form */
+/** @var bool $withProviderField */
+/** @var bool $withSenderField */
+/** @var bool $withReceiverField */
+
 ?>
 
 <div class="postal-shipment-form">
 
-    <?php $form = ActiveForm::begin([
-            'id' => 'shipment-form',
-    ]); ?>
+	<?php $form = ActiveForm::begin([
+		'id' => 'shipment-form',
+	]); ?>
 
+	<div class="row">
+		<div class="col-12 col-sm-8 col-md-6 col-lg-6">
+			<?= $form->field($model, 'number')->textInput(['maxlength' => true, 'autofocus' => true]) ?>
+		</div>
 
-    <?= $form->field($model, 'number')->textInput(['maxlength' => true, 'autofocus' => true]) ?>
+		<div class="col-12 col-sm-4 col-md-6 col-lg-4">
+			<?= $withProviderField ? $form->field($model, 'provider')->widget(Select2::class, [
+				'data' => $model::getProvidersNames(),
+				'options' => ['placeholder' => Module::t('postal', 'Choose provider')],
+			]) : '' ?>
+		</div>
+	</div>
 
-    <?= $form->field($model, 'provider')->widget(Select2::class, [
-        'data' => $model::getProvidersNames(),
-        'options' => ['placeholder' => Module::t('postal', 'Choose provider')],
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			<?= $form->field($model, 'content_id')->widget(Select2::class, [
+				'data' => $model->getContentNames(),
+				'options' => ['placeholder' => Module::t('postal', 'Choose content')],
+				'pluginOptions' => ['tags' => true],
+			])->hint(
+				Html::a(
+					Module::t('postal', 'Create Content'),
+					['shipment-content/create']
+				)
+			) ?>
+		</div>
+	</div>
 
-    ]) ?>
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			<?= $withSenderField ? $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
+				'role' => ShipmentAddress::ROLE_SENDER,
+				'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
+				'addressProperty' => 'senderAddress',
+			])->hint(
+				Html::a(
+					Module::t('postal', 'Create Sender Address'),
+					['shipment-address/create']
+				)
+			) : '' ?>
+		</div>
+	</div>
 
-    <?= $form->field($model, 'content_id')->widget(Select2::class, [
-        'data' => $model->getContentNames(),
-        'options' => ['placeholder' => Module::t('postal', 'Choose content')],
-        'pluginOptions' => [
-            'tags' => true
-        ]
-    ])->hint(Html::a(
-        Module::t('postal', 'Create Content'), [
-            'shipment-content/create'
-        ]
-    )) ?>
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			<?= $withReceiverField ? $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
+				'role' => ShipmentAddress::ROLE_RECEIVER,
+				'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
+				'addressProperty' => 'receiverAddress',
+			])->hint(
+				Html::a(
+					Module::t('postal', 'Create Receiver Address'),
+					['shipment-address/create']
+				)
+			) : '' ?>
+		</div>
+	</div>
 
-    <?= $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
-        'role' => ShipmentAddress::ROLE_SENDER,
-        'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
-        'addressProperty' => 'senderAddress',
-    ])->hint(Html::a(
-        Module::t('postal', 'Create Sender Address'), [
-            'shipment-address/create']
-    )) ?>
+	<div class="row">
+		<div class="col-12 col-sm-6 col-md-4 col-lg-5">
+			<?= ($model->isInScenario() || $model->isUpdateIn())
+				? $form->field($model, 'finished_at')->textInput()
+				: ''
+			?>
+		</div>
+	</div>
 
-    <?= $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
-        'role' => ShipmentAddress::ROLE_RECEIVER,
-        'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
-        'addressProperty' => 'receiverAddress',
-    ])->hint(Html::a(
-        Module::t('postal', 'Create Receiver Address'), [
-            'shipment-address/create']
-    )) ?>
+	<div class="form-group mt-3">
+		<?= Html::submitButton(Module::t('common', 'Save'), ['class' => 'btn btn-success']) ?>
+	</div>
 
-
-    <?= ($model->isInScenario() || $model->isUpdateIn())
-        ? $form->field($model, 'finished_at')->textInput()
-        : ''
-    ?>
-
-    <div class="form-group">
-        <?= Html::submitButton(Module::t('common', 'Save'), ['class' => 'btn btn-success']) ?>
-    </div>
-
-    <?php ActiveForm::end(); ?>
+	<?php ActiveForm::end(); ?>
 
 </div>

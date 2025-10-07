@@ -11,18 +11,26 @@ use yii\widgets\ActiveForm;
 
 <div class="shipment-content-form">
 
-    <?php $form = ActiveForm::begin([
-            'id' => 'shipment-content-form',
-    ]); ?>
+	<?php $form = ActiveForm::begin([
+		'id' => 'shipment-content-form',
+	]); ?>
 
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+	<div class="row">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+			<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+		</div>
+	</div>
 
-    <?= $form->field($model, 'is_active')->checkbox() ?>
+	<div class="row">
+		<div class="col-6 col-sm-6 col-md-2 col-lg-1">
+			<?= $form->field($model, 'is_active')->checkbox() ?>
+		</div>
+	</div>
 
-    <div class="form-group">
-        <?= Html::submitButton(Module::t('common', 'Save'), ['class' => 'btn btn-success']) ?>
-    </div>
+	<div class="form-group">
+		<?= Html::submitButton(Module::t('common', 'Save'), ['class' => 'btn btn-success']) ?>
+	</div>
 
-    <?php ActiveForm::end(); ?>
+	<?php ActiveForm::end(); ?>
 
 </div>
