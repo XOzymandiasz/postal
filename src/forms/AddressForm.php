@@ -14,6 +14,7 @@ class AddressForm extends Model
     public string $name = '';
     public string $postal_code = '';
     public string $city = '';
+	public string $house_number = '';
     public bool $isSender = false;
     public bool $isReceiver = false;
     public ?string $street = null;
