@@ -9,6 +9,8 @@
         "yiisoft/yii2": "^2.0",
         "kartik-v/yii2-widget-select2": "^2.2",
         "kartik-v/yii2-widget-depdrop": "^1.0",
+        "kartik-v/yii2-widget-datetimepicker":"^1.5",
+        "kartik-v/yii2-widget-datepicker":"^1.4",
         "edzima/yii2-teryt": "^1.1",
         "wsdltophp/packagebase": "^5.0"
     },
