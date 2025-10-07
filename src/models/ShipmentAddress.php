@@ -39,6 +39,8 @@ class ShipmentAddress extends ActiveRecord
     public const ROLE_RECEIVER = ShipmentDirectionInterface::DIRECTION_IN;
     public const ROLE_BOTH = 'BOTH';
 
+	protected const DEFAULT_COUNTRY_VALUE = 'PL';
+
     public static function tableName(): string
     {
         return '{{%shipment_address}}';
@@ -49,7 +51,7 @@ class ShipmentAddress extends ActiveRecord
         return [
             [['street', 'apartment_number', 'name_2', 'phone', 'mobile', 'contact_person', 'email'],
                 'default', 'value' => null],
-            [['country'], 'default', 'value' => 'PL'],
+            [['country'], 'default', 'value' => self::DEFAULT_COUNTRY_VALUE],
             [['name', 'house_number', 'postal_code', 'city'], 'required'],
             [['name', 'street', 'city'], 'string', 'max' => 255],
             [['taxID'], 'string', 'max' => 15],
