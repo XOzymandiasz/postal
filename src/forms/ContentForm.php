@@ -68,9 +68,4 @@ class ContentForm extends Model
         return $this->model;
     }
 
-    public function getID(): int
-    {
-        return $this->model->id;
-    }
-
 }

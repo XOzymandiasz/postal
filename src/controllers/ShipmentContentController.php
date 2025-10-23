@@ -72,7 +72,7 @@ class ShipmentContentController extends Controller
         $model = new ContentForm();
 
         if ($model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->getID()]);
+            return $this->redirect(['view', 'id' => $model->getModel()->id]);
         }
 
         return $this->render('create', [
