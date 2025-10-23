@@ -39,18 +39,18 @@ class AddressForm extends Model
     public function rules(): array
     {
         return [
-            [['name', 'city', 'postal_code', 'house_number'], 'required'],
-            [['isSender', 'isReceiver'], 'boolean'],
-            [['name', 'name_2'], 'string', 'max' => 100],
-            [['phone', 'mobile', 'contact_person'], 'string', 'max' => 15],
-            [['email'], 'string', 'min' => 5, 'max' => 320],
-            [['taxID'], 'string', 'max' => 15],
-            [['house_number'], 'string', 'max' => 20],
-            [['street', 'city'], 'string', 'max' => 60],
-            [['country'], 'string', 'max' => 2],
-            [['apartment_number', 'postal_code'], 'string', 'max' => 10],
-            ['email', 'email'],
-            [['default_role'], 'in', 'range' => array_keys($this->getRolesNames())],
+			[['name', 'city', 'postal_code', 'house_number'], 'required'],
+			[['isSender', 'isReceiver'], 'boolean'],
+			[['name', 'name_2'], 'string', 'max' => 100],
+			[['phone', 'mobile', 'contact_person'], 'string', 'max' => 15],
+			[['email'], 'string', 'min' => 5, 'max' => 320],
+			[['taxID'], 'string', 'max' => 15],
+			[['house_number'], 'string', 'max' => 20],
+			[['street', 'city'], 'string', 'max' => 60],
+			[['country'], 'string', 'max' => 2],
+			[['apartment_number', 'postal_code'], 'string', 'max' => 10],
+			['email', 'email'],
+			[['default_role'], 'in', 'range' => array_keys($this->getDefaultRolesNames())],
         ];
     }
 
@@ -106,7 +106,7 @@ class AddressForm extends Model
 		$model->mobile = $this->mobile;
 		$model->contact_person = $this->contact_person;
 		$model->taxID = $this->taxID;
-		$model->default_role = $this->getDefaultRole();
+		$model->default_role = $this->determineDefaultRole();
 
 		$saveResult = $model->save(false);
 
@@ -115,7 +115,7 @@ class AddressForm extends Model
 		return $saveResult;
 	}
 
-	protected function getDefaultRole(): ?string {
+	protected function determineDefaultRole(): ?string {
 		if ($this->isSender && $this->isReceiver) {
 			return ShipmentAddress::ROLE_BOTH;
 		} elseif ($this->isSender) {
@@ -158,17 +158,17 @@ class AddressForm extends Model
         return $this->model;
     }
 
-    public function getRole(): string
+    public function getDefaultRole(): string
     {
         return $this->model ? $this->model->getRole() : '';
     }
 
-    public function getRoleName(): string
+    public function getDefaultRoleName(): string
     {
         return $this->model ? $this->model->getRoleName() : '';
     }
 
-    public static function getRolesNames(): array
+    public static function getDefaultRolesNames(): array
     {
         return ShipmentAddress::getRolesNames();
     }
