@@ -63,6 +63,8 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
             ['refTables', 'each', 'rule' => ['string']],
             ['refIds', 'each', 'rule' => ['integer']],
             [['content_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShipmentContent::class, 'targetAttribute' => ['content_id' => 'id']],
+			[['sender_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShipmentAddress::class, 'targetAttribute' => ['sender_id' => 'id']],
+			[['receiver_id'], 'exist', 'skipOnError' => true, 'targetClass' => ShipmentAddress::class, 'targetAttribute' => ['receiver_id' => 'id']],
         ];
     }
 
