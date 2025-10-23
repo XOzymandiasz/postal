@@ -128,7 +128,7 @@ class AddressForm extends Model
 
 	protected function findExistingAddress(): ?ShipmentAddress {
 		return ShipmentAddress::find()
-			->whereLocation($this->postal_code, $this->street, $this->house_number, $this->apartment_number)
+			->whereLocation($this->postal_code, $this->house_number, $this->street, $this->apartment_number)
 			->one();
 	}
 

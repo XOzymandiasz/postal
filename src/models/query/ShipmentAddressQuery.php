@@ -11,12 +11,22 @@ use yii\db\Expression;
  */
 class ShipmentAddressQuery extends ActiveQuery
 {
-	public function whereLocation(string $postalCode, string $street, string $houseNumber, ?string $apartmentNumber = null): self {
+	public function whereLocation(
+		string $postalCode,
+		string $houseNumber,
+		?string $street = null,
+		?string $apartmentNumber = null): self
+	{
 		[$table, $alias] = $this->getTableNameAndAlias();
-		$this->andWhere(
-			new Expression("REPLACE($alias.$postalCode, '-', '') = :postalCode"),
-			[':postalCode' => $postalCode]
-		);
+
+		$normalizedPostalCode = preg_replace('/[^0-9]/', '', $postalCode);
+
+		$this->andWhere([
+			'=',
+			new Expression("REPLACE($alias.postal_code, '-', '')"),
+			$normalizedPostalCode,
+		]);
+
 		$this->andWhere(["$alias.street" => $street]);
 		$this->andWhere(["$alias.house_number" => $houseNumber]);
 		$this->andWhere(["$alias.apartment_number" => $apartmentNumber]);
