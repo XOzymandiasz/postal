@@ -44,5 +44,6 @@ return [
     'Sender Name' => 'Nazwa nadawcy',
     'Sender Address' => 'Adres nadawcy',
     'Receiver Name' => 'Nazwa odbiorcy',
-    'Receiver' => 'Odbiorca'
+    'Receiver' => 'Odbiorca',
+	'None' => 'Brak'
 ];
