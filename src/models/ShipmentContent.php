@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\models;
 
+use XOzymandias\Yii2Postal\Module;
 use yii\db\ActiveRecord;
 
 /**
@@ -18,4 +19,12 @@ class ShipmentContent extends ActiveRecord
         return '{{%shipment_content}}';
     }
 
+	public function attributeLabels(): array
+	{
+		return [
+			'id' => Module::t('postal', 'ID'),
+			'name' => Module::t('postal', 'Name'),
+			'is_active' => Module::t('postal', 'Is Active'),
+		];
+	}
 }

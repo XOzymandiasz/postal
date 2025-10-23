@@ -65,6 +65,28 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         return '{{%shipment}}';
     }
 
+	public function attributeLabels(): array
+	{
+		return [
+			'id' => Module::t('postal', 'ID'),
+			'direction' => Module::t('postal', 'Direction'),
+			'number' => Module::t('postal', 'Number'),
+			'provider' => Module::t('postal', 'Provider'),
+			'content_id' => Module::t('postal', 'Content ID'),
+			'creator_id' => Module::t('postal', 'Creator ID'),
+			'guid' => Module::t('postal', 'Guid'),
+			'buffer_id' => Module::t('postal', 'Buffer ID'),
+			'created_at' => Module::t('postal', 'Created at'),
+			'updated_at' => Module::t('postal', 'Updated at'),
+			'finished_at' => Module::t('postal', 'Finished At'),
+			'shipment_at' => Module::t('postal', 'Shipment At'),
+			'api_data' => Module::t('postal', 'Api Data'),
+			'receiver_id' => Module::t('postal', 'Receiver ID'),
+			'sender_id' => Module::t('postal', 'Sender ID'),
+		];
+	}
+
+
     /**
      * @throws InvalidConfigException
      */
@@ -130,17 +152,16 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
         return $this->hasMany(ShipmentAddressLink::class, ['shipment_id' => 'id'])->indexBy('type');
     }
 
-    public function getCreator(): ActiveQuery
-    {
-        $module = static::ensureModule();
-        /**
-         * @var ActiveRecord $userClass
-         */
-        $userClass = $module->shipmentRelation->userClass;
-        return $this->hasOne($module->shipmentRelation->userClass, [
-            'creator_id' => $userClass::primaryKey()[0]
-        ]);
-    }
+	public function getCreator(): ActiveQuery {
+		$module = static::ensureModule();
+		/**
+		 * @var ActiveRecord $userClass
+		 */
+		$userClass = $module->shipmentRelation->userClass;
+		return $this->hasOne($module->shipmentRelation->userClass, [
+			$userClass::primaryKey()[0] => 'creator_id'
+		]);
+	}
 
     public function getContent(): ActiveQuery
     {

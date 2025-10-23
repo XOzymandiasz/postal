@@ -183,11 +183,19 @@ class ShipmentAddress extends ActiveRecord
         ];
     }
 
-    public function getRole(): string
+    public function getRole(): ?string
     {
         return $this->default_role;
     }
-
+	
+	public function isDefaultRoleForDirection(string $direction): bool {
+		$role = $this->getRole();
+		if (empty($role)) {
+			return false;
+		}
+		return $role === self::ROLE_BOTH || $role === $direction;
+	}
+	
     public static function find(): ShipmentAddressQuery
     {
         return new ShipmentAddressQuery(static::class);
