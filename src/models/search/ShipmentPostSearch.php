@@ -107,7 +107,14 @@ class ShipmentPostSearch extends Shipment
      */
     public function search(array $params, string $formName = null): ActiveDataProvider
     {
-        $query = Shipment::find();
+        $query = Shipment::find()
+			->with([
+				'content',
+				'senderAddress',
+				'receiverAddress',
+				'creator'
+			]);
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
