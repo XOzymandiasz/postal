@@ -15,18 +15,23 @@ class AddressForm extends Model
     public string $postal_code = '';
     public string $city = '';
 	public string $house_number = '';
-    public bool $isSender = false;
-    public bool $isReceiver = false;
-    public ?string $street = null;
-    public ?string $name_2 = null;
-    public ?string $apartment_number = null;
-    public ?string $phone = null;
-    public ?string $email = null;
-    public ?string $mobile = null;
-    public ?string $contact_person = null;
-    public ?string $taxID = null;
-    public string $country = self::DEFAULT_COUNTRY;
-    public ?string $default_role = null;
+	public bool $isSender = false;
+	public bool $isReceiver = false;
+	public ?string $street = null;
+	public ?string $name_2 = null;
+	public ?string $apartment_number = null;
+	public ?string $phone = null;
+	public ?string $email = null;
+	public ?string $mobile = null;
+	public ?string $contact_person = null;
+	public ?string $taxID = null;
+	public string $country = self::DEFAULT_COUNTRY;
+	public ?string $default_role = null;
+
+	public bool $findExistOnSave = true;
+
+	public bool $enableClientValidation = true;
+
 	private ?string $formName = null;
 
 	private ?ShipmentAddress $model = null;
@@ -79,57 +84,71 @@ class AddressForm extends Model
             return false;
         }
 
-        $model = $this->getModel();
+		$model = $this->getModel();
+		if ($this->findExistOnSave) {
+			$findModel = $this->findExistingAddress();
 
-        $model->name = $this->name;
-        $model->street = $this->street;
-        $model->postal_code = $this->postal_code;
-        $model->house_number = $this->house_number;
-        $model->apartment_number = $this->apartment_number;
-        $model->city = $this->city;
-        $model->name_2 = $this->name_2;
-        $model->country = $this->country;
-        $model->phone = $this->phone;
-        $model->email = $this->email;
-        $model->mobile = $this->mobile;
-        $model->contact_person = $this->contact_person;
-        $model->taxID = $this->taxID;
+			if ($findModel !== null) {
+				$model = $findModel;
+			}
+
+		}
+		$model->name = $this->name;
+		$model->street = $this->street;
+		$model->postal_code = $this->postal_code;
+		$model->house_number = $this->house_number;
+		$model->apartment_number = $this->apartment_number;
+		$model->city = $this->city;
+		$model->name_2 = $this->name_2;
+		$model->country = $this->country;
+		$model->phone = $this->phone;
+		$model->email = $this->email;
+		$model->mobile = $this->mobile;
+		$model->contact_person = $this->contact_person;
+		$model->taxID = $this->taxID;
 		$model->default_role = $this->getDefaultRole();
-		
-        return $model->save(false);
-    }
+
+		$saveResult = $model->save(false);
+
+		$this->setModel($model);
+
+		return $saveResult;
+	}
 
 	protected function getDefaultRole(): ?string {
 		if ($this->isSender && $this->isReceiver) {
 			return ShipmentAddress::ROLE_BOTH;
-		}
-		elseif ($this->isSender) {
+		} elseif ($this->isSender) {
 			return ShipmentAddress::ROLE_SENDER;
-		}
-		elseif ($this->isReceiver) {
+		} elseif ($this->isReceiver) {
 			return ShipmentAddress::ROLE_RECEIVER;
 		}
 		return null;
 	}
 
-    public function setModel(ShipmentAddress $model): void
-    {
-        $this->model = $model;
-        $this->name = $model->name;
-        $this->street = $model->street;
-        $this->postal_code = $model->postal_code;
-        $this->house_number = $model->house_number;
-        $this->apartment_number = $model->apartment_number;
-        $this->city = $model->city;
-        $this->name_2 = $model->name_2;
-        $this->country = $model->country;
-        $this->phone = $model->phone;
-        $this->email = $model->email;
-        $this->mobile = $model->mobile;
-        $this->contact_person = $model->contact_person;
-        $this->taxID = $model->taxID;
-        $this->default_role = $model->default_role;
-    }
+	protected function findExistingAddress(): ?ShipmentAddress {
+		return ShipmentAddress::find()
+			->whereLocation($this->postal_code, $this->street, $this->house_number, $this->apartment_number)
+			->one();
+	}
+
+	public function setModel(ShipmentAddress $model): void {
+		$this->model = $model;
+		$this->name = $model->name;
+		$this->street = $model->street;
+		$this->postal_code = $model->postal_code;
+		$this->house_number = $model->house_number;
+		$this->apartment_number = $model->apartment_number;
+		$this->city = $model->city;
+		$this->name_2 = $model->name_2;
+		$this->country = $model->country;
+		$this->phone = $model->phone;
+		$this->email = $model->email;
+		$this->mobile = $model->mobile;
+		$this->contact_person = $model->contact_person;
+		$this->taxID = $model->taxID;
+		$this->default_role = $model->default_role;
+	}
 
     public function getModel(): ShipmentAddress
     {
