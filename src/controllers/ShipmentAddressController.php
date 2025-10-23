@@ -85,7 +85,7 @@ class ShipmentAddressController extends Controller
 	{
 		$model = new AddressForm();
 
-		if ($model->load($this->request->post()) && !$model->isAddressAlreadyExist() && $model->save()) {
+		if ($model->load($this->request->post()) && $model->save()) {
 			return $this->redirect(['view', 'id' => $model->getModel()->id]);
 		}
 
