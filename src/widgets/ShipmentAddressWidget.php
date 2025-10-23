@@ -14,13 +14,18 @@ class ShipmentAddressWidget extends Select2
     use ModuleEnsureTrait;
 
     public string $addressProperty = 'address';
-    public array $addressListRoute = ['shipment-address/list'];
+	public string $listRoute = 'shipment-address/list';
+    public array $addressListRoute = [];
     public ?string $role = null;
     public function init(): void
     {
         $module = static::ensureModule();
 
         $minLength = $module->minLengthAddressListQuery;
+
+		$this->addressListRoute = [
+			'/' . $module->uniqueId . '/' . $this->listRoute
+		];
 
         if (!isset($this->options['placeholder'])) {
             $this->options['placeholder'] = Module::t('postal', 'Search for an address...');
