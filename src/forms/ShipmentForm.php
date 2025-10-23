@@ -143,30 +143,34 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     /**
      * @throws Exception
      */
-    protected function saveAddresses(): void
-    {
-        $model = $this->getModel();
-        $model->unlinkAll('addressLinks', true);
-        $sender = $this->getSenderAddress();
-        $sender->save();
-        $model->link('addressLinks',
-            new ShipmentAddressLink([
-                    'shipment_id' => $model->id,
-                    'address_id' => $sender->id,
-                    'type' => ShipmentDirectionInterface::DIRECTION_IN,
-                ]
-            ));
-        $receiver = $this->getReceiverAddress();
-        $receiver->save();
-        $model->link('addressLinks',
-            new ShipmentAddressLink([
-                    'shipment_id' => $model->id,
-                    'address_id' => $receiver->id,
-                    'type' => ShipmentDirectionInterface::DIRECTION_OUT,
-                ]
-            ));
+	protected function saveAddresses(): void
+	{
+		$model = $this->getModel();
+		$model->unlinkAll('addressLinks', true);
+		$sender = $this->getSenderAddress();
+		if($sender !== null) {
+			$sender->save();
+			$model->link('addressLinks',
+				new ShipmentAddressLink([
+						'shipment_id' => $model->id,
+						'address_id' => $sender->id,
+						'type' => ShipmentDirectionInterface::DIRECTION_IN,
+					]
+				));
+		}
 
-    }
+		$receiver = $this->getReceiverAddress();
+		if($receiver !== null) {
+			$receiver->save();
+			$model->link('addressLinks',
+				new ShipmentAddressLink([
+						'shipment_id' => $model->id,
+						'address_id' => $receiver->id,
+						'type' => ShipmentDirectionInterface::DIRECTION_OUT,
+					]
+				));
+		}
+	}
 
     public function getModel(): Shipment
     {
