@@ -84,4 +84,7 @@ return [
 	'No Number' => 'Bez numeru',
 	'From' => 'Od',
 	'To' => 'Do',
+	'Shipment {content}' => 'Przesyłka {content}',
+	'Updated at' => 'Zaktualizowano',
+	'Created at' => 'Utworzono',
 ];
