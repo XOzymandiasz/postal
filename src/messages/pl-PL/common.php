@@ -45,5 +45,7 @@ return [
     'Sender Address' => 'Adres nadawcy',
     'Receiver Name' => 'Nazwa odbiorcy',
     'Receiver' => 'Odbiorca',
-	'None' => 'Brak'
+	'None' => 'Brak',
+	'YYYY-MM-DD' => 'RRRR-MM-DD',
+	'YYYY-MM-DD HH:MM:SS' => 'RRRR-MM-DD GG:MM:SS',
 ];
