@@ -4,6 +4,7 @@ use XOzymandias\Yii2Postal\forms\ShipmentForm;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\Module;
 use XOzymandias\Yii2Postal\widgets\ShipmentAddressWidget;
+use XOzymandias\Yii2Postal\widgets\DateTimeWidget;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\select2\Select2;
@@ -84,7 +85,7 @@ use kartik\select2\Select2;
 	<div class="row">
 		<div class="col-12 col-sm-6 col-md-4 col-lg-5">
 			<?= ($model->isInScenario() || $model->isUpdateIn())
-				? $form->field($model, 'finished_at')->textInput()
+				? $form->field($model, 'finished_at')->widget(DateTimeWidget::class)
 				: ''
 			?>
 		</div>
