@@ -1,11 +1,12 @@
 <?php
 
+use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\Module;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /** @var yii\web\View $this */
-/** @var XOzymandias\Yii2Postal\models\Shipment $model */
+/** @var Shipment $model */
 
 $this->title = Module::t('postal','Shipment {content}', [
 		'content' => $model->content->name,
@@ -32,9 +33,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'direction',
+			[
+				'attribute' => 'direction',
+				'value' => function(Shipment $model){
+					return $model->getDirectionName();
+				}
+			],
             'number',
-            'provider',
+			[
+				'attribute' => 'provider',
+				'value' => function(Shipment $model){
+					return $model->getProviderName();
+				}
+			],
             //'content_id',
             //'creator_id',
             'created_at',
