@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'creator_id',
                 'value' => 'creator.name',
                 'filter' => $searchModel::getCreatorsNames(),
-                'visible' => !$searchModel->isCreatorScenario(),
+                'visible' => $searchModel->isCreatorScenario(),
             ],
             //'creator_id',
             //'guid',
