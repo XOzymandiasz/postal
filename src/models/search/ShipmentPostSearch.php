@@ -52,10 +52,12 @@ class ShipmentPostSearch extends Shipment
         );
     }
 
-    public static function getCreatorsNames(): array #todo:
+    public static function getCreatorsNames(): array
     {
-        return ArrayHelper::map(
-            ShipmentContent::find()->andWhere([
+		$userClass = static::ensureModule()->shipmentRelation->userClass;
+        return ($userClass !== null) ?
+			ArrayHelper::map(
+            $userClass::find()->andWhere([
                 'id' => Shipment::find()
                     ->select('content_id')
                     ->distinct()
@@ -64,7 +66,7 @@ class ShipmentPostSearch extends Shipment
                 ->all(),
             'id',
             'name'
-        );
+        ) : [];
     }
 
     public function rules(): array
