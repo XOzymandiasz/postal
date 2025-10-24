@@ -103,11 +103,11 @@ class ShipmentAddressController extends Controller
 		$model = new AddressForm();
 		$model->setModel($this->findModel($id));
 
-		if ($model->default_role = ShipmentAddress::ROLE_BOTH){
+		if ($model->default_role == ShipmentAddress::ROLE_BOTH){
 			$model->isSender = $model->isReceiver = true;
-		} elseif ($model->default_role = ShipmentAddress::ROLE_SENDER){
+		} elseif ($model->default_role == ShipmentAddress::ROLE_SENDER){
 			$model->isSender = true;
-		} elseif ($model->default_role = ShipmentAddress::ROLE_RECEIVER){
+		} elseif ($model->default_role == ShipmentAddress::ROLE_RECEIVER){
 			$model->isReceiver = true;
 		}
 
