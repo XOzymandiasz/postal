@@ -78,7 +78,7 @@ class AddressForm extends Model
     /**
      * @throws Exception
      */
-    public function save(bool $validate = true): bool
+    public function save(bool $validate = true, bool $setDefaultRole = true): bool
     {
         if ($validate && !$this->validate()) {
             return false;
@@ -106,7 +106,7 @@ class AddressForm extends Model
 		$model->mobile = $this->mobile;
 		$model->contact_person = $this->contact_person;
 		$model->taxID = $this->taxID;
-		$model->default_role = $this->determineDefaultRole();
+		$model->default_role = $setDefaultRole ? $this->determineDefaultRole() : $model->default_role;
 
 		$saveResult = $model->save(false);
 
