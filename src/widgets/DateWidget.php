@@ -3,6 +3,7 @@
 namespace XOzymandias\Yii2Postal\widgets;
 
 use kartik\date\DatePicker as BaseDateWidget;
+use XOzymandias\Yii2Postal\Module;
 
 class DateWidget extends BaseDateWidget {
 	public function init(): void
@@ -14,7 +15,7 @@ class DateWidget extends BaseDateWidget {
 		], $this->pluginOptions ?? []);
 
 		$this->options = array_merge([
-			'placeholder' => 'YYYY-MM-DD',
+			'placeholder' => Module::t('common', 'YYYY-MM-DD'),
 		], $this->options ?? []);
 
 		parent::init();
