@@ -94,71 +94,66 @@ class ShipmentController extends Controller
         ]);
     }
 
-    public function actionCreateIn(?int $bufferId = null): Response|string
-    {
-        $model = new ShipmentForm();
-        $model->setScenario(ShipmentForm::SCENARIO_DIRECTION_IN);
-        $model->direction = ShipmentDirectionInterface::DIRECTION_IN;
-        $model->creator_id = Yii::$app->user->id;
-        $model->buffer_id = $bufferId;
-        //$model->finished_at = date(DATE_ATOM);
-        $model->finished_at = date('Y-m-d H-i-s');
-        if ($model->load($this->request->post()) && $model->save()) {
-            $this->module->afterCreateInShipment($model->getModel());
-            $url = $this->module->shipmentUrl->getAfterCreateURL(
-                $model->getModel()->id,
-                $model->getModel()->provider
-            );
-            if ($url) {
-                return $this->redirect($url);
-            }
-            return $this->redirect(['view', 'id' => $model->getModel()->id]);
-        }
-        return $this->render('create', [
-            'model' => $model,
-            'direction' => ShipmentDirectionInterface::DIRECTION_IN,
-        ]);
-    }
+	public function actionCreateIn(?int $bufferId = null): Response|string
+	{
+		$model = new ShipmentForm();
+		$model->setScenario(ShipmentForm::SCENARIO_DIRECTION_IN);
+		$model->direction = ShipmentDirectionInterface::DIRECTION_IN;
+		$model->creator_id = Yii::$app->user->id;
+		$model->buffer_id = $bufferId;
+		//$model->finished_at = date(DATE_ATOM);
+		$model->finished_at = date('Y-m-d H:i');
+		if ($model->load($this->request->post()) && $model->save()) {
+			$this->module->afterCreateInShipment($model->getModel());
+			//@todo: uncomment after integration with ElektronicznyNadawca
+			//$url = $this->module->shipmentUrl->getAfterCreateURL(
+			//    $model->getModel()->id,
+			//    $model->getModel()->provider
+			//);
+			//if ($url) {
+			//    return $this->redirect($url);
+			//}
+			//return $this->redirect(['view', 'id' => $model->getModel()->id]);
+			return $this->redirect(['index']);
+		}
+		return $this->render('create', [
+			'model' => $model,
+			'direction' => ShipmentDirectionInterface::DIRECTION_IN,
+		]);
+	}
 
 
     /**
      * @throws NotFoundHttpException
      */
-    public function actionUpdate(int $id): Response|string
-    {
-        $model = new ShipmentForm();
-        $model->setModel($this->findModel($id));
+	public function actionUpdate(int $id): Response|string
+	{
+		$model = new ShipmentForm();
+		$model->setModel($this->findModel($id));
 
-        if ($model->load($this->request->post()) && $model->save()) {
-            if ($model->direction == ShipmentDirectionInterface::DIRECTION_IN) {
-                $url = $this->module->shipmentUrl->getAfterUpdateURL(
-                    $model->getModel()->buffer_id,
-                    $model->getModel()->guid,
-                    $model->getModel()->provider
-                );
-                if ($url) {
-                    return $this->redirect($url);
-                }
-                return $this->redirect(['view', 'id' => $id]);
-            } elseif ($model->direction == ShipmentDirectionInterface::DIRECTION_OUT) {
-                $url = $this->module->shipmentUrl->getAfterUpdateURL(
-                    $model->getModel()->buffer_id,
-                    $model->getModel()->guid,
-                    $model->getModel()->provider
-                );
-                if ($url) {
-                    return $this->redirect($url);
-                }
-                return $this->redirect(['view', 'id' => $id]);
-            } else {
-                throw new NotFoundHttpException();
-            }
-        }
+		if ($model->load($this->request->post()) && $model->save()) {
+			if ($model->direction == ShipmentDirectionInterface::DIRECTION_IN) {
+				//@todo: uncomment after integration with ElektronicznyNadawca
+				//$url = $this->module->shipmentUrl->getAfterUpdateURL(
+				//    $model->getModel()->buffer_id,
+				//    $model->getModel()->guid,
+				//    $model->getModel()->provider
+				//);
+				//if ($url) {
+				//    return $this->redirect($url);
+				//}
+				return $this->redirect(['view', 'id' => $id]);
+			} elseif ($model->direction == ShipmentDirectionInterface::DIRECTION_OUT) {
+				return $this->redirect(['view', 'id' => $id]);
+			} else {
+				throw new NotFoundHttpException();
+			}
+		}
 
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
+		return $this->render('update', [
+			'model' => $model,
+		]);
+	}
 
     /**
      * @throws StaleObjectException
