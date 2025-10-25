@@ -11,6 +11,8 @@ use yii\data\ActiveDataProvider;
  */
 class ShipmentAddressPostSearch extends ShipmentAddress
 {
+
+	private ?string $formName = null;
     /**
      * {@inheritdoc}
      */
@@ -19,6 +21,10 @@ class ShipmentAddressPostSearch extends ShipmentAddress
         return [
             [['id'], 'integer'],
             ['default_role', 'in', 'range' => array_keys($this->optionList())],
+			[['name', 'name_2'], 'string', 'max' => 100],
+			[['house_number'], 'string', 'max' => 20],
+			[['street', 'city'], 'string', 'max' => 60],
+			[['apartment_number', 'postal_code'], 'string', 'max' => 10],
             [['default_role', 'name', 'street', 'house_number', 'apartment_number', 'postal_code', 'city', 'country', 'phone', 'email'], 'safe'],
         ];
     }
@@ -32,14 +38,27 @@ class ShipmentAddressPostSearch extends ShipmentAddress
         return Model::scenarios();
     }
 
-    /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     * @param string|null $formName Form name to be used into `->load()` method.
-     *
-     * @return ActiveDataProvider
-     */
+	public function setFormName(string $formName): void
+	{
+		$this->formName = $formName;
+	}
+	public function formName(): string
+	{
+		if ($this->formName !== null) {
+			return $this->formName;
+		}
+
+		return parent::formName();
+	}
+
+	/**
+	 * Creates data provider instance with search query applied
+	 *
+	 * @param array $params
+	 * @param string|null $formName Form name to be used into `->load()` method.
+	 *
+	 * @return ActiveDataProvider
+	 */
     public function search(array $params, string $formName = null): ActiveDataProvider
     {
         $query = ShipmentAddress::find();
