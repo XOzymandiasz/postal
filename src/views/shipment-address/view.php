@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'attribute' => Module::t('postal', 'Role'),
                 'value' => function (ShipmentAddress $model) {
                     return $model->default_role
-                        ? ShipmentAddress::getRolesNames()[$model->default_role]
+                        ? ShipmentAddress::getDefaultRolesNames()[$model->default_role]
                         : Module::t('common', 'None');
                 }
             ]

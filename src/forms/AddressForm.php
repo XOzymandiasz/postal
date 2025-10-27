@@ -160,17 +160,17 @@ class AddressForm extends Model
 
     public function getDefaultRole(): string
     {
-        return $this->model ? $this->model->getRole() : '';
+        return $this->model ? $this->model->getDefaultRole() : '';
     }
 
     public function getDefaultRoleName(): string
     {
-        return $this->model ? $this->model->getRoleName() : '';
+        return $this->model ? $this->model->getDefaultRoleName() : '';
     }
 
     public static function getDefaultRolesNames(): array
     {
-        return ShipmentAddress::getRolesNames();
+        return ShipmentAddress::getDefaultRolesNames();
     }
 
 	public function setFormName(string $formName): void {

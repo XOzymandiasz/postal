@@ -58,7 +58,7 @@ class ShipmentAddress extends ActiveRecord
             [['phone', 'mobile', 'contact_person'], 'string', 'max' => 11],
             [['house_number', 'apartment_number', 'postal_code'], 'string', 'max' => 10],
             [['country'], 'string', 'max' => 2],
-            [['default_role'], 'in', 'range' => array_keys(static::getRolesNames())]
+            [['default_role'], 'in', 'range' => array_keys(static::getDefaultRolesNames())]
         ];
     }
 
@@ -169,12 +169,12 @@ class ShipmentAddress extends ActiveRecord
         return $name;
     }
 
-    public function getRoleName(): string
+    public function getDefaultRoleName(): string
     {
-        return static::getRolesNames()[$this->default_role];
+        return static::getDefaultRolesNames()[$this->default_role];
     }
 
-    public static function getRolesNames(): array
+    public static function getDefaultRolesNames(): array
     {
         return [
             self::ROLE_RECEIVER => Module::t('postal', 'Receiver'),
@@ -183,13 +183,13 @@ class ShipmentAddress extends ActiveRecord
         ];
     }
 
-    public function getRole(): ?string
+    public function getDefaultRole(): ?string
     {
         return $this->default_role;
     }
 	
 	public function isDefaultRoleForDirection(string $direction): bool {
-		$role = $this->getRole();
+		$role = $this->getDefaultRole();
 		if (empty($role)) {
 			return false;
 		}

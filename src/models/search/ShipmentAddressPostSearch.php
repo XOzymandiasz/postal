@@ -102,6 +102,6 @@ class ShipmentAddressPostSearch extends ShipmentAddress
 
     public static function optionList(): array
     {
-        return ShipmentAddress::getRolesNames();
+        return ShipmentAddress::getDefaultRolesNames();
     }
 }
