@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => $searchModel::optionList(),
                 'value' => function (ShipmentAddress $model) use ($searchModel) {
                     return $model->default_role
-                        ? ShipmentAddress::getRolesNames()[$model->default_role]
+                        ? ShipmentAddress::getDefaultRolesNames()[$model->default_role]
                         : Module::t('common', 'None');
                 }
             ],
