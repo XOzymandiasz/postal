@@ -87,4 +87,5 @@ return [
 	'Shipment {content}' => 'Przesyłka {content}',
 	'Updated at' => 'Zaktualizowano',
 	'Created at' => 'Utworzono',
+	'Address' => 'Adres'
 ];
