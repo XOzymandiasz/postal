@@ -12,7 +12,7 @@ class AddressSearchWidget extends Widget{
 
 	public function run():string {
 		return $this->render(
-			'search', [
+			'address/search', [
 				'form' => $this->form,
 				'model' => $this->model,
 			]
