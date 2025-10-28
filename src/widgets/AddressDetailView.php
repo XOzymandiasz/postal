@@ -3,6 +3,7 @@
 namespace XOzymandias\Yii2Postal\widgets;
 
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
+use XOzymandias\Yii2Postal\Module;
 use Yii;
 use yii\base\InvalidConfigException;
 use yii\widgets\DetailView;
@@ -26,7 +27,7 @@ class AddressDetailView extends DetailView {
 		}
 
 		if ($this->role === null) {
-			$this->role = Yii::t('postal', 'Address');
+			$this->role = Module::t('postal', 'Address');
 		}
 
 		if (empty($this->options)) {
@@ -49,44 +50,44 @@ class AddressDetailView extends DetailView {
 	public function defaultAttributes(): array {
 		return [
 			[
-				'label' => Yii::t('postal', 'Role'),
+				'label' => Module::t('postal', 'Role'),
 				'value' => $this->role,
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'name',
-				'label' => Yii::t('postal', 'Name'),
+				'label' => Module::t('postal', 'Name'),
 				'value' => $this->model->name,
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'postal_code',
-				'label' => Yii::t('postal', 'Postal Code'),
+				'label' => Module::t('postal', 'Postal Code'),
 				'value' => $this->model->postal_code,
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'city',
-				'label' => Yii::t('postal', 'City'),
+				'label' => Module::t('postal', 'City'),
 				'value' => $this->model->city,
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'street',
-				'label' => Yii::t('postal', 'Street'),
+				'label' => Module::t('postal', 'Street'),
 				'value' => $this->model->street,
 				'visible' => isset($this->model->street),
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'house_number',
-				'label' => Yii::t('postal', 'House Number'),
+				'label' => Module::t('postal', 'House Number'),
 				'value' => $this->model->house_number,
 				'format' => 'text',
 			],
 			[
 				'attribute' => 'apartment_number',
-				'label' => Yii::t('postal', 'Apartment Number'),
+				'label' => Module::t('postal', 'Apartment Number'),
 				'value' => $this->model->apartment_number,
 				'format' => 'text',
 				'visible' => isset($this->model->apartment_number),
