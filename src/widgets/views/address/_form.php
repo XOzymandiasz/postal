@@ -25,8 +25,8 @@ $formWasNull = $form === null;
 	<div class="row">
 		<div class="col-12 col-sm-8 col-md-6 col-lg-6">
 			<?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-6 col-sm-4 col-md-2 col-lg-2">
 			<?= $form->field($model, 'postal_code')->textInput(['maxlength' => true]) ?>
