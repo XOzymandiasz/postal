@@ -5,31 +5,28 @@ namespace XOzymandias\Yii2Postal\widgets;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\Module;
 use Yii;
-use yii\base\InvalidConfigException;
+use yii\base\Widget;
+use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /**
  * @property ShipmentAddress $model
  */
-class AddressDetailView extends DetailView
-{
+class AddressDetailWidget extends Widget {
+	public array $tableOptions = [];
+	public array $headingOptions = [];
+	public array $attributes = [];
+
 	public ?string $role = null;
+	public ShipmentAddress $model;
 
 	public function init(): void {
-		if (!$this->model instanceof ShipmentAddress) {
-			throw new InvalidConfigException(sprintf(
-				'Property "model" must be an instance of %s, %s given.',
-				ShipmentAddress::class,
-				is_object($this->model) ? get_class($this->model) : gettype($this->model)
-			));
-		}
-
 		if ($this->role === null) {
 			$this->role = Yii::t('postal', 'Address');
 		}
 
-		if (empty($this->options)) {
-			$this->options = $this->defaultOptions();
+		if (empty($this->tableOptions)) {
+			$this->tableOptions = $this->defaultTableOptions();
 		}
 
 		if (empty($this->attributes)) {
@@ -38,7 +35,20 @@ class AddressDetailView extends DetailView
 		parent::init();
 	}
 
-	public function defaultOptions(): array {
+	public function run(): string
+	{
+		$heading = Html::tag($this->headingTag, Html::encode($this->role), $this->headingOptions);
+
+		$table = DetailView::widget([
+			'model' => $this->model,
+			'options' => $this->tableOptions,
+			'attributes' => $this->attributes,
+		]);
+
+		return $heading . $table;
+	}
+
+	public function defaultTableOptions(): array {
 		return [
 			'class' => 'table table-striped table-bordered detail-view',
 			'style' => 'table-layout:fixed;width:100%;',
