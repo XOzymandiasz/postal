@@ -11,13 +11,11 @@ use yii\widgets\DetailView;
 /**
  * @property ShipmentAddress $model
  */
-
-class AddressDetailView extends DetailView {
-
+class AddressDetailView extends DetailView
+{
 	public ?string $role = null;
 
 	public function init(): void {
-
 		if (!$this->model instanceof ShipmentAddress) {
 			throw new InvalidConfigException(sprintf(
 				'Property "model" must be an instance of %s, %s given.',
@@ -27,14 +25,14 @@ class AddressDetailView extends DetailView {
 		}
 
 		if ($this->role === null) {
-			$this->role = Module::t('postal', 'Address');
+			$this->role = Yii::t('postal', 'Address');
 		}
 
 		if (empty($this->options)) {
 			$this->options = $this->defaultOptions();
 		}
 
-		if (empty($this->attributes)){
+		if (empty($this->attributes)) {
 			$this->attributes = $this->defaultAttributes();
 		}
 		parent::init();
@@ -47,8 +45,9 @@ class AddressDetailView extends DetailView {
 		];
 	}
 
-	public function defaultAttributes(): array {
-		return [
+	public function defaultAttributes(): array
+	{
+		$attrs = [
 			[
 				'label' => Module::t('postal', 'Role'),
 				'value' => $this->role,
@@ -93,7 +92,12 @@ class AddressDetailView extends DetailView {
 				'visible' => isset($this->model->apartment_number),
 			],
 		];
+
+		foreach ($attrs as &$attr) {
+			$attr['captionOptions'] = ['style' => 'width:50%;'];
+			$attr['contentOptions'] = ['style' => 'width:50%;word-wrap:break-word;'];
+		}
+
+		return $attrs;
 	}
-
-
 }
