@@ -5,6 +5,7 @@ namespace XOzymandias\Yii2Postal\widgets;
 use XOzymandias\Yii2Postal\models\ShipmentAddress;
 use XOzymandias\Yii2Postal\Module;
 use Yii;
+use yii\base\InvalidConfigException;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
@@ -13,9 +14,12 @@ use yii\widgets\DetailView;
  * @property ShipmentAddress $model
  */
 class AddressDetailWidget extends Widget {
+	public const DEFAULT_HEADING_TAG = 'h4';
+
 	public array $tableOptions = [];
-	public array $headingOptions = [];
 	public array $attributes = [];
+	public array $headingOptions = [];
+	public string $headingTag = self::DEFAULT_HEADING_TAG;
 
 	public ?string $role = null;
 	public ShipmentAddress $model;
@@ -58,11 +62,6 @@ class AddressDetailWidget extends Widget {
 	public function defaultAttributes(): array
 	{
 		$attrs = [
-			[
-				'label' => Module::t('postal', 'Role'),
-				'value' => $this->role,
-				'format' => 'text',
-			],
 			[
 				'attribute' => 'name',
 				'label' => Module::t('postal', 'Name'),
