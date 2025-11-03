@@ -23,13 +23,13 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     public string $number = '';
     public string $direction = '';
     public string $provider = '';
-    public ?int $content_id = null;
     public ?int $creator_id = null;
-    public ?string $guid = null;
     public ?int $buffer_id = null;
+	public ?string $guid = null;
     public ?string $finished_at = null;
     public ?string $shipment_at = null;
     public ?string $api_data = null;
+	public $content_id = null;
     /**
      * @var string[] $refTables
      */
@@ -45,6 +45,30 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
     public ?int $receiver_id = null;
     private ?ShipmentAddress $receiverAddress = null;
     private ?ShipmentAddress $senderAddress = null;
+
+	public function beforeValidate(): bool {
+		if (is_string($this->content_id) && ctype_digit($this->content_id)) {
+			$this->content_id = (int)$this->content_id;
+		}
+
+		if (is_int($this->content_id)) {
+			return parent::beforeValidate();
+		}
+
+		$name = trim($this->content_id);
+		if (!empty($name)) {
+			$content = ShipmentContent::findOne(['name' => $name]);
+			if (!$content) {
+				$contentForm = new ContentForm();
+				$contentForm->name = $name;
+				$contentForm->save();
+				$content = $contentForm->getModel();
+			}
+			$this->content_id = $content->id;
+		}
+
+		return parent::beforeValidate();
+	}
 
     public function rules(): array
     {
