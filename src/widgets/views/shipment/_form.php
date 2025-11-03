@@ -25,11 +25,11 @@ use kartik\select2\Select2;
 	]); ?>
 
 	<div class="row">
-		<div class="col-12 col-sm-8 col-md-6 col-lg-6">
+		<div class="col-sm-5 col-md-4 col-lg-3">
 			<?= $form->field($model, 'number')->textInput(['maxlength' => true, 'autofocus' => true]) ?>
 		</div>
 
-		<div class="col-12 col-sm-4 col-md-6 col-lg-4">
+		<div class="col-sm-4 col-md-3 col-lg-2">
 			<?= $withProviderField ? $form->field($model, 'provider')->widget(Select2::class, [
 				'data' => $model::getProvidersNames(),
 				'options' => ['placeholder' => Module::t('postal', 'Choose provider')],
@@ -38,22 +38,17 @@ use kartik\select2\Select2;
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-9 col-md-7 col-lg-5">
 			<?= $form->field($model, 'content_id')->widget(Select2::class, [
 				'data' => $model->getContentNames(),
 				'options' => ['placeholder' => Module::t('postal', 'Choose content')],
 				'pluginOptions' => ['tags' => true],
-			])->hint(
-				Html::a(
-					Module::t('postal', 'Create Content'),
-					['shipment-content/create']
-				)
-			) ?>
+			]) ?>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-9 col-md-7 col-lg-5">
 			<?= $withSenderField ? $form->field($model, 'sender_id')->widget(ShipmentAddressWidget::class, [
 				'role' => ShipmentAddress::ROLE_SENDER,
 				'options' => ['placeholder' => Module::t('postal', 'Choose Sender')],
@@ -68,7 +63,7 @@ use kartik\select2\Select2;
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="col-sm-9 col-md-7 col-lg-5">
 			<?= $withReceiverField ? $form->field($model, 'receiver_id')->widget(ShipmentAddressWidget::class, [
 				'role' => ShipmentAddress::ROLE_RECEIVER,
 				'options' => ['placeholder' => Module::t('postal', 'Choose Receiver')],
@@ -83,7 +78,7 @@ use kartik\select2\Select2;
 	</div>
 
 	<div class="row">
-		<div class="col-12 col-sm-6 col-md-4 col-lg-5">
+		<div class="col-sm-6 col-md-5 col-lg-4">
 			<?= ($model->isInScenario() || $model->isUpdateIn())
 				? $form->field($model, 'finished_at')->widget(DateTimeWidget::class)
 				: ''
