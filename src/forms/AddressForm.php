@@ -158,7 +158,39 @@ class AddressForm extends Model
         return $this->model;
     }
 
-    public function getDefaultRole(): string
+	public function equals(ShipmentAddress $otherAddress): bool {
+		return $this->street === $otherAddress->street
+			&& $this->house_number === $otherAddress->house_number
+			&& $this->apartment_number === $otherAddress->apartment_number
+			&& $this->postal_code === $otherAddress->postal_code;
+	}
+
+	public function setFormName(string $formName): void {
+		$this->formName = $formName;
+	}
+
+	public function formName(): string {
+		return $this->formName ?? parent::formName();
+	}
+
+	protected function determineDefaultRole(): ?string {
+		if ($this->isSender && $this->isReceiver) {
+			return ShipmentAddress::ROLE_BOTH;
+		} elseif ($this->isSender) {
+			return ShipmentAddress::ROLE_SENDER;
+		} elseif ($this->isReceiver) {
+			return ShipmentAddress::ROLE_RECEIVER;
+		}
+		return null;
+	}
+
+	protected function findExistingAddress(): ?ShipmentAddress {
+		return ShipmentAddress::find()
+			->whereLocation($this->postal_code, $this->house_number, $this->street, $this->apartment_number)
+			->one();
+	}
+
+	public function getDefaultRole(): string
     {
         return $this->model ? $this->model->getDefaultRole() : '';
     }
