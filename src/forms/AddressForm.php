@@ -115,23 +115,6 @@ class AddressForm extends Model
 		return $saveResult;
 	}
 
-	protected function determineDefaultRole(): ?string {
-		if ($this->isSender && $this->isReceiver) {
-			return ShipmentAddress::ROLE_BOTH;
-		} elseif ($this->isSender) {
-			return ShipmentAddress::ROLE_SENDER;
-		} elseif ($this->isReceiver) {
-			return ShipmentAddress::ROLE_RECEIVER;
-		}
-		return null;
-	}
-
-	protected function findExistingAddress(): ?ShipmentAddress {
-		return ShipmentAddress::find()
-			->whereLocation($this->postal_code, $this->house_number, $this->street, $this->apartment_number)
-			->one();
-	}
-
 	public function setModel(ShipmentAddress $model): void {
 		$this->model = $model;
 		$this->name = $model->name;
@@ -204,13 +187,4 @@ class AddressForm extends Model
     {
         return ShipmentAddress::getDefaultRolesNames();
     }
-
-	public function setFormName(string $formName): void {
-		$this->formName = $formName;
-	}
-
-	public function formName(): string {
-		return $this->formName ?? parent::formName();
-	}
-
 }
