@@ -100,6 +100,27 @@ class AddressDetailWidget extends Widget {
 				'format' => 'text',
 				'visible' => isset($this->model->apartment_number),
 			],
+			//[
+			//	'attribute' => 'country',
+			//	'label' => Module::t('postal', 'Country'),
+			//	'value' => $this->model->country,
+			//	'format' => 'text',
+			//	'visible' => isset($this->model->country),
+			//],
+			[
+				'attribute' => 'email',
+				'label' => Module::t('postal', 'Email'),
+				'value' => $this->model->email,
+				'format' => 'text',
+				'visible' => isset($this->model->email),
+			],
+			[
+				'attribute' => 'phone_number',
+				'label' => Module::t('postal', 'Phone Number'),
+				'value' => $this->model->phone,
+				'format' => 'text',
+				'visible' => isset($this->model->phone),
+			],
 		];
 
 		foreach ($attrs as &$attr) {
