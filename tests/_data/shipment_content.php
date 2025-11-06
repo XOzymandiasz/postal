@@ -10,4 +10,14 @@ return [
         'name' => 'Clothing',
         'is_active' => 0,
     ],
+	[
+		'id' => 4,
+		'name' => 'Fragile Items',
+		'is_active' => 1,
+	],
+	[
+		'id' => 5,
+		'name' => 'Heavy Package',
+		'is_active' => 0,
+	],
 ];
