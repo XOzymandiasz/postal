@@ -84,7 +84,7 @@ class AddressDetailWidget extends Widget {
 				'attribute' => 'street',
 				'label' => Module::t('postal', 'Street'),
 				'value' => $this->model->street,
-				'visible' => isset($this->model->street),
+				'visible' => !empty($this->model->street),
 				'format' => 'text',
 			],
 			[
@@ -98,7 +98,7 @@ class AddressDetailWidget extends Widget {
 				'label' => Module::t('postal', 'Apartment Number'),
 				'value' => $this->model->apartment_number,
 				'format' => 'text',
-				'visible' => isset($this->model->apartment_number),
+				'visible' => !empty($this->model->apartment_number),
 			],
 			//[
 			//	'attribute' => 'country',
@@ -112,14 +112,14 @@ class AddressDetailWidget extends Widget {
 				'label' => Module::t('postal', 'Email'),
 				'value' => $this->model->email,
 				'format' => 'text',
-				'visible' => isset($this->model->email),
+				'visible' => !empty($this->model->email),
 			],
 			[
 				'attribute' => 'phone_number',
 				'label' => Module::t('postal', 'Phone Number'),
 				'value' => $this->model->phone,
 				'format' => 'text',
-				'visible' => isset($this->model->phone),
+				'visible' => !empty($this->model->phone),
 			],
 		];
 
