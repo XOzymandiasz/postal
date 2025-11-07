@@ -1,6 +1,6 @@
 <?php
 
-namespace XOzymandias\Yii2Postal\modules\poczta_polska\components;
+namespace XOzymandias\Yii2Postal\components;
 
 interface ShipmentInterface
 {
