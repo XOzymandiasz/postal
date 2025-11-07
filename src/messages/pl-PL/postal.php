@@ -87,5 +87,6 @@ return [
 	'Shipment {content}' => 'Przesyłka {content}',
 	'Updated at' => 'Zaktualizowano',
 	'Created at' => 'Utworzono',
-	'Address' => 'Adres'
+	'Address' => 'Adres',
+	'Missing shipment number.' => 'Brak numeru przesyłki.'
 ];
