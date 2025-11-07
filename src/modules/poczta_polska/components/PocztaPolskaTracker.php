@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\modules\poczta_polska\components;
 
+use XOzymandias\Yii2Postal\components\ShipmentTrackerInterface;
 use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
 use Yii;
@@ -11,23 +12,13 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
 {
 
     public bool $addPostInfo = true;
-    public ?string $language = null;
-
+    private ?string $language = null;
     private ?PocztaPolskaTrackerClient $client;
-
 
     public function __construct(PocztaPolskaTrackerClient $client, array $config = [])
     {
         $this->client = $client;
         parent::__construct($config);
-    }
-
-    public function init(): void
-    {
-        parent::init();
-        if ($this->language === null) {
-            $this->language = Yii::$app->language;
-        }
     }
 
     public function externalTrackingUrl(string $number): string {
@@ -40,7 +31,7 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
     }
 
 	public function checkMail(string $number): ?Mail {
-		$data = $this->getMailData($number, $this->language = null);
+		$data = $this->getMailData($number, $this->language);
 
 		if (empty($data)) {
 			return null;
@@ -60,7 +51,6 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
 		return $mail;
 	}
 
-
     public function updateModel(Shipment $model): void
     {
         $data = $this->getMailData($model->shipment);
@@ -74,7 +64,6 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
         }
     }
 
-
     protected function getMailData(string $number, string $language = null): ?array
     {
         return $this->client->checkMailex($number, $this->addPostInfo, $language);
@@ -86,5 +75,7 @@ class PocztaPolskaTracker extends Component implements ShipmentTrackerInterface
         return new Mail($data);
     }
 
-
+	public function setLanguage(string $language): void {
+		$this->language = $language;
+	}
 }
