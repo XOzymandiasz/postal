@@ -86,6 +86,11 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
 		];
 	}
 
+	public function externalTrackingUrl(): string {
+		return $this->number
+			? static::ensureModule()->tracker->getTracker($this->provider)->externalTrackingUrl($this->number)
+			: Module::t('postal', 'Missing shipment number.');
+	}
 
     /**
      * @throws InvalidConfigException
