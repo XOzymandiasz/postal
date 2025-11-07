@@ -38,7 +38,7 @@ class Module extends BaseModule
 	/**
 	 * @var string|array|TrackerComponent
 	 */
-	public $tracker = [
+	public $trackerManager = [
 		'class' => TrackerComponent::class,
 	];
 
@@ -53,7 +53,7 @@ class Module extends BaseModule
         Yii::configure($this, require __DIR__ . '/config.php');
 
         $this->shipmentRelation = Instance::ensure($this->shipmentRelation, ShipmentRelationComponent::class, $this);
-		$this->tracker = Instance::ensure($this->tracker, TrackerComponent::class, $this);
+		$this->trackerManager = Instance::ensure($this->trackerManager, TrackerComponent::class, $this);
         $this->shipmentUrl = Instance::ensure($this->shipmentUrl, ShipmentUrlComponent::class, $this);
         $this->shipmentUrl->moduleId = $this->uniqueId;
 
