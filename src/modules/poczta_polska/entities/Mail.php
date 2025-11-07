@@ -2,8 +2,8 @@
 
 namespace XOzymandias\Yii2Postal\modules\poczta_polska\entities;
 
+use XOzymandias\Yii2Postal\components\ShipmentInterface;
 use XOzymandias\Yii2Postal\Module;
-use XOzymandias\Yii2Postal\modules\poczta_polska\components\ShipmentInterface;
 use yii\base\Model;
 
 class Mail extends Model implements ShipmentInterface

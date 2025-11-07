@@ -2,6 +2,7 @@
 
 namespace XOzymandias\Yii2Postal\modules\poczta_polska\components;
 
+use XOzymandias\Yii2Postal\components\ShipmentInterface;
 use XOzymandias\Yii2Postal\components\ShipmentTrackerInterface;
 use XOzymandias\Yii2Postal\models\Shipment;
 use XOzymandias\Yii2Postal\modules\poczta_polska\entities\Mail;
