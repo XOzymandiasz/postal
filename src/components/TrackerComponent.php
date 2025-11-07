@@ -22,7 +22,7 @@ class TrackerComponent extends Component{
 	}
 
 	public function getTracker(string $provider): ShipmentTrackerInterface {
-		if (!empty($this->cacheTrackers[$provider])) {
+		if (empty($this->cacheTrackers[$provider])) {
 			$this->cacheTrackers[$provider] = match ($provider) {
 				ShipmentProviderInterface::PROVIDER_POCZTA_POLSKA => new PocztaPolskaTracker(new PocztaPolskaTrackerClient()),
 				default => throw new RuntimeException("Unknown provider: $provider"),
