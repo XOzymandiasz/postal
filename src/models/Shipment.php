@@ -87,7 +87,7 @@ class Shipment extends ActiveRecord implements ShipmentDirectionInterface, Shipm
 	}
 
 	public function externalTrackingUrl(): ?string {
-		return $this->number
+		return $this->number && $this->provider
 			? static::ensureModule()->trackerManager->getTracker($this->provider)->externalTrackingUrl($this->number)
 			: null;
 	}
