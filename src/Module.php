@@ -4,6 +4,7 @@ namespace XOzymandias\Yii2Postal;
 
 use XOzymandias\Yii2Postal\components\ShipmentRelationComponent;
 use XOzymandias\Yii2Postal\components\ShipmentUrlComponent;
+use XOzymandias\Yii2Postal\components\TrackerComponent;
 use XOzymandias\Yii2Postal\events\ShipmentEvent;
 use XOzymandias\Yii2Postal\models\Shipment;
 use Yii;
@@ -13,6 +14,7 @@ use yii\di\Instance;
 /**
  * @property ShipmentUrlComponent $shipmentUrl
  * @property ShipmentRelationComponent $shipmentRelation
+ * @property TrackerComponent $tracker
  */
 class Module extends BaseModule
 {
@@ -33,6 +35,13 @@ class Module extends BaseModule
         'class' => ShipmentUrlComponent::class,
     ];
 
+	/**
+	 * @var string|array|TrackerComponent
+	 */
+	public $tracker = [
+		'class' => TrackerComponent::class,
+	];
+
     public bool $isOnlyCreator = true;
 
     public int $minLengthAddressListQuery = 4;
@@ -44,6 +53,7 @@ class Module extends BaseModule
         Yii::configure($this, require __DIR__ . '/config.php');
 
         $this->shipmentRelation = Instance::ensure($this->shipmentRelation, ShipmentRelationComponent::class, $this);
+		$this->tracker = Instance::ensure($this->tracker, TrackerComponent::class, $this);
         $this->shipmentUrl = Instance::ensure($this->shipmentUrl, ShipmentUrlComponent::class, $this);
         $this->shipmentUrl->moduleId = $this->uniqueId;
 
