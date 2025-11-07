@@ -7,7 +7,7 @@ Module for
 # INSTALLATION
 Add following lines to require section in composer.json:
 ```
-"xozymandias/postal": "1.0.30"
+"xozymandias/postal": "1.0.31"
 ```
 or use command
 ```
@@ -70,7 +70,10 @@ composer require xozymandias/postal
            ],
            'shipmentUrl' => [
                  'class' => XOzymandias\Yii2Postal\components\ShipmentUrlComponent::class
-           ]
+           ],
+           'trackerManager' => [
+                'class' => XOzymandias\Yii2Postal\components\TrackerComponent::class
+           ],
       ]
 ],
 
