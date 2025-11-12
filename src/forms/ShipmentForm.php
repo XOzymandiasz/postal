@@ -61,6 +61,7 @@ class ShipmentForm extends Model implements ShipmentDirectionInterface, Shipment
 			if (!$content) {
 				$contentForm = new ContentForm();
 				$contentForm->name = $name;
+				$contentForm->is_active = true;
 				$contentForm->save();
 				$content = $contentForm->getModel();
 			}
